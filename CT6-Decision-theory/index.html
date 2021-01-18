@@ -1,0 +1,2455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>遇事不决，可问春风 - 精算后花园</title>
+  
+    <meta name="keywords" content="非寿险精算,决策理论">
+  
+
+  
+    <meta name="description" content="涉及的知识点为 CT6 Decision-theory 决策理论">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://img.actuarygarden.cn/9b1f6a0e-f644-44d4-b222-0d15e5d37171.ico">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+
+
+</head>
+
+  <body>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://img.actuarygarden.cn/f167f780-3ee2-43e4-9755-6f4c9f82b3f5.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>索引
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>文章分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>文章标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>时间轴
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://actuarygarden.com/
+                  
+                  
+                  
+                    id="https:actuarygardencom"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>论坛
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-fan fa-spin fa-fw'></i>入坑指南
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/
+                  
+                  
+                  
+                    id="guideline"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算入坑指南
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/
+                  
+                  
+                  
+                    id="guidelineexam"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算考试介绍
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/curriculum/
+                  
+                  
+                  
+                    id="guidelinecurriculum"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算课程设置
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/IFoA/
+                  
+                  
+                  
+                    id="guidelineexamIFoA"
+                  >
+                  <i class='fas fa-book fa-fw'></i>IFoA学习路径
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/transfer/
+                  
+                  
+                  
+                    id="guidelineexamtransfer"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算体系间互换
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/tutorial/
+                  
+                  
+                  
+                    id="guidelinetutorial"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>IFoA考试辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fad fa-ellipsis-v fa-fw'></i>关于
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/CM1-Online-class/
+                  
+                  
+                  
+                    id="CM1-Online-class"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>精算辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>联系方式
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fas fa-link fa-fw'></i>常用链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fad fa-cog fa-fw'></i>Settings
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>索引
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>文章分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>文章标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>时间轴
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://actuarygarden.com/
+                  
+                  
+                  
+                    id="https:actuarygardencom"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>论坛
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-fan fa-spin fa-fw'></i>入坑指南
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/
+                  
+                  
+                  
+                    id="guideline"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算入坑指南
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/
+                  
+                  
+                  
+                    id="guidelineexam"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算考试介绍
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/curriculum/
+                  
+                  
+                  
+                    id="guidelinecurriculum"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算课程设置
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/IFoA/
+                  
+                  
+                  
+                    id="guidelineexamIFoA"
+                  >
+                  <i class='fas fa-book fa-fw'></i>IFoA学习路径
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/transfer/
+                  
+                  
+                  
+                    id="guidelineexamtransfer"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算体系间互换
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/tutorial/
+                  
+                  
+                  
+                    id="guidelinetutorial"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>IFoA考试辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fad fa-ellipsis-v fa-fw'></i>关于
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/CM1-Online-class/
+                  
+                  
+                  
+                    id="CM1-Online-class"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>精算辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>联系方式
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fas fa-link fa-fw'></i>常用链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fad fa-cog fa-fw'></i>Settings
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">精算后花园</p>
+    
+    
+      <p class="subtitle">「一个有趣有料的精算学习交流平台」</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="https://actuarygarden.cn/archives/"
+              
+              
+              id="https:actuarygardencnarchives">
+              <i class='fas fa-archive fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/categories/"
+              
+              
+              id="https:actuarygardencncategories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/tags/"
+              
+              
+              id="https:actuarygardencntags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://actuarygarden.com/"
+              
+              
+              id="https:actuarygardencom">
+              <i class='fas fa-comments fa-fw'></i><p>论坛</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/about/"
+              
+              
+              id="https:actuarygardencnabout">
+              <i class='fas fa-info-circle fa-fw'></i><p>关于</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/links/"
+              
+              
+              id="https:actuarygardencnlinks">
+              <i class='fas fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        遇事不决，可问春风
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
+    <p>Jackie</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/IFoA/">IFoA</a><span class="sep"></span><a class="category-link" href="/categories/IFoA/CS2/">CS2</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月18日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="遇事不决，可问春风" data-path="/CT6-Decision-theory/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>涉及的知识点为 CT6 Decision-theory 决策理论</p>
+<a id="more"></a>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>夏令营的英文面里，我被老师问了一个问题：</p>
+<blockquote>
+<p>“Say something about your girlfriend.” </p>
+</blockquote>
+<p>这种出其不意的问题就像蓝天白云晴空万里突然暴风雨。真是难倒我了，巧妇难为无米之炊啊。要不我唱首歌缓解一下尴尬的气氛？</p>
+<p>情感问题果然是拉近人们距离的永恒的话题。再严肃的场合，只要问一句“谈朋友了没？”空气里就能立时充满愉快的气氛。 </p>
+<p>不过其实稍加思索，万能的答题模板总是有的。比如说：</p>
+<blockquote>
+<p>“Actuaries always make assumptions before they solve questions. So I may assume that my girlfriend exists first.”</p>
+</blockquote>
+<p>然后愉快地编一个可爱善良单纯的女生莫名其妙爱上自己的故事。</p>
+<p>然而破产概率的调节系数存在的必要条件是个体损失X的矩母函数存在，而厚尾分布的MGF是不存在的。没错，我又用了一回MGF的梗，梗的出处见《<a href="https://actuarygarden.cn/Lianaixian/">恋爱险的起源</a>》。 </p>
+<p>当然也可以这样说：</p>
+<blockquote>
+<p>“I don’t have girlfriend now，but maybe I will find one here during the period of master degree study.”</p>
+</blockquote>
+<p>第二种回答方法需要承担一定的风险。为使自己学校的姑娘免遭祸害，老师可能会拒绝给你优秀营员。别说女朋友了，书都没得读，这就又是另一个悲伤的故事了。</p>
+<p><img src="https://img.actuarygarden.cn/24988161-4f7e-490c-9fb6-e2accc670236.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/24988161-4f7e-490c-9fb6-e2accc670236.png" srcset="data:image/png;base64,666"></p>
+<p>所以最稳妥的做法是赶在老师提问之前找一个女朋友。今后编起故事来也能够得心应手，不至于出现太多破绽。</p>
+<p>有女朋友的前提是要先表白。这可不，七夕快要到了，表白的良机啊！</p>
+<p>作为一个单身友好型的公众号，精算后花园对粉丝们的终身大事自然不能坐视不理。</p>
+<p>但由朋友迈向恋人，既要靠彼此的怦然心动，也得考虑到命运的行程。贸然表白是不理智的。因为求之不得与得而复失，两者都可能成为这项决策的副产品。</p>
+<p>所以请千万别着急。我们先来推演两种场景感受一下。 </p>
+<ol>
+<li>可以选择不表白。</li>
+</ol>
+<blockquote>
+<p>心里会出现一个声音：我才二十岁，我还年轻。找对象？先放一放吧。放着放着，就忘了。。。（摊手）</p>
+</blockquote>
+<p><img src="https://img.actuarygarden.cn/f3a93644-46ff-4bbf-91e3-c4058613d0f8.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/f3a93644-46ff-4bbf-91e3-c4058613d0f8.png" srcset="data:image/png;base64,666"></p>
+<ol start="2">
+<li>如果表白呢？</li>
+</ol>
+<blockquote>
+<p>你忐忑不安地等在大厅里，远远看到喜欢的姑娘在1号窗口，窗口上贴着“表白业务”四个大字。大厅里的广播响了：“请007号到1号窗口。”那位姑娘端坐在窗口里，耐心地听你讲明来意，然后递给你一张好人卡，隔着钢化玻璃客客气气地对你说道：“先生您的卡，请收好。记得给五星好评喔。”附带一个24小时职业化的微笑。她的好人卡发得如此熟练，像是套用了某个现成的模板。你接过来仔细瞧了瞧，千篇一律毫无特色，显然是批量生产的。你转身走出门，隐隐约约听到她在里面说：“下一位。” </p>
+</blockquote>
+<p>这是魔幻现实主义的说法。事实是，无形的好人卡杀伤力远比有形的好人卡强。说起来还真有点扎心。（《巴扎黑经典语录》，孙笑川，2016）相比之下，该说哪个更不幸呢？</p>
+<p>所以表白与否的确是一件纠结的事情。有没有那么一种方法，能够帮助你解决这个问题呢？！有啊！那就是决策理论。</p>
+<p>根据《美国大百科全书》的“Decision Theory”一条，“所谓做决策，就是在若干个可能的备选方案中进行选择，决策理论则是为了对制定决策的过程进行描述并使之合理化而发展起来的范围很广的概念和方法。” </p>
+<p>巧的是，夏令营的笔试部分也考了一道决策理论的题目：</p>
+<blockquote>
+<p>投资者有100万本金，，面临两种选择投资选择：第一种是bond，有固定的4%的收益率；第二种是stock，50%的可能收入10万，40%可能收入5万，10%可能亏损1万。在minimax和bayesian decision criterion下，问分别应该选哪个方案？</p>
+</blockquote>
+<p>今天精算后花园就给大家讲讲 CT6-01-Decision Theory 决策理论。</p>
+<h2 id="1-Zero-sum-two-player-games-双方零和博弈"><a href="#1-Zero-sum-two-player-games-双方零和博弈" class="headerlink" title="1.Zero-sum two-player games 双方零和博弈"></a>1.Zero-sum two-player games 双方零和博弈</h2><p>我们的研究范围是两个玩家（玩家A和玩家B）的零和博弈。即：一方的收益必然意味着另一方的损失，博弈双方的收益和损失相加总和永远为”零”。玩家A和玩家B都有几种不同的策略，把双方策略的不同情况组合起来，可以列出一个矩阵，我们称之为策略矩阵，用来表示博弈的情况。把玩家A的策略编号为I，II，III，…把玩家B的策略编号为1，2，3，…下图是一个2*2的策略矩阵的例子：</p>
+<p><img src="https://img.actuarygarden.cn/f4a74a0b-6ddb-4744-b41f-42198405f7da.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/f4a74a0b-6ddb-4744-b41f-42198405f7da.png" srcset="data:image/png;base64,666"></p>
+<p>矩阵中的元素称为收益（payoffs）（即玩家A的loss，或者说是玩家B的gain）一般来说，我们称a gain to player B为一个正的payoff。L（I，1）表示当玩家A选策略I，玩家B选策略1时，玩家B的利得。顺便提一下，</p>
+<h3 id="1-1-Domination-占优"><a href="#1-1-Domination-占优" class="headerlink" title="1.1 Domination 占优"></a>1.1 Domination 占优</h3><p><img src="https://img.actuarygarden.cn/5f0f7644-4ad6-4571-a582-a4267f510c71.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/5f0f7644-4ad6-4571-a582-a4267f510c71.png" srcset="data:image/png;base64,666"></p>
+<p>我们来看上图。<br>策略II dominate 策略IV（II对IV占优），因为II中玩家A的损失总小于IV中的，那么，被占优的（dominated）策略IV（劣势策略）就可以被抛弃了。策略3 dominate 策略1，因为策略3中玩家B的利得总大于策略1中的。同样地，策略II dominate 策略III。理性的个体永远都不会采取一个被其他策略占优的策略，所以可以把被占优的那些行和列都划掉。如下图：</p>
+<p><img src="https://img.actuarygarden.cn/922a41bb-847c-4573-a210-71618c919aca.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/922a41bb-847c-4573-a210-71618c919aca.png" srcset="data:image/png;base64,666"></p>
+<h3 id="1-2-The-Minimax-criterion-最小最大法则"><a href="#1-2-The-Minimax-criterion-最小最大法则" class="headerlink" title="1.2 The Minimax criterion 最小最大法则"></a>1.2 The Minimax criterion 最小最大法则</h3><p>顾名思义，最小最大法则就是：使最大损失最小化，或使最小收益最大化。 </p>
+<p>因为每一列都是玩家A的损失，所以在每列中找出最大数，找出各列中最小的一个。因为每一行都是玩家B的利得，所以在每行中找出最小数，找出各行中最大的一个。这就是所谓的”least worst“。我们来看个例子。</p>
+<p><img src="https://img.actuarygarden.cn/717c9095-ced9-4cf9-a814-ce88a1a4de3e.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/717c9095-ced9-4cf9-a814-ce88a1a4de3e.png" srcset="data:image/png;base64,666"></p>
+<p>先分析玩家A的minimax strategy：</p>
+<p><img src="https://img.actuarygarden.cn/84830eb6-83dc-4246-9dc4-1508cc0f1fa3.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/84830eb6-83dc-4246-9dc4-1508cc0f1fa3.png" srcset="data:image/png;base64,666"></p>
+<p>玩家A在策略I，II，III下的最大损失分别为6，3，5。显然3是三者中最小的。所以玩家A的minimax strategy为策略II。</p>
+<p>再分析玩家B的minimax strategy：</p>
+<p><img src="https://img.actuarygarden.cn/3315ca7a-2983-4e98-a8d9-2f8508079fcd.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/3315ca7a-2983-4e98-a8d9-2f8508079fcd.png" srcset="data:image/png;base64,666"></p>
+<p>玩家B在策略1，2，3下的最小利得分别为2，3，-3。显然3是三者中最大的。所以玩家B的minimax strategy为策略2。</p>
+<p>所以L（II，2）（Row 2， Column 2的点）对玩家A和B来说都是最优的(optimal)策略，即均衡位置（equilibrium position）。这样的点称为鞍点（saddle points）。当鞍点存在时，minimax strategy是”spy-off“的，即：即便双方互相知晓对方的决策，也不影响他们自己最后做出的决策。决策点最终还是会落在均衡位置（鞍点）上。</p>
+<h3 id="1-3-Randomised-Strategies-随机化策略"><a href="#1-3-Randomised-Strategies-随机化策略" class="headerlink" title="1.3 Randomised Strategies 随机化策略"></a>1.3 Randomised Strategies 随机化策略</h3><p>若鞍点不存在，那么minimax strategy就不是”spy-off“的，当我们知道对手的决策时，我们就可以采取相应的措施。这时我们可以使用Randomised Strategies：一个玩家的策略是关于对手策略的函数时，玩家如何采取策略，使得最大损失最小化。</p>
+<p><img src="https://img.actuarygarden.cn/e81e035c-6595-461b-9e86-d75c38097435.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/e81e035c-6595-461b-9e86-d75c38097435.png" srcset="data:image/png;base64,666"></p>
+<p>上图的例子不存在鞍点。所以我们应该采取随机化策略。</p>
+<p>记采取策略I的概率为p，则采取策略II的概率为1-p。</p>
+<p>若玩家B采取策略1，玩家A的期望损失L1( p)=7p -6(1-p) =13p-6。若玩家B采取策略2，玩家A的期望损失L2( p)=p +5(1-p) =5-4p。我们要求的是能使得两者中的较大损失最小的p。显然令两者相等，13p-6=5-4p，求出p即可。</p>
+<h2 id="2-Statistical-games-统计博弈"><a href="#2-Statistical-games-统计博弈" class="headerlink" title="2.Statistical games 统计博弈"></a>2.Statistical games 统计博弈</h2><p>统计推断（statistical inference）可以视作Nature（自然）和statistician（统计学家）之间的博弈。在统计博弈中，统计学家有一些样本数据，这些数据可以给出一些关于Nature的选择的信息（information about Nature‘s choice）。</p>
+<p>Example:<br>一个统计学家被告知有两种硬币：一种是a head and a tail（一面是head，另一面是tail）；另一种是two heads（两面都是head）。他要根据一次投掷后观察的硬币的其中一面来判断自己面前的硬币是哪一种。判断错误罚1块钱，判断正确不赏也不罚。</p>
+<p>先忽略统计学家可以观测到一次投掷的信息，可以把上述问题看作以下博弈：</p>
+<p><img src="https://img.actuarygarden.cn/88785370-4efd-4eff-8b18-0e3cec5c79f8.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/88785370-4efd-4eff-8b18-0e3cec5c79f8.png" srcset="data:image/png;base64,666"></p>
+<p>但实际上统计学家可以观测到一次投掷的硬币信息。记x=0为观测到head，x=1为观测到tail。</p>
+<p>决策函数（decision function）可以为：</p>
+<p>$$d_{1}(x)=\left{\begin{array}{l}<br>a_{1} \text { when } x=0 \<br>a_{2} \text { when } x=1<br>\end{array}\right.$$</p>
+<p>上述决策函数也可记为：d1(0) =a1 and d1(1)=a2。当然决策函数还可以用别的。再写三个：  </p>
+<ul>
+<li>d2(0) =a1 and d2(1) =a1；</li>
+<li>d3(0) =a2 and d3(1) =a2；</li>
+<li>d4(0) =a2 and d4(1) =a1。</li>
+</ul>
+<p>上述表格里的元素即为损失函数loss function，一般化可写为：</p>
+<p><img src="https://img.actuarygarden.cn/38276fb9-70dc-4121-afc1-d5712c4cdb0b.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/38276fb9-70dc-4121-afc1-d5712c4cdb0b.png" srcset="data:image/png;base64,666"></p>
+<p>上述决策函数d1（x）的期望损失：</p>
+<p>$$R\left(d_{1}, \theta_{j}\right)=E\left[L\left(d_{1}(x), \theta_{j}\right)\right]$$</p>
+<p>等式右边的中括号里面的就是采用决策函数d1（x）时的损失函数。</p>
+<p>R称为风险函数Risk function，为期望损失。要计算出这些损失的期望，需要知道各损失函数的概率。</p>
+<p><img src="https://img.actuarygarden.cn/65dd78f1-a34e-46f1-a9b2-ef4582c19102.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/65dd78f1-a34e-46f1-a9b2-ef4582c19102.png" srcset="data:image/png;base64,666"></p>
+<p>同样地，可以计算出其他三个决策函数下的期望损失，从而得到以下矩阵：</p>
+<p><img src="https://img.actuarygarden.cn/c9170dce-6e18-4502-8aca-6195bc171fec.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/c9170dce-6e18-4502-8aca-6195bc171fec.png" srcset="data:image/png;base64,666"></p>
+<ul>
+<li>d1 dominates d2；</li>
+<li>d3 dominates d4。<br>此时鞍点不存在，所以我们可以用随机化策略确定最优策略：采取决策函数d1和d3的概率分别为2/3和1/3（用上文的方法自己算一下吧）。</li>
+</ul>
+<h2 id="3-Decision-criteria-决策法则"><a href="#3-Decision-criteria-决策法则" class="headerlink" title="3.Decision criteria 决策法则"></a>3.Decision criteria 决策法则</h2><h3 id="3-1-The-minimax-criterion-最小最大法则"><a href="#3-1-The-minimax-criterion-最小最大法则" class="headerlink" title="3.1 The minimax criterion 最小最大法则"></a>3.1 The minimax criterion 最小最大法则</h3><p>根据最小最大法则选择决策函数d即可。</p>
+<p><img src="https://img.actuarygarden.cn/bce59402-38b8-46af-ba82-8d25e54e8ecc.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/bce59402-38b8-46af-ba82-8d25e54e8ecc.png" srcset="data:image/png;base64,666"></p>
+<p>显然对于刚才的例子，应选择d1。</p>
+<h3 id="3-2-The-Bayes-criterion-贝叶斯法则"><a href="#3-2-The-Bayes-criterion-贝叶斯法则" class="headerlink" title="3.2 The Bayes criterion 贝叶斯法则"></a>3.2 The Bayes criterion 贝叶斯法则</h3><p>当我们把Theta视作随机变量，就可以根据贝叶斯法则来选择决策函数。Theta是有一定的概率分布的。例如：</p>
+<p><img src="https://img.actuarygarden.cn/6b0abde5-c9b4-4d3f-9497-aaf79b504253.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/6b0abde5-c9b4-4d3f-9497-aaf79b504253.png" srcset="data:image/png;base64,666"></p>
+<p>当p&gt;1/3，d1下的Bayes risk比d2小，选择d1；当p&lt;1/3，d2下的Bayes risk比d1小，选择d2;当p=1/3，两者相同，选哪个都一样。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上就是决策理论的全部内容。 </p>
+<p>回到我们最开始的问题：表白与否，答案究竟是什么？</p>
+<p>要是有标准答案，那也不叫围城了。 </p>
+<p>当然，如果七夕那天喜欢的女孩子正好来找你聊天，那表白就容易多了。——“学校东门外新开了一家店好像不错诶。”——“知道了，我也喜欢你。”</p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://actuarygarden.cn/CT6-Decision-theory/>https://actuarygarden.cn/CT6-Decision-theory/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-01T17:36:26+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>本页文档最后更新于：2020年8月1日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9D%9E%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>非寿险精算</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>决策理论</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://actuarygarden.cn/CT6-Decision-theory/&title=遇事不决，可问春风 - 精算后花园&summary=涉及的知识点为 CT6 Decision-theory 决策理论"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://actuarygarden.cn/CT6-Decision-theory/&title=遇事不决，可问春风 - 精算后花园&summary=涉及的知识点为 CT6 Decision-theory 决策理论"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://actuarygarden.cn/CT6-Decision-theory/&title=遇事不决，可问春风 - 精算后花园&summary=涉及的知识点为 CT6 Decision-theory 决策理论"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/CUFE-actuary-kaoyan-2/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>绝对详细有料的2020年中财精算考研经验贴</p>
+          <p class='content'>2020年中央财经大学精算学硕考研经验贴第二篇。
+
+
+
+大家好，我是“于是”，负责精算论坛 actuarygarden.com 的央财精算考研版块，这个是我征集考研经验帖后一位学弟的投稿，因为他...</p>
+        </a>
+      
+      
+        <a class='next' href='/CT5-studynote/'>
+          <p class='title'>CT5 Contingencies 寿险精算学习笔记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>根据赫瑞瓦特的 CT5 寿险精算课程对全书的知识点做的梳理，和协会的CT5考试内容不完全一致，适合预习或者复习CT5的时候理一遍思路。
+
+
+当当当～下面就是CT5的学习笔记啦～
+虽然自己也是一个...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 交流区</p>
+    
+      <p cst>这里仅供博客观众之间进行交流，需要精算课程辅导请直接联系Jackie微信号AGJackie。在评论区进行提问将不会收到任何回复！</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Zero-sum-two-player-games-%E5%8F%8C%E6%96%B9%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88"><span class="toc-text">1.Zero-sum two-player games 双方零和博弈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Domination-%E5%8D%A0%E4%BC%98"><span class="toc-text">1.1 Domination 占优</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-The-Minimax-criterion-%E6%9C%80%E5%B0%8F%E6%9C%80%E5%A4%A7%E6%B3%95%E5%88%99"><span class="toc-text">1.2 The Minimax criterion 最小最大法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-Randomised-Strategies-%E9%9A%8F%E6%9C%BA%E5%8C%96%E7%AD%96%E7%95%A5"><span class="toc-text">1.3 Randomised Strategies 随机化策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Statistical-games-%E7%BB%9F%E8%AE%A1%E5%8D%9A%E5%BC%88"><span class="toc-text">2.Statistical games 统计博弈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Decision-criteria-%E5%86%B3%E7%AD%96%E6%B3%95%E5%88%99"><span class="toc-text">3.Decision criteria 决策法则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-The-minimax-criterion-%E6%9C%80%E5%B0%8F%E6%9C%80%E5%A4%A7%E6%B3%95%E5%88%99"><span class="toc-text">3.1 The minimax criterion 最小最大法则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-The-Bayes-criterion-%E8%B4%9D%E5%8F%B6%E6%96%AF%E6%B3%95%E5%88%99"><span class="toc-text">3.2 The Bayes criterion 贝叶斯法则</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="遇事不决，可问春风";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='true'
+      volume='0.4'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5062959861'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:Jackie@actuarygarden.cn"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://www.zhihu.com/people/oak-1"
+                class="social fab fa-zhihu flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://jq.qq.com/?_wv=1027&amp;k=5EXDdeF"
+                class="social fab fa-qq flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <p>本站使用 <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0">Volantis</a> 作为主题，您可以在 GitHub 找到<a target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs">本站源码</a>。</p>
+
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
+        
+        
+        
+        
+          id="https:volantisjsorgfaqs"
+        >
+        <i class='fa fa-question fa-fw'></i> 常见问题
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
+        
+        
+        
+        
+          id="https:volantisjsorgexamples"
+        >
+        <i class='fa fa-rss fa-fw'></i> 示例博客
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
+        
+        
+        
+        
+          id="https:volantisjsorgcontributors"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xvolantis-docs"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xhexo-theme-volantis"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 主题源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('/js/issues.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5062959861';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.4';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.LoadMetingJS=0
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return
+    clearInterval(checkAPlayer)
+	if (!window.volantis.LoadMetingJS&&!window.MetingJSElement){
+	  window.LoadMetingJS=1
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
+	  }
+  }, 2500)
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '/';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":"/","placeholder":"快来评论吧~","appId":"VTJuRPVQkQK1td4F5b2M62nD-gzGzoHsz","appKey":"8J9d3TJAICA2rc8C0RtAmiPA","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI',
+    app_key: '4xKBXGBj6BgecU62vff5rJHs',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'https://actuarygarden.cn' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'https://actuarygarden.cn' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'https://actuarygarden.cn' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

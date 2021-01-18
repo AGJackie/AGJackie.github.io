@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="preload" href="/css/first.css" as="style">
+  
+
+  <!-- 页面元数据 -->
+  
+  <title>【CM2导引篇】Loss Reserving and Financial Engineering - 精算后花园</title>
+  
+    <meta name="keywords" content="导引篇,金融经济学">
+  
+
+  
+    <meta name="description" content="IFoA 英国精算师考试 CM2 金融经济学的学习大纲，备考必看。各章的主干知识点和考点总结。">
+  
+
+  <!-- feed -->
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  
+    <link rel="shortcut icon" type='image/x-icon' href="https://img.actuarygarden.cn/9b1f6a0e-f644-44d4-b222-0d15e5d37171.ico">
+  
+
+  <!-- import link -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/first.css">
+
+  
+
+  
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+
+  <script id="loadcss"></script>
+
+  
+
+<script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) document.write('\x3Cscript id="_iealwn_js" data-outver="11" src="https://support.dmeng.net/ie-alert-warning/latest.js">\x3C/script>'); </script>
+
+
+</head>
+
+  <body>
+    
+
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a id="s-toc" class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://img.actuarygarden.cn/f167f780-3ee2-43e4-9755-6f4c9f82b3f5.png'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>索引
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>文章分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>文章标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>时间轴
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://actuarygarden.com/
+                  
+                  
+                  
+                    id="https:actuarygardencom"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>论坛
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-fan fa-spin fa-fw'></i>入坑指南
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/
+                  
+                  
+                  
+                    id="guideline"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算入坑指南
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/
+                  
+                  
+                  
+                    id="guidelineexam"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算考试介绍
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/curriculum/
+                  
+                  
+                  
+                    id="guidelinecurriculum"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算课程设置
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/IFoA/
+                  
+                  
+                  
+                    id="guidelineexamIFoA"
+                  >
+                  <i class='fas fa-book fa-fw'></i>IFoA学习路径
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/transfer/
+                  
+                  
+                  
+                    id="guidelineexamtransfer"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算体系间互换
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/tutorial/
+                  
+                  
+                  
+                    id="guidelinetutorial"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>IFoA考试辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fad fa-ellipsis-v fa-fw'></i>关于
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/CM1-Online-class/
+                  
+                  
+                  
+                    id="CM1-Online-class"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>精算辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>联系方式
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fas fa-link fa-fw'></i>常用链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fad fa-cog fa-fw'></i>Settings
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/
+                  
+                  
+                  
+                    id="home"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>主页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-ellipsis-v fa-fw'></i>索引
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/categories/
+                  
+                  
+                  
+                    id="categories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>文章分类
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/tags/
+                  
+                  
+                  
+                    id="tags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>文章标签
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/archives/
+                  
+                  
+                  
+                    id="archives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>时间轴
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=https://actuarygarden.com/
+                  
+                  
+                  
+                    id="https:actuarygardencom"
+                  >
+                  <i class='fas fa-comments fa-fw'></i>论坛
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fas fa-fan fa-spin fa-fw'></i>入坑指南
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/
+                  
+                  
+                  
+                    id="guideline"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算入坑指南
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/
+                  
+                  
+                  
+                    id="guidelineexam"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算考试介绍
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/curriculum/
+                  
+                  
+                  
+                    id="guidelinecurriculum"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算课程设置
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/IFoA/
+                  
+                  
+                  
+                    id="guidelineexamIFoA"
+                  >
+                  <i class='fas fa-book fa-fw'></i>IFoA学习路径
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/exam/transfer/
+                  
+                  
+                  
+                    id="guidelineexamtransfer"
+                  >
+                  <i class='fas fa-book fa-fw'></i>精算体系间互换
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/guideline/tutorial/
+                  
+                  
+                  
+                    id="guidelinetutorial"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>IFoA考试辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fad fa-ellipsis-v fa-fw'></i>关于
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/CM1-Online-class/
+                  
+                  
+                  
+                    id="CM1-Online-class"
+                  >
+                  <i class='fas fa-laptop fa-fw'></i>精算辅导
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/about/
+                  
+                  
+                  
+                    id="about"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>联系方式
+                </a>
+                
+              </li>
+            
+          
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" href=/links/
+                  
+                  
+                  
+                    id="links"
+                  >
+                  <i class='fas fa-link fa-fw'></i>常用链接
+                </a>
+                
+              </li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover" 
+                  
+                  
+                  >
+                  <i class='fad fa-cog fa-fw'></i>Settings
+                </a>
+                
+                  <ul class="list-v">
+                    
+                      
+            
+              <li>
+                <a class="menuitem flat-box header toggle-mode-btn">
+                  <i class='fas fa-moon fa-fw'></i>暗黑模式
+                </a>
+              <li>
+            
+          
+                    
+                  </ul>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
+          
+            <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
+          
+          <div class='cover-body'>
+  <div class='top'>
+    
+    
+      <p class="title">精算后花园</p>
+    
+    
+      <p class="subtitle">「一个有趣有料的精算学习交流平台」</p>
+    
+  </div>
+  <div class='bottom'>
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="https://actuarygarden.cn/archives/"
+              
+              
+              id="https:actuarygardencnarchives">
+              <i class='fas fa-archive fa-fw'></i><p>博文</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/categories/"
+              
+              
+              id="https:actuarygardencncategories">
+              <i class='fas fa-folder-open fa-fw'></i><p>分类</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/tags/"
+              
+              
+              id="https:actuarygardencntags">
+              <i class='fas fa-tags fa-fw'></i><p>标签</p>
+            </a>
+          
+            <a target="_blank" rel="noopener" href="https://actuarygarden.com/"
+              
+              
+              id="https:actuarygardencom">
+              <i class='fas fa-comments fa-fw'></i><p>论坛</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/about/"
+              
+              
+              id="https:actuarygardencnabout">
+              <i class='fas fa-info-circle fa-fw'></i><p>关于</p>
+            </a>
+          
+            <a href="https://actuarygarden.cn/links/"
+              
+              
+              id="https:actuarygardencnlinks">
+              <i class='fas fa-link fa-fw'></i><p>友链</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+          <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        </div>
+    
+  
+  </div>
+
+      <div id="safearea">
+        <div class="body-wrapper" id="pjax-container">
+          
+
+<div class='l_main'>
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title">
+        【CM2导引篇】Loss Reserving and Financial Engineering
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
+    <p>Jackie</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <a class='notlink'>
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <a class="category-link" href="/categories/IFoA/">IFoA</a><span class="sep"></span><a class="category-link" href="/categories/IFoA/CM2/">CM2</a>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月18日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="【CM2导引篇】Loss Reserving and Financial Engineering" data-path="/CM2-Guide/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
+        
+      </div>
+    
+  </div>
+
+
+  
+  
+  <p>IFoA 英国精算师考试 CM2 金融经济学的学习大纲，备考必看。各章的主干知识点和考点总结。</p>
+<a id="more"></a>
+
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>CM2 Loss Reserving and Financial Engineering 对应改革前的CT8金融经济学。同样地，CM2增加了机考（PaperB）的内容（EXCEL题）。Paper A 和 Paper B 的分数按照七三开算一个加权总分，再对总分进行划线。</p>
+<h2 id="CM2A-纸考部分"><a href="#CM2A-纸考部分" class="headerlink" title="CM2A 纸考部分"></a>CM2A 纸考部分</h2><h3 id="Chapter-1-Effective-Market-Assumption-有效市场假说"><a href="#Chapter-1-Effective-Market-Assumption-有效市场假说" class="headerlink" title="Chapter 1 Effective Market Assumption 有效市场假说"></a>Chapter 1 Effective Market Assumption 有效市场假说</h3><p>很简单的一章，只需要了解有效市场的定义、三种有效市场分类的依据以及它们各自的特征，此外还有信息效率（过度/不足反应）的相关问题及案例，有效市场检验一般只需要了解理论部分（面对的困难，检验思路等），波动率检验部分较难但极少考察，复习时间紧张的同学可跳过这一部分。考试一般考察判断有效市场或是简单的定义复述，也可能引申到套利的相关内容，分值占比不大。</p>
+<h3 id="Chapter-2-Utility-效用"><a href="#Chapter-2-Utility-效用" class="headerlink" title="Chapter 2 Utility 效用"></a>Chapter 2 Utility 效用</h3><p>效用的定义、四种性质、边际效用、绝对/相对风险偏好的定义和数学表达，常见类型的效用函数，影响效用函数的因素（如财富等），学过微观经济学的同学应该很容易搞定。此外注意可能要通过效用函数计算保费或就解释保险原理，以及最后一节“效用理论的局限性”可能会考论述题。</p>
+<h3 id="Chapter-3-Stochastic-dominance-and-behavioural-finance-随机占优和行为金融学"><a href="#Chapter-3-Stochastic-dominance-and-behavioural-finance-随机占优和行为金融学" class="headerlink" title="Chapter 3 Stochastic dominance and behavioural finance 随机占优和行为金融学"></a>Chapter 3 Stochastic dominance and behavioural finance 随机占优和行为金融学</h3><p>这一章由两节独立的内容组成，第一节为数学类，了解随机占优的判定（一阶&amp;二阶）即可；第二部分内容较多，从前景理论出发并描述了各类行为金融学现象，下一小节则有常见的行为偏见，这些特征（如确定性效应、孤岛效应、过度自信等）应该了解其具体描述对象并能举例，第四小节中关于行为金融和权益保费的研究应该有所了解。</p>
+<p>本章考察比较频繁，通常必考一道8-10分的论述题，考前应有所准备。</p>
+<h3 id="Chapter-4-Measure-of-investment-risk-投资风险测度"><a href="#Chapter-4-Measure-of-investment-risk-投资风险测度" class="headerlink" title="Chapter 4 Measure of investment risk 投资风险测度"></a>Chapter 4 Measure of investment risk 投资风险测度</h3><p>本章主要内容为风险测度方法：VaR和预期亏损。应该了解二者的计算方法以及各自的优势，此外可能联合效用理论或保险来进行考察，这一章多半会作为大题的一小部分，同学们看看重点就好。</p>
+<h3 id="Chapter-5-Stochastic-models-of-investment-return-投资收益随机模型"><a href="#Chapter-5-Stochastic-models-of-investment-return-投资收益随机模型" class="headerlink" title="Chapter 5 Stochastic models of investment return 投资收益随机模型"></a>Chapter 5 Stochastic models of investment return 投资收益随机模型</h3><p>  本章重点是对数模型（原CT1的内容：Stochastic interest rate models 随机利率模型）和短期聚合模型（见CS1），考察对象基本不超过书后summary 部分的公式。出题大多以应用题为主，复习时主要关注方差的计算方式。</p>
+<h3 id="Chapter-6-Portfolio-theory-资产组合理论"><a href="#Chapter-6-Portfolio-theory-资产组合理论" class="headerlink" title="Chapter 6 Portfolio theory 资产组合理论"></a>Chapter 6 Portfolio theory 资产组合理论</h3><p>主要是MV（均方理论）的假设、有效边界函数以及最小方差组合等，和金融计量学交叉部分较多。</p>
+<h3 id="Chapter-7-Models-of-asset-returns-资本收益建模"><a href="#Chapter-7-Models-of-asset-returns-资本收益建模" class="headerlink" title="Chapter 7 Models of asset returns 资本收益建模"></a>Chapter 7 Models of asset returns 资本收益建模</h3><p>主要是多因子模型和指数模型，多因子模型要了解影响收益率的各类因素，计算题主要是方差的计算。</p>
+<h3 id="Chapter-8-Asset-pricing-models-资产定价模型"><a href="#Chapter-8-Asset-pricing-models-资产定价模型" class="headerlink" title="Chapter 8 Asset pricing models 资产定价模型"></a>Chapter 8 Asset pricing models 资产定价模型</h3><p>全章基本上都在讲CAPM，CAPM的假设、公式、贝塔值的计算、证券市场线和资本市场线等。</p>
+<h3 id="Chapter-9-Brownian-motion-and-martingale-布朗运动和鞅"><a href="#Chapter-9-Brownian-motion-and-martingale-布朗运动和鞅" class="headerlink" title="Chapter 9 Brownian motion and martingale 布朗运动和鞅"></a>Chapter 9 Brownian motion and martingale 布朗运动和鞅</h3><p>标准布朗运动（维纳过程）的定义和性质、含漂移项的布朗运动以及广义布朗运动。鞅的定义和性质。注意常考点是鞅的证明（证明一个含有布朗运动的多项式是鞅）。</p>
+<h3 id="Chapter-10-Stochastic-calculus-and-ito-process-随机微积分和伊藤过程"><a href="#Chapter-10-Stochastic-calculus-and-ito-process-随机微积分和伊藤过程" class="headerlink" title="Chapter 10 Stochastic calculus and ito process 随机微积分和伊藤过程"></a>Chapter 10 Stochastic calculus and ito process 随机微积分和伊藤过程</h3><p>重点是伊藤引理的应用，伊藤引理的推导一般不考，但建议至少看懂。此外还有OU过程、广义布朗运动等微分式的求解，由于考察范围一般不会超过书上的几个微分式（OU、均值回归等），建议至少把书上的几个过程全部自己解一次。</p>
+<h3 id="Chapter-11-Stochastic-models-of-security-price-证券定价随机模型"><a href="#Chapter-11-Stochastic-models-of-security-price-证券定价随机模型" class="headerlink" title="Chapter 11 Stochastic models of security price 证券定价随机模型"></a>Chapter 11 Stochastic models of security price 证券定价随机模型</h3><p>全章都是连续时间对数模型，模型的假设前提以及模型存在的问题等；也有可能结合CS1的知识考计算题。</p>
+<h3 id="Chapter-12-Characteristics-of-derivative-securities-衍生品概述"><a href="#Chapter-12-Characteristics-of-derivative-securities-衍生品概述" class="headerlink" title="Chapter 12 Characteristics of derivative securities 衍生品概述"></a>Chapter 12 Characteristics of derivative securities 衍生品概述</h3><p>前半部分内容为原CT1的内容：Arbitrage and forward contracts 远期合约的定价。期货、期权的基础知识，期货的定价以及期货与期权的价格关系。这一章不难，重点关注put-call charity。</p>
+<h3 id="Chapter-13-The-Greeks-五个希腊字母"><a href="#Chapter-13-The-Greeks-五个希腊字母" class="headerlink" title="Chapter 13 The Greeks 五个希腊字母"></a>Chapter 13 The Greeks 五个希腊字母</h3><p>五种基本的希腊值（Delta、Gamma、Vega、Rho、Lambda和Theta）及其基本计算方法，CM2中不会考察BS模型下的希腊值公式所以本章比较简单。</p>
+<h3 id="14-The-binomial-model-二叉树模型"><a href="#14-The-binomial-model-二叉树模型" class="headerlink" title="14 The binomial model 二叉树模型"></a>14 The binomial model 二叉树模型</h3><p>CM2考察的重点之一，公式table上有一部分，但也需要熟练掌握；扩展的重组二叉树和校准二叉树要有所了解，要明白现实概率p和二叉树概率q的区别。</p>
+<p>此外还需要了解平减指数法的计算过程 。</p>
+<h3 id="Chapter-15-The-Black-Scholes-option-pricing-formula-BS期权定价公式"><a href="#Chapter-15-The-Black-Scholes-option-pricing-formula-BS期权定价公式" class="headerlink" title="Chapter 15 The Black-Scholes option pricing formula BS期权定价公式"></a>Chapter 15 The Black-Scholes option pricing formula BS期权定价公式</h3><p>另一个重点，要了解BS定价假设、两种公式（PDE和GK）都要会用，但是不需要证明。（PDE的证明最好能看一下）</p>
+<p>还有就是结合put-call charity考察。</p>
+<h3 id="Chapter-16-The-5-step-method-in-discrete-time-离散时间下的五步法"><a href="#Chapter-16-The-5-step-method-in-discrete-time-离散时间下的五步法" class="headerlink" title="Chapter 16 The 5-step method in discrete time 离散时间下的五步法"></a>Chapter 16 The 5-step method in discrete time 离散时间下的五步法</h3><p>理解previsible、self-financing等的含义，理解GMV定理、等价鞅测度和鞅代表定理；五步法的每一步都要能理解并结合题目实际情况推导。这一章新理论较多，一开始看不懂是正常的，可以作为学习重点多看几遍。</p>
+<h3 id="Chapter-17-The-5-step-method-in-continuous-time-连续时间下的五步法"><a href="#Chapter-17-The-5-step-method-in-continuous-time-连续时间下的五步法" class="headerlink" title="Chapter 17 The 5-step method in continuous time 连续时间下的五步法"></a>Chapter 17 The 5-step method in continuous time 连续时间下的五步法</h3><p>五步本身和离散时间没什么区别，连续五步法可以用来证明BS的PDE方程，建议看懂并自己推导一下；价格平减指数了解即可。</p>
+<h3 id="Chapter-18-The-term-structure-of-interest-rates-利率的期限结构"><a href="#Chapter-18-The-term-structure-of-interest-rates-利率的期限结构" class="headerlink" title="Chapter 18 The term structure of interest rates 利率的期限结构"></a>Chapter 18 The term structure of interest rates 利率的期限结构</h3><p>利率曲线、即期利率和远期利率的关系、利率模型的评价维度、常见四种利率模型及其对比。（利率模型了解微分式，漂移项和随机项系数对应的意义即可，基于利率模型的定价太复杂而且很少考，不建议花太多时间在上面）</p>
+<h3 id="Chapter-19-Credit-risk-信用风险"><a href="#Chapter-19-Credit-risk-信用风险" class="headerlink" title="Chapter 19 Credit risk 信用风险"></a>Chapter 19 Credit risk 信用风险</h3><p>信用风险概述、信用评级、信用风险矩阵以及三个相关模型（默顿、两状态、JLT）。三种模型的计算都应该能掌握。</p>
+<h3 id="Chapter-20-Ruin-theory-破产理论"><a href="#Chapter-20-Ruin-theory-破产理论" class="headerlink" title="Chapter 20 Ruin theory 破产理论"></a>Chapter 20 Ruin theory 破产理论</h3><p>是原来CT6里的内容。利用短期聚合模型计算不同情况下的破产概率，再保险对破产概率的影响以及如何安排再保险使得调整系数R值最大。同时要知道各参数对破产概率的影响。</p>
+<h3 id="Chapter-21-Run-off-triangles-流量三角形"><a href="#Chapter-21-Run-off-triangles-流量三角形" class="headerlink" title="Chapter 21 Run-off triangles 流量三角形"></a>Chapter 21 Run-off triangles 流量三角形</h3><p>是原来CT6里的内容。主要用链梯法来计算IBNR，理解发展系数的含义并掌握四种链梯法（基础、通胀调整、平均成本、BF法）。还有一些相关的论述但考的不多，重点关注方法本身。</p>
+<h2 id="CM2B-机考"><a href="#CM2B-机考" class="headerlink" title="CM2B 机考"></a>CM2B 机考</h2><p>机考在excel上操作，在规定时间内从机考系统内下载试题，完成后上传即可。机考一般不会考察超出笔试范围内的问题，不涉及vba的使用，可以考前先写一个BS定价模型以便更快完成答题。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>前8章主要是投资学和金融计量学的内容，数学上难度不大，主要是概念性的问题和论述题；9-10章是随机数学基础，通常不会单独考；11-13章是衍生品基础，一般会作为最后大题的一部分小问；14-17章是衍生品定价，在全书中难度属于比较大的部分；18-21章是一些单独的章节，一部分来自原来的CT6，也具有一定数学难度。建议重点关注1-8章和11-13章的概念论述部分和剩下几章的数学推导部分。</p>
+<p>由于前8章机考出题不多，因此机考的难度可能会大于笔试（至少我考的时候是这样的），建议做好心理准备。</p>
+<p><a target="_blank" rel="noopener" href="https://www.actuaries.org.uk/studying/curriculum/actuarial-mathematics">Resources for CM2</a></p>
+
+  
+  
+    
+    <div class='footer'>
+      
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://actuarygarden.cn/CM2-Guide/>https://actuarygarden.cn/CM2-Guide/</a></p>
+              
+            
+          </blockquote>
+        </div>
+      
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-29T09:17:34+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>本页文档最后更新于：2020年9月29日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%AF%BC%E5%BC%95%E7%AF%87/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>导引篇</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%87%91%E8%9E%8D%E7%BB%8F%E6%B5%8E%E5%AD%A6/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>金融经济学</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://actuarygarden.cn/CM2-Guide/&title=【CM2导引篇】Loss Reserving and Financial Engineering - 精算后花园&summary=IFoA 英国精算师考试 CM2 金融经济学的学习大纲，备考必看。各章的主干知识点和考点总结。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://actuarygarden.cn/CM2-Guide/&title=【CM2导引篇】Loss Reserving and Financial Engineering - 精算后花园&summary=IFoA 英国精算师考试 CM2 金融经济学的学习大纲，备考必看。各章的主干知识点和考点总结。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://actuarygarden.cn/CM2-Guide/&title=【CM2导引篇】Loss Reserving and Financial Engineering - 精算后花园&summary=IFoA 英国精算师考试 CM2 金融经济学的学习大纲，备考必看。各章的主干知识点和考点总结。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/CM1-survivalmodels/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【知识点串讲】CM1 Survival models 生存模型</p>
+          <p class='content'>CM1寿险精算部分的第一课。
+
+
+开个新系列【知识点串讲】，本系列的文章会完全按照对应科目的考纲对知识点进行梳理。本文按照英国精算师考试CM1新考纲要求掌握的知识点来写，是寿险精算部分第一课时的...</p>
+        </a>
+      
+      
+        <a class='next' href='/CS1-Guide/'>
+          <p class='title'>【CS1导引篇】Actuarial Statistics<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>IFoA 英国精算师考试 CS1 概率论与数理统计的学习大纲，备考必看。各章的主干知识点和考点总结。
+
+
+概述IFoA在2019年新大纲考试改革后，各门课都发生了一定的变化。尤其是CS1（原CT...</p>
+        </a>
+      
+    </div>
+  
+</article>
+
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 交流区</p>
+    
+      <p cst>这里仅供博客观众之间进行交流，需要精算课程辅导请直接联系Jackie微信号AGJackie。在评论区进行提问将不会收到任何回复！</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+</div>
+
+  </article>
+
+
+
+
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CM2A-%E7%BA%B8%E8%80%83%E9%83%A8%E5%88%86"><span class="toc-text">CM2A 纸考部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-1-Effective-Market-Assumption-%E6%9C%89%E6%95%88%E5%B8%82%E5%9C%BA%E5%81%87%E8%AF%B4"><span class="toc-text">Chapter 1 Effective Market Assumption 有效市场假说</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-2-Utility-%E6%95%88%E7%94%A8"><span class="toc-text">Chapter 2 Utility 效用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-3-Stochastic-dominance-and-behavioural-finance-%E9%9A%8F%E6%9C%BA%E5%8D%A0%E4%BC%98%E5%92%8C%E8%A1%8C%E4%B8%BA%E9%87%91%E8%9E%8D%E5%AD%A6"><span class="toc-text">Chapter 3 Stochastic dominance and behavioural finance 随机占优和行为金融学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-4-Measure-of-investment-risk-%E6%8A%95%E8%B5%84%E9%A3%8E%E9%99%A9%E6%B5%8B%E5%BA%A6"><span class="toc-text">Chapter 4 Measure of investment risk 投资风险测度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-5-Stochastic-models-of-investment-return-%E6%8A%95%E8%B5%84%E6%94%B6%E7%9B%8A%E9%9A%8F%E6%9C%BA%E6%A8%A1%E5%9E%8B"><span class="toc-text">Chapter 5 Stochastic models of investment return 投资收益随机模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-6-Portfolio-theory-%E8%B5%84%E4%BA%A7%E7%BB%84%E5%90%88%E7%90%86%E8%AE%BA"><span class="toc-text">Chapter 6 Portfolio theory 资产组合理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-7-Models-of-asset-returns-%E8%B5%84%E6%9C%AC%E6%94%B6%E7%9B%8A%E5%BB%BA%E6%A8%A1"><span class="toc-text">Chapter 7 Models of asset returns 资本收益建模</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-8-Asset-pricing-models-%E8%B5%84%E4%BA%A7%E5%AE%9A%E4%BB%B7%E6%A8%A1%E5%9E%8B"><span class="toc-text">Chapter 8 Asset pricing models 资产定价模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-9-Brownian-motion-and-martingale-%E5%B8%83%E6%9C%97%E8%BF%90%E5%8A%A8%E5%92%8C%E9%9E%85"><span class="toc-text">Chapter 9 Brownian motion and martingale 布朗运动和鞅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-10-Stochastic-calculus-and-ito-process-%E9%9A%8F%E6%9C%BA%E5%BE%AE%E7%A7%AF%E5%88%86%E5%92%8C%E4%BC%8A%E8%97%A4%E8%BF%87%E7%A8%8B"><span class="toc-text">Chapter 10 Stochastic calculus and ito process 随机微积分和伊藤过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-11-Stochastic-models-of-security-price-%E8%AF%81%E5%88%B8%E5%AE%9A%E4%BB%B7%E9%9A%8F%E6%9C%BA%E6%A8%A1%E5%9E%8B"><span class="toc-text">Chapter 11 Stochastic models of security price 证券定价随机模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-12-Characteristics-of-derivative-securities-%E8%A1%8D%E7%94%9F%E5%93%81%E6%A6%82%E8%BF%B0"><span class="toc-text">Chapter 12 Characteristics of derivative securities 衍生品概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-13-The-Greeks-%E4%BA%94%E4%B8%AA%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="toc-text">Chapter 13 The Greeks 五个希腊字母</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-The-binomial-model-%E4%BA%8C%E5%8F%89%E6%A0%91%E6%A8%A1%E5%9E%8B"><span class="toc-text">14 The binomial model 二叉树模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-15-The-Black-Scholes-option-pricing-formula-BS%E6%9C%9F%E6%9D%83%E5%AE%9A%E4%BB%B7%E5%85%AC%E5%BC%8F"><span class="toc-text">Chapter 15 The Black-Scholes option pricing formula BS期权定价公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-16-The-5-step-method-in-discrete-time-%E7%A6%BB%E6%95%A3%E6%97%B6%E9%97%B4%E4%B8%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E6%B3%95"><span class="toc-text">Chapter 16 The 5-step method in discrete time 离散时间下的五步法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-17-The-5-step-method-in-continuous-time-%E8%BF%9E%E7%BB%AD%E6%97%B6%E9%97%B4%E4%B8%8B%E7%9A%84%E4%BA%94%E6%AD%A5%E6%B3%95"><span class="toc-text">Chapter 17 The 5-step method in continuous time 连续时间下的五步法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-18-The-term-structure-of-interest-rates-%E5%88%A9%E7%8E%87%E7%9A%84%E6%9C%9F%E9%99%90%E7%BB%93%E6%9E%84"><span class="toc-text">Chapter 18 The term structure of interest rates 利率的期限结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-19-Credit-risk-%E4%BF%A1%E7%94%A8%E9%A3%8E%E9%99%A9"><span class="toc-text">Chapter 19 Credit risk 信用风险</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-20-Ruin-theory-%E7%A0%B4%E4%BA%A7%E7%90%86%E8%AE%BA"><span class="toc-text">Chapter 20 Ruin theory 破产理论</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-21-Run-off-triangles-%E6%B5%81%E9%87%8F%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="toc-text">Chapter 21 Run-off triangles 流量三角形</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CM2B-%E6%9C%BA%E8%80%83"><span class="toc-text">CM2B 机考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+
+		  
+		  <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.postTitle="【CM2导引篇】Loss Reserving and Financial Engineering";
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+
+  var l_header=document.getElementById("l_header");
+  
+  l_header.classList.add("show");
+  
+</script>
+
+        </div>
+        
+  
+  <footer class="footer clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='true'
+      volume='0.4'
+      loop='all'
+      order='random'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='playlist'
+      id='5062959861'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="mailto:Jackie@actuarygarden.cn"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://www.zhihu.com/people/oak-1"
+                class="social fab fa-zhihu flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+            
+              <a href="https://jq.qq.com/?_wv=1027&amp;k=5EXDdeF"
+                class="social fab fa-qq flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <p>本站使用 <a target="_blank" rel="noopener" href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.3.0">Volantis</a> 作为主题，您可以在 GitHub 找到<a target="_blank" rel="noopener" href="https://github.com/volantis-x/volantis-docs">本站源码</a>。</p>
+
+      
+    
+      
+        
+          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+</div>
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+
+        <a id="s-top" class="fas fa-arrow-up fa-fw" href="javascript:void(0)"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+window.volantis={};
+window.volantis.loadcss=document.getElementById("loadcss");
+/********************脚本懒加载函数********************************/
+function loadScript(src, cb) {
+var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+var script = document.createElement('script');
+script.setAttribute('type','text/javascript');
+if (cb) script.onload = cb;
+script.setAttribute('src', src);
+HEAD.appendChild(script);
+}
+//https://github.com/filamentgroup/loadCSS
+var loadCSS = function( href, before, media, attributes ){
+	var doc = window.document;
+	var ss = doc.createElement( "link" );
+	var ref;
+	if( before ){
+		ref = before;
+	}
+	else {
+		var refs = ( doc.body || doc.getElementsByTagName( "head" )[ 0 ] ).childNodes;
+		ref = refs[ refs.length - 1];
+	}
+	var sheets = doc.styleSheets;
+	if( attributes ){
+		for( var attributeName in attributes ){
+			if( attributes.hasOwnProperty( attributeName ) ){
+				ss.setAttribute( attributeName, attributes[attributeName] );
+			}
+		}
+	}
+	ss.rel = "stylesheet";
+	ss.href = href;
+	ss.media = "only x";
+	function ready( cb ){
+		if( doc.body ){
+			return cb();
+		}
+		setTimeout(function(){
+			ready( cb );
+		});
+	}
+	ready( function(){
+		ref.parentNode.insertBefore( ss, ( before ? ref : ref.nextSibling ) );
+	});
+	var onloadcssdefined = function( cb ){
+		var resolvedHref = ss.href;
+		var i = sheets.length;
+		while( i-- ){
+			if( sheets[ i ].href === resolvedHref ){
+				return cb();
+			}
+		}
+		setTimeout(function() {
+			onloadcssdefined( cb );
+		});
+	};
+	function loadCB(){
+		if( ss.addEventListener ){
+			ss.removeEventListener( "load", loadCB );
+		}
+		ss.media = media || "all";
+	}
+	if( ss.addEventListener ){
+		ss.addEventListener( "load", loadCB);
+	}
+	ss.onloadcssdefined = onloadcssdefined;
+	onloadcssdefined( loadCB );
+	return ss;
+};
+</script>
+<script>
+  
+  loadCSS("https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css", window.volantis.loadcss);
+  
+  
+  
+  
+</script>
+<!-- required -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5/dist/jquery.min.js"></script>
+
+<script>
+  function pjax_fancybox() {
+    $(".md .gallery").find("img").each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("class", "fancybox");
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 判断当前页面是否存在描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".md .gallery").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  function SCload_fancybox() {
+    if ($(".md .gallery").find("img").length == 0) return;
+    loadCSS("https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css", document.getElementById("loadcss"));
+    setTimeout(function() {
+      loadScript('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', pjax_fancybox)
+    }, 1);
+  };
+  $(function () {
+    SCload_fancybox();
+  });
+</script>
+
+
+<!-- internal -->
+
+
+
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
+        
+        
+        
+        
+          id="https:volantisjsorgfaqs"
+        >
+        <i class='fa fa-question fa-fw'></i> 常见问题
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
+        
+        
+        
+        
+          id="https:volantisjsorgexamples"
+        >
+        <i class='fa fa-rss fa-fw'></i> 示例博客
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
+        
+        
+        
+        
+          id="https:volantisjsorgcontributors"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xvolantis-docs"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 本站源码
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
+        
+        
+        
+        
+          id="https:githubcomvolantis-xhexo-theme-volantis"
+        >
+        <i class='fa fa-code-branch fa-fw'></i> 主题源码
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
+
+<script>
+  function loadIssuesJS() {
+    if ($(".md").find(".issues-api").length == 0) return;
+    setTimeout(function() {
+	
+	  loadScript('/js/issues.js');
+	
+    }, 1);
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+</script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+  
+    <script>
+      window.FPConfig = {
+        delay: 0,
+        ignoreKeywords: [],
+        maxRPS: 5,
+        hoverDelay: 25
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn-copy', {
+        target: function (trigger) {
+            return trigger.nextElementSibling
+        }
+    });
+    function wait(callback, seconds) {
+        var timelag = null;
+        timelag = window.setTimeout(callback, seconds)
+    }
+    function pjax_initCopyCode() {
+		if($(".highlight .code pre").length+$(".article pre code").length==0)return;
+        var copyHtml = '';
+        copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+        copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+        copyHtml += '</button>';
+        $(".highlight .code pre").before(copyHtml);
+        $(".article pre code").before(copyHtml);
+        clipboard.off('success').on('success', function (e) {
+            let $btn = $(e.trigger);
+            $btn.addClass('copied');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-check-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPIED';
+            wait(function () {
+                $icon.removeClass('fa-check-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        });
+        clipboard.off('error').on('error', function (e) {
+            e.clearSelection();
+            let $btn = $(e.trigger);
+            $btn.addClass('copy-failed');
+            let $icon = $($btn.find('i'));
+            $icon.removeClass('fa-copy');
+            $icon.addClass('fa-times-circle');
+            let $span = $($btn.find('span'));
+            $span[0].innerText = 'COPY FAILED';
+            wait(function () {
+                $icon.removeClass('fa-times-circle');
+                $icon.addClass('fa-copy');
+                $span[0].innerText = 'COPY'
+            }, 2000)
+        })
+    }
+    $(function () {
+        pjax_initCopyCode()
+    });
+</script>
+
+
+
+
+
+
+  <script>
+  let APlayerController = new Object();
+  APlayerController.id = '5062959861';  // 设定全局音乐播放ID
+  APlayerController.volume = '0.4';
+  loadCSS("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css", window.volantis.loadcss);
+  // APlayer 需要在  MetingJS 之前加载
+  loadScript("https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js")
+  window.volantis.LoadMetingJS=0
+  var checkAPlayer = setInterval(function () {
+    if (!window.APlayer) return
+    clearInterval(checkAPlayer)
+	if (!window.volantis.LoadMetingJS&&!window.MetingJSElement){
+	  window.LoadMetingJS=1
+      loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
+	  }
+  }, 2500)
+
+  
+    loadScript("/js/aplayer.js")
+  
+
+</script>
+
+
+
+
+  
+  
+<script src="/js/valine.js"></script>
+
+
+<script>
+  function emoji(path, idx, ext) {
+    return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  function pjax_valine() {
+    if(!document.querySelectorAll("#valine_container")[0])return;
+    let pagePlaceholder = pdata.commentPlaceholder || "快来评论吧~";
+    let path = pdata.commentPath;
+    if (path.length == 0) {
+      let defaultPath = '/';
+      path = defaultPath || decodeURI(window.location.pathname);
+    }
+    var valine = new Valine();
+    valine.init(Object.assign({"path":"/","placeholder":"快来评论吧~","appId":"VTJuRPVQkQK1td4F5b2M62nD-gzGzoHsz","appKey":"8J9d3TJAICA2rc8C0RtAmiPA","meta":["nick","mail","link"],"requiredFields":["nick","mail"],"enableQQ":true,"recordIP":false,"avatar":"robohash","pageSize":10,"lang":"zh-cn","highlight":true,"mathJax":false}, {
+      el: '#valine_container',
+      path: path,
+      placeholder: pagePlaceholder,
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/valine/',
+      emojiMaps: emojiMaps,
+    }))
+  }
+  $(function () {
+    pjax_valine();
+  });
+  pjax_comment=pjax_valine;
+</script>
+
+
+
+
+
+  
+<script src="/js/app.js"></script>
+
+
+
+<!-- optional -->
+
+  <script>
+const SearchServiceimagePath="https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@master/img/";
+const ROOT =  ("/" || "/").endsWith('/') ? ("/" || "/") : ("//" || "/" );
+
+$('.input.u-search-input').one('focus',function(){
+	
+		loadScript('https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@2.6.4/js/search.js',setSearchService);
+	
+})
+
+function listenSearch(){
+  
+    customSearch = new HexoSearch({
+      imagePath: SearchServiceimagePath
+    });
+  
+}
+function setSearchService() {
+	listenSearch();
+	
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <script defer>
+
+  const LCCounter = {
+    app_id: 'GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI',
+    app_key: '4xKBXGBj6BgecU62vff5rJHs',
+    custom_api_server: '',
+
+    // 查询存储的记录
+    getRecord(Counter, url, title) {
+      return new Promise(function (resolve, reject) {
+        Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({url})))
+          .then(resp => resp.json())
+          .then(({results, code, error}) => {
+            if (code === 401) {
+              throw error;
+            }
+            if (results && results.length > 0) {
+              var record = results[0];
+              resolve(record);
+            } else {
+              Counter('post', '/classes/Counter', {url, title: title, times: 0})
+                .then(resp => resp.json())
+                .then((record, error) => {
+                  if (error) {
+                    throw error;
+                  }
+                  resolve(record);
+                }).catch(error => {
+                console.error('Failed to create', error);
+                reject(error);
+              });
+            }
+          }).catch((error) => {
+          console.error('LeanCloud Counter Error:', error);
+          reject(error);
+        });
+      })
+    },
+
+    // 发起自增请求
+    increment(Counter, incrArr) {
+      return new Promise(function (resolve, reject) {
+        Counter('post', '/batch', {
+          "requests": incrArr
+        }).then((res) => {
+          res = res.json();
+          if (res.error) {
+            throw res.error;
+          }
+          resolve(res);
+        }).catch((error) => {
+          console.error('Failed to save visitor count', error);
+          reject(error);
+        });
+      });
+    },
+
+    // 构建自增请求体
+    buildIncrement(objectId) {
+      return {
+        "method": "PUT",
+        "path": `/1.1/classes/Counter/${ objectId }`,
+        "body": {
+          "times": {
+            '__op': 'Increment',
+            'amount': 1
+          }
+        }
+      }
+    },
+
+    // 校验是否为有效的 UV
+    validUV() {
+      var key = 'LeanCloudUVTimestamp';
+      var flag = localStorage.getItem(key);
+      if (flag) {
+        // 距离标记小于 24 小时则不计为 UV
+        if (new Date().getTime() - parseInt(flag) <= 86400000) {
+          return false;
+        }
+      }
+      localStorage.setItem(key, new Date().getTime().toString());
+      return true;
+    },
+
+    addCount(Counter) {
+      var enableIncr = '' === 'true' && window.location.hostname !== 'localhost';
+      enableIncr = true;
+      var getterArr = [];
+      var incrArr = [];
+      // 请求 PV 并自增
+      var pvCtn = document.querySelector('#lc-sv');
+      if (pvCtn || enableIncr) {
+        var pvGetter = this.getRecord(Counter, 'https://actuarygarden.cn' + '/#lc-sv', 'Visits').then((record) => {
+          incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-sv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + 1;
+              if (pvCtn) {
+                pvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(pvGetter);
+      }
+
+      // 请求 UV 并自增
+      var uvCtn = document.querySelector('#lc-uv');
+      if (uvCtn || enableIncr) {
+        var uvGetter = this.getRecord(Counter, 'https://actuarygarden.cn' + '/#lc-uv', 'Visitors').then((record) => {
+          var vuv = this.validUV();
+          vuv && incrArr.push(this.buildIncrement(record.objectId))
+          var eles = document.querySelectorAll('#lc-uv #number');
+          if (eles.length > 0) {
+            eles.forEach((el,index,array)=>{
+              el.innerText = record.times + (vuv ? 1 : 0);
+              if (uvCtn) {
+                uvCtn.style.display = 'inline';
+              }
+            })
+          }
+        });
+        getterArr.push(uvGetter);
+      }
+
+      // 请求文章的浏览数，如果是当前页面就自增
+      var allPV = document.querySelectorAll('#lc-pv');
+      if (allPV.length > 0 || enableIncr) {
+        for (i = 0; i < allPV.length; i++) {
+          let pv = allPV[i];
+          let title = pv.getAttribute('data-title');
+          var url = 'https://actuarygarden.cn' + pv.getAttribute('data-path');
+          if (url) {
+            var viewGetter = this.getRecord(Counter, url, title).then((record) => {
+              // 是当前页面就自增
+              let curPath = window.location.pathname;
+              if (curPath.includes('index.html')) {
+                curPath = curPath.substring(0, curPath.lastIndexOf('index.html'));
+              }
+              if (pv.getAttribute('data-path') == curPath) {
+                incrArr.push(this.buildIncrement(record.objectId));
+              }
+              if (pv) {
+                var ele = pv.querySelector('#lc-pv #number');
+                if (ele) {
+                  if (pv.getAttribute('data-path') == curPath) {
+                    ele.innerText = (record.times || 0) + 1;
+                  } else {
+                    ele.innerText = record.times || 0;
+                  }
+                  pv.style.display = 'inline';
+                }
+              }
+            });
+            getterArr.push(viewGetter);
+          }
+        }
+      }
+
+      // 如果启动计数自增，批量发起自增请求
+      if (enableIncr) {
+        Promise.all(getterArr).then(() => {
+          incrArr.length > 0 && this.increment(Counter, incrArr);
+        })
+      }
+
+    },
+
+
+    fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${ api_server }/1.1${ url }`, {
+          method,
+          headers: {
+            'X-LC-Id': this.app_id,
+            'X-LC-Key': this.app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      this.addCount(Counter);
+    },
+
+    refreshCounter() {
+      var api_server = this.app_id.slice(-9) !== '-MdYXbMMI' ? this.custom_api_server : `https://${ this.app_id.slice(0, 8).toLowerCase() }.api.lncldglobal.com`;
+      if (api_server) {
+        this.fetchData(api_server);
+      } else {
+        fetch('https://app-router.leancloud.cn/2/route?appId=' + this.app_id)
+          .then(resp => resp.json())
+          .then(({api_server}) => {
+            this.fetchData('https://' + api_server);
+          });
+      }
+    }
+
+  };
+
+  LCCounter.refreshCounter();
+
+  document.addEventListener('pjax:complete', function () {
+    LCCounter.refreshCounter();
+  });
+</script>
+
+
+
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "user-color-scheme";
+const rootElementDarkModeAttributeName = "data-user-color-scheme";
+
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+
+/**
+ * get target mode
+ */
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+
+/**
+ * bind click event for toggle button
+ */
+function bindToggleButton() {
+	var btn=$("#wrapper .toggle-mode-btn");
+    btn.on('click',(e) => {
+      const mode = toggleCustomDarkMode();
+      applyCustomDarkModeSettings(mode);
+    });
+}
+
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", bindToggleButton);
+document.addEventListener("pjax:success", bindToggleButton);
+
+</script>
+
+
+
+
+
+
+
+
+<script>
+function listennSidebarTOC() {
+  const navItems = document.querySelectorAll(".toc li");
+  if (!navItems.length) return;
+  const sections = [...navItems].map((element) => {
+    const link = element.querySelector(".toc-link");
+    const target = document.getElementById(
+      decodeURI(link.getAttribute("href")).replace("#", "")
+    );
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+		top: target.offsetTop + 100,
+		
+		behavior: "smooth"
+		
+	  });
+    });
+    return target;
+  });
+
+  function activateNavByIndex(target) {
+    if (target.classList.contains("active-current")) return;
+
+    document.querySelectorAll(".toc .active").forEach((element) => {
+      element.classList.remove("active", "active-current");
+    });
+    target.classList.add("active", "active-current");
+    let parent = target.parentNode;
+    while (!parent.matches(".toc")) {
+      if (parent.matches("li")) parent.classList.add("active");
+      parent = parent.parentNode;
+    }
+  }
+
+  function findIndex(entries) {
+    let index = 0;
+    let entry = entries[index];
+    if (entry.boundingClientRect.top > 0) {
+      index = sections.indexOf(entry.target);
+      return index === 0 ? 0 : index - 1;
+    }
+    for (; index < entries.length; index++) {
+      if (entries[index].boundingClientRect.top <= 0) {
+        entry = entries[index];
+      } else {
+        return sections.indexOf(entry.target);
+      }
+    }
+    return sections.indexOf(entry.target);
+  }
+
+  function createIntersectionObserver(marginTop) {
+    marginTop = Math.floor(marginTop + 10000);
+    let intersectionObserver = new IntersectionObserver(
+      (entries, observe) => {
+        let scrollHeight = document.documentElement.scrollHeight + 100;
+        if (scrollHeight > marginTop) {
+          observe.disconnect();
+          createIntersectionObserver(scrollHeight);
+          return;
+        }
+        let index = findIndex(entries);
+        activateNavByIndex(navItems[index]);
+      },
+      {
+        rootMargin: marginTop + "px 0px -100% 0px",
+        threshold: 0,
+      }
+    );
+    sections.forEach((element) => {
+      element && intersectionObserver.observe(element);
+    });
+  }
+  createIntersectionObserver(document.documentElement.scrollHeight);
+}
+
+document.addEventListener("DOMContentLoaded", listennSidebarTOC);
+document.addEventListener("pjax:success", listennSidebarTOC);
+</script>
+
+<!-- more -->
+
+ 
+	   
+	    
+
+
+<script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox])',
+        selectors: [
+          "title",
+          "#l_cover",
+          "#pjax-container",
+          "#pjax-header-nav-list"
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      window.subData = null; // 移除标题（用于一二级导航栏切换处）
+      if (typeof $.fancybox != "undefined") {
+        $.fancybox.close();    // 关闭弹窗
+      }
+      volantis.$switcher.removeClass('active'); // 关闭移动端激活的搜索框
+      volantis.$header.removeClass('z_search-open'); // 关闭移动端激活的搜索框
+      volantis.$wrapper.removeClass('sub'); // 跳转页面时关闭二级导航
+
+      // 解绑事件 避免重复监听
+      volantis.$topBtn.unbind('click');
+      $('.menu a').unbind('click');
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+      
+      $("#wrapper .toggle-mode-btn").unbind('click');
+      
+	  
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 关于百度统计对 SPA 页面的处理：
+      // 方案一：百度统计>管理>单页应用设置中，打开开启按钮即可对SPA进行统计。 https://tongji.baidu.com/web/help/article?id=324
+      // 方案二：取消注释下列代码。 https://tongji.baidu.com/web/help/article?id=235
+       
+
+      // 关于谷歌统计对 SPA 页面的处理：
+      // 当应用以动态方式加载内容并更新地址栏中的网址时，也应该更新通过 gtag.js 存储的网页网址。
+      // https://developers.google.cn/analytics/devguides/collection/gtagjs/single-page-applications?hl=zh-cn
+      
+
+
+      $('.nav-main').find('.list-v').not('.menu-phone').removeAttr("style",""); // 移除小尾巴的移除
+      $('.menu-phone.list-v').removeAttr("style",""); // 移除小尾巴的移除
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+      try{
+          if (typeof $.fancybox == "undefined") {
+            SCload_fancybox();
+          } else {
+            pjax_fancybox();
+          }
+        
+        
+        
+        if (typeof IssuesAPI == "undefined") {
+          loadIssuesJS();
+        }
+        
+          pjax_initCopyCode();
+        
+		
+          try{pjax_comment();} catch (e) {}
+        
+      } catch (e) {
+        console.log(e);
+      }
+	  
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+	  
+      window.location.href = e.triggerElement.href;
+    });
+</script>
+ 
+	  
+    </div>
+  </body>
+</html>

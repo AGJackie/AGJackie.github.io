@@ -829,55 +829,73 @@
   
   <p>IFoA 英国精算师考试 CT4 精算模型的学习大纲，备考必看。各章的主干知识点和考点总结。</p>
 <a id="more"></a>
-
 <p>CT4分为两部分，1-6章为随机过程，7-13章为生存模型。</p>
-<h2 id="随机过程部分"><a href="#随机过程部分" class="headerlink" title="随机过程部分"></a>随机过程部分</h2><h3 id="Chapter-1-Principles-of-actuarial-modelling"><a href="#Chapter-1-Principles-of-actuarial-modelling" class="headerlink" title="Chapter 1 Principles of actuarial modelling"></a>Chapter 1 Principles of actuarial modelling</h3><p>精算建模的原则。是简单的介绍性质的章节。</p>
+<h2 id="随机过程部分">随机过程部分</h2>
+<h3 id="chapter-1-principles-of-actuarial-modelling">Chapter 1 Principles of actuarial modelling</h3>
+<p>精算建模的原则。是简单的介绍性质的章节。</p>
 <p>熟悉概念即可。比如随机模型（stochastic models）和确定性模型（deterministic models）的优缺点，建模的基本步骤等。</p>
-<h3 id="Chapter-2-Stochastic-processes"><a href="#Chapter-2-Stochastic-processes" class="headerlink" title="Chapter 2 Stochastic processes"></a>Chapter 2 Stochastic processes</h3><p>介绍了随机过程的基本概念，随机过程的种类（根据state和 time是离散还是连续的），白噪声（White noise），随机游走（random walk），平稳性（Stationarity），弱平稳性，独立增量（Independent increments）等。也是简单的介绍性质的章节。</p>
-<h3 id="Chapter-3-Markov-chains"><a href="#Chapter-3-Markov-chains" class="headerlink" title="Chapter 3 Markov chains"></a>Chapter 3 Markov chains</h3><p>马尔可夫链。占25%的分值。大概会出两题，每题12-13分。</p>
+<h3 id="chapter-2-stochastic-processes">Chapter 2 Stochastic processes</h3>
+<p>介绍了随机过程的基本概念，随机过程的种类（根据state和 time是离散还是连续的），白噪声（White noise），随机游走（random walk），平稳性（Stationarity），弱平稳性，独立增量（Independent increments）等。也是简单的介绍性质的章节。</p>
+<h3 id="chapter-3-markov-chains">Chapter 3 Markov chains</h3>
+<p>马尔可夫链。占25%的分值。大概会出两题，每题12-13分。</p>
 <p>给定一个马尔可夫链的实例，要能画出马尔科夫状态转移图（transition graph），进而对其分析。掌握The Chapman-Kolmogorov equations。</p>
-<h3 id="Chapter-4-The-two-state-Markov-model"><a href="#Chapter-4-The-two-state-Markov-model" class="headerlink" title="Chapter 4 The two-state Markov model"></a>Chapter 4 The two-state Markov model</h3><p>两状态的马尔可夫链。本章是第五和第六章的基础章节。</p>
+<h3 id="chapter-4-the-two-state-markov-model">Chapter 4 The two-state Markov model</h3>
+<p>两状态的马尔可夫链。本章是第五和第六章的基础章节。</p>
 <p>要掌握两状态马尔可夫链的三个基本假设。并由此推导公式：</p>
-<p>$$<br>\px{t}{x}=exp(-\int^t_0 \mu_{x+s}ds)<br>$$</p>
+<p><span class="math display">\[
+\px{t}{x}=exp(-\int^t_0 \mu_{x+s}ds)
+\]</span></p>
 <p>掌握在两状态模型中的，死亡力的极大似然估计量。</p>
-<h3 id="Chapter-5-Time-homogeneous-Markov-jump-processes"><a href="#Chapter-5-Time-homogeneous-Markov-jump-processes" class="headerlink" title="Chapter 5 Time-homogeneous Markov jump processes"></a>Chapter 5 Time-homogeneous Markov jump processes</h3><p>时齐带跳的马尔可夫过程。比较难。</p>
+<h3 id="chapter-5-time-homogeneous-markov-jump-processes">Chapter 5 Time-homogeneous Markov jump processes</h3>
+<p>时齐带跳的马尔可夫过程。比较难。</p>
 <p>首先，要注意转移力（transition rates）和转移概率（transition probabilities）的区别。</p>
 <p>要求根据实例写出转移矩阵（transition matrix）。</p>
 <p>HSD model（health-sickness-death model）的图像非常重要，后续的很多例子都基于此。</p>
-<p><img src="https://img.actuarygarden.cn/4e19d7ff-7181-423d-bca7-57a815f62748.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4e19d7ff-7181-423d-bca7-57a815f62748.jpg" srcset="data:image/png;base64,666"></p>
-<p>要掌握 Kolmogorov 的前后差分方程。掌握 Holding time（也叫 waiting time，等待时间），occupancy probabilities（占据（某状态的）时间），状态间转移的期望时间（Expected time to reach state $k$ starting from state $i$）的计算。</p>
+<p><img src="https://img.actuarygarden.cn/4e19d7ff-7181-423d-bca7-57a815f62748.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4e19d7ff-7181-423d-bca7-57a815f62748.jpg" srcset="data:image/png;base64,666" /></p>
+<p>要掌握 Kolmogorov 的前后差分方程。掌握 Holding time（也叫 waiting time，等待时间），occupancy probabilities（占据（某状态的）时间），状态间转移的期望时间（Expected time to reach state <span class="math inline">\(k\)</span> starting from state <span class="math inline">\(i\)</span>）的计算。</p>
 <p>简单的二重减因模型（simple two-decrement model）的两个公式要会推导。</p>
-<p>$$<br>p_{01}(x, x+t)=\frac{\mu_{01}}{\mu_{01}+\mu_{02}}\left[1-e^{-\left(\mu_{01}+\mu_{02}\right) t}\right]<br>$$</p>
-<p>$$<br>p_{02}(x, x+t)=\frac{\mu_{02}}{\mu_{01}+\mu_{02}}\left[1-e^{-\left(\mu_{01}+\mu_{02}\right) t}\right]<br>$$</p>
-<h3 id="Chapter-6-Time-inhomogeneous-Markov-jump-processes"><a href="#Chapter-6-Time-inhomogeneous-Markov-jump-processes" class="headerlink" title="Chapter 6 Time-inhomogeneous Markov jump processes"></a>Chapter 6 Time-inhomogeneous Markov jump processes</h3><p>非时齐带跳的马尔可夫过程。有些难。多数真题出10分，有一张卷子里是20分。</p>
+<p><span class="math display">\[
+p_{01}(x, x+t)=\frac{\mu_{01}}{\mu_{01}+\mu_{02}}\left[1-e^{-\left(\mu_{01}+\mu_{02}\right) t}\right]
+\]</span></p>
+<p><span class="math display">\[
+p_{02}(x, x+t)=\frac{\mu_{02}}{\mu_{01}+\mu_{02}}\left[1-e^{-\left(\mu_{01}+\mu_{02}\right) t}\right]
+\]</span></p>
+<h3 id="chapter-6-time-inhomogeneous-markov-jump-processes">Chapter 6 Time-inhomogeneous Markov jump processes</h3>
+<p>非时齐带跳的马尔可夫过程。有些难。多数真题出10分，有一张卷子里是20分。</p>
 <p>非时齐与时齐的区别在于，它的转移力不再是一个常数，而是一个与时间有关的函数。称作with duration dependence。</p>
-<h2 id="生存模型部分"><a href="#生存模型部分" class="headerlink" title="生存模型部分"></a>生存模型部分</h2><h3 id="Chapter-7-Survival-models"><a href="#Chapter-7-Survival-models" class="headerlink" title="Chapter 7 Survival models"></a>Chapter 7 Survival models</h3><p>生存模型。</p>
+<h2 id="生存模型部分">生存模型部分</h2>
+<h3 id="chapter-7-survival-models">Chapter 7 Survival models</h3>
+<p>生存模型。</p>
 <p>这一章和CT5存在重叠，主要介绍了余命（Future lifetime）的分布函数，生存概率，死亡概率，死亡力（The force of mortality），取整余命的期望（Curtate expectation of life）的基本概念，简单的参数生存模型（Simple parametric survival models），两个死亡力法则（The Gompertz and Makeham laws of mortality）</p>
-<h3 id="Chapter-8-Estimating-the-lifetime-distribution-function"><a href="#Chapter-8-Estimating-the-lifetime-distribution-function" class="headerlink" title="Chapter 8 Estimating the lifetime distribution function"></a>Chapter 8 Estimating the lifetime distribution function</h3><p>估计 lifetime distribution。很简单。</p>
+<h3 id="chapter-8-estimating-the-lifetime-distribution-function">Chapter 8 Estimating the lifetime distribution function</h3>
+<p>估计 lifetime distribution。很简单。</p>
 <p>和上一章的参数估计方法不同，本章介绍的KM和NA生存分析法都是非参数估计方法（nonparametric approach to estimation）。非参数估计没有对生存函数的分布做预先的假定，因而更加准确。</p>
 <p>主要掌握Kaplan-Meier (or product limit)生存分析法和Nelson-Aalen生存分析法，以及两者计算得到的估计量之间的联系。</p>
 <p>要注意实际数据一定是存在删失或者截尾的。在生存分析中考虑了这一点。</p>
-<h3 id="Chapter-9-Proportional-hazards-models"><a href="#Chapter-9-Proportional-hazards-models" class="headerlink" title="Chapter 9 Proportional hazards models"></a>Chapter 9 Proportional hazards models</h3><p>比例风险模型。很简单。9分。</p>
+<h3 id="chapter-9-proportional-hazards-models">Chapter 9 Proportional hazards models</h3>
+<p>比例风险模型。很简单。9分。</p>
 <p>比例风险模型中的hazard，即是指死亡力。</p>
 <p>较为常用的是The Cox proportional hazards model。要求能够指出baseline的实际情景，并在题中给定情景下通过对协变量（covariates）的取值计算hazard。看几道例题就很清楚了。</p>
-<h3 id="Chapter-10-The-Binomial-and-Poisson-models"><a href="#Chapter-10-The-Binomial-and-Poisson-models" class="headerlink" title="Chapter 10 The Binomial and Poisson models"></a>Chapter 10 The Binomial and Poisson models</h3><p>二项模型和泊松模型。偏理论的章节。泊松模型是两者中较好的。一般不直接考察这一章节，但这一章有助于对下一章的理解。</p>
+<h3 id="chapter-10-the-binomial-and-poisson-models">Chapter 10 The Binomial and Poisson models</h3>
+<p>二项模型和泊松模型。偏理论的章节。泊松模型是两者中较好的。一般不直接考察这一章节，但这一章有助于对下一章的理解。</p>
 <p>要掌握 Actuarial estimate 和 Poisson estimate 的计算。</p>
-<h3 id="Chapter-11-Exposed-to-risk"><a href="#Chapter-11-Exposed-to-risk" class="headerlink" title="Chapter 11 Exposed to risk"></a>Chapter 11 Exposed to risk</h3><p>风险暴露数。分为中心风险暴露数和初始风险暴露数。</p>
+<h3 id="chapter-11-exposed-to-risk">Chapter 11 Exposed to risk</h3>
+<p>风险暴露数。分为中心风险暴露数和初始风险暴露数。</p>
 <p>要掌握两者的精确计算和数据存在删失时的近似估计。要注意，census data 和 death data 在 age 的定义上必须是一致的。</p>
 <p>年龄有三种定义方法：</p>
 <ul>
-<li><p>aged $x$ last birthday：上一个生日的年龄为 $x$</p>
-</li>
-<li><p>aged $x$ next birthday：下一个生日的年龄为 $x$</p>
-</li>
-<li><p>aged $x$ nearest birthday：最近的一个生日的年龄为 $x$</p>
-</li>
+<li><p>aged <span class="math inline">\(x\)</span> last birthday：上一个生日的年龄为 <span class="math inline">\(x\)</span></p></li>
+<li><p>aged <span class="math inline">\(x\)</span> next birthday：下一个生日的年龄为 <span class="math inline">\(x\)</span></p></li>
+<li><p>aged <span class="math inline">\(x\)</span> nearest birthday：最近的一个生日的年龄为 <span class="math inline">\(x\)</span></p></li>
 </ul>
-<p>由年龄的定义方法得到的某年龄 $x$ 处在的实际年龄区间称作 Rate interval。</p>
-<p><img src="https://img.actuarygarden.cn/53af53ee-7ce5-4f64-b17b-237461e9e4c1.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/53af53ee-7ce5-4f64-b17b-237461e9e4c1.jpg" srcset="data:image/png;base64,666"></p>
-<h3 id="Chapter-12-Graduation-and-statistical-tests"><a href="#Chapter-12-Graduation-and-statistical-tests" class="headerlink" title="Chapter 12 Graduation and statistical tests"></a>Chapter 12 Graduation and statistical tests</h3><p>修匀和统计方法。统计方法的部分在CT3中已经学过。</p>
-<h3 id="Chapter-13-Methods-of-graduation"><a href="#Chapter-13-Methods-of-graduation" class="headerlink" title="Chapter 13 Methods of graduation"></a>Chapter 13 Methods of graduation</h3><p>介绍了三种修匀方法。graduation by parametric formula，graduation by reference to a standard table，graphical graduation</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>CT4 最重要的概念是死亡力。CT4中的每一章都是和死亡力相关的，无论是直接或者间接。Force of mortality，transaction rates，比例风险模型中的hazard，这些都是指死亡力。</p>
+<p>由年龄的定义方法得到的某年龄 <span class="math inline">\(x\)</span> 处在的实际年龄区间称作 Rate interval。</p>
+<p><img src="https://img.actuarygarden.cn/53af53ee-7ce5-4f64-b17b-237461e9e4c1.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/53af53ee-7ce5-4f64-b17b-237461e9e4c1.jpg" srcset="data:image/png;base64,666" /></p>
+<h3 id="chapter-12-graduation-and-statistical-tests">Chapter 12 Graduation and statistical tests</h3>
+<p>修匀和统计方法。统计方法的部分在CT3中已经学过。</p>
+<h3 id="chapter-13-methods-of-graduation">Chapter 13 Methods of graduation</h3>
+<p>介绍了三种修匀方法。graduation by parametric formula，graduation by reference to a standard table，graphical graduation</p>
+<h2 id="结语">结语</h2>
+<p>CT4 最重要的概念是死亡力。CT4中的每一章都是和死亡力相关的，无论是直接或者间接。Force of mortality，transaction rates，比例风险模型中的hazard，这些都是指死亡力。</p>
 <p>You have three methods of graduation, but only one way to pass the exam——work hard.</p>
 
   
@@ -996,8 +1014,7 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>CT4 Survival Model 精算模型学习笔记</p>
           <p class='content'>根据赫瑞瓦特的 CT4 精算模型课程对全书的知识点做的梳理，和协会的CT4考试内容不完全一致，适合预习或者复习CT4的时候理一遍思路。
 
-
-把一学期老师上课内容梳理一遍+自己理解～很基础但很有用...</p>
+把一学期老师上课内容梳理一遍+自己理解～很基础但很有...</p>
         </a>
       
       
@@ -1005,8 +1022,7 @@
           <p class='title'>CT2 Finance and Financial reporting 公司金融与财务报表笔记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>根据赫瑞瓦特的 CT2 公司金融与财务报表课程对全书的知识点做的梳理。
 
-
-本来在国内就学了会计，到了英国又来了一遍，真实开心（误）。下面就梳理一下对于考试来说重要的知识（老师勾的），不然真的贼...</p>
+本来在国内就学了会计，到了英国又来了一遍，真实开心（误）。下面就梳理一下对于考试来说重要的知识（老师勾的），不然真的...</p>
         </a>
       
     </div>
@@ -1135,7 +1151,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E9%83%A8%E5%88%86"><span class="toc-text">随机过程部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-1-Principles-of-actuarial-modelling"><span class="toc-text">Chapter 1 Principles of actuarial modelling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-2-Stochastic-processes"><span class="toc-text">Chapter 2 Stochastic processes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-3-Markov-chains"><span class="toc-text">Chapter 3 Markov chains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-4-The-two-state-Markov-model"><span class="toc-text">Chapter 4 The two-state Markov model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-5-Time-homogeneous-Markov-jump-processes"><span class="toc-text">Chapter 5 Time-homogeneous Markov jump processes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-6-Time-inhomogeneous-Markov-jump-processes"><span class="toc-text">Chapter 6 Time-inhomogeneous Markov jump processes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%AD%98%E6%A8%A1%E5%9E%8B%E9%83%A8%E5%88%86"><span class="toc-text">生存模型部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-7-Survival-models"><span class="toc-text">Chapter 7 Survival models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-8-Estimating-the-lifetime-distribution-function"><span class="toc-text">Chapter 8 Estimating the lifetime distribution function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-9-Proportional-hazards-models"><span class="toc-text">Chapter 9 Proportional hazards models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-10-The-Binomial-and-Poisson-models"><span class="toc-text">Chapter 10 The Binomial and Poisson models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-11-Exposed-to-risk"><span class="toc-text">Chapter 11 Exposed to risk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-12-Graduation-and-statistical-tests"><span class="toc-text">Chapter 12 Graduation and statistical tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Chapter-13-Methods-of-graduation"><span class="toc-text">Chapter 13 Methods of graduation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E9%83%A8%E5%88%86"><span class="toc-text">随机过程部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-1-principles-of-actuarial-modelling"><span class="toc-text">Chapter 1 Principles of actuarial modelling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-2-stochastic-processes"><span class="toc-text">Chapter 2 Stochastic processes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-3-markov-chains"><span class="toc-text">Chapter 3 Markov chains</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-4-the-two-state-markov-model"><span class="toc-text">Chapter 4 The two-state Markov model</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-5-time-homogeneous-markov-jump-processes"><span class="toc-text">Chapter 5 Time-homogeneous Markov jump processes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-6-time-inhomogeneous-markov-jump-processes"><span class="toc-text">Chapter 6 Time-inhomogeneous Markov jump processes</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%AD%98%E6%A8%A1%E5%9E%8B%E9%83%A8%E5%88%86"><span class="toc-text">生存模型部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-7-survival-models"><span class="toc-text">Chapter 7 Survival models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-8-estimating-the-lifetime-distribution-function"><span class="toc-text">Chapter 8 Estimating the lifetime distribution function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-9-proportional-hazards-models"><span class="toc-text">Chapter 9 Proportional hazards models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-10-the-binomial-and-poisson-models"><span class="toc-text">Chapter 10 The Binomial and Poisson models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-11-exposed-to-risk"><span class="toc-text">Chapter 11 Exposed to risk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-12-graduation-and-statistical-tests"><span class="toc-text">Chapter 12 Graduation and statistical tests</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#chapter-13-methods-of-graduation"><span class="toc-text">Chapter 13 Methods of graduation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol>
     </div>
   </section>
 
@@ -1235,14 +1251,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1394,294 +1410,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1819,10 +1547,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

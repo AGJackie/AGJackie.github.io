@@ -829,12 +829,11 @@
   
   <p>从一个精算学生的角度谈自己对latex的学习历程。</p>
 <a id="more"></a>
-
 <p>本文不介绍LaTeX入门的具体知识，仅以一个精算专业学生的角度来谈谈自己的LaTeX学习经历。人对自己不熟悉的事物会有本能的排斥，因此本文的目的是用我的学习经历帮助还不了解LaTeX的朋友建立熟悉感，这样后续的学习就会少很多阻力。至于正式的学习，互联网上不乏优秀的LaTeX入门的资料，建议通读《一份不太简短的LaTeX介绍》（安装完Texlive，在命令行输入：texdoc Ishort-zh，即可获取pdf文档）。</p>
 <p>我第一次听说LaTeX这个词是在准备美国大学生数学建模竞赛的时候，时间是大一的寒假。和现在大家在精算考试前本能地想从各处（如微信公众号：精算后花园）搜刮经验贴一样，我看到有篇美赛的经验贴说“<strong>LaTeX是一个免费且强大的排版工具</strong>，美赛中用它排版论文毫无疑问是加分项。但不要轻易尝试，容易报错。”于是我下载安装了LaTeX的发行版之一——<strong>Texlive</strong>并开始了简单的入门。但最后比赛时还是用Word排的版，一方面比赛时间紧张，一方面对LaTeX不太熟悉，用来排版正式作品心里也没底。</p>
-<p>后来大二大三就一直没碰LaTeX。直到大四，保研的事情尘埃落定，于是决定多写写公众号，于是重读了《一份不太简短的LaTeX介绍》，并用LaTeX对精算的知识点进行系统整理，排版精算师考试的讲义书籍等等。不用Word而用LaTeX的原因之一是<strong>LaTeX在处理数学公式上具有明显的优势，尤其是精算符号</strong>。上一则推文《<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzIyODY3ODM2Nw==&mid=2247484569&idx=1&sn=4b628bace15684405a853d6da6e5110f&chksm=e84f0b29df38823fcf9a6fb7478110851921de2783969a07f9e8e36be3b34d8095c18186aa98&scene=21#wechat_redirect">如何有效记忆寿险精算符号？</a>》的 PDF 文档就是用 LaTeX 排版的。其次，<strong>LaTeX处理长文档也很便捷</strong>。用 input 可以把整个书籍源码按章节分拆成多个子文档，结构更清晰，方便注释当前无需编译的章节，节省编译时间。而Word尽管也可以有子文档的形式，但长文档中的大量mathtype公式会变成图片，不利于后续的修改。Word有上千页文字时，打开都需要半天，更别说有数学公式了。但是LaTeX因为实现了内容和样式分离，输入时不会实时渲染出html（word其实是边输入边渲染成html来达到缩减即所得），所以LaTeX排版长文档时很稳定，无非是导出pdf慢一点，但不会出现程序突然崩溃的情况。我的CM1授课讲义已经写到了200多页，从来没出现latex卡死的情况。（顺便打个广告，<strong>需要精算课程在线辅导欢迎联系Jackie微信号：AGJackie</strong>）另外，录制精算课程需要<strong>制作PPT</strong>，这用<strong>LaTeX的beamer文类</strong>也可以实现。将排版精算书籍的文档源码稍微改动就可以生成类PPT的PDF，而且学术风十足，且方便交叉引用，将来用在毕业论文答辩PPT制作上也是个不错的选择。</p>
+<p>后来大二大三就一直没碰LaTeX。直到大四，保研的事情尘埃落定，于是决定多写写公众号，于是重读了《一份不太简短的LaTeX介绍》，并用LaTeX对精算的知识点进行系统整理，排版精算师考试的讲义书籍等等。不用Word而用LaTeX的原因之一是<strong>LaTeX在处理数学公式上具有明显的优势，尤其是精算符号</strong>。上一则推文《<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzIyODY3ODM2Nw==&amp;mid=2247484569&amp;idx=1&amp;sn=4b628bace15684405a853d6da6e5110f&amp;chksm=e84f0b29df38823fcf9a6fb7478110851921de2783969a07f9e8e36be3b34d8095c18186aa98&amp;scene=21#wechat_redirect">如何有效记忆寿险精算符号？</a>》的 PDF 文档就是用 LaTeX 排版的。其次，<strong>LaTeX处理长文档也很便捷</strong>。用 input 可以把整个书籍源码按章节分拆成多个子文档，结构更清晰，方便注释当前无需编译的章节，节省编译时间。而Word尽管也可以有子文档的形式，但长文档中的大量mathtype公式会变成图片，不利于后续的修改。Word有上千页文字时，打开都需要半天，更别说有数学公式了。但是LaTeX因为实现了内容和样式分离，输入时不会实时渲染出html（word其实是边输入边渲染成html来达到缩减即所得），所以LaTeX排版长文档时很稳定，无非是导出pdf慢一点，但不会出现程序突然崩溃的情况。我的CM1授课讲义已经写到了200多页，从来没出现latex卡死的情况。（顺便打个广告，<strong>需要精算课程在线辅导欢迎联系Jackie微信号：AGJackie</strong>）另外，录制精算课程需要<strong>制作PPT</strong>，这用<strong>LaTeX的beamer文类</strong>也可以实现。将排版精算书籍的文档源码稍微改动就可以生成类PPT的PDF，而且学术风十足，且方便交叉引用，将来用在毕业论文答辩PPT制作上也是个不错的选择。</p>
 <p>大四下学期我去了某家保险公司的精算部实习。部门总打算排版一份精算制度汇编，在部门人手紧缺的情况下，这份艰巨的任务自然落到了精算部唯一的实习生Jackie身上。我花了一个月时间纯手打了100多页的精算制度，领导等不及了，于是接受领导的建议对剩下的600多页内容用插入PDF的形式进行排版，牺牲了一定程度的美观，但节约了时间。话说回来，这一个月的排版经历实实在在地提高了我的LaTeX水平，比如<strong>长表格，合并单元格，长公式的断行</strong>，等等。所以建议大家<strong>学习LaTeX使用的过程多上手操作</strong>，报错没关系，有搜索引擎帮你。多排几份文档就熟练了。实习结束时，我留下了排版的LaTeX源码并写了份简短的排版指南，以便后续更新。果然，前一阵子新的实习生来找我了……</p>
-<p>下面再详细讲讲我用LaTeX排版书籍的过程。普通文档用LaTeX自带的文档类模版，如article，book即可。加<strong>宏包ctex或者xeCJK可以实现对中文排版的支持</strong>。打数学公式需要添加相应的数学公式宏包。加<strong>宏包actuarialsymbol</strong>可以方便地打出寿险精算符号。<strong>宏包XSIM可以实现习题册的排版</strong>，类似一个简易的题库系统。要让书籍排版得更加美观，最好选择一个适用的模版。LaTeX模版的制作需要自定义宏的知识，有一定的门槛，所以大多数用户（比如我）是用的别人做的模版。我排版的精算制度用的是<strong>ElegantBook</strong>的模版（TeX源码的github链接：<a target="_blank" rel="noopener" href="https://github.com/ElegantLaTeX/ElegantBook%EF%BC%8C%E4%B9%9F%E6%9C%89%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%EF%BC%8C%E5%90%8D%E4%B8%BAElegantLaTeX%EF%BC%89%E3%80%82%E6%AD%A3%E5%9C%A8%E6%8E%92%E7%89%88%E4%B8%AD%E7%9A%84%E7%B2%BE%E7%AE%97%E4%B9%A6%E7%B1%8D%E6%98%AF%E6%8A%8AElegantBook%E6%96%87%E6%A1%A3%E7%B1%BB%E6%A8%A1%E6%9D%BF%E5%92%8CXSIM%E5%AE%8F%E5%8C%85%E4%B8%80%E8%B5%B7%E7%94%A8%EF%BC%88%E5%86%B2%E7%AA%81%E9%83%A8%E5%88%86%E7%9A%84%E4%BB%A3%E7%A0%81%E8%A6%81%E6%B3%A8%E9%87%8A%E6%8E%89%EF%BC%89%EF%BC%8C%E8%BF%99%E6%A0%B7%E5%8F%AF%E4%BB%A5%E5%BE%88%E6%96%B9%E4%BE%BF%E5%9C%B0%E7%AE%A1%E7%90%86%E5%90%84%E7%AB%A0%E7%9A%84%E4%B9%A0%E9%A2%98%EF%BC%88%E5%88%86%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86%EF%BC%9AIFoA%EF%BC%8CSOA%EF%BC%8CCAA%E7%AD%89%E7%AD%89%EF%BC%89%E3%80%82">https://github.com/ElegantLaTeX/ElegantBook，也有微信公众号，名为ElegantLaTeX）。正在排版中的精算书籍是把ElegantBook文档类模板和XSIM宏包一起用（冲突部分的代码要注释掉），这样可以很方便地管理各章的习题（分标签管理：IFoA，SOA，CAA等等）。</a>                                                </p>
+<p>下面再详细讲讲我用LaTeX排版书籍的过程。普通文档用LaTeX自带的文档类模版，如article，book即可。加<strong>宏包ctex或者xeCJK可以实现对中文排版的支持</strong>。打数学公式需要添加相应的数学公式宏包。加<strong>宏包actuarialsymbol</strong>可以方便地打出寿险精算符号。<strong>宏包XSIM可以实现习题册的排版</strong>，类似一个简易的题库系统。要让书籍排版得更加美观，最好选择一个适用的模版。LaTeX模版的制作需要自定义宏的知识，有一定的门槛，所以大多数用户（比如我）是用的别人做的模版。我排版的精算制度用的是<strong>ElegantBook</strong>的模版（TeX源码的github链接：https://github.com/ElegantLaTeX/ElegantBook，也有微信公众号，名为ElegantLaTeX）。正在排版中的精算书籍是把ElegantBook文档类模板和XSIM宏包一起用（冲突部分的代码要注释掉），这样可以很方便地管理各章的习题（分标签管理：IFoA，SOA，CAA等等）。</p>
 <p>最后，LaTeX在<strong>SCI论文的绘图</strong>上也有妙用。你能想象出来的图用<strong>TikZ和PGF宏包</strong>都可以画出来，而且非常精致，唯一缺点是比较耗时。这是我目前准备开始学习的内容，也是一个不亚于精算的大坑了。</p>
 
   
@@ -953,15 +952,14 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【精算后花园】博客文章合集目录</p>
           <p class='content'>Jackie 目前已经把公众号【精算后花园】里的所有文章重新排版放到博客上，请放心食用。
 
-
-前言为方便读者查阅【精算后花园】博客往期文章，Jackie将文章分门别类汇总此处。会持续更新。本次更...</p>
+前言
+为方便读者查阅【精算后花园】博客往期文章，Jackie将文章分门别类汇总此处。会持续更新。...</p>
         </a>
       
       
         <a class='next' href='/Actuarial-Symbol/'>
           <p class='title'>如何有效记忆寿险精算符号<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>系统讲解寿险和年金符号的构成逻辑。
-
 
 点击链接进入公众号阅读如何有效记忆寿险精算符号
 </p>
@@ -1095,14 +1093,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1254,294 +1252,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1679,10 +1389,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

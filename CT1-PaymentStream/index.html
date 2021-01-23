@@ -829,99 +829,119 @@
   
   <p>探讨CT1利息理论中连续现金流的几种积分套路。</p>
 <a id="more"></a>
-
-<p><img src="https://img.actuarygarden.cn/4e8739df-e279-46e9-907a-ca05096a01ed.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4e8739df-e279-46e9-907a-ca05096a01ed.jpg" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/4e8739df-e279-46e9-907a-ca05096a01ed.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4e8739df-e279-46e9-907a-ca05096a01ed.jpg" srcset="data:image/png;base64,666" /></p>
 <p>计算出上图的公式或许不能告诉你某家奶茶店的WiFi密码，但一定能给你的考试押中一道大题——无论你参加的是IFoA的CM1新体系考试还是学校里CT1（或新体系CM1）的免试认证，payment stream都是一道必考题。</p>
 <p>对于payment streams，即连续支付的现金流，考试时一般考察两个点：</p>
-<ol>
-<li><p>计算 present value</p>
-</li>
-<li><p>计算 equivalent constant force of interest</p>
-</li>
+<ol type="1">
+<li><p>计算 present value</p></li>
+<li><p>计算 equivalent constant force of interest</p></li>
 </ol>
 <p>(2)中，计算 equivalent constant force of interest，只需要令（1）中计算出的现值和连续支付的等额年金现值公式相等即可。所以解题的关键部分是（1）计算现值。</p>
-<p>考虑一个payment stream，从a时刻支付到b时刻，rate of payment为 $\rho(t)$，利息力为$\delta(t)$。则该 payment stream 在 $a$ 时刻的现值：</p>
-<p>$$<br>PV=\int_{a}^{b}\rho(t)v(t)dt<br>$$<br>其中：<br>$$<br>v(t)=e^{-\int_{0}^{t}\delta(s)ds}<br>$$</p>
+<p>考虑一个payment stream，从a时刻支付到b时刻，rate of payment为 <span class="math inline">\(\rho(t)\)</span>，利息力为<span class="math inline">\(\delta(t)\)</span>。则该 payment stream 在 <span class="math inline">\(a\)</span> 时刻的现值：</p>
+<p><span class="math display">\[
+PV=\int_{a}^{b}\rho(t)v(t)dt
+\]</span> 其中： <span class="math display">\[
+v(t)=e^{-\int_{0}^{t}\delta(s)ds}
+\]</span></p>
 <p>这就涉及到两个积分的计算。</p>
-<p>往年 CT1 和2019年改革以后的 CM1 考试里，payment stream的利息力 $\delta(t)$ 一般都是一个分段函数，并且是常数函数和关于 $t$ 的一次函数的混合函数。</p>
-<p>而 $\rho(t)$ 在往年考试题中只出现过两种形式：常数函数和指数函数。以下的几个 Exercise 均为CM1真题风格。</p>
-<h2 id="rho-t-为常数函数，-delta-t-为常数函数"><a href="#rho-t-为常数函数，-delta-t-为常数函数" class="headerlink" title="$\rho(t)$为常数函数，$\delta(t)$ 为常数函数"></a>$\rho(t)$为常数函数，$\delta(t)$ 为常数函数</h2><p>（更准确地讲，这里的 $\delta(t)$ 可以是含有常数函数和关于t的一次函数的分段函数，但在payment stream需要积分的时间段里， $\delta(t)$ 为常数函数）。</p>
-<h3 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h3><p>An individual can obtain a force of interest per annum at time t , measured in years, as given by the formula:<br>$$<br>\delta(t)=\left{\begin{array}{ll}{0.03+0.01 t} &amp; {0 \leq t&lt;4} \ {0.07} &amp; {4 \leq t&lt;6} \ {0.09} &amp; {6 \leq t}\end{array}\right.<br>$$</p>
+<p>往年 CT1 和2019年改革以后的 CM1 考试里，payment stream的利息力 <span class="math inline">\(\delta(t)\)</span> 一般都是一个分段函数，并且是常数函数和关于 <span class="math inline">\(t\)</span> 的一次函数的混合函数。</p>
+<p>而 <span class="math inline">\(\rho(t)\)</span> 在往年考试题中只出现过两种形式：常数函数和指数函数。以下的几个 Exercise 均为CM1真题风格。</p>
+<h2 id="rhot为常数函数deltat-为常数函数"><span class="math inline">\(\rho(t)\)</span>为常数函数，<span class="math inline">\(\delta(t)\)</span> 为常数函数</h2>
+<p>（更准确地讲，这里的 <span class="math inline">\(\delta(t)\)</span> 可以是含有常数函数和关于t的一次函数的分段函数，但在payment stream需要积分的时间段里， <span class="math inline">\(\delta(t)\)</span> 为常数函数）。</p>
+<h3 id="exercise-1">Exercise 1</h3>
+<p>An individual can obtain a force of interest per annum at time t , measured in years, as given by the formula: <span class="math display">\[
+\delta(t)=\left\{\begin{array}{ll}{0.03+0.01 t} &amp; {0 \leq t&lt;4} \\ {0.07} &amp; {4 \leq t&lt;6} \\ {0.09} &amp; {6 \leq t}\end{array}\right.
+\]</span></p>
 <ul>
-<li>(i)Calculate the amount the individual would need to invest at time $t = 0$ in order<br>to receive a continuous payment stream of $3,000 per annum from time $t = 4$<br>to t =10.</li>
+<li>(i)Calculate the amount the individual would need to invest at time <span class="math inline">\(t = 0\)</span> in order to receive a continuous payment stream of $3,000 per annum from time <span class="math inline">\(t = 4\)</span> to t =10.</li>
 <li>(ii)Calculate the equivalent constant annual effective rate of interest earned by the individual in part(i).</li>
 </ul>
 <details green open><summary> 思路 </summary>
               <div class='content'>
-              <p>我们来看第一小问。</p><p>$$<br>\begin{aligned}<br>PV&amp;=\int_{a}^{b}\rho(t)v(t)dt\<br>&amp;=\int_{4}^{10}3000v(t)dt\<br>&amp;=3000\int_{4}^{10}v(t)dt<br>\end{aligned}<br>$$</p><p>然后根据 $v(t)=e^{-\int_{0}^{t}\delta(s)ds}$，对分段函数 $\delta(t)$ 求积分即可。求得:<br>$$<br>v(t)=\left{<br>\begin{array}{cc}<br>{e^{0.08-0.07t}} &amp; {4 \leq t &lt; 6}\<br>{e^{0.20-0.09t}} &amp; {6 \leq t \leq 10}<br>\end{array}<br>\right.<br>$$<br>比较容易求得积分。可以得到：<br>$$<br>\begin{aligned} P V &amp;=3,000 \int_{4}^{6}\left(e^{0.08-0.07 t}\right) d t+3,000 \int_{6}^{10} e^{(0.20-0.09 t)} d t \ &amp;=\frac{3,000 e^{0.08}}{-0.07}\left[e^{-0.42}-e^{-0.28}\right]+\frac{3,000 e^{0.20}}{-0.09}\left[e^{-0.90}-e^{-0.54}\right] \ &amp;=4584.02+7172.83=$ 11,756.85 \end{aligned}<br>$$</p>
+              <p>我们来看第一小问。</p><p><span class="math display">\[\begin{aligned}PV&amp;=\int_{a}^{b}\rho(t)v(t)dt\\&amp;=\int_{4}^{10}3000v(t)dt\\&amp;=3000\int_{4}^{10}v(t)dt\end{aligned}\]</span></p><p>然后根据 <span class="math inline">\(v(t)=e^{-\int_{0}^{t}\delta(s)ds}\)</span>，对分段函数 <span class="math inline">\(\delta(t)\)</span> 求积分即可。求得: <span class="math display">\[v(t)=\left\{\begin{array}{cc}{e^{0.08-0.07t}} &amp; {4 \leq t &lt; 6}\\{e^{0.20-0.09t}} &amp; {6 \leq t \leq 10}\end{array}\right.\]</span> 比较容易求得积分。可以得到： <span class="math display">\[\begin{aligned} P V &amp;=3,000 \int_{4}^{6}\left(e^{0.08-0.07 t}\right) d t+3,000 \int_{6}^{10} e^{(0.20-0.09 t)} d t \\ &amp;=\frac{3,000 e^{0.08}}{-0.07}\left[e^{-0.42}-e^{-0.28}\right]+\frac{3,000 e^{0.20}}{-0.09}\left[e^{-0.90}-e^{-0.54}\right] \\ &amp;=4584.02+7172.83=\$ 11,756.85 \end{aligned}\]</span></p>
               </div>
             </details>
-
-<h2 id="rho-t-为指数函数，-delta-t-为常数函数"><a href="#rho-t-为指数函数，-delta-t-为常数函数" class="headerlink" title="$\rho(t)$ 为指数函数，$\delta(t)$ 为常数函数"></a>$\rho(t)$ 为指数函数，$\delta(t)$ 为常数函数</h2><p>（更准确地讲，这里的 $\delta(t)$ 可以是含有常数函数和关于 $t$ 的一次函数的分段函数，但在payment stream需要积分的时间段里， $\delta(t)$ 为常数函数）。</p>
-<h3 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise 2"></a>Exercise 2</h3><p>The force of interest at time t, where time is measured in years, is given by:<br>$$<br>\delta(t)=\left{<br>\begin{array}{cc}<br>{0.06} &amp; {0 \leq t&lt;4} \<br> {0.02+0.01 t} &amp; {4 \leq t}<br> \end{array}<br> \right.<br>$$</p>
+<h2 id="rhot-为指数函数deltat-为常数函数"><span class="math inline">\(\rho(t)\)</span> 为指数函数，<span class="math inline">\(\delta(t)\)</span> 为常数函数</h2>
+<p>（更准确地讲，这里的 <span class="math inline">\(\delta(t)\)</span> 可以是含有常数函数和关于 <span class="math inline">\(t\)</span> 的一次函数的分段函数，但在payment stream需要积分的时间段里， <span class="math inline">\(\delta(t)\)</span> 为常数函数）。</p>
+<h3 id="exercise-2">Exercise 2</h3>
+<p>The force of interest at time t, where time is measured in years, is given by: <span class="math display">\[
+\delta(t)=\left\{
+\begin{array}{cc}
+{0.06} &amp; {0 \leq t&lt;4} \\
+ {0.02+0.01 t} &amp; {4 \leq t}
+ \end{array}
+ \right.
+\]</span></p>
 <ul>
-<li>(i)Calculate, showing all workings, the accumulated value at time t = 10 of an investment of 50 units at time $t = 0$.</li>
+<li>(i)Calculate, showing all workings, the accumulated value at time t = 10 of an investment of 50 units at time <span class="math inline">\(t = 0\)</span>.</li>
 <li>(ii)Hence calculate the equivalent constant annual effective rate of interest implied by the transaction in (i).</li>
 </ul>
-<p>A continuous payment stream is paid at a rate of $e^{-0.05t}$ from time $t = 0$ to time $ t = 4$.</p>
+<p>A continuous payment stream is paid at a rate of <span class="math inline">\(e^{-0.05t}\)</span> from time <span class="math inline">\(t = 0\)</span> to time $ t = 4$.</p>
 <ul>
-<li>(iii)Calculate, showing all workings, the present value of this payment stream at time $t = 0$.</li>
+<li>(iii)Calculate, showing all workings, the present value of this payment stream at time <span class="math inline">\(t = 0\)</span>.</li>
 </ul>
 <details green open><summary> 思路 </summary>
               <div class='content'>
-              <p>我们来看第三小问。</p><p>先计算出 $v(t)=e^{-\int_{0}^{t}0.06ds}=e^{-0.06t}$，代入公式，得：<br>$$<br>\begin{aligned}<br>PV&amp;=\int_{0}^{4}e^{-0.05t} e^{-0.06t}dt\<br>&amp;=\int_{0}^{4}e^{-0.11t}dt\<br>&amp;=\left[-\frac{1}{0.11} e^{-0.11 t}\right]_{0}^{4}=\frac{1}{0.11}\left(1-e^{-0.44}\right)=3.24<br>\end{aligned}<br>$$</p><p>可以发现，出题者让 $\rho(t)$ 为指数函数，是为了方便考生的计算。因为 $\rho(t)$ 和 $v(t)$ 均形如 $e^{-at+b}$ 和 $e^{-ct}$,可以直接相乘得到 $e^{-(a+c)t+b}$，容易求出积分。</p>
+              <p>我们来看第三小问。</p><p>先计算出 <span class="math inline">\(v(t)=e^{-\int_{0}^{t}0.06ds}=e^{-0.06t}\)</span>，代入公式，得： <span class="math display">\[\begin{aligned}PV&amp;=\int_{0}^{4}e^{-0.05t} e^{-0.06t}dt\\&amp;=\int_{0}^{4}e^{-0.11t}dt\\&amp;=\left[-\frac{1}{0.11} e^{-0.11 t}\right]_{0}^{4}=\frac{1}{0.11}\left(1-e^{-0.44}\right)=3.24\end{aligned}\]</span></p><p>可以发现，出题者让 <span class="math inline">\(\rho(t)\)</span> 为指数函数，是为了方便考生的计算。因为 <span class="math inline">\(\rho(t)\)</span> 和 <span class="math inline">\(v(t)\)</span> 均形如 <span class="math inline">\(e^{-at+b}\)</span> 和 <span class="math inline">\(e^{-ct}\)</span>,可以直接相乘得到 <span class="math inline">\(e^{-(a+c)t+b}\)</span>，容易求出积分。</p>
               </div>
             </details>
-
 <p>出题人为了简化考生的计算也是煞费苦心了。</p>
-<p>IFoA的官方教材机构ActEd的CMP中，还给出了一道“$\rho(t)$为关于 $t$ 的一次函数，且 $\delta(t)$ 为关于 $t$ 的一次函数”的题。</p>
-<h2 id="rho-t-为关于-t-的一次函数，-delta-t-为关于-t-的一次函数"><a href="#rho-t-为关于-t-的一次函数，-delta-t-为关于-t-的一次函数" class="headerlink" title="$\rho(t)$为关于 $t$ 的一次函数，$\delta(t)$ 为关于 $t$ 的一次函数"></a>$\rho(t)$为关于 $t$ 的一次函数，$\delta(t)$ 为关于 $t$ 的一次函数</h2><h3 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise 3"></a>Exercise 3</h3><p>The force of interest at time $t$ is given by:<br>$$<br>\delta(t)=<br>\begin{array}{cc}<br>{0.01t+0.04} &amp; {0 \leq t \leq 5}<br>\end{array}<br>$$<br>Calculate the present value at time 0 of a payment stream, received continuously from time 0 to time 5, under which the rate of payment at time $t$ is $0.5t+2$.</p>
+<p>IFoA的官方教材机构ActEd的CMP中，还给出了一道“<span class="math inline">\(\rho(t)\)</span>为关于 <span class="math inline">\(t\)</span> 的一次函数，且 <span class="math inline">\(\delta(t)\)</span> 为关于 <span class="math inline">\(t\)</span> 的一次函数”的题。</p>
+<h2 id="rhot为关于-t-的一次函数deltat-为关于-t-的一次函数"><span class="math inline">\(\rho(t)\)</span>为关于 <span class="math inline">\(t\)</span> 的一次函数，<span class="math inline">\(\delta(t)\)</span> 为关于 <span class="math inline">\(t\)</span> 的一次函数</h2>
+<h3 id="exercise-3">Exercise 3</h3>
+<p>The force of interest at time <span class="math inline">\(t\)</span> is given by: <span class="math display">\[
+\delta(t)=
+\begin{array}{cc}
+{0.01t+0.04} &amp; {0 \leq t \leq 5}
+\end{array}
+\]</span> Calculate the present value at time 0 of a payment stream, received continuously from time 0 to time 5, under which the rate of payment at time <span class="math inline">\(t\)</span> is <span class="math inline">\(0.5t+2\)</span>.</p>
 <details green open><summary> 思路 </summary>
               <div class='content'>
-              <p>这就需要用到一个积分技巧:<br>$$<br>\int_{a}^{b} f^{\prime}(t) e^{f(t)} d t=\int_{a}^{b} e^{f(t)} d f(t)=\left[e^{f(t)}\right]_{a}^{b}<br>$$</p><p>所以，我们有：</p><p>$$<br>\begin{aligned}<br>PV&amp;=\int_{0}^{5}(0.5 t+2) \exp \left(-\int_{0}^{t}(0.01 s+0.04) ds\right) dt\<br>&amp;=\int_{0}^{5}(0.5 t+2) \exp \left(-\left[0.005 t^{2}+0.04 t\right]\right) d t \ &amp;=-50 \int_{0}^{5}-(0.01 t+0.04) \exp \left(-\left[0.005 t^{2}+0.04 t\right]\right) d t \ &amp;=-50\left[\exp \left(-\left[0.005 t^{2}+0.04 t\right]\right)\right]_{0}^{5} \ &amp;=-50(\exp (-0.125-0.2)-\exp (0)) \ &amp;=13.87<br>\end{aligned}<br>$$</p>
+              <p>这就需要用到一个积分技巧: <span class="math display">\[\int_{a}^{b} f^{\prime}(t) e^{f(t)} d t=\int_{a}^{b} e^{f(t)} d f(t)=\left[e^{f(t)}\right]_{a}^{b}\]</span></p><p>所以，我们有：</p><p><span class="math display">\[\begin{aligned}PV&amp;=\int_{0}^{5}(0.5 t+2) \exp \left(-\int_{0}^{t}(0.01 s+0.04) ds\right) dt\\&amp;=\int_{0}^{5}(0.5 t+2) \exp \left(-\left[0.005 t^{2}+0.04 t\right]\right) d t \\ &amp;=-50 \int_{0}^{5}-(0.01 t+0.04) \exp \left(-\left[0.005 t^{2}+0.04 t\right]\right) d t \\ &amp;=-50\left[\exp \left(-\left[0.005 t^{2}+0.04 t\right]\right)\right]_{0}^{5} \\ &amp;=-50(\exp (-0.125-0.2)-\exp (0)) \\ &amp;=13.87\end{aligned}\]</span></p>
               </div>
             </details>
-
 <p>出这样的题得预先凑好两个一次函数，以便考生能够把该积分技巧用上。</p>
 <p>如果要考察分部积分法，我们还可以这样出题。</p>
-<h2 id="rho-t-为关于-t-的一次函数，-delta-t-为常数函数"><a href="#rho-t-为关于-t-的一次函数，-delta-t-为常数函数" class="headerlink" title="$\rho(t)$ 为关于 $t$ 的一次函数，$\delta(t)$ 为常数函数"></a>$\rho(t)$ 为关于 $t$ 的一次函数，$\delta(t)$ 为常数函数</h2><p>我们将 Exercise 2 的题稍做改编，令 $\rho(t)=t+5$</p>
-<h3 id="Exercise-4"><a href="#Exercise-4" class="headerlink" title="Exercise 4"></a>Exercise 4</h3><p>The force of interest at time $t$, where time is measured in years, is given by:<br>$$<br>\delta(t)=\left{\begin{array}{cc}{0.06} &amp; {0 \leq t&lt;4} \ {0.02+0.01 t} &amp; {4 \leq t}\end{array}\right.<br>$$<br>A continuous payment stream is paid at a rate of $t+5$ from time$ t = 0$ to time $t = 4$.<br>Calculate, showing all workings, the present value of this payment stream at time $t = 0$.</p>
+<h2 id="rhot-为关于-t-的一次函数deltat-为常数函数"><span class="math inline">\(\rho(t)\)</span> 为关于 <span class="math inline">\(t\)</span> 的一次函数，<span class="math inline">\(\delta(t)\)</span> 为常数函数</h2>
+<p>我们将 Exercise 2 的题稍做改编，令 <span class="math inline">\(\rho(t)=t+5\)</span></p>
+<h3 id="exercise-4">Exercise 4</h3>
+<p>The force of interest at time <span class="math inline">\(t\)</span>, where time is measured in years, is given by: <span class="math display">\[
+\delta(t)=\left\{\begin{array}{cc}{0.06} &amp; {0 \leq t&lt;4} \\ {0.02+0.01 t} &amp; {4 \leq t}\end{array}\right.
+\]</span> A continuous payment stream is paid at a rate of <span class="math inline">\(t+5\)</span> from time$ t = 0$ to time <span class="math inline">\(t = 4\)</span>. Calculate, showing all workings, the present value of this payment stream at time <span class="math inline">\(t = 0\)</span>.</p>
 <details green open><summary> 思路（也是详细答案） </summary>
               <div class='content'>
-              <p>同样地，代入公式得：<br>$$<br>\begin{aligned}<br>PV&amp;=\int_{a}^{b}\rho(t)v(t)dt\<br>&amp;=\int_{0}^{4}(t+5)e^{-\int_{0}^{t}0.06ds}dt\<br>&amp;=\int_{0}^{4}(t+5)e^{-0.06t}dt\<br>&amp;=e^{0.3}\int_{0}^{4}(t+5)e^{-0.06(t+5)}dt<br>\end{aligned}<br>$$<br>换元，令$y=t+5$，则：<br>$$<br>PV=e^{0.3}\int_{5}^{9}ye^{-0.06y}dy<br>$$<br>再用分部积分法即可求出答案。</p>
+              <p>同样地，代入公式得： <span class="math display">\[\begin{aligned}PV&amp;=\int_{a}^{b}\rho(t)v(t)dt\\&amp;=\int_{0}^{4}(t+5)e^{-\int_{0}^{t}0.06ds}dt\\&amp;=\int_{0}^{4}(t+5)e^{-0.06t}dt\\&amp;=e^{0.3}\int_{0}^{4}(t+5)e^{-0.06(t+5)}dt\end{aligned}\]</span> 换元，令<span class="math inline">\(y=t+5\)</span>，则： <span class="math display">\[PV=e^{0.3}\int_{5}^{9}ye^{-0.06y}dy\]</span> 再用分部积分法即可求出答案。</p>
               </div>
             </details>
-
-
 <p>这样我们就考察了了学生分部积分法的运算能力。</p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><p>个人认为CM1的考题出到这个程度已经够了，出得再难意义不大。不过结合我们学过的高数知识，我们可以进一步思考，题目还能怎么出？</p>
-<h3 id="rho-t-为常数函数，-delta-t-为关于-t-的一次函数"><a href="#rho-t-为常数函数，-delta-t-为关于-t-的一次函数" class="headerlink" title="$\rho(t)$ 为常数函数，$\delta(t)$ 为关于 $t$ 的一次函数"></a>$\rho(t)$ 为常数函数，$\delta(t)$ 为关于 $t$ 的一次函数</h3><p>此时要处理的积分式形如 $\int_{a}^{b} e^{t^{2}} d t$，</p>
+<h2 id="拓展">拓展</h2>
+<p>个人认为CM1的考题出到这个程度已经够了，出得再难意义不大。不过结合我们学过的高数知识，我们可以进一步思考，题目还能怎么出？</p>
+<h3 id="rhot-为常数函数deltat-为关于-t-的一次函数"><span class="math inline">\(\rho(t)\)</span> 为常数函数，<span class="math inline">\(\delta(t)\)</span> 为关于 <span class="math inline">\(t\)</span> 的一次函数</h3>
+<p>此时要处理的积分式形如 <span class="math inline">\(\int_{a}^{b} e^{t^{2}} d t\)</span>，</p>
 <p>根据正态分布的概率密度函数可以求解。</p>
-<h3 id="rho-t-为关于-t-的一次函数，-delta-t-为常数函数-1"><a href="#rho-t-为关于-t-的一次函数，-delta-t-为常数函数-1" class="headerlink" title="$\rho(t)$ 为关于 $t$ 的一次函数，$\delta(t)$ 为常数函数"></a>$\rho(t)$ 为关于 $t$ 的一次函数，$\delta(t)$ 为常数函数</h3><p>通过换元等步骤简化，最终要处理的积分式形如 $\int_{a}^{b} x e^{x} d x$，</p>
+<h3 id="rhot-为关于-t-的一次函数deltat-为常数函数-1"><span class="math inline">\(\rho(t)\)</span> 为关于 <span class="math inline">\(t\)</span> 的一次函数，<span class="math inline">\(\delta(t)\)</span> 为常数函数</h3>
+<p>通过换元等步骤简化，最终要处理的积分式形如 <span class="math inline">\(\int_{a}^{b} x e^{x} d x\)</span>，</p>
 <p>用分部积分法即可求解。</p>
-<h3 id="rho-t-为关于-t-的一次函数，-delta-t-为关于-t-的一次函数-1"><a href="#rho-t-为关于-t-的一次函数，-delta-t-为关于-t-的一次函数-1" class="headerlink" title="$\rho(t)$为关于 $t$ 的一次函数，$\delta(t)$ 为关于 $t$ 的一次函数"></a>$\rho(t)$为关于 $t$ 的一次函数，$\delta(t)$ 为关于 $t$ 的一次函数</h3><p>此时要处理的积分式形如 $\int_{a}^{b} x e^{x^{2}} d x$，</p>
-<p> $\int_{a}^{b} x e^{x^{2}} d x=\frac{1}{2} \int_{a}^{b} e^{x^{2}} d\left(x^{2}\right)$，又可以转化成正态分布的概率密度函数求解。</p>
-<h2 id="Exercise-的完整答案"><a href="#Exercise-的完整答案" class="headerlink" title="Exercise 的完整答案"></a>Exercise 的完整答案</h2><p>最后附上前面几道 Exercise 的完整答案：</p>
+<h3 id="rhot为关于-t-的一次函数deltat-为关于-t-的一次函数-1"><span class="math inline">\(\rho(t)\)</span>为关于 <span class="math inline">\(t\)</span> 的一次函数，<span class="math inline">\(\delta(t)\)</span> 为关于 <span class="math inline">\(t\)</span> 的一次函数</h3>
+<p>此时要处理的积分式形如 <span class="math inline">\(\int_{a}^{b} x e^{x^{2}} d x\)</span>，</p>
+<p><span class="math inline">\(\int_{a}^{b} x e^{x^{2}} d x=\frac{1}{2} \int_{a}^{b} e^{x^{2}} d\left(x^{2}\right)\)</span>，又可以转化成正态分布的概率密度函数求解。</p>
+<h2 id="exercise-的完整答案">Exercise 的完整答案</h2>
+<p>最后附上前面几道 Exercise 的完整答案：</p>
 <details blue><summary> Solution 1 </summary>
               <div class='content'>
-              <p><img src="https://img.actuarygarden.cn/4cf51f2a-fc0e-45e3-b405-2775f6e64766.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4cf51f2a-fc0e-45e3-b405-2775f6e64766.jpg" srcset="data:image/png;base64,666"></p>
+              <p><img src="https://img.actuarygarden.cn/4cf51f2a-fc0e-45e3-b405-2775f6e64766.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4cf51f2a-fc0e-45e3-b405-2775f6e64766.jpg" srcset="data:image/png;base64,666" /></p>
               </div>
             </details>
-
 <details blue><summary> Solution 2 </summary>
               <div class='content'>
-              <p><img src="https://img.actuarygarden.cn/d93f90b8-87da-4b50-a667-6938ed1d70c9.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/d93f90b8-87da-4b50-a667-6938ed1d70c9.jpg" srcset="data:image/png;base64,666"></p><p><img src="https://img.actuarygarden.cn/a8a7be6c-2488-4506-9ead-b4b3dc7a80e0.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/a8a7be6c-2488-4506-9ead-b4b3dc7a80e0.jpg" srcset="data:image/png;base64,666"></p>
+              <p><img src="https://img.actuarygarden.cn/d93f90b8-87da-4b50-a667-6938ed1d70c9.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/d93f90b8-87da-4b50-a667-6938ed1d70c9.jpg" srcset="data:image/png;base64,666" /></p><p><img src="https://img.actuarygarden.cn/a8a7be6c-2488-4506-9ead-b4b3dc7a80e0.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/a8a7be6c-2488-4506-9ead-b4b3dc7a80e0.jpg" srcset="data:image/png;base64,666" /></p>
               </div>
             </details>
-
 <details blue><summary> Solution 3 </summary>
               <div class='content'>
-              <p><img src="https://img.actuarygarden.cn/6fd420d2-d6cc-409f-971f-eba85b99a084.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/6fd420d2-d6cc-409f-971f-eba85b99a084.jpg" srcset="data:image/png;base64,666"></p>
+              <p><img src="https://img.actuarygarden.cn/6fd420d2-d6cc-409f-971f-eba85b99a084.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/6fd420d2-d6cc-409f-971f-eba85b99a084.jpg" srcset="data:image/png;base64,666" /></p>
               </div>
             </details>
-
-
-
 
   
   
@@ -1035,12 +1055,12 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/CS2-Ch6-survivalmodels/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【CS2】Ch06 Survival models 生存模型</p>
-          <p class='content'>本文介绍生存模型，属于CS2第六章的内容，也是学习CM1的寿险精算部分的先修内容。
+        <a class='prev' href='/CS2-Guide/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【CS2导引篇】Risk Modelling and Survival Analysis</p>
+          <p class='content'>IFoA 英国精算师考试 CS2 精算模型和非寿险精算的学习大纲，备考必看。各章的主干知识点和考点总结。
 
-
-本文不仅适用于英国精算师的考试，Jackie 在写这篇推文时也参考了北美体系的内容，所以考SOA的同学也不...</p>
+概述
+公众号原先发过一篇旧体系IFoA的《CT4 Models 导引篇》以及赫瑞...</p>
         </a>
       
       
@@ -1048,8 +1068,7 @@
           <p class='title'>给我一张林夕债券，我能掀翻整个力熄理论<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>60分钟掌握利息理论！Jackie 录的中文教学视频（完全免费~），将CT1历年真题和CM1样卷中的题型归纳为14类题型并进行针对性的讲解。配有对应知识点讲义和精选真题。
 
-
-说起林夕，这位华语...</p>
+说起林夕，这位华...</p>
         </a>
       
     </div>
@@ -1178,7 +1197,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rho-t-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">$\rho(t)$为常数函数，$\delta(t)$ 为常数函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-1"><span class="toc-text">Exercise 1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rho-t-%E4%B8%BA%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">$\rho(t)$ 为指数函数，$\delta(t)$ 为常数函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-2"><span class="toc-text">Exercise 2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rho-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0"><span class="toc-text">$\rho(t)$为关于 $t$ 的一次函数，$\delta(t)$ 为关于 $t$ 的一次函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-3"><span class="toc-text">Exercise 3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rho-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">$\rho(t)$ 为关于 $t$ 的一次函数，$\delta(t)$ 为常数函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Exercise-4"><span class="toc-text">Exercise 4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-text">拓展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rho-t-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0"><span class="toc-text">$\rho(t)$ 为常数函数，$\delta(t)$ 为关于 $t$ 的一次函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rho-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0-1"><span class="toc-text">$\rho(t)$ 为关于 $t$ 的一次函数，$\delta(t)$ 为常数函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rho-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0%EF%BC%8C-delta-t-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0-1"><span class="toc-text">$\rho(t)$为关于 $t$ 的一次函数，$\delta(t)$ 为关于 $t$ 的一次函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Exercise-%E7%9A%84%E5%AE%8C%E6%95%B4%E7%AD%94%E6%A1%88"><span class="toc-text">Exercise 的完整答案</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#rhot%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">\(\rho(t)\)为常数函数，\(\delta(t)\) 为常数函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise-1"><span class="toc-text">Exercise 1</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rhot-%E4%B8%BA%E6%8C%87%E6%95%B0%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">\(\rho(t)\) 为指数函数，\(\delta(t)\) 为常数函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise-2"><span class="toc-text">Exercise 2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rhot%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0"><span class="toc-text">\(\rho(t)\)为关于 \(t\) 的一次函数，\(\delta(t)\) 为关于 \(t\) 的一次函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise-3"><span class="toc-text">Exercise 3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rhot-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0"><span class="toc-text">\(\rho(t)\) 为关于 \(t\) 的一次函数，\(\delta(t)\) 为常数函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#exercise-4"><span class="toc-text">Exercise 4</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%93%E5%B1%95"><span class="toc-text">拓展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rhot-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0"><span class="toc-text">\(\rho(t)\) 为常数函数，\(\delta(t)\) 为关于 \(t\) 的一次函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rhot-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%B8%B8%E6%95%B0%E5%87%BD%E6%95%B0-1"><span class="toc-text">\(\rho(t)\) 为关于 \(t\) 的一次函数，\(\delta(t)\) 为常数函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rhot%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0deltat-%E4%B8%BA%E5%85%B3%E4%BA%8E-t-%E7%9A%84%E4%B8%80%E6%AC%A1%E5%87%BD%E6%95%B0-1"><span class="toc-text">\(\rho(t)\)为关于 \(t\) 的一次函数，\(\delta(t)\) 为关于 \(t\) 的一次函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#exercise-%E7%9A%84%E5%AE%8C%E6%95%B4%E7%AD%94%E6%A1%88"><span class="toc-text">Exercise 的完整答案</span></a></li></ol>
     </div>
   </section>
 
@@ -1278,14 +1297,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1437,294 +1456,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1862,10 +1593,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

@@ -772,9 +772,9 @@
           
             
 <div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
-    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
-    <p>Jackie</p>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/alonso" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/063626fa-659b-4cc3-9588-67112721e816.jpg">
+    <p>Alonso</p>
   </a>
 </div>
 
@@ -820,14 +820,13 @@
   
   <p>本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。</p>
 <a id="more"></a>
-
 <p>本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。</p>
 <p>本文想法源于同事。</p>
-<p>初始赔付率，IELR，Initial Expected Loss Ratio, 被用准备金评估的LR method中，是精算师根据自己的经验，对当年赔付率的一个初步判断。</p>
+<p>初始赔付率，IELR，Initial Expected Loss Ratio, 被用于准备金评估的LR method中，是精算师根据自己的经验，对当年赔付率的一个初步判断。</p>
 <p>另外，ULR，是根据实际发生情况，测算出的终极赔付率。</p>
 <p>至于为什么区分再保和直保，因为再保的LR是保单年角度，直保的LR是事故年角度。</p>
 <p>首先做几个关键假设及声明。</p>
-<ol>
+<ol type="1">
 <li>在2020年，疫情对出行的影响为Q1-Q2，Q3后恢复正常。</li>
 <li>车险综改从2020/09/19正式实施，近似视为从2020/10/01开始实施，只对2020Q4签单的保单造成影响</li>
 <li>各季度车险均匀签单，按照保费加权的赔付率近似为按照时间加权。</li>
@@ -837,14 +836,18 @@
 <li>图中，粉红色斜线区分不同的保单年，大红色竖线区分疫情影响，绿色斜线区分车险综改前后。</li>
 <li>数据与真实数据有偏，结果不重要，方法是要分享的核心。</li>
 </ol>
-<p><img src="https://img.actuarygarden.cn/8206e911-74a7-43ae-8714-96c6302b084d.PNG" class="lazyload" data-srcset="https://img.actuarygarden.cn/8206e911-74a7-43ae-8714-96c6302b084d.PNG" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/8206e911-74a7-43ae-8714-96c6302b084d.PNG" class="lazyload" data-srcset="https://img.actuarygarden.cn/8206e911-74a7-43ae-8714-96c6302b084d.PNG" srcset="data:image/png;base64,666" /></p>
 <p>从直保的事故年角度来看，2020事故年为蓝色正方形部分，需要考虑2019和2020两个年度签单的保单。</p>
-<p>疫情影响占比$\frac{1}{2}$，正常情况占比$\frac{7}{16}$，车险综改占比$\frac{1}{16}$</p>
-<p>那么，对于直保公司，2020评估时选取的商车险IELR为：<br>$$<br>\frac{1}{2} * 47% + \frac{7}{16}*55%  + \frac{1}{16}*75% = 52.25%<br>$$</p>
-<p><img src="https://img.actuarygarden.cn/f9bfbcb4f5c14904928685adda9c5ab9.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/f9bfbcb4f5c14904928685adda9c5ab9.png" srcset="data:image/png;base64,666"></p>
+<p>疫情影响占比<span class="math inline">\(\frac{1}{2}\)</span>，正常情况占比<span class="math inline">\(\frac{15}{32}\)</span>，车险综改占比<span class="math inline">\(\frac{1}{32}\)</span></p>
+<p>那么，对于直保公司，2020评估时选取的商车险IELR为： <span class="math display">\[
+\frac{1}{2} \times 47\% + \frac{15}{32}\times 55\%  + \frac{1}{32}\times 75\% = 51.625\%
+\]</span></p>
+<p><img src="https://img.actuarygarden.cn/f9bfbcb4f5c14904928685adda9c5ab9.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/f9bfbcb4f5c14904928685adda9c5ab9.png" srcset="data:image/png;base64,666" /></p>
 <p>从再保的保单年角度来看，2020保单年为蓝色平行四边形部分，仅考虑2020签单的保单。</p>
-<p>疫情影响占比$\frac{1}{8}$，正常情况占比$\frac{5}{8}$，车险综改占比$\frac{1}{4}$</p>
-<p>那么，对于再保公司，2020评估时选取的商车险IELR为：<br>$$<br>\frac{1}{8} * 47% + \frac{5}{8}*55%  + \frac{1}{4}*75% = 59%<br>$$</p>
+<p>疫情影响占比<span class="math inline">\(\frac{1}{8}\)</span>，正常情况占比<span class="math inline">\(\frac{5}{8}\)</span>，车险综改占比<span class="math inline">\(\frac{1}{4}\)</span></p>
+<p>那么，对于再保公司，2020评估时选取的商车险IELR为： <span class="math display">\[
+\frac{1}{8} \times  47\% + \frac{5}{8}\times 55\%  + \frac{1}{4}\times 75\% = 59\%
+\]</span></p>
 
   
   
@@ -879,7 +882,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-23T13:29:39+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-23T14:26:44+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>本页文档最后更新于：2021年1月23日</p>
@@ -960,11 +963,10 @@
           <p class='title'>寿险精算——生命表 (1)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>生命表的基础介绍：符号说明、常用公式及其含义、易错点。
 
-
-
-介绍该章节是非常重要的章节之一，之后所有符号含义都基于该章节内容。
+介绍
+该章节是非常重要的章节之一，之后所有符号含义都基于该章节内容。
 什么是生命表？
-所谓生命表，就是采用表格的形式简单地表述了同时出...</p>
+所谓生命表，就是采用表格的形式简单地表述...</p>
         </a>
       
     </div>
@@ -987,6 +989,90 @@
 
 
 
+
+
+  <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        tags: "ams",
+        macros: {
+          actuarialangle: ['{\\mkern1mu\\overline\{#1\\,\}\\kern-3mu\\lower-1mu\\small|}',1],
+          angl: ['{\\actuarialangle\{#1\\mkern1mu\}}',1],
+          angln: '{\\angl n}',
+          anglk: '{\\angl k}',
+          anglr: '{\\angl r}',
+          term: ['{\\overset\{1\}\{#1\}:\\angl\{#2\}}',2],
+          termxn: '{\\term\{x\}\{n\}}',
+          pureendow: ['{#1:\\overset\{1\}\{\\angl\{#2\}\}}',2],
+          pureendowxn: '{\\pureendow\{x\}\{n\}}',
+          endow: ['{#1:\\angl\{#2\}}',2],
+          endowxn: '{\\endow\{x\}\{n\}}',
+          joint: ['{\\overline\{#1\}}',1],
+          actsymb: ['{\\sideset\{_\{#1\\mkern3mu\}^\{#2\\mkern3mu\}\}\{^\{#4\}_\{#5\}}\{#3\}}',5],
+          Ax: ['{\\actsymb\{#1\}\{#2\}\{A\}\{#3\}\{#4\}}',4],
+          Axz: ['{\\actsymb\{#1\}\{#2\}\{\\bar\{A\}\}\{#3\}\{#4\}}',4],
+          Axzz: ['{\\actsymb\{#1\}\{#2\}\{\\ddot\{A\}\}\{#3\}\{#4\}}',4],
+          ax: ['{\\actsymb\{#1\}\{#2\}\{a\}\{#3\}\{#4\}}',4],
+          axz: ['{\\actsymb\{#1\}\{#2\}\{\\bar\{a\}\}\{#3\}\{#4\}}',4],
+          axzz: ['{\\actsymb\{#1\}\{#2\}\{\\ddot\{a\}\}\{#3\}\{#4\}}',4],
+          Ex: ['{\\actsymb\{#1\}\{\}\{E\}\{\}\{#2\}}',2],
+          px: ['{\\actsymb\{#1\}\{\}\{p\}\{\}\{#2\}}',2],
+          qx: ['{\\actsymb\{#1\}\{\}\{q\}\{\}\{#2\}}',2],
+          sx: ['{\\actsymb\{\}\{\}\{s\}\{\}\{#1\}}',1],
+          sxz: ['{\\actsymb\{\}\{\}\{\\bar\{s\}\}\{\}\{#1\}}',1],
+          sxzz: ['{\\actsymb\{\}\{\}\{\\ddot\{s\}\}\{\}\{#1\}}',1],
+          Vx: ['{\\actsymb\{#1\}\{\}\{V\}\{\}\{#2\}}',2],
+          href: "{}"
+        }
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 
@@ -1095,14 +1181,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1254,294 +1340,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1679,10 +1477,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

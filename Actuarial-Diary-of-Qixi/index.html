@@ -827,37 +827,29 @@
   
   <p>马路边捡到的精算日记。</p>
 <a id="more"></a>
-
 <p>加班是精算从业人员的常态。每月月初的几天要月结，所以加班；每个季度初要出季度报表，所以加班；每年四月份要出年报，所以加班；出新产品了要重新定价，也得加班。</p>
 <p>今年的七夕也不例外。</p>
 <p>我们今天文章的主人公就是这样一位疲于加班的中年精算师。Jackie轧马路的时候在路边捡到了他的日记本。昨天是七夕，料想他应该是昨天不慎遗失在马路边了。故事逻辑不是很清晰，但总体来说内容还不错，所以分享给大家。</p>
-<h2 id="七夕精算日记"><a href="#七夕精算日记" class="headerlink" title="七夕精算日记"></a>七夕精算日记</h2><p>2020年8月25日，晴。</p>
+<h2 id="七夕精算日记">七夕精算日记</h2>
+<p>2020年8月25日，晴。</p>
 <p>今天又是加班的一天。最近加班加的脖子疼，早上出门前突然想给自己放个假，过个七夕啥的，向老婆征求了意见，她似乎答应了但又哭得很大声。我只好默默地挤地铁去了。</p>
-<p><img src="https://img.actuarygarden.cn/4567396f-94a7-4a68-bce3-e9d6cde26abe.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4567396f-94a7-4a68-bce3-e9d6cde26abe.jpg" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/4567396f-94a7-4a68-bce3-e9d6cde26abe.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/4567396f-94a7-4a68-bce3-e9d6cde26abe.jpg" srcset="data:image/png;base64,666" /></p>
 <p>在地铁上看到几个高三毕业生兴高采烈地讨论着自己填的专业，有点感慨。想起我当年填报高考志愿的时候，不慎搜到了几则假新闻，说什么精算师年薪百万，人才缺口五千，堪称金领中的战斗机云云，把年少无知的我忽悠进了坑，结果现在每天加班，微薄的薪水也只够和高中生一起挤地铁。没有人知道年薪百万的精算师到底有多少，毕竟公布总精算师工资的上市公司就这么几家。想着想着不禁走了神，还坐过站了。导致今天早上没法去地铁站附近那家便利店买奥尔良鸡肉的饭团了。</p>
 <p>没吃饭团的我比往常早了些到公司，正在心里称赞自己是精算部第一个到岗的模范员工，突然看到已经有同事在工位上了。看到他摊开在桌子上的ActEd Notes，我想起来下个月又到了IFoA的考试季，于是和同事攀谈了几句。他说，今年九月份是他第三次报名CP1了。前两次一次因为忙着年报没来得及考，另一次差了两分没过。这是他的最后一门精算考试了。昨天他老婆给他下达了最后通牒，说这回一定要过。因为疫情期间老婆怀孕了，年底孩子就要出生，到时得一起带娃。我说那挺好，你可以对着老婆的大肚子多读读CP1的教材，让孩子多接受接受精算控制循环的胎教。这样孩子一出生可能也就不哭不闹了，他会觉得没有精算考试的世界一点都不苦。</p>
 <p>调侃完同事我进入了工作状态。Prophet我已经调试好几天了，上午调完看了下觉得应该没问题，于是开始跑模型，现在这段我就是在跑Prophet写的，因为几百万条数据要跑一下午，创造了难得的写日记时间。Prophet的代码倒大多只需要用到基础的IF和ELSE，类似C语言，再者遇到不会的地方也可以输入HELP，但是代码里隐藏的精算逻辑要理清楚实在是不太轻松，这个子表套着那个子表，仿佛在绕迷宫。之前在慕再实习的时候我就经常因为被这一串串代码绕得晕晕乎乎，我老婆也是在那时候追到了我。我俩都是通过慕再精算竞赛去的慕再实习，她考的SOA而我考的IFoA。当时我们都在考寿险精算这门课，她还给我讲了个笑话：</p>
 <ul>
-<li><p>Question: Do you know the difference between a man and a whole life policy? </p>
-</li>
-<li><p>问：男人和终身寿险有什么区别吗？</p>
-</li>
-<li><p>Answer: A whole life policy eventually matures. </p>
-</li>
-<li><p>答：终身寿险总有到期（成熟）的那一天。</p>
-</li>
+<li><p>Question: Do you know the difference between a man and a whole life policy?</p></li>
+<li><p>问：男人和终身寿险有什么区别吗？</p></li>
+<li><p>Answer: A whole life policy eventually matures.</p></li>
+<li><p>答：终身寿险总有到期（成熟）的那一天。</p></li>
 </ul>
 <p>当时我还觉得这个知识点讲得不错，把“终身寿险是一个加长版的生死两全保险”这个知识点融入了一段对话中，后来我才反应过来，这是在嘲笑我不成熟啊。“不过你还挺有王家卫风格的。”她补充说。</p>
 <p>其实会到期的不只是男人和终身寿险，精算考试也一样。每个精算考生都只有一个目的地，就是考完所有考试成功Fellow，在Title上挂上洋气的FIA或FSA或FCAS或FCAA，精算津贴制度里说考这些科目能加工资。以前一直记不清楚这几个正精算师资格证的全称，在日记里记录下来备查：</p>
 <ul>
-<li><p>FIA的全称是F***ing Interesting Actuaries。</p>
-</li>
-<li><p>FSA的全称是F***ing Smart Actuaries。</p>
-</li>
-<li><p>FCAS的全称是F***ing Clever At Sums。</p>
-</li>
-<li><p>FCAA的全称是F***ing Clever At All。</p>
-</li>
+<li><p>FIA的全称是F***ing Interesting Actuaries。</p></li>
+<li><p>FSA的全称是F***ing Smart Actuaries。</p></li>
+<li><p>FCAS的全称是F***ing Clever At Sums。</p></li>
+<li><p>FCAA的全称是F***ing Clever At All。</p></li>
 </ul>
 <p>从全称里可以看到精算师的Title里总有聪明的字样。精算师希望通过这种心理暗示的方式解决备考时候遇到的难题。遗憾的是，在这个世界上，不是所有的题目都能做出答案，直到进考场前的那一秒，可能你都不知道，哪个题才是真正容易做的。</p>
 <p>IFoA，英国精算师协会，这是我交会费和考试费交的最多的一个协会，再交多一整年就都靠吃泡面维持生活。突然之间我很想罢考。当我打开IFoA官网的时候觉得非常的难过，我总觉得应该是两万人一起点开这个网页。其实了解一门精算考试并不能代表什么，考试是会变的，今天她全考计算大题，明天她可能会把25%的题改成多项选择题。从什么时候开始每场考试都有一个结束时间，报名付款的页面会过期，ActEd上买的PBOR会过期，以前考的旧体系免试认证也会过期。但如果精算考试也是一个凤梨罐头的话，我希望这个罐头快点到期。如果一定要加一个日子的话，我希望就今天。</p>
@@ -980,8 +972,7 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>IFoA 2020年9月的线上考试怎么考？</p>
           <p class='content'>2020年9月份全新线上考试的一些理解。
 
-
-本文内容部分借鉴IFoA官方内容：考生必读 | IFoA在线考试常见问答（2020年9月考试，截至8月21日官网更新），部分内容是Jackie的主观...</p>
+本文内容部分借鉴IFoA官方内容：考生必读 | IFoA在线考试常见问答（2020年9月考试，截至8月21日官网更新），部分内容是Jackie的主...</p>
         </a>
       
       
@@ -1127,14 +1118,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1286,294 +1277,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1711,10 +1414,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

@@ -774,9 +774,9 @@
           
             
 <div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
-    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
-    <p>Jackie</p>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/alonso" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/063626fa-659b-4cc3-9588-67112721e816.jpg">
+    <p>Alonso</p>
   </a>
 </div>
 
@@ -829,23 +829,22 @@
   
   <p>使用VBA警示异常值。</p>
 <a id="more"></a>
-
 <p>在非寿险评估工作中，需要看很多三角形。</p>
 <p>用肉眼去观测三角形中的异常值非常辛苦。需要一个简单的工具来帮助我们找到异常的数据。</p>
 <p>以reported loss ratio的三角形为例，希望找出不同事故年，同一进展年的赔付率的异常波动。</p>
 <p>在Excel中的操作逻辑如下：</p>
-<p>原始数据（数据为虚拟数据）：<br><img src="https://img.actuarygarden.cn/a6f9ccf2f3e94df4b4bfb53903997122.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/a6f9ccf2f3e94df4b4bfb53903997122.png" srcset="data:image/png;base64,666"></p>
+<p>原始数据（数据为虚拟数据）： <img src="https://img.actuarygarden.cn/a6f9ccf2f3e94df4b4bfb53903997122.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/a6f9ccf2f3e94df4b4bfb53903997122.png" srcset="data:image/png;base64,666" /></p>
 <p>对原始数据相邻行做差，得到LR每事故年的变动值，如下：</p>
-<p><img src="https://img.actuarygarden.cn/6295d9b3-5292-450a-873c-1eb884b36cf0.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/6295d9b3-5292-450a-873c-1eb884b36cf0.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/6295d9b3-5292-450a-873c-1eb884b36cf0.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/6295d9b3-5292-450a-873c-1eb884b36cf0.png" srcset="data:image/png;base64,666" /></p>
 <p>以10%为阈值，对大于10%或者小于-10%的区域高亮。基础的想法是条件格式。使用条件格式后效果如下：</p>
-<p><img src="https://img.actuarygarden.cn/7e4fadc174fd4eab80eeded8f6c0b161.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/7e4fadc174fd4eab80eeded8f6c0b161.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/7e4fadc174fd4eab80eeded8f6c0b161.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/7e4fadc174fd4eab80eeded8f6c0b161.png" srcset="data:image/png;base64,666" /></p>
 <p>这样就突显出了异常值，但是，一个额外的需求是，让原始数据出现同样的高亮。此时无法使用格式刷，因为格式刷中依然是条件格式，刷回原数据，会出现如下情况。</p>
-<p><img src="https://img.actuarygarden.cn/96c5d612412e430a98a664e886fb6384.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/96c5d612412e430a98a664e886fb6384.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/96c5d612412e430a98a664e886fb6384.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/96c5d612412e430a98a664e886fb6384.png" srcset="data:image/png;base64,666" /></p>
 <p>原始数据中，所有数值都高于10%，因此全为红色。</p>
 <p>为了实现此额外的需求，写了VBA代码如下：</p>
 <figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Sub</span> suozai()</span><br><span class="line"><span class="keyword">Dim</span> rg <span class="keyword">As</span> Range</span><br><span class="line"><span class="keyword">Set</span> rg = Selection <span class="comment">&#x27;对选中的三角形区域进行操作，可设置为固定区域</span></span><br><span class="line"><span class="keyword">Dim</span> t <span class="keyword">As</span> <span class="type">Single</span></span><br><span class="line">t = <span class="number">0.1</span> <span class="comment">&#x27;可以将t设置为单元格的值，为不同的三角形设置不同的阈值</span></span><br><span class="line"><span class="keyword">Dim</span> countrows <span class="keyword">As</span> <span class="type">Integer</span></span><br><span class="line"><span class="keyword">Dim</span> countcols <span class="keyword">As</span> <span class="type">Integer</span></span><br><span class="line">countrows = rg.Rows.Count</span><br><span class="line">countcols = rg.Columns.Count</span><br><span class="line"><span class="comment">&#x27;通如下循环，实现对做差三角形中满足高亮的单元格进行高亮</span></span><br><span class="line"><span class="keyword">Dim</span> i, j <span class="keyword">As</span> <span class="type">Integer</span></span><br><span class="line"><span class="keyword">For</span> i = <span class="number">1</span> <span class="keyword">To</span> countrows</span><br><span class="line">    <span class="keyword">For</span> j = <span class="number">1</span> <span class="keyword">To</span> countcols - i + <span class="number">1</span></span><br><span class="line">        <span class="keyword">If</span> rg.Cells(i, j).Value &gt; t <span class="keyword">Then</span></span><br><span class="line">            rg.Cells(i, j).Interior.Color = <span class="number">13551615</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">        <span class="keyword">If</span> rg.Cells(i, j).Value &lt; -t <span class="keyword">Then</span></span><br><span class="line">            rg.Cells(i, j).Interior.Color = <span class="number">13561798</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">    <span class="keyword">Next</span> j</span><br><span class="line"><span class="keyword">Next</span> i</span><br><span class="line"></span><br><span class="line"><span class="comment">&#x27;接下来的步骤是把格式刷回原始数据,找到原始数据所在地,可以用数格子的方法,也可以用下面的方法.</span></span><br><span class="line"><span class="keyword">Dim</span> rg1 <span class="keyword">As</span> Range</span><br><span class="line"><span class="keyword">Dim</span> c <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">c = rg.Cells(<span class="number">1</span>, <span class="number">1</span>).Formula <span class="comment">&#x27;提取做差三角形中第一个单元格的公式 =A-B</span></span><br><span class="line">c = <span class="keyword">Mid</span>(c, <span class="number">2</span>) <span class="comment">&#x27;去掉公式中的等号 A-B</span></span><br><span class="line">d = Split(c, <span class="string">&quot;-&quot;</span>)(<span class="number">0</span>) <span class="comment">&#x27;以减号为分界，分离A，B，并获取A。由于不同类型三角形的公式可能不同，此处可以应用正则表达式进行拓展。学习中</span></span><br><span class="line"><span class="keyword">Set</span> rg1 = Range(d).Resize(countrows, countcols) <span class="comment">&#x27;得到初始数据所在的三角形</span></span><br><span class="line">rg.Copy</span><br><span class="line">rg1.PasteSpecial Paste:=xlPasteFormats, Operation:=xlNone, _</span><br><span class="line">        SkipBlanks:=<span class="literal">False</span>, Transpose:=<span class="literal">False</span> <span class="comment">&#x27;刷格式</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>使用VBA后的结果</p>
-<p><img src="https://img.actuarygarden.cn/003f52e2-a22e-422c-b569-27c8a845db13.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/003f52e2-a22e-422c-b569-27c8a845db13.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/003f52e2-a22e-422c-b569-27c8a845db13.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/003f52e2-a22e-422c-b569-27c8a845db13.png" srcset="data:image/png;base64,666" /></p>
 <p>完结撒花。有改进请大家指出。示例文件可以点击在<a target="_blank" rel="noopener" href="https://actuarygarden.com/topic/120">精算后花园论坛</a>下载学习。</p>
 
   
@@ -964,11 +963,10 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>实用技能 | Excel VBA基础操作</p>
           <p class='content'>VBA基础操作。
 
-
 VBA真的是工作中十分常用的了，次次实习次次用，以前都是自学+写好的码改改就好，这学期又从头学了一遍最基础的操作～
 按照五个部分来简单介绍一下：
 
-1 introducti...</p>
+1 introd...</p>
         </a>
       
       
@@ -976,8 +974,7 @@ VBA真的是工作中十分常用的了，次次实习次次用，以前都是�
           <p class='title'>【VBA】如何利用Class module计算精算现值<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>用 Excel VBA 中的类模块 Class module 计算精算现值。
 
-
-本文背景：类模块 （Class module）的普及是未来VBA编程的发展趋势。它具有能够简洁化代码，增强代码可...</p>
+本文背景：类模块 （Class module）的普及是未来VBA编程的发展趋势。它具有能够简洁化代码，增强代码...</p>
         </a>
       
     </div>
@@ -1108,14 +1105,14 @@ VBA真的是工作中十分常用的了，次次实习次次用，以前都是�
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1267,294 +1264,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1692,10 +1401,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

@@ -829,23 +829,40 @@
   
   <p>币值加权收益率 MWRR 和时间加权收益率 TWRR 的计算，以及线性插值法的使用。</p>
 <a id="more"></a>
-
 <p>MWRR为币值加权收益率，TWRR为时间加权收益率。MWRR和TWRR是旧大纲CT1的Measurement of investment performance一节的内容，新大纲CM1中已经删去。但在2019年的慕再精算竞赛中有考察，且在西浦 MTH120 和利物浦 MATH267 科目中仍是一道必考题，值得一看。</p>
 <p>MWRR 为币值加权收益率，TWRR 为时间加权收益率。</p>
-<h2 id="MWRR-Money-weighted-rate-of-return"><a href="#MWRR-Money-weighted-rate-of-return" class="headerlink" title="MWRR:Money-weighted rate of return"></a>MWRR:Money-weighted rate of return</h2><p>注意，在币值加权收益率MWRR中，用到的只是“new money”（新投入的钱，而不是基金本身运转得到的钱）</p>
-<p>用以下公式计算出的 $i$ 即为MWRR：<br>$$<br>F_{0} (1+i)^{T}+C_{t_{1}} (1+i)^{T-t_{1}}+C_{t_{2}} (1+i)^{T-t_{2}}+\cdots+C_{t_{n}} (1+i)^{T-t_{n}}=F_{T}<br>$$</p>
-<p>其中，$F_{0}$ 是0时刻的 fund value；$F_{T}$ 是 $T$ 时刻的 fund value.</p>
-<p>计算MWRR时，用一阶近似找到近似的$i$（用 $1+ni$ 代替 $(1+i)^n$），再比这个 $i$ 大和比这个 $i$ 小分别找两个 $i_{1}$ 和 $i_{2}$，再用线性插值法算出更为准确的 $i$.</p>
-<h2 id="TWRR-Time-weighted-rate-of-return"><a href="#TWRR-Time-weighted-rate-of-return" class="headerlink" title="TWRR:Time-weighted rate of return"></a>TWRR:Time-weighted rate of return</h2><p>时间加权收益率TWRR是通过以下式子算出的$i$：</p>
-<p>$$<br>(1+i)^{T}=\frac{F_{t_{-}}-}{F_{0}+C_{0}} \frac{F_{t_{2}-}}{F_{t_{1}-}+C_{t_{1}}} \frac{F_{t_{3}-}}{F_{t_{2}-}+C_{t_{2}}} \cdots \frac{F_{T}}{F_{t_{n}-}+C_{t_{n}}}<br>$$</p>
-<p><img src="https://img.actuarygarden.cn/949281ae-3c43-4f21-a644-9eb4507c9f5e.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/949281ae-3c43-4f21-a644-9eb4507c9f5e.png" srcset="data:image/png;base64,666" alt="TWRR计算示意图"></p>
+<h2 id="mwrrmoney-weighted-rate-of-return">MWRR:Money-weighted rate of return</h2>
+<p>注意，在币值加权收益率MWRR中，用到的只是“new money”（新投入的钱，而不是基金本身运转得到的钱）</p>
+<p>用以下公式计算出的 <span class="math inline">\(i\)</span> 即为MWRR： <span class="math display">\[
+F_{0} (1+i)^{T}+C_{t_{1}} (1+i)^{T-t_{1}}+C_{t_{2}} (1+i)^{T-t_{2}}+\cdots+C_{t_{n}} (1+i)^{T-t_{n}}=F_{T}
+\]</span></p>
+<p>其中，<span class="math inline">\(F_{0}\)</span> 是0时刻的 fund value；<span class="math inline">\(F_{T}\)</span> 是 <span class="math inline">\(T\)</span> 时刻的 fund value.</p>
+<p>计算MWRR时，用一阶近似找到近似的<span class="math inline">\(i\)</span>（用 <span class="math inline">\(1+ni\)</span> 代替 <span class="math inline">\((1+i)^n\)</span>），再比这个 <span class="math inline">\(i\)</span> 大和比这个 <span class="math inline">\(i\)</span> 小分别找两个 <span class="math inline">\(i_{1}\)</span> 和 <span class="math inline">\(i_{2}\)</span>，再用线性插值法算出更为准确的 <span class="math inline">\(i\)</span>.</p>
+<h2 id="twrrtime-weighted-rate-of-return">TWRR:Time-weighted rate of return</h2>
+<p>时间加权收益率TWRR是通过以下式子算出的<span class="math inline">\(i\)</span>：</p>
+<p><span class="math display">\[
+(1+i)^{T}=\frac{F_{t_{-}}-}{F_{0}+C_{0}} \frac{F_{t_{2}-}}{F_{t_{1}-}+C_{t_{1}}} \frac{F_{t_{3}-}}{F_{t_{2}-}+C_{t_{2}}} \cdots \frac{F_{T}}{F_{t_{n}-}+C_{t_{n}}}
+\]</span></p>
+<figure>
+<img src="https://img.actuarygarden.cn/949281ae-3c43-4f21-a644-9eb4507c9f5e.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/949281ae-3c43-4f21-a644-9eb4507c9f5e.png" srcset="data:image/png;base64,666" alt="TWRR计算示意图" /><figcaption aria-hidden="true">TWRR计算示意图</figcaption>
+</figure>
 <p>TWRR的原理：计算“没有任何事情发生的时间区间里的”growth factor.</p>
-<h2 id="Linked-internal-rate-of-return"><a href="#Linked-internal-rate-of-return" class="headerlink" title="Linked internal rate of return"></a>Linked internal rate of return</h2><p>$$<br>(1+i)^{t_{n}} ={(1+i_1)}^{t_1} (1+i_{2})^{t_{2}-t_{1}} (1+i_{3})^{t_{3}-t_{2}} \ldots(1+i_{n})^{t_{n}-t_{n-1}}<br>$$</p>
-<h2 id="线性插值法"><a href="#线性插值法" class="headerlink" title="线性插值法"></a>线性插值法</h2><p>假定我们在利率$i_{1}$ 和 $i_{2}$ 下计算出的现值分别为 $P_{1}$和$P_{2}$ ， 我们希望计算出准确的现值$P$对应的利率$i$.</p>
+<h2 id="linked-internal-rate-of-return">Linked internal rate of return</h2>
+<p><span class="math display">\[
+(1+i)^{t_{n}} ={(1+i_1)}^{t_1} (1+i_{2})^{t_{2}-t_{1}} (1+i_{3})^{t_{3}-t_{2}} \ldots(1+i_{n})^{t_{n}-t_{n-1}}
+\]</span></p>
+<h2 id="线性插值法">线性插值法</h2>
+<p>假定我们在利率<span class="math inline">\(i_{1}\)</span> 和 <span class="math inline">\(i_{2}\)</span> 下计算出的现值分别为 <span class="math inline">\(P_{1}\)</span>和<span class="math inline">\(P_{2}\)</span> ， 我们希望计算出准确的现值<span class="math inline">\(P\)</span>对应的利率<span class="math inline">\(i\)</span>.</p>
 <p>可以用下图表示：</p>
-<p><img src="https://img.actuarygarden.cn/d64ba034-f831-4923-847d-7c63843ad6a5.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/d64ba034-f831-4923-847d-7c63843ad6a5.jpg" srcset="data:image/png;base64,666" alt="线性插值法"></p>
-<p>$$<br>\frac{i-i_{1}}{i_{2}-i_{1}}=\frac{P-P_{1}}{P_{2}-P_{1}}<br>$$</p>
-<p>可以解出$i$的值为:<br>$$<br>i \approx i_{1}+\frac{P-P_{1}}{P_{2}-P_{1}} \times\left(i_{2}-i_{1}\right)<br>$$</p>
+<figure>
+<img src="https://img.actuarygarden.cn/d64ba034-f831-4923-847d-7c63843ad6a5.jpg" class="lazyload" data-srcset="https://img.actuarygarden.cn/d64ba034-f831-4923-847d-7c63843ad6a5.jpg" srcset="data:image/png;base64,666" alt="线性插值法" /><figcaption aria-hidden="true">线性插值法</figcaption>
+</figure>
+<p><span class="math display">\[
+\frac{i-i_{1}}{i_{2}-i_{1}}=\frac{P-P_{1}}{P_{2}-P_{1}}
+\]</span></p>
+<p>可以解出<span class="math inline">\(i\)</span>的值为: <span class="math display">\[
+i \approx i_{1}+\frac{P-P_{1}}{P_{2}-P_{1}} \times\left(i_{2}-i_{1}\right)
+\]</span></p>
 
   
   
@@ -959,21 +976,20 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/CS2-Guide/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【CS2导引篇】Risk Modelling and Survival Analysis</p>
-          <p class='content'>IFoA 英国精算师考试 CS2 精算模型和非寿险精算的学习大纲，备考必看。各章的主干知识点和考点总结。
+        <a class='prev' href='/CS2-Ch6-survivalmodels/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【CS2】Ch06 Survival models 生存模型</p>
+          <p class='content'>本文介绍生存模型，属于CS2第六章的内容，也是学习CM1的寿险精算部分的先修内容。
 
-
-概述公众号原先发过一篇旧体系IFoA的《CT4 Models 导引篇》以及赫瑞瓦特的...</p>
+本文不仅适用于英国精算师的考试，Jackie 在写这篇推文时也参考了北美体系的内容，所以考SOA的同学也...</p>
         </a>
       
       
-        <a class='next' href='/CS2-Ch6-survivalmodels/'>
-          <p class='title'>【CS2】Ch06 Survival models 生存模型<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>本文介绍生存模型，属于CS2第六章的内容，也是学习CM1的寿险精算部分的先修内容。
+        <a class='next' href='/CS2-Guide/'>
+          <p class='title'>【CS2导引篇】Risk Modelling and Survival Analysis<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>IFoA 英国精算师考试 CS2 精算模型和非寿险精算的学习大纲，备考必看。各章的主干知识点和考点总结。
 
-
-本文不仅适用于英国精算师的考试，Jackie 在写这篇推文时也参考了北美体系的内容，所以考SOA的同学也不...</p>
+概述
+公众号原先发过一篇旧体系IFoA的《CT4 Models 导引篇》以及赫瑞...</p>
         </a>
       
     </div>
@@ -1102,7 +1118,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MWRR-Money-weighted-rate-of-return"><span class="toc-text">MWRR:Money-weighted rate of return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TWRR-Time-weighted-rate-of-return"><span class="toc-text">TWRR:Time-weighted rate of return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linked-internal-rate-of-return"><span class="toc-text">Linked internal rate of return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E6%B3%95"><span class="toc-text">线性插值法</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#mwrrmoney-weighted-rate-of-return"><span class="toc-text">MWRR:Money-weighted rate of return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#twrrtime-weighted-rate-of-return"><span class="toc-text">TWRR:Time-weighted rate of return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#linked-internal-rate-of-return"><span class="toc-text">Linked internal rate of return</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC%E6%B3%95"><span class="toc-text">线性插值法</span></a></li></ol>
     </div>
   </section>
 
@@ -1202,14 +1218,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1361,294 +1377,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1786,10 +1514,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

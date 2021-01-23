@@ -774,9 +774,9 @@
           
             
 <div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
-    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
-    <p>Jackie</p>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/mengkelyu" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/ca386b90-7d77-47c0-aa6c-e6f46701f65a.jpg">
+    <p>珂珂</p>
   </a>
 </div>
 
@@ -829,64 +829,38 @@
   
   <p>用 Excel VBA 中的类模块 Class module 计算精算现值。</p>
 <a id="more"></a>
-
 <p>本文背景：类模块 （Class module）的普及是未来VBA编程的发展趋势。它具有能够简洁化代码，增强代码可读性的特点。但同时，它会加大代码维护的难度。类模块 （Class module）相对门槛较高，比普通模块更难理解。考虑到做精算同事的背景，可能要两者权衡取舍。</p>
 <p>不积跬步无以至千里，本文用了一个简单的类模块 （Class module）例子，帮助大家入门。本文设计了一个精算背景，目标读者为类模块初级学习者。欢迎大家指出不足之处。</p>
 <p>我有一个朋友，她叫做小珂珂。</p>
 <p>小珂珂是 ActuaryGarden 公司的精算实习生，这天，她在做精算表写VBA的时候遇到了一个问题：她手上目前有两套精算假设，想利用这两套假设计算年金现值a，还有定期寿险现值A。</p>
-<p><img src="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png" srcset="data:image/png;base64,666"></p>
-<p>因为不想重复工作，她想到，每一套假设都可以看作一个对象(Object)呀！可以利用类模块(Class model)来避免重复工作。<br>可以把利息率和死亡率设置成类模块(Class model)的属性，计算A和a设置成类模块(Class model)的方法~</p>
-<h3 id="如何定义Class-module"><a href="#如何定义Class-module" class="headerlink" title="如何定义Class module"></a>如何定义Class module</h3><p>首先，小珂珂创建了一个新的类模块(Class module)。</p>
-<p><img src="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png" srcset="data:image/png;base64,666" /></p>
+<p>因为不想重复工作，她想到，每一套假设都可以看作一个对象(Object)呀！可以利用类模块(Class model)来避免重复工作。 可以把利息率和死亡率设置成类模块(Class model)的属性，计算A和a设置成类模块(Class model)的方法~</p>
+<h3 id="如何定义class-module">如何定义Class module</h3>
+<p>首先，小珂珂创建了一个新的类模块(Class module)。</p>
+<p><img src="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png" srcset="data:image/png;base64,666" /></p>
 <p>并把它的名字在属性窗口中改成了：factor</p>
-<p><img src="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png" srcset="data:image/png;base64,666" /></p>
 <p>注意，这个名字十分重要，它决定了我们要如何在普通模块中创建对象。</p>
 <p>这里要解释一下没有用中文写属性名称的原因：因为在VBA编辑器中较难设定中文编码，在分发Excel文件的时候容易出现乱码问题。当然，如果您有更好的解决方案，欢迎留言。</p>
-<h3 id="如何创建属性"><a href="#如何创建属性" class="headerlink" title="如何创建属性"></a>如何创建属性</h3><p>小珂珂想要创建两个属性，一个是死亡率，一个是利息率。<br>这样的话，对于任何一个假设，都都可以轻易获得这些数据。<br>所以她打开了名为factor的类模块(Class model)，开始写属性啦~</p>
-<p>定义变量。getmordata 是死亡数据表，getinsrate是利率。<br>好的编程习惯是一定要把Option Explicit加上哦，这样可以让代码更不容易出错，跑的更快。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Option Explicit</span><br><span class="line">Private getmordata As Variant</span><br><span class="line">Private getinsrate As Single</span><br></pre></td></tr></table></figure>
-<p>对于某种属性，小珂珂都想要做两件事。</p>
-<ul>
-<li>首先，要给这个属性赋值，</li>
-<li>其次，要能够获取这个属性的值。</li>
-</ul>
+<h3 id="如何创建属性">如何创建属性</h3>
+<p>小珂珂想要创建两个属性，一个是死亡率，一个是利息率。 这样的话，对于任何一个假设，都都可以轻易获得这些数据。 所以她打开了名为factor的类模块(Class model)，开始写属性啦~</p>
+<p>定义变量。getmordata 是死亡数据表，getinsrate是利率。 好的编程习惯是一定要把Option Explicit加上哦，这样可以让代码更不容易出错，跑的更快。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Option Explicit</span><br><span class="line">Private getmordata As Variant</span><br><span class="line">Private getinsrate As Single</span><br></pre></td></tr></table></figure> 对于某种属性，小珂珂都想要做两件事。 - 首先，要给这个属性赋值， - 其次，要能够获取这个属性的值。</p>
 <p>注意，这里面的变量getmordata，getinsrate 是这个类模块(Class model)里面的局域变量（private variable)，我们在调取属性的时候，并不需要用它们。</p>
-<p>这个属性要通过下面定义的mortable()来获取。赋值在VBA中使用Let来表示的，代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Property Let mortable(rData As Variant)</span><br><span class="line">	&#39;这里可以定义一下如何验证属性rData的值</span><br><span class="line">    &#39;比如死亡率是否在0和1之间</span><br><span class="line">    getmordata &#x3D; rData</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure>
-<p>rData是我们给getmordata 赋值的时候用的参数。我们把rData的值赋给了mortable这个属性。注意，最后我们把值赋给了区域变量，而不是mortable。</p>
-<p>假设小珂珂把mortable赋好值啦，那么该如何获取这个值呢？<br>那么就涉及到Get啦~</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Property Get mortable() As Variant</span><br><span class="line">        mortable &#x3D; getmordata</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure>
-<p>可以把它想象成一个函数，因为VBA中利用函数时，返回值是通过给函数自身赋值得到的，所以我们要把地方变量getmordata的值赋予mortable。</p>
+<p>这个属性要通过下面定义的mortable()来获取。赋值在VBA中使用Let来表示的，代码如下： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Property Let mortable(rData As Variant)</span><br><span class="line">	&#39;这里可以定义一下如何验证属性rData的值</span><br><span class="line">    &#39;比如死亡率是否在0和1之间</span><br><span class="line">    getmordata &#x3D; rData</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure> rData是我们给getmordata 赋值的时候用的参数。我们把rData的值赋给了mortable这个属性。注意，最后我们把值赋给了区域变量，而不是mortable。</p>
+<p>假设小珂珂把mortable赋好值啦，那么该如何获取这个值呢？ 那么就涉及到Get啦~ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Property Get mortable() As Variant</span><br><span class="line">        mortable &#x3D; getmordata</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure> 可以把它想象成一个函数，因为VBA中利用函数时，返回值是通过给函数自身赋值得到的，所以我们要把地方变量getmordata的值赋予mortable。</p>
 <p>利率的属性也是通过相同方法得到的，大家可以自己试一试哦。</p>
 <ul>
 <li>这里最容易迷惑的点在于getmordata和mortable到底有什么区别？他俩看起来很相似呀，为什么要一个等于另一个呢？</li>
 </ul>
 <p>可以这么想：getmordata是在类模块(Class model)中用来称呼死亡率表的名字，它不能在这个类模块(Class model)之外使用，而mortable是用来在类模块(Class model)外部称呼这个属性的。</p>
-<h3 id="如何创建方法"><a href="#如何创建方法" class="headerlink" title="如何创建方法"></a>如何创建方法</h3><p>接下来，小珂珂就要定义方法啦。方法就太简单啦。方法就是函数而已，不同之处在于，它可以直接调用一些定义好的属性。<br>下面的代码就是小珂珂计算A的过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Function bigavalue(lowerlimit As Integer, duration As Integer):</span><br><span class="line">bigavalue &#x3D; 0</span><br><span class="line">Dim i As Integer</span><br><span class="line">For i &#x3D; lowerlimit To duration + lowerlimit</span><br><span class="line">    bigavalue &#x3D; bigavalue + getmordata(lowerlimit, 2) &#x2F; (1 + insrate) ^ (0.05 + i - lowerlimit)</span><br><span class="line">Next i</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
-<p>希望她还没有把精算数学还给老师。getmordata是死亡率的表，insrate是定义好的利率。通过一个循环算好A~<br>a的计算相似，大家可以想一想哦。</p>
-<h3 id="调用类模块-Class-model"><a href="#调用类模块-Class-model" class="headerlink" title="调用类模块(Class model)"></a>调用类模块(Class model)</h3><p>大家还记得小珂珂把定义好的类模块(Class model)叫做factor了吗？想要定义新的对象，她是这样做滴：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#39;Declare class variable</span><br><span class="line">   Dim factorA As factor</span><br><span class="line">   Dim factorB As factor</span><br><span class="line">   </span><br><span class="line">   Set factorA &#x3D; New factor</span><br><span class="line">   Set factorB &#x3D; New factor</span><br></pre></td></tr></table></figure>
-<p>另一种方法是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;Declare class variable</span><br><span class="line">   Dim factorA As new factor</span><br><span class="line">   Dim factorB As new factor</span><br></pre></td></tr></table></figure>
-<p>但是要记住，<em>最好使用第一种Dim/Set方法</em>。这两种方法最大的区别在于，第一种方法中，factor这个对象在set的时候就创造好了，第二种方法中，factor这个对象是在用它的时候创造的。而且第二种方法跑的更慢。</p>
-<p>factorA和factorB都是新的factor，小珂珂不禁觉得，太简单啦。<br>然后小珂珂把这种假设的属性设置好。</p>
-<ul>
-<li>Atable和Btable都是事先读取了Table1和Table2值的array数组。</li>
-<li>rateA和rateB是两种假设下的利率。</li>
-<li>bigavalue是用来计算A的方法。</li>
-</ul>
-<p>注意Debug.Print的内容可以在即时窗口(immediate window)中显示出来。调用即时窗口(immediate window)的快捷键是Ctrl + G</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   factorA.mortable &#x3D; Atable</span><br><span class="line">   factorB.mortable &#x3D; Btable</span><br><span class="line">   </span><br><span class="line">   factorA.insrate &#x3D; Range(&quot;rateA&quot;).Value</span><br><span class="line">   factorB.insrate &#x3D; Range(&quot;rateB&quot;).Value</span><br><span class="line">   </span><br><span class="line">&#39;Calculations</span><br><span class="line">   Debug.Print (factorA.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorA.smlavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.smlavalue(10, 10))</span><br></pre></td></tr></table></figure>
-<h3 id="集合-Collections"><a href="#集合-Collections" class="headerlink" title="集合(Collections)"></a>集合(Collections)</h3><p>小珂珂此时想到，如果我能把所有假设放在一起就好啦。这样我能轻易找到自己一共定义了几个假设，调用或遍历起来也方便。</p>
+<h3 id="如何创建方法">如何创建方法</h3>
+<p>接下来，小珂珂就要定义方法啦。方法就太简单啦。方法就是函数而已，不同之处在于，它可以直接调用一些定义好的属性。 下面的代码就是小珂珂计算A的过程 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Function bigavalue(lowerlimit As Integer, duration As Integer):</span><br><span class="line">bigavalue &#x3D; 0</span><br><span class="line">Dim i As Integer</span><br><span class="line">For i &#x3D; lowerlimit To duration + lowerlimit</span><br><span class="line">    bigavalue &#x3D; bigavalue + getmordata(lowerlimit, 2) &#x2F; (1 + insrate) ^ (0.05 + i - lowerlimit)</span><br><span class="line">Next i</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure> 希望她还没有把精算数学还给老师。getmordata是死亡率的表，insrate是定义好的利率。通过一个循环算好A~ a的计算相似，大家可以想一想哦。</p>
+<h3 id="调用类模块class-model">调用类模块(Class model)</h3>
+<p>大家还记得小珂珂把定义好的类模块(Class model)叫做factor了吗？想要定义新的对象，她是这样做滴： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#39;Declare class variable</span><br><span class="line">   Dim factorA As factor</span><br><span class="line">   Dim factorB As factor</span><br><span class="line">   </span><br><span class="line">   Set factorA &#x3D; New factor</span><br><span class="line">   Set factorB &#x3D; New factor</span><br></pre></td></tr></table></figure> 另一种方法是 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#39;Declare class variable</span><br><span class="line">   Dim factorA As new factor</span><br><span class="line">   Dim factorB As new factor</span><br></pre></td></tr></table></figure> 但是要记住，<em>最好使用第一种Dim/Set方法</em>。这两种方法最大的区别在于，第一种方法中，factor这个对象在set的时候就创造好了，第二种方法中，factor这个对象是在用它的时候创造的。而且第二种方法跑的更慢。</p>
+<p>factorA和factorB都是新的factor，小珂珂不禁觉得，太简单啦。 然后小珂珂把这种假设的属性设置好。 - Atable和Btable都是事先读取了Table1和Table2值的array数组。 - rateA和rateB是两种假设下的利率。 - bigavalue是用来计算A的方法。</p>
+<p>注意Debug.Print的内容可以在即时窗口(immediate window)中显示出来。调用即时窗口(immediate window)的快捷键是Ctrl + G <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   factorA.mortable &#x3D; Atable</span><br><span class="line">   factorB.mortable &#x3D; Btable</span><br><span class="line">   </span><br><span class="line">   factorA.insrate &#x3D; Range(&quot;rateA&quot;).Value</span><br><span class="line">   factorB.insrate &#x3D; Range(&quot;rateB&quot;).Value</span><br><span class="line">   </span><br><span class="line">&#39;Calculations</span><br><span class="line">   Debug.Print (factorA.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorA.smlavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.smlavalue(10, 10))</span><br></pre></td></tr></table></figure> ### 集合(Collections) 小珂珂此时想到，如果我能把所有假设放在一起就好啦。这样我能轻易找到自己一共定义了几个假设，调用或遍历起来也方便。</p>
 <p>这个时候就要用到一个叫做集合(Collections)的东西。</p>
-<p>像这样可以定义一个叫做Assumptions的集合:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Dim Assumptions As Collection</span><br><span class="line">Set Assumptions &#x3D; New Collection</span><br></pre></td></tr></table></figure>
-<p>把我们刚刚定义好的对象加入进去：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Assumptions.Add factorA</span><br><span class="line">Assumptions.Add factorB</span><br></pre></td></tr></table></figure>
-<p>试着使用一下！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For Each fac In Assumptions</span><br><span class="line">    Debug.Print fac.insrate</span><br><span class="line">Next fac</span><br></pre></td></tr></table></figure>
-<p>这样，把所有的factor对象都放到一个集合(Collections)中，遍历和管理就方便多啦。</p>
+<p>像这样可以定义一个叫做Assumptions的集合: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Dim Assumptions As Collection</span><br><span class="line">Set Assumptions &#x3D; New Collection</span><br></pre></td></tr></table></figure> 把我们刚刚定义好的对象加入进去： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Assumptions.Add factorA</span><br><span class="line">Assumptions.Add factorB</span><br></pre></td></tr></table></figure> 试着使用一下！ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For Each fac In Assumptions</span><br><span class="line">    Debug.Print fac.insrate</span><br><span class="line">Next fac</span><br></pre></td></tr></table></figure> 这样，把所有的factor对象都放到一个集合(Collections)中，遍历和管理就方便多啦。</p>
 <p>本文完整代码点击<a target="_blank" rel="noopener" href="https://actuarygarden.com/topic/13">阅读原文</a>进入精算后花园论坛下载。</p>
 
   
@@ -1005,10 +979,9 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>用Python分析财险数据——菜鸟向</p>
           <p class='content'>使用VBA警示异常值。
 
-
 在非寿险评估工作中，需要看很多三角形。
 用肉眼去观测三角形中的异常值非常辛苦。需要一个简单的工具来帮助我们找到异常的数据。
-以reported loss ratio的...</p>
+以reported loss rat...</p>
         </a>
       
       
@@ -1016,8 +989,7 @@
           <p class='title'>悉尼新南威尔士大学精算就读体验<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>悉尼新南威尔士大学（UNSW）精算专业课程设置和就读体验。
 
-
-不知不觉来到澳洲已经一年多了，有幸在澳洲两所精算认证的高校都就读过，在精算的道路上摸爬打滚，感触颇深。现在UNSW精算研究生在读，...</p>
+不知不觉来到澳洲已经一年多了，有幸在澳洲两所精算认证的高校都就读过，在精算的道路上摸爬打滚，感触颇深。现在UNSW精算研究生在读...</p>
         </a>
       
     </div>
@@ -1062,7 +1034,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89Class-module"><span class="toc-text">如何定义Class module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B1%9E%E6%80%A7"><span class="toc-text">如何创建属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-text">如何创建方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E7%B1%BB%E6%A8%A1%E5%9D%97-Class-model"><span class="toc-text">调用类模块(Class model)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88-Collections"><span class="toc-text">集合(Collections)</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89class-module"><span class="toc-text">如何定义Class module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B1%9E%E6%80%A7"><span class="toc-text">如何创建属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-text">如何创建方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E7%B1%BB%E6%A8%A1%E5%9D%97class-model"><span class="toc-text">调用类模块(Class model)</span></a></li></ol>
     </div>
   </section>
 
@@ -1162,14 +1134,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1321,294 +1293,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1746,10 +1430,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

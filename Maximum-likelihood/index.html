@@ -829,38 +829,42 @@
   
   <p>涉及的知识点为贝叶斯和极大似然估计。</p>
 <a id="more"></a>
-
 <p>本文的目的是让没有学过贝叶斯公式的同学对贝叶斯公式有个具体生动的印象。已经掌握得很好的同学可以略过这篇文章。限于作者水平，面面俱到是不可能的，这句话也同样适用于本公众号的其他文章。毕竟孙子也说过，备前则后寡，备左则右寡，无所不备，则无所不寡。</p>
-<h3 id="场景假定"><a href="#场景假定" class="headerlink" title="场景假定"></a>场景假定</h3><p>我们设想一个场景：某个晚上，Jackie梦见了一个姑娘。</p>
+<h3 id="场景假定">场景假定</h3>
+<p>我们设想一个场景：某个晚上，Jackie梦见了一个姑娘。</p>
 <p>这件事情显然可以有两种可能性：</p>
 <ul>
 <li>其一，Jackie喜欢这个姑娘，因此寤寐思服。</li>
 <li>其二，Jackie不喜欢这个姑娘，梦见她纯属偶然。</li>
 </ul>
 <p>我们把事件“Jackie梦见这个姑娘”记作B1；把事件“Jackie没有梦见这个姑娘”记作B2;把事件“Jackie喜欢这个姑娘”记作A1；把事件“Jackie不喜欢这个姑娘”记作A2。</p>
-<h3 id="设定各事件的概率"><a href="#设定各事件的概率" class="headerlink" title="设定各事件的概率"></a>设定各事件的概率</h3><p>为了让这个场景更加生动，作者决定写一段话解释各事件的概率是如何设（Xia）定(Bai)的。</p>
+<h3 id="设定各事件的概率">设定各事件的概率</h3>
+<p>为了让这个场景更加生动，作者决定写一段话解释各事件的概率是如何设（Xia）定(Bai)的。</p>
 <p>因为这个姑娘还有些漂亮，不妨假定“Jackie喜欢这个姑娘”的概率为0.6，略高于“Jackie不喜欢这个姑娘”的概率0.4。</p>
 <p>又因为Jackie在武汉某所“男女三比七”的财经类院校就读，而作为本文作者，Jackie显然是一个专情的人，如果喜欢一个姑娘，只要梦见女生，梦见的就一定是这位姑娘，所以“Jackie喜欢这个姑娘的前提下梦见这个姑娘”的概率大致为0.7；如果不喜欢这个姑娘呢，梦见她的概率和梦见男生的概率差不多，为0.3。</p>
-<p><img src="https://img.actuarygarden.cn/6f37e57d-fd8f-453a-8c48-76b7eff0efd2.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/6f37e57d-fd8f-453a-8c48-76b7eff0efd2.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/6f37e57d-fd8f-453a-8c48-76b7eff0efd2.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/6f37e57d-fd8f-453a-8c48-76b7eff0efd2.png" srcset="data:image/png;base64,666" /></p>
 <p>我们可以画出以下树状图：</p>
-<p><img src="https://img.actuarygarden.cn/2dde909c-eb65-4f25-a561-2379d90f21e6.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/2dde909c-eb65-4f25-a561-2379d90f21e6.png" srcset="data:image/png;base64,666"></p>
-<h3 id="计算条件概率"><a href="#计算条件概率" class="headerlink" title="计算条件概率"></a>计算条件概率</h3><p>Jackie在各情形下梦见这个姑娘的概率：</p>
-<p>$$P\left(B_{1}\right)=0.6 * 0.7+0.4 * 0.3=0.54$$</p>
+<p><img src="https://img.actuarygarden.cn/2dde909c-eb65-4f25-a561-2379d90f21e6.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/2dde909c-eb65-4f25-a561-2379d90f21e6.png" srcset="data:image/png;base64,666" /></p>
+<h3 id="计算条件概率">计算条件概率</h3>
+<p>Jackie在各情形下梦见这个姑娘的概率：</p>
+<p><span class="math display">\[P\left(B_{1}\right)=0.6 * 0.7+0.4 * 0.3=0.54\]</span></p>
 <p>Jackie喜欢并且梦见这个姑娘的概率：</p>
-<p>$$P\left(A_{1} B_{1}\right)=0.6 * 0.7=0.42$$</p>
+<p><span class="math display">\[P\left(A_{1} B_{1}\right)=0.6 * 0.7=0.42\]</span></p>
 <p>给定梦见的前提，Jackie喜欢该姑娘的条件概率：</p>
-<p>$$P\left(A_{1} | B_{1}\right)=\frac{P\left(A_{1} B_{1}\right)}{P\left(B_{1}\right)}=\frac{7}{9}$$</p>
+<p><span class="math display">\[P\left(A_{1} | B_{1}\right)=\frac{P\left(A_{1} B_{1}\right)}{P\left(B_{1}\right)}=\frac{7}{9}\]</span></p>
 <p>同样地，给定梦见的前提，Jackie不喜欢该姑娘的条件概率：</p>
-<p>$$P\left(A_{2} | B_{1}\right)=\frac{P\left(A_{2} B_{1}\right)}{P\left(B_{1}\right)}=\frac{2}{9}$$</p>
+<p><span class="math display">\[P\left(A_{2} | B_{1}\right)=\frac{P\left(A_{2} B_{1}\right)}{P\left(B_{1}\right)}=\frac{2}{9}\]</span></p>
 <p>显然前者更大。所以说，会在梦里遇到她，大概潜意识就是很喜欢这个姑娘了。证毕。</p>
 <p>我们计算条件概率时用到的就是贝叶斯公式。</p>
-<h3 id="联想到极大似然估计"><a href="#联想到极大似然估计" class="headerlink" title="联想到极大似然估计"></a>联想到极大似然估计</h3><p>从上述的例子我们可以发现，“梦见这个姑娘”这个事件最像是发生在“喜欢这个姑娘”的前提下。这个推断是符合人们的经验事实的。</p>
+<h3 id="联想到极大似然估计">联想到极大似然估计</h3>
+<p>从上述的例子我们可以发现，“梦见这个姑娘”这个事件最像是发生在“喜欢这个姑娘”的前提下。这个推断是符合人们的经验事实的。</p>
 <p>“最像”就是“极大似然”的意思。这就暗含了极大似然估计估计的思想：已经发生的事情，就是最可能会发生的。</p>
 <p>严格的说，极大似然估计的目的是：利用已知的样本结果，反推最有可能（最大概率）导致这样结果的参数值。</p>
-<h3 id="习题"><a href="#习题" class="headerlink" title="习题"></a>习题</h3><p>看完这个例子，大家对贝叶斯公式的理解有没有更加具体呢？来道习题检验一下吧。这是IFoA2016年4月的第四道真题，也是2017年慕再精算竞赛里的题源之一。</p>
-<p><img src="https://img.actuarygarden.cn/fc1eb045-5abf-402e-b353-8a591f1c6353.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/fc1eb045-5abf-402e-b353-8a591f1c6353.png" srcset="data:image/png;base64,666"></p>
+<h3 id="习题">习题</h3>
+<p>看完这个例子，大家对贝叶斯公式的理解有没有更加具体呢？来道习题检验一下吧。这是IFoA2016年4月的第四道真题，也是2017年慕再精算竞赛里的题源之一。</p>
+<p><img src="https://img.actuarygarden.cn/fc1eb045-5abf-402e-b353-8a591f1c6353.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/fc1eb045-5abf-402e-b353-8a591f1c6353.png" srcset="data:image/png;base64,666" /></p>
 <p>答案如下：</p>
-<p><img src="https://img.actuarygarden.cn/17c0fa5f-00dd-40f5-85e3-2091fc4eba66.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/17c0fa5f-00dd-40f5-85e3-2091fc4eba66.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/17c0fa5f-00dd-40f5-85e3-2091fc4eba66.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/17c0fa5f-00dd-40f5-85e3-2091fc4eba66.png" srcset="data:image/png;base64,666" /></p>
 <p>当然，本文离不开一个最重要的前提假设：</p>
 <blockquote>
 <p>首先得有这样一个姑娘存在</p>
@@ -869,7 +873,7 @@
 <blockquote>
 <p>We may assume that GuNiang exists first.</p>
 </blockquote>
-<p><img src="https://img.actuarygarden.cn/5e32613f-e321-406a-9387-5dcd517006a4.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/5e32613f-e321-406a-9387-5dcd517006a4.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/5e32613f-e321-406a-9387-5dcd517006a4.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/5e32613f-e321-406a-9387-5dcd517006a4.png" srcset="data:image/png;base64,666" /></p>
 
   
   
@@ -987,8 +991,8 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>【P导引篇】Probability</p>
           <p class='content'>SOA 北美精算师考试 P 概率论的学习大纲，备考必看。各章的主干知识点和考点总结。
 
-
-P基本信息P为概率论，是SOA基础科目之一，每个奇数月份可注册预约，考试时应使用指定的科学计算器。P考试...</p>
+P基本信息
+P为概率论，是SOA基础科目之一，每个奇数月份可注册预约，考试时应使用指定的科学计算器。...</p>
         </a>
       
       
@@ -996,9 +1000,9 @@ P基本信息P为概率论，是SOA基础科目之一，每个奇数月份可注
           <p class='title'>【LTAM导引篇】Long-Term Actuarial Mathmetics<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>SOA 北美精算师考试 LTAM 寿险精算的学习大纲，备考必看。各章的主干知识点和考点总结。
 
-
 希望精算的小可爱们LTAM都一次性过过过！！！毕竟书真的太厚了。
-备考时间LTAM的ASM Ma...</p>
+备考时间
+LTAM的AS...</p>
         </a>
       
     </div>
@@ -1227,14 +1231,14 @@ P基本信息P为概率论，是SOA基础科目之一，每个奇数月份可注
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1386,294 +1390,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1811,10 +1527,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

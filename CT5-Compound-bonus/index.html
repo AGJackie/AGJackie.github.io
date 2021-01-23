@@ -829,38 +829,56 @@
   
   <p>CM1常考察带分红（With-profit）的寿险，其中，保额复利增长（compound reversionary bonus）通常有两种出题套路。</p>
 <a id="more"></a>
-
-
-<p>在CM1的寿险精算部分（部分学校对应的课程名称为寿险1或寿险A）会出一道总保费（Gross Premium）和总保费准备金（Gross Premium Reserve, Gross Premium Policy Value）计算的大题。为适当增加题目难度，CM1常考察带分红（With-profit）的寿险，其保险金额（Sum Assured）会随着Bonus（红利）而增长（通常为单利或复利增长）。其中，对于保额复利增长（compound reversionary bonus）的情况，为方便考生查表（Tables）计算，利率（用字母$i$表示）和红利利率（用字母$b$表示）通常有以下两种组合：</p>
+<p>在CM1的寿险精算部分（部分学校对应的课程名称为寿险1或寿险A）会出一道总保费（Gross Premium）和总保费准备金（Gross Premium Reserve, Gross Premium Policy Value）计算的大题。为适当增加题目难度，CM1常考察带分红（With-profit）的寿险，其保险金额（Sum Assured）会随着Bonus（红利）而增长（通常为单利或复利增长）。其中，对于保额复利增长（compound reversionary bonus）的情况，为方便考生查表（Tables）计算，利率（用字母<span class="math inline">\(i\)</span>表示）和红利利率（用字母<span class="math inline">\(b\)</span>表示）通常有以下两种组合：</p>
 <ul>
 <li>组合1: 利率为6%，compound bonus为1.92308%</li>
-<li>组合2: 利率为$x$%，compound bonus也为$x$%</li>
+<li>组合2: 利率为<span class="math inline">\(x\)</span>%，compound bonus也为<span class="math inline">\(x\)</span>%</li>
 </ul>
 <p>我们以CT5的两道真题为例，对两种组合的解法逐一说明。</p>
-<h3 id="利率为6-，compound-bonus为1-92308"><a href="#利率为6-，compound-bonus为1-92308" class="headerlink" title="利率为6%，compound bonus为1.92308%"></a>利率为6%，compound bonus为1.92308%</h3><p>Exercise 1: CT5 April 2008 Q11<br><img src="https://img.actuarygarden.cn/e01316d7-34a7-419c-bd15-ad5907375aaa.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/e01316d7-34a7-419c-bd15-ad5907375aaa.png" srcset="data:image/png;base64,666"><br>考察复利bonus的生死两全保险的未来法总保费和总保费准备金的计算。其中利率为6%，compound bonus为1.92308%.</p>
-<p>我们看第一问。这里有增长的部分只是保额，所以要处理的部分在EPV of death benefits. 我们需要将survival benefits和death benefits分拆开来计算，原因是死亡时立即给付的生死两全保险在近似为死亡年度末的EPV时需要分拆。记$b=1.92308%$:<br>$$<br>\begin{array}{ll}<br>{\text{EPV of benefits}} &amp; {} \<br>{=\frac{75000}{(1+b)}\times (1.06)^{0.5}({<em>{}q}</em>{[50]}(1+b)v+{<em>{1|}q}</em>{[50]}(1+b)^{2}v^{2}}&amp; {} \<br>{\quad +\cdots+ {<em>{9|}q}</em>{[50]}(1+b)^{10}v^{10})+75000{<em>{10}p}</em>{[50]}(1+b)^{10}v^{10}} &amp; {\mbox{令} v_{j}=v(1+b)} \<br>{=\frac{75000}{(1+b)}\times (1.06)^{0.5}\Ax{}{}{}{\term{[50]}{10}}@j+75000{<em>{10}p}</em>{[50]}\times \frac{1}{(1+j)^{10}}} &amp; {\mbox{其中}j=\frac{1.06}{(1+b)}-1=0.04}<br>\end{array}<br>$$<br>接下来查表就好。利率为6%，compound bonus为1.92308%的组合妙就妙在组合出新的利率 $j=0.04$，刚好可以查4%的 AM92 表。</p>
-<h3 id="利率为-x-，compound-bonus也为-x"><a href="#利率为-x-，compound-bonus也为-x" class="headerlink" title="利率为$x$%，compound bonus也为$x$%"></a>利率为$x$%，compound bonus也为$x$%</h3><p>Exercise 2: CT5 April 2011 Q12<br><img src="https://img.actuarygarden.cn/bb25fc37-9a2f-470c-bc29-fee4b2307c2d.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/bb25fc37-9a2f-470c-bc29-fee4b2307c2d.png" srcset="data:image/png;base64,666"><br>考察保额复利增长的定期寿险的未来法总保费和总保费准备金的计算。其中利率为4%，保额增长率也为4%.</p>
-<p>看第一小问。我们用和上题相同的方法，记 $b=4%$：<br>$$<br>\begin{array}{ll}<br>{\text{EPV of benefits}} &amp; {} \<br>{=75000({<em>{}q}</em>{[40]}v^{0.5}+{<em>{1|}q}</em>{[40]}(1+b)v^{1.5}+\cdots+ {<em>{24|}q}</em>{[40]}(1+b)^{24}v^{24.5} )}&amp; {} \<br>{=\frac{75000\times (1+i)^{0.5}}{(1+b)}\times \Ax{}{}{}{\term{[40]}{25}}@j} &amp; {\mbox{其中}j=\frac{1.04}{(1+b)}-1=0%} \<br>{=\frac{75000\times (1+i)^{0.5}}{(1+b)}\times(<em>{}A</em>{[40]}-{<em>{25}p}</em>{[40]}v^{25}<em>{}A</em>{65})@j} &amp; {}\<br>{=\frac{75000}{(1.04)^{0.5}}\times(1-\frac{8821.2612}{9854.3036}\times1\times1)} &amp; {}<br>\end{array}<br>$$</p>
-<p>这里新计算出的 $j=0%$, 没法对 $\Ax{}{}{}{\term{[40]}{25}}$ 直接查表，所以我们先转化为终身寿险的保险金EPV，根据原始定义可以发现：<br>$$<br><em>{}A</em>{x}=\sum_{k=0}^{\infty}v^{k+1}{<em>{k|}q}</em>{x}=\sum_{k=0}^{\infty}{<em>{k|}q}</em>{x}=1<br>$$</p>
-<p>这道题的Renewal expenses也是4%的增长率，所以：<br>$$<br>\begin{array}{ll}<br>{\text{EPV of renewal expenses}} &amp; {} \<br>{=75(\axzz{}{}{}{\endow{[40]}{25}}@j -1 )}&amp; {\mbox{其中}j=\frac{1.04}{(1+b)}-1=0%} \<br>{=75 \frac{1}{l_{[40]}}\left(l_{[40]+1}+\ldots+l_{64}\right)} &amp; {} \<br>{=e_{[40]}-\frac{l_{64}}{l_{[40]}}e_{64}}&amp; {\mbox{因为}e_{x}=E[K_{x}]=\sum_{k=0}^{\infty}k \cdot P(K_{x}=k)=\sum_{k=1}^{\infty}{<em>{k}p}</em>{x}=\sum_{k=1}^{\infty}\frac{l_{x+k}}{l_x}}<br>\end{array}<br>$$</p>
+<h3 id="利率为6compound-bonus为1.92308">利率为6%，compound bonus为1.92308%</h3>
+<p>Exercise 1: CT5 April 2008 Q11 <img src="https://img.actuarygarden.cn/e01316d7-34a7-419c-bd15-ad5907375aaa.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/e01316d7-34a7-419c-bd15-ad5907375aaa.png" srcset="data:image/png;base64,666" /> 考察复利bonus的生死两全保险的未来法总保费和总保费准备金的计算。其中利率为6%，compound bonus为1.92308%.</p>
+<p>我们看第一问。这里有增长的部分只是保额，所以要处理的部分在EPV of death benefits. 我们需要将survival benefits和death benefits分拆开来计算，原因是死亡时立即给付的生死两全保险在近似为死亡年度末的EPV时需要分拆。记<span class="math inline">\(b=1.92308\%\)</span>: <span class="math display">\[
+\begin{array}{ll}
+{\text{EPV of benefits}} &amp; {} \\
+{=\frac{75000}{(1+b)}\times (1.06)^{0.5}({_{}q}_{[50]}(1+b)v+{_{1|}q}_{[50]}(1+b)^{2}v^{2}}&amp; {} \\
+{\quad +\cdots+ {_{9|}q}_{[50]}(1+b)^{10}v^{10})+75000{_{10}p}_{[50]}(1+b)^{10}v^{10}} &amp; {\mbox{令} v_{j}=v(1+b)} \\
+{=\frac{75000}{(1+b)}\times (1.06)^{0.5}\Ax{}{}{}{\term{[50]}{10}}@j+75000{_{10}p}_{[50]}\times \frac{1}{(1+j)^{10}}} &amp; {\mbox{其中}j=\frac{1.06}{(1+b)}-1=0.04}
+\end{array}
+\]</span> 接下来查表就好。利率为6%，compound bonus为1.92308%的组合妙就妙在组合出新的利率 <span class="math inline">\(j=0.04\)</span>，刚好可以查4%的 AM92 表。</p>
+<h3 id="利率为xcompound-bonus也为x">利率为<span class="math inline">\(x\)</span>%，compound bonus也为<span class="math inline">\(x\)</span>%</h3>
+<p>Exercise 2: CT5 April 2011 Q12 <img src="https://img.actuarygarden.cn/bb25fc37-9a2f-470c-bc29-fee4b2307c2d.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/bb25fc37-9a2f-470c-bc29-fee4b2307c2d.png" srcset="data:image/png;base64,666" /> 考察保额复利增长的定期寿险的未来法总保费和总保费准备金的计算。其中利率为4%，保额增长率也为4%.</p>
+<p>看第一小问。我们用和上题相同的方法，记 <span class="math inline">\(b=4\%\)</span>： <span class="math display">\[
+\begin{array}{ll}
+{\text{EPV of benefits}} &amp; {} \\
+{=75000({_{}q}_{[40]}v^{0.5}+{_{1|}q}_{[40]}(1+b)v^{1.5}+\cdots+ {_{24|}q}_{[40]}(1+b)^{24}v^{24.5} )}&amp; {} \\
+{=\frac{75000\times (1+i)^{0.5}}{(1+b)}\times \Ax{}{}{}{\term{[40]}{25}}@j} &amp; {\mbox{其中}j=\frac{1.04}{(1+b)}-1=0\%} \\
+{=\frac{75000\times (1+i)^{0.5}}{(1+b)}\times(_{}A_{[40]}-{_{25}p}_{[40]}v^{25}_{}A_{65})@j} &amp; {}\\
+{=\frac{75000}{(1.04)^{0.5}}\times(1-\frac{8821.2612}{9854.3036}\times1\times1)} &amp; {} 
+\end{array}
+\]</span></p>
+<p>这里新计算出的 <span class="math inline">\(j=0\%\)</span>, 没法对 <span class="math inline">\(\Ax{}{}{}{\term{[40]}{25}}\)</span> 直接查表，所以我们先转化为终身寿险的保险金EPV，根据原始定义可以发现： <span class="math display">\[
+_{}A_{x}=\sum_{k=0}^{\infty}v^{k+1}{_{k|}q}_{x}=\sum_{k=0}^{\infty}{_{k|}q}_{x}=1
+\]</span></p>
+<p>这道题的Renewal expenses也是4%的增长率，所以： <span class="math display">\[
+\begin{array}{ll}
+{\text{EPV of renewal expenses}} &amp; {} \\
+{=75(\axzz{}{}{}{\endow{[40]}{25}}@j -1 )}&amp; {\mbox{其中}j=\frac{1.04}{(1+b)}-1=0\%} \\
+{=75 \frac{1}{l_{[40]}}\left(l_{[40]+1}+\ldots+l_{64}\right)} &amp; {} \\
+{=e_{[40]}-\frac{l_{64}}{l_{[40]}}e_{64}}&amp; {\mbox{因为}e_{x}=E[K_{x}]=\sum_{k=0}^{\infty}k \cdot P(K_{x}=k)=\sum_{k=1}^{\infty}{_{k}p}_{x}=\sum_{k=1}^{\infty}\frac{l_{x+k}}{l_x}} 
+\end{array}
+\]</span></p>
 <p>接下来查表即可。</p>
 <p>最后附上两道真题的完整答案：</p>
 <details blue><summary> Solution 1: CT5 April 2008 Q11 </summary>
               <div class='content'>
-              <p><img src="https://img.actuarygarden.cn/29519150-8e2e-4682-a645-ad1242e4316f.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/29519150-8e2e-4682-a645-ad1242e4316f.png" srcset="data:image/png;base64,666"></p>
+              <p><img src="https://img.actuarygarden.cn/29519150-8e2e-4682-a645-ad1242e4316f.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/29519150-8e2e-4682-a645-ad1242e4316f.png" srcset="data:image/png;base64,666" /></p>
               </div>
             </details>
-
 <details blue><summary> Solution 2: CT5 April 2011 Q12 </summary>
               <div class='content'>
-              <p><img src="https://img.actuarygarden.cn/3b66ab1a-6e72-4047-81a7-dac73f57e7b4.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/3b66ab1a-6e72-4047-81a7-dac73f57e7b4.png" srcset="data:image/png;base64,666"></p><p><img src="https://img.actuarygarden.cn/fff9b54a-4cc5-4f20-a846-231b3609c0c6.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/fff9b54a-4cc5-4f20-a846-231b3609c0c6.png" srcset="data:image/png;base64,666"></p><p><img src="https://imgkr.cn-bj.ufileos.com/1aed0b33-f815-46c2-a856-9042b755b660.png" class="lazyload" data-srcset="https://imgkr.cn-bj.ufileos.com/1aed0b33-f815-46c2-a856-9042b755b660.png" srcset="data:image/png;base64,666"></p>
+              <p><img src="https://img.actuarygarden.cn/3b66ab1a-6e72-4047-81a7-dac73f57e7b4.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/3b66ab1a-6e72-4047-81a7-dac73f57e7b4.png" srcset="data:image/png;base64,666" /></p><p><img src="https://img.actuarygarden.cn/fff9b54a-4cc5-4f20-a846-231b3609c0c6.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/fff9b54a-4cc5-4f20-a846-231b3609c0c6.png" srcset="data:image/png;base64,666" /></p><p><img src="https://imgkr.cn-bj.ufileos.com/1aed0b33-f815-46c2-a856-9042b755b660.png" class="lazyload" data-srcset="https://imgkr.cn-bj.ufileos.com/1aed0b33-f815-46c2-a856-9042b755b660.png" srcset="data:image/png;base64,666" /></p>
               </div>
             </details>
-
-
-
-
-
 
   
   
@@ -895,10 +913,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-01T17:39:14+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-23T14:30:48+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>本页文档最后更新于：2020年8月1日</p>
+    <p>本页文档最后更新于：2021年1月23日</p>
   </a>
 </div>
 
@@ -978,9 +996,8 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>CT5 Contingencies 寿险精算学习笔记</p>
           <p class='content'>根据赫瑞瓦特的 CT5 寿险精算课程对全书的知识点做的梳理，和协会的CT5考试内容不完全一致，适合预习或者复习CT5的时候理一遍思路。
 
-
 当当当～下面就是CT5的学习笔记啦～
-虽然自己也是一个...</p>
+虽然自己也是...</p>
         </a>
       
       
@@ -988,8 +1005,7 @@
           <p class='title'>CT4 Survival Model 精算模型学习笔记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>根据赫瑞瓦特的 CT4 精算模型课程对全书的知识点做的梳理，和协会的CT4考试内容不完全一致，适合预习或者复习CT4的时候理一遍思路。
 
-
-把一学期老师上课内容梳理一遍+自己理解～很基础但很有用...</p>
+把一学期老师上课内容梳理一遍+自己理解～很基础但很有...</p>
         </a>
       
     </div>
@@ -1118,7 +1134,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%8E%87%E4%B8%BA6-%EF%BC%8Ccompound-bonus%E4%B8%BA1-92308"><span class="toc-text">利率为6%，compound bonus为1.92308%</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%8E%87%E4%B8%BA-x-%EF%BC%8Ccompound-bonus%E4%B9%9F%E4%B8%BA-x"><span class="toc-text">利率为$x$%，compound bonus也为$x$%</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%8E%87%E4%B8%BA6compound-bonus%E4%B8%BA1.92308"><span class="toc-text">利率为6%，compound bonus为1.92308%</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%8E%87%E4%B8%BAxcompound-bonus%E4%B9%9F%E4%B8%BAx"><span class="toc-text">利率为\(x\)%，compound bonus也为\(x\)%</span></a></li></ol>
     </div>
   </section>
 
@@ -1218,14 +1234,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1377,294 +1393,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1802,10 +1530,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

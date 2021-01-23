@@ -774,9 +774,9 @@
           
             
 <div class='new-meta-item author'>
-  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
-    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
-    <p>Jackie</p>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/ellie" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/063626fa-659b-4cc3-9588-67112721e816.jpg">
+    <p>ellie</p>
   </a>
 </div>
 
@@ -829,29 +829,25 @@
   
   <p>VBA基础操作。</p>
 <a id="more"></a>
-
 <p>VBA真的是工作中十分常用的了，次次实习次次用，以前都是自学+写好的码改改就好，这学期又从头学了一遍最基础的操作～</p>
 <p>按照五个部分来简单介绍一下：</p>
 <ul>
-<li><p>1 introduction</p>
-</li>
-<li><p>2 User-defined functions</p>
-</li>
-<li><p>3 Contol-flow statements</p>
-</li>
-<li><p>4 Arrays</p>
-</li>
-<li><p>5 Objects</p>
-</li>
+<li><p>1 introduction</p></li>
+<li><p>2 User-defined functions</p></li>
+<li><p>3 Contol-flow statements</p></li>
+<li><p>4 Arrays</p></li>
+<li><p>5 Objects</p></li>
 </ul>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>小贴士：alt+F11快捷键打开VB界面，F5执行代码，一定要储存为.xlsm不然里面的宏会丢失。</p>
+<h2 id="introduction">1 Introduction</h2>
+<p>小贴士：alt+F11快捷键打开VB界面，F5执行代码，一定要储存为.xlsm不然里面的宏会丢失。</p>
 <p>基本操作：</p>
 <p>VBA是在module里编程，sub作为里面的一个个更小的模块运行，每个sub互不影响。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Sub Name [(Arguments)(As type)]</span><br><span class="line">[Statements]</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 <p>其中arguments和as type都可以没有定义</p>
 <p>举例：输入名字并返回：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Sub Name()</span><br><span class="line">Name&#x3D;inputbox(&quot;Enter your name:&quot;)</span><br><span class="line">Msgbox(&quot;My name is &quot; &amp; Name &amp; &quot;.&quot;)</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
-<h2 id="2-User-Defined-Functions"><a href="#2-User-Defined-Functions" class="headerlink" title="2 User-Defined Functions"></a>2 User-Defined Functions</h2><ul>
+<h2 id="user-defined-functions">2 User-Defined Functions</h2>
+<ul>
 <li>Declaring constant</li>
 </ul>
 <p>在模块的开始，我们申明变量之后，下面的sub都可以使用这些变量，如果没有申明的话，sub之间不同变量（如果有相同名称）不会有影响。</p>
@@ -866,34 +862,30 @@
 </ul>
 <p>就像python一样，写好function后面可以在任意sub里面调用，方便快捷。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Function name([Arg 1 as Type 1, Arg 2 as Type 2...])[As Type]</span><br><span class="line">[Statements]</span><br><span class="line">name &#x3D; expression</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
-<p>举个栗子：三个数的加和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Function Sum3Numbers(a as Double, b as Double, c as Double)</span><br><span class="line">Sum3Numbers &#x3D; a + b + c</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
-<p><img src="https://img.actuarygarden.cn/69c2931a-ed15-463c-b901-3a72c6cb837f.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/69c2931a-ed15-463c-b901-3a72c6cb837f.png" srcset="data:image/png;base64,666" alt="VBA的内置函数"></p>
+<p>举个栗子：三个数的加和 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Function Sum3Numbers(a as Double, b as Double, c as Double)</span><br><span class="line">Sum3Numbers &#x3D; a + b + c</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure> <img src="https://img.actuarygarden.cn/69c2931a-ed15-463c-b901-3a72c6cb837f.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/69c2931a-ed15-463c-b901-3a72c6cb837f.png" srcset="data:image/png;base64,666" alt="VBA的内置函数" /></p>
 <p>如果需要调用Excel内置的函数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application.WorksheetFunction.(function)</span><br></pre></td></tr></table></figure>
-<h2 id="3-Control-Flow-Statements"><a href="#3-Control-Flow-Statements" class="headerlink" title="3 Control-Flow Statements"></a>3 Control-Flow Statements</h2><ul>
+<h2 id="control-flow-statements">3 Control-Flow Statements</h2>
+<ul>
 <li>常用operators</li>
 </ul>
 <p>1）if</p>
 <p>就是if, then, else, else if, end if叠加。</p>
-<p>有三种用法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Type 1: one line syntax</span><br><span class="line">result &#x3D; iif (statement, statement if true, statement if false)</span><br><span class="line"></span><br><span class="line">Type 2: one line if</span><br><span class="line">if (condition) Then (result &#x3D; value if true) Else (result &#x3D; value if false)</span><br><span class="line"></span><br><span class="line">Type 3: if Syntax</span><br><span class="line">If (condition) Then</span><br><span class="line">[Statement]</span><br><span class="line">Else if (condition2) Then</span><br><span class="line">[Statement]</span><br><span class="line">Else</span><br><span class="line">[Statement]</span><br><span class="line">End if</span><br></pre></td></tr></table></figure>
-<p>2）Select case</p>
-<p>不想用 if 的时候可以用用这个</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Select Case (test variable)</span><br><span class="line">Case (expression)</span><br><span class="line">[Statement]</span><br><span class="line">Case Else (expression)</span><br><span class="line">[else statement]</span><br><span class="line">End Select</span><br></pre></td></tr></table></figure>
-<p>举个栗子：</p>
-<p><img src="https://img.actuarygarden.cn/433db906-80be-4cdf-8494-b6cf26495a95.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/433db906-80be-4cdf-8494-b6cf26495a95.png" srcset="data:image/png;base64,666"></p>
-<p>3）Do…Loop</p>
+<p>有三种用法 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Type 1: one line syntax</span><br><span class="line">result &#x3D; iif (statement, statement if true, statement if false)</span><br><span class="line"></span><br><span class="line">Type 2: one line if</span><br><span class="line">if (condition) Then (result &#x3D; value if true) Else (result &#x3D; value if false)</span><br><span class="line"></span><br><span class="line">Type 3: if Syntax</span><br><span class="line">If (condition) Then</span><br><span class="line">[Statement]</span><br><span class="line">Else if (condition2) Then</span><br><span class="line">[Statement]</span><br><span class="line">Else</span><br><span class="line">[Statement]</span><br><span class="line">End if</span><br></pre></td></tr></table></figure> 2）Select case</p>
+<p>不想用 if 的时候可以用用这个 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Select Case (test variable)</span><br><span class="line">Case (expression)</span><br><span class="line">[Statement]</span><br><span class="line">Case Else (expression)</span><br><span class="line">[else statement]</span><br><span class="line">End Select</span><br></pre></td></tr></table></figure> 举个栗子：</p>
+<p><img src="https://img.actuarygarden.cn/433db906-80be-4cdf-8494-b6cf26495a95.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/433db906-80be-4cdf-8494-b6cf26495a95.png" srcset="data:image/png;base64,666" /></p>
+<p>3）Do...Loop</p>
 <p>有两种写法：</p>
-<p><img src="https://img.actuarygarden.cn/83d85e2f-9484-41ff-b6f1-b44a16fa4f85.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/83d85e2f-9484-41ff-b6f1-b44a16fa4f85.png" srcset="data:image/png;base64,666"></p>
-<p>4）For…Next Loop</p>
-<p><img src="https://img.actuarygarden.cn/d5ff6019-717b-42af-9728-6c0b22edd795.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/d5ff6019-717b-42af-9728-6c0b22edd795.png" srcset="data:image/png;base64,666"></p>
-<h2 id="4-Arrays"><a href="#4-Arrays" class="headerlink" title="4 Arrays"></a>4 Arrays</h2><ul>
+<p><img src="https://img.actuarygarden.cn/83d85e2f-9484-41ff-b6f1-b44a16fa4f85.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/83d85e2f-9484-41ff-b6f1-b44a16fa4f85.png" srcset="data:image/png;base64,666" /></p>
+<p>4）For...Next Loop</p>
+<p><img src="https://img.actuarygarden.cn/d5ff6019-717b-42af-9728-6c0b22edd795.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/d5ff6019-717b-42af-9728-6c0b22edd795.png" srcset="data:image/png;base64,666" /></p>
+<h2 id="arrays">4 Arrays</h2>
+<ul>
 <li>Declare an array</li>
 </ul>
 <p>跟定义其他类型的变量一样，<code>Dim Arr(3) as Double/ Variant...</code></p>
 <p>Array默认由0开始，如果想从1开始，那么有两种做法：第一是在module的最开始写上：<code>Option base 1</code>；或者直接写<code>Dim Arr(1 to 3)</code>。</p>
-<p><img src="https://img.actuarygarden.cn/60349dbb-e13e-4a5b-b3f7-262c358a2dd2.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/60349dbb-e13e-4a5b-b3f7-262c358a2dd2.png" srcset="data:image/png;base64,666"></p>
+<p><img src="https://img.actuarygarden.cn/60349dbb-e13e-4a5b-b3f7-262c358a2dd2.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/60349dbb-e13e-4a5b-b3f7-262c358a2dd2.png" srcset="data:image/png;base64,666" /></p>
 <ul>
 <li>Dynamic Array</li>
 </ul>
@@ -902,15 +894,15 @@
 <li>Multidimensional array</li>
 </ul>
 <p>具体用法：</p>
-<p><img src="https://img.actuarygarden.cn/b62afd31-aefe-46db-9bfa-18891e4416e3.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/b62afd31-aefe-46db-9bfa-18891e4416e3.png" srcset="data:image/png;base64,666" alt="如果我们要在VBA里面replicate这个表格"></p>
-<p><img src="https://img.actuarygarden.cn/fbfc7b70-7775-4794-80e1-cead62274770.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/fbfc7b70-7775-4794-80e1-cead62274770.png" srcset="data:image/png;base64,666"></p>
+<figure>
+<img src="https://img.actuarygarden.cn/b62afd31-aefe-46db-9bfa-18891e4416e3.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/b62afd31-aefe-46db-9bfa-18891e4416e3.png" srcset="data:image/png;base64,666" alt="如果我们要在VBA里面replicate这个表格" /><figcaption aria-hidden="true">如果我们要在VBA里面replicate这个表格</figcaption>
+</figure>
+<p><img src="https://img.actuarygarden.cn/fbfc7b70-7775-4794-80e1-cead62274770.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/fbfc7b70-7775-4794-80e1-cead62274770.png" srcset="data:image/png;base64,666" /></p>
 <ul>
 <li>Size of the array</li>
 </ul>
-<p>如果想要知道这个arr的upper bound和lower bound，我们可以用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UBound(Arr)</span><br><span class="line">LBound(Arr)</span><br></pre></td></tr></table></figure>
-<h2 id="5-Objects"><a href="#5-Objects" class="headerlink" title="5 Objects"></a>5 Objects</h2><p>快捷键F2打开object browser，就可以看到如何对workbook, worksheet, range和cells进行操作。</p>
-<p>这个没什么好讲的，打开object browser就可以看怎么做了（其实是我懒了。。。）平时上班操作一般都用这一部分进行不同的操作，进行增加一个表，填入数据，等等的操作……一定要好好掌握鸭！</p>
+<p>如果想要知道这个arr的upper bound和lower bound，我们可以用 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">UBound(Arr)</span><br><span class="line">LBound(Arr)</span><br></pre></td></tr></table></figure> ## 5 Objects 快捷键F2打开object browser，就可以看到如何对workbook, worksheet, range和cells进行操作。</p>
+<p>这个没什么好讲的，打开object browser就可以看怎么做了（其实是我懒了。。。）平时上班操作一般都用这一部分进行不同的操作，进行增加一个表，填入数据，等等的操作......一定要好好掌握鸭！</p>
 
   
   
@@ -1028,11 +1020,9 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>精算仔秘籍之——如何用 VBA 撩 TA</p>
           <p class='content'>精算仔用 Excel VBA 写的表白利器。只要手里有代码，没有姑娘拿不下！
 
-
-
 （文末有彩蛋哦）
 珂珂有一个好朋友，小珂仔。
-小珂仔是一个可爱聪明善良又胆小的男孩子，他暗恋了一个女生很久，情...</p>
+小珂仔是一个可爱聪明善良又胆小的男孩子，他暗恋了一个女生很久...</p>
         </a>
       
       
@@ -1040,10 +1030,9 @@
           <p class='title'>用Python分析财险数据——菜鸟向<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>使用VBA警示异常值。
 
-
 在非寿险评估工作中，需要看很多三角形。
 用肉眼去观测三角形中的异常值非常辛苦。需要一个简单的工具来帮助我们找到异常的数据。
-以reported loss ratio的...</p>
+以reported loss rat...</p>
         </a>
       
     </div>
@@ -1088,7 +1077,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1 Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-User-Defined-Functions"><span class="toc-text">2 User-Defined Functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Control-Flow-Statements"><span class="toc-text">3 Control-Flow Statements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Arrays"><span class="toc-text">4 Arrays</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Objects"><span class="toc-text">5 Objects</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#introduction"><span class="toc-text">1 Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#user-defined-functions"><span class="toc-text">2 User-Defined Functions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#control-flow-statements"><span class="toc-text">3 Control-Flow Statements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#arrays"><span class="toc-text">4 Arrays</span></a></li></ol>
     </div>
   </section>
 
@@ -1188,14 +1177,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1347,294 +1336,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1772,10 +1473,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

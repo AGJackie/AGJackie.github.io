@@ -829,33 +829,39 @@
   
   <p>SOA 的 Exam P Sample 第247题。</p>
 <a id="more"></a>
-
 <blockquote>
-<p><strong>SOA P Sample Q247</strong> :<br>Each week, a subcommittee of four individuals is formed from among the members of a committee comprising seven individuals. Two subcommittee members are then assigned to lead the subcommittee, one as chair and the other as secretary.</p>
+<p><strong>SOA P Sample Q247</strong> : Each week, a subcommittee of four individuals is formed from among the members of a committee comprising seven individuals. Two subcommittee members are then assigned to lead the subcommittee, one as chair and the other as secretary.</p>
 <p>Calculate the maximum number of consecutive weeks that can elapse without having the subcommittee contain four individuals who have previously served together with the same subcommittee chair.</p>
 <ul>
-<li>(A) 70</li>
-<li>(B) 140</li>
-<li>(C) 210</li>
-<li>(D) 420</li>
-<li>(E) 840</li>
+<li><ol type="A">
+<li>70</li>
+</ol></li>
+<li><ol start="2" type="A">
+<li>140</li>
+</ol></li>
+<li><ol start="3" type="A">
+<li>210</li>
+</ol></li>
+<li><ol start="4" type="A">
+<li>420</li>
+</ol></li>
+<li><ol start="5" type="A">
+<li>840</li>
+</ol></li>
 </ul>
 </blockquote>
 <details green open><summary> 思路 </summary>
               <div class='content'>
-              <p>题目的意思是，7个人里选4个人出来组成一组。对选出的四个人的其中两个给以特定的身份：chair 和 secretary. 求出不同的组合方法有几种。</p><p>刚开始看题的时候我也想当然地列了这个式子：<br>$$<br>A_7^2\times C_5^2=420<br>$$<br>刚好掉进了题目给挖的坑里。</p><p>实际上，题目的最后说了，只要没有“served together with the same subcommittee chair”，就可以算是不同的组合方法。所以跟秘书（secretary）是谁没有关系。因此我们可以直接把题目理解为：7选4，指定其中一人为 chair，求出不同的组合方法共几种。所以先在7个人中选出1个人担任 chair，然后在其余6人中选出3人即可：<br>$$<br>A_7^1\times C_6^3=140<br>$$</p>
+              <p>题目的意思是，7个人里选4个人出来组成一组。对选出的四个人的其中两个给以特定的身份：chair 和 secretary. 求出不同的组合方法有几种。</p><p>刚开始看题的时候我也想当然地列了这个式子： <span class="math display">\[A_7^2\times C_5^2=420\]</span> 刚好掉进了题目给挖的坑里。</p><p>实际上，题目的最后说了，只要没有“served together with the same subcommittee chair”，就可以算是不同的组合方法。所以跟秘书（secretary）是谁没有关系。因此我们可以直接把题目理解为：7选4，指定其中一人为 chair，求出不同的组合方法共几种。所以先在7个人中选出1个人担任 chair，然后在其余6人中选出3人即可： <span class="math display">\[A_7^1\times C_6^3=140\]</span></p>
               </div>
             </details>
-
 <details blue><summary> 答案 </summary>
               <div class='content'>
               <p>所以选 (B) 140</p>
               </div>
             </details>
-
-
-
-<h3 id="精算每日一题专栏"><a href="#精算每日一题专栏" class="headerlink" title="精算每日一题专栏"></a>精算每日一题专栏</h3><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/xy0kkrP7hpX54yyWTbuqjw">精算每日一题 001|寿险现值随机变量的书写(寿险精算)</a> </p>
+<h3 id="精算每日一题专栏">精算每日一题专栏</h3>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/xy0kkrP7hpX54yyWTbuqjw">精算每日一题 001|寿险现值随机变量的书写(寿险精算)</a></p>
 <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/VoQZtYMcVinyhqkixFT2qQ">精算每日一题 002|寿险 EPV 的递归公式(寿险精算)</a></p>
 <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/w3GgBAH9vJ7-bbjmL6Ecyg">精算每日一题 003|分期付款表(利息理论)</a></p>
 
@@ -975,9 +981,8 @@
           <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>七夕特辑|精算情话速查手册</p>
           <p class='content'>别低头看鞋了，看我吧
 
-
 众所周知，精算是一个充满爱的学科。每一门精算考试，从知识点到精算术语，都洋溢着七夕的氛围。
-但考虑到广大精算师们因为常常忙于低头看鞋的缘故，无暇思索情话的表述。为让精算...</p>
+但考虑到广大精算师们因为常常忙于低头看鞋的缘故，无暇思索情话的表述。为让...</p>
         </a>
       
       
@@ -985,8 +990,7 @@
           <p class='title'>精算保研夏令营——央财和南开<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
           <p class='content'>19年写的保研经验贴。
 
-
-转眼寒假就快过去了，16级的师弟师妹们也要开始准备保研了。作为一个人数较少的专业，网上关于精算保研夏令营的帖子比较少。回想起当时准备参营时，也得到了许多师兄师姐的帮助...</p>
+转眼寒假就快过去了，16级的师弟师妹们也要开始准备保研了。作为一个人数较少的专业，网上关于精算保研夏令营的帖子比较少。回想起当时准备参营时，也得到了许多师兄师姐的帮...</p>
         </a>
       
     </div>
@@ -1215,14 +1219,14 @@
     
       
         
-          <div><p><span id="lc-sv">本站总访问量为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
+          <div><p><span id="lc-sv">本站总访问量为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 次</span> <span id="lc-uv">访客数为 <span id="number"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> 人</span></p>
 </div>
         
       
     
       
         <div class='copyright'>
-        <p><a href="https://actuarygarden.cn/">Copyright © 2017-2020 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
+        <p><a href="https://actuarygarden.cn">Copyright © 2017-2021 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备19051021号-1</a></p>
 
         </div>
       
@@ -1374,294 +1378,6 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
-  
-  
-
-  <div id="rightmenu-wrapper">
-    <ul class="list-v rightmenu" id="rightmenu-content">
-      <li class='option'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
-        <hr id='hr-text'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
-        <hr id='hr-href'>
-        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
-        <hr id='hr-src'>
-      </li>
-      
-        <li class='navigation'>
-          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
-          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
-        </li>
-      
-      <hr>
-      
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/faqs/
-        
-        
-        
-        
-          id="https:volantisjsorgfaqs"
-        >
-        <i class='fa fa-question fa-fw'></i> 常见问题
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/examples/
-        
-        
-        
-        
-          id="https:volantisjsorgexamples"
-        >
-        <i class='fa fa-rss fa-fw'></i> 示例博客
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://volantis.js.org/contributors/
-        
-        
-        
-        
-          id="https:volantisjsorgcontributors"
-        >
-        <i class='fa fa-fan fa-spin fa-fw'></i> 加入社区
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/volantis-docs/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xvolantis-docs"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 本站源码
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
-        
-        
-        
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
-        >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          
-    <li>
-      <a class='vlts-menu fix-cursor-default' 
-        
-        
-        
-          onclick="document.execCommand('print')"
-        
-        >
-        <i class='fa fa-print fa-fw'></i> 打印页面
-      </a>
-    </li>
-  
-        
-      
-        
-          <hr>
-        
-      
-        
-          <li class='music name'>
-            <p class='nav music-title fix-cursor-default'></p>
-          </li>
-          <li class='music ctrl'>
-            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
-            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
-            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
-          </li>
-          <li class='music volume'>
-            <a class='nav volume'>
-              <div class="aplayer-volume-bar-wrap">
-                <div class="aplayer-volume-bar fix-cursor-pointer">
-                  <div class="aplayer-volume"></div>
-                  <i class='left fa fa-volume-off fa-fw'></i>
-                  <i class='right fa fa-volume-up fa-fw'></i>
-                </div>
-              </div>
-            </a>
-          </li>
-        
-      
-    </ul>
-  </div>
-
-  <script>
-    window.document.oncontextmenu = function (event) {
-      if (event.ctrlKey) return true;
-      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
-      return popMenu(event);
-    };
-    document.addEventListener("click", function (event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      mymenu.style.display = "none";
-    });
-    function popMenu(event) {
-      var mymenu = document.getElementById('rightmenu-wrapper');
-      var menuContent = document.getElementById('rightmenu-content');
-      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
-      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
-      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
-      mymenu.style.top = event.clientY + "px";
-      mymenu.style.display = 'block';
-      if (event.clientX * 2 > screenWidth) {
-        menuContent.classList.add('left');
-      } else {
-        menuContent.classList.remove('left');
-      }
-      if (event.clientY * 2 > screenHeight) {
-        menuContent.classList.add('top');
-      } else {
-        menuContent.classList.remove('top');
-      }
-
-      let hrText = document.getElementById('hr-text');
-      let hrSrc = document.getElementById('hr-src');
-      let hrHref = document.getElementById('hr-href');
-
-      // 选中图片
-      let copySrc = document.getElementById('menu-copy-src');
-      if (copySrc != undefined) {
-        if (event.target.currentSrc) {
-          copySrc.style.display = 'block';
-          copySrc.addEventListener("click", function (e) {
-            copyString(event.target.currentSrc);
-          },{once: true});
-          hrSrc.style.display = 'block';
-        } else {
-          copySrc.style.display = 'none';
-          hrSrc.style.display = 'none';
-        }
-      }
-
-      // 选中按钮
-      // 判断是不是按钮
-      let href = '';
-      if (event.path) {
-        for (i = 0; i < event.path.length; i++) {
-          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
-            href = event.path[i].href;
-          }
-        }
-      }
-
-      let copyText = document.getElementById('menu-copy-text');
-      copyText.style.display = 'none';
-      hrText.style.display = 'none';
-      if (href.length == 0) {
-        // 选中文本
-        if (window.getSelection().toString()) {
-          if ('true' == 'true') {
-            copyText.style.display = 'block';
-            hrText.style.display = 'block';
-          }
-        }
-      }
-
-      // 在新标签页打开
-      let openHref = document.getElementById('menu-open-href');
-      if (openHref != undefined) {
-        if (href.length > 0) {
-          openHref.style.display = 'block';
-          openHref.addEventListener("click", function (e) {
-            window.open(href);
-          },{once: true});
-          hrHref.style.display = 'block';
-        } else {
-          openHref.style.display = 'none';
-          hrHref.style.display = 'none';
-        }
-      }
-      // 复制链接
-      let copyHref = document.getElementById('menu-copy-href');
-      if (copyHref != undefined) {
-        if (href.length > 0) {
-          copyHref.style.display = 'block';
-          copyHref.addEventListener("click", function (e) {
-            copyString(href);
-          },{once: true});
-        } else {
-          copyHref.style.display = 'none';
-        }
-      }
-
-      // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
-        // 如果有aplayer，初始化一下
-      	try {
-      		checkAPlayer();
-          updateTitle();
-      	} catch (error) {
-      		console.log(error);
-      	}
-      }
-
-      return false; // 该行代码确保系统自带的右键菜单不会被调出
-    }
-    function hideMenu() {
-      document.getElementById('rightmenu-wrapper').style.display = 'none';
-    }
-    function copyString(str) {
-      const input = document.createElement('input');
-      input.setAttribute('readonly', 'readonly');
-      document.body.appendChild(input);
-      input.setAttribute('value', str);
-      input.select();
-      document.execCommand('copy');
-      document.body.removeChild(input);
-    }
-    document.execCommand('click');
-  </script>
-
-
-
 
 <script>
   function loadIssuesJS() {
@@ -1799,10 +1515,6 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
-
-  
-    loadScript("/js/aplayer.js")
-  
 
 </script>
 

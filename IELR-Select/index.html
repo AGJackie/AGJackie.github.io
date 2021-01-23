@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta http-equiv='x-dns-prefetch-control' content='on' />
@@ -24,9 +22,11 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档：2021/1 - 精算后花园</title>
+  <title>2020商车险IELR选取方法——考虑疫情和车险综改的影响 - 精算后花园</title>
   
 
+  
+    <meta name="description" content="本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。">
   
 
   <!-- feed -->
@@ -66,7 +66,7 @@
   <body>
     
 
-<header id="l_header" class="l_header auto shadow blur " style='opacity: 0' >
+<header id="l_header" class="l_header auto shadow blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -677,7 +677,7 @@
       <div id="l_cover">
   
     
-        <div id="half" class='cover-wrapper  dock' style="display: ;">
+        <div id="full" class='cover-wrapper post dock' style="display: none;">
           
             <div class='cover-bg lazyload placeholder' data-bg="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture"></div>
           
@@ -755,458 +755,241 @@
           
 
 <div class='l_main'>
-	
-		
-  <section class="post-list">
+  <article class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
+  
+
+
+  
+  <div class="article-meta" id="top">
     
     
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
     
-    <h2 class="article-title" >
-      <a href="/Actuary-latex/">
-        一个精算学生的LaTeX学习经历
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>从一个精算学生的角度谈自己对latex的学习历程。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
+      <h1 class="title">
+        2020商车险IELR选取方法——考虑疫情和车险综改的影响
+      </h1>
+      <div class='new-meta-box'>
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
+            
+<div class='new-meta-item author'>
+  <a class='author' target="_blank" href="https://actuarygarden.com/user/jackie" rel="nofollow noopener">
+    <img no-lazy src="https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico">
+    <p>Jackie</p>
+  </a>
+</div>
+
+          
         
-        <time>2021-01-18</time>
+          
+            
+
+          
         
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/">软件技能</a>
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年1月23日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item browse leancloud">
+    <a class='notlink'>
+      
+      <div id="lc-pv" data-title="2020商车险IELR选取方法——考虑疫情和车险综改的影响" data-path="/IELR-Select/">
+        <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
+        <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+        次浏览
+      </div>
+    </a>
+  </div>
+
+
+          
         
       </div>
+    
+  </div>
+
+
+  
+  
+  <p>本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。</p>
+<a id="more"></a>
+
+<p>本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。</p>
+<p>本文想法源于同事。</p>
+<p>初始赔付率，IELR，Initial Expected Loss Ratio, 被用准备金评估的LR method中，是精算师根据自己的经验，对当年赔付率的一个初步判断。</p>
+<p>另外，ULR，是根据实际发生情况，测算出的终极赔付率。</p>
+<p>至于为什么区分再保和直保，因为再保的LR是保单年角度，直保的LR是事故年角度。</p>
+<p>首先做几个关键假设及声明。</p>
+<ol>
+<li>在2020年，疫情对出行的影响为Q1-Q2，Q3后恢复正常。</li>
+<li>车险综改从2020/09/19正式实施，近似视为从2020/10/01开始实施，只对2020Q4签单的保单造成影响</li>
+<li>各季度车险均匀签单，按照保费加权的赔付率近似为按照时间加权。</li>
+<li>疫情导致商车险赔付率下降，2020上半年，市场上大公司商车险ULR处于44%-50%的区间。选取47%</li>
+<li>进入Q3，疫情影响减弱，商车险赔付率上升，逐渐恢复至疫情之前水平，市场上大公司商车险ULR处于50%-60%的区间，选取55%</li>
+<li>进入Q4，车险综改，按保监会发文，LR应上调至75%。</li>
+<li>图中，粉红色斜线区分不同的保单年，大红色竖线区分疫情影响，绿色斜线区分车险综改前后。</li>
+<li>数据与真实数据有偏，结果不重要，方法是要分享的核心。</li>
+</ol>
+<p><img src="https://img.actuarygarden.cn/8206e911-74a7-43ae-8714-96c6302b084d.PNG" class="lazyload" data-srcset="https://img.actuarygarden.cn/8206e911-74a7-43ae-8714-96c6302b084d.PNG" srcset="data:image/png;base64,666"></p>
+<p>从直保的事故年角度来看，2020事故年为蓝色正方形部分，需要考虑2019和2020两个年度签单的保单。</p>
+<p>疫情影响占比$\frac{1}{2}$，正常情况占比$\frac{7}{16}$，车险综改占比$\frac{1}{16}$</p>
+<p>那么，对于直保公司，2020评估时选取的商车险IELR为：<br>$$<br>\frac{1}{2} * 47% + \frac{7}{16}*55%  + \frac{1}{16}*75% = 52.25%<br>$$</p>
+<p><img src="https://img.actuarygarden.cn/f9bfbcb4f5c14904928685adda9c5ab9.png" class="lazyload" data-srcset="https://img.actuarygarden.cn/f9bfbcb4f5c14904928685adda9c5ab9.png" srcset="data:image/png;base64,666"></p>
+<p>从再保的保单年角度来看，2020保单年为蓝色平行四边形部分，仅考虑2020签单的保单。</p>
+<p>疫情影响占比$\frac{1}{8}$，正常情况占比$\frac{5}{8}$，车险综改占比$\frac{1}{4}$</p>
+<p>那么，对于再保公司，2020评估时选取的商车险IELR为：<br>$$<br>\frac{1}{8} * 47% + \frac{5}{8}*55%  + \frac{1}{4}*75% = 59%<br>$$</p>
+
+  
+  
+    
+    <div class='footer'>
       
-        <div>
-          <a class='readmore' href='/Actuary-latex/'>
-            阅读全文
-          </a>
+      
+      
+        <div class='copyright'>
+          <blockquote>
+            
+              
+                <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</p>
+
+              
+            
+              
+                <p>本文永久链接是：<a href=https://actuarygarden.cn/IELR-Select/>https://actuarygarden.cn/IELR-Select/</a></p>
+              
+            
+          </blockquote>
         </div>
+      
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-01-23T13:29:39+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>本页文档最后更新于：2021年1月23日</p>
+  </a>
 </div>
 
-          </div>
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Actuarial-Symbol/">
-        如何有效记忆寿险精算符号
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>系统讲解寿险和年金符号的构成逻辑。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
         
           
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
+
         
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/IFoA/">IFoA</a><span class="sep"></span><a class="category-link" href="/categories/IFoA/CM1/">CM1</a>
-        
-      </div>
       
-        <div>
-          <a class='readmore' href='/Actuarial-Symbol/'>
-            阅读全文
-          </a>
-        </div>
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://actuarygarden.cn/IELR-Select/&title=2020商车险IELR选取方法——考虑疫情和车险综改的影响 - 精算后花园&summary=本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://actuarygarden.cn/IELR-Select/&title=2020商车险IELR选取方法——考虑疫情和车险综改的影响 - 精算后花园&summary=本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://actuarygarden.cn/IELR-Select/&title=2020商车险IELR选取方法——考虑疫情和车险综改的影响 - 精算后花园&summary=本文从直保和再保两个角度，分析在判定初始赔付率时，如何考虑疫情及车险综改的影响。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,666">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/Life-table-I/'>
+          <p class='title'>寿险精算——生命表 (1)<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>生命表的基础介绍：符号说明、常用公式及其含义、易错点。
+
+
+
+介绍该章节是非常重要的章节之一，之后所有符号含义都基于该章节内容。
+什么是生命表？
+所谓生命表，就是采用表格的形式简单地表述了同时出...</p>
+        </a>
       
     </div>
   
+</article>
 
+
+  
+
+  <article class="post white-box reveal shadow" id="comments">
+    <p ct><i class='fas fa-comments'></i> 交流区</p>
+    
+      <p cst>这里仅供博客观众之间进行交流，需要精算课程辅导请直接联系Jackie微信号AGJackie。在评论区进行提问将不会收到任何回复！</p>
+    
+    <div id="valine_container" class="valine_thread">
+  <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
 </div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Actuarial-loveword/">
-        七夕特辑|精算情话速查手册
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>别低头看鞋了，看我吧</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/">调侃精算</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/Actuarial-loveword/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/ActuarialDailyExercise004/">
-        精算每日一题 004|一道会说谎的排列组合题(概率论)
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>SOA 的 Exam P Sample 第247题。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/SOA/">SOA</a><span class="sep"></span><a class="category-link" href="/categories/SOA/P/">P</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/ActuarialDailyExercise004/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Actuary-Baoyan/">
-        精算保研夏令营——央财和南开
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>19年写的保研经验贴。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E7%B2%BE%E7%AE%97%E8%80%83%E7%A0%94/">精算考研</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/Actuary-Baoyan/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Actuarial-lovestory/">
-        精算爱情故事
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>算不准的爱情故事。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/">调侃精算</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/Actuarial-lovestory/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/100-reasons-for-actuary/">
-        爱上精算的一百个理由
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>爱上精算需要理由吗？不需要吗？需要吗？</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/">调侃精算</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/100-reasons-for-actuary/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/2020-September-online/">
-        IFoA 2020年9月的线上考试怎么考？
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>2020年9月份全新线上考试的一些理解。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/IFoA/">IFoA</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2020-September-online/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow">
-  
-  
-  
-  
-    
-    <h2 class="article-title" >
-      <a href="/Actuarial-Diary-of-Qixi/">
-        七夕精算日记
-      </a>
-    </h2>
-  
-  <div class='md'>
-    
-      <p>马路边捡到的精算日记。</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://actuarygarden.com/user/jackie'><img src='https://img.actuarygarden.cn/033f03a2-22d2-4daa-ba95-a7f3e985283f.ico'></a>
-        
-        <time>2021-01-18</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/">调侃精算</a>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/Actuarial-Diary-of-Qixi/'>
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-          <a class="prev" rel="prev" href="/archives/2021/01/page/8/">
-            <section class="post prev white-box shadow" >
-              <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-            </section>
-          </a>
-        
-        <p class="current">
-          9 / 9
-        </p>
-        
-      </div>
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -1214,202 +997,7 @@
     
     
 
-<section class="widget text shadow desktop mobile">
-  
-  <header>
-    
-      <a href='/guideline/tutorial/'><i class="fas fa-plus fa-fw" aria-hidden="true"></i><span class='name'>精算课程一对一在线辅导</span></a>
-    
-  </header>
 
-
-  <div class='content'>
-    
-      <p><strong>IFoA英国精算师考试辅导</strong><br>目前CM1科目：利息理论、寿险精算 I、寿险精算 II 接受报名预约，对应英国和澳洲高校相应课程）课程详情请见：「<a href="https://actuarygarden.cn/CM1-Online-class/"><strong>CM1利息理论和寿险精算一对一在线辅导开课了！</strong></a>」。</p>
-
-    
-  </div>
-</section>
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget category shadow desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/CAA/" href="/categories/CAA/"
-            id="categoriesCAA"
-            ><div class='name'>CAA</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/CAA/A5/" href="/categories/CAA/A5/"
-            id="categoriesCAAA5"
-            ><div class='name'>A5</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/IFoA/" href="/categories/IFoA/"
-            id="categoriesIFoA"
-            ><div class='name'>IFoA</div><div class='badge'>(41)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CB1/" href="/categories/IFoA/CB1/"
-            id="categoriesIFoACB1"
-            ><div class='name'>CB1</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CB2/" href="/categories/IFoA/CB2/"
-            id="categoriesIFoACB2"
-            ><div class='name'>CB2</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CM1/" href="/categories/IFoA/CM1/"
-            id="categoriesIFoACM1"
-            ><div class='name'>CM1</div><div class='badge'>(15)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CM2/" href="/categories/IFoA/CM2/"
-            id="categoriesIFoACM2"
-            ><div class='name'>CM2</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CP/" href="/categories/IFoA/CP/"
-            id="categoriesIFoACP"
-            ><div class='name'>CP</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CS1/" href="/categories/IFoA/CS1/"
-            id="categoriesIFoACS1"
-            ><div class='name'>CS1</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/CS2/" href="/categories/IFoA/CS2/"
-            id="categoriesIFoACS2"
-            ><div class='name'>CS2</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/IFoA/SP/" href="/categories/IFoA/SP/"
-            id="categoriesIFoASP"
-            ><div class='name'>SP</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/SOA/" href="/categories/SOA/"
-            id="categoriesSOA"
-            ><div class='name'>SOA</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/SOA/FM/" href="/categories/SOA/FM/"
-            id="categoriesSOAFM"
-            ><div class='name'>FM</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/SOA/LTAM/" href="/categories/SOA/LTAM/"
-            id="categoriesSOALTAM"
-            ><div class='name'>LTAM</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/SOA/P/" href="/categories/SOA/P/"
-            id="categoriesSOAP"
-            ><div class='name'>P</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/SOA/STAM/" href="/categories/SOA/STAM/"
-            id="categoriesSOASTAM"
-            ><div class='name'>STAM</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BF%9D%E9%99%A9%E7%9F%A5%E8%AF%86/" href="/categories/%E4%BF%9D%E9%99%A9%E7%9F%A5%E8%AF%86/"
-            id="categoriesE4BF9DE999A9E79FA5E8AF86"
-            ><div class='name'>保险知识</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%85%A5%E5%9D%91%E7%AF%87/" href="/categories/%E5%85%A5%E5%9D%91%E7%AF%87/"
-            id="categoriesE585A5E59D91E7AF87"
-            ><div class='name'>入坑篇</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%85%B6%E4%BB%96/" href="/categories/%E5%85%B6%E4%BB%96/"
-            id="categoriesE585B6E4BB96"
-            ><div class='name'>其他</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86/" href="/categories/%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86/"
-            id="categoriesE5AE9EE4B9A0E7BB8FE58E86"
-            ><div class='name'>实习经历</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%B2%BE%E7%AE%97%E7%AB%9E%E8%B5%9B/" href="/categories/%E7%B2%BE%E7%AE%97%E7%AB%9E%E8%B5%9B/"
-            id="categoriesE7B2BEE7AE97E7AB9EE8B59B"
-            ><div class='name'>精算竞赛</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E7%B2%BE%E7%AE%97%E8%80%83%E7%A0%94/" href="/categories/%E7%B2%BE%E7%AE%97%E8%80%83%E7%A0%94/"
-            id="categoriesE7B2BEE7AE97E88083E7A094"
-            ><div class='name'>精算考研</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/" href="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/"
-            id="categoriesE8B083E4BE83E7B2BEE7AE97"
-            ><div class='name'>调侃精算</div><div class='badge'>(8)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/"
-            id="categoriesE8BDAFE4BBB6E68A80E883BD"
-            ><div class='name'>软件技能</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/Python/" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/Python/"
-            id="categoriesE8BDAFE4BBB6E68A80E883BDPython"
-            ><div class='name'>Python</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/VBA/" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/VBA/"
-            id="categoriesE8BDAFE4BBB6E68A80E883BDVBA"
-            ><div class='name'>VBA</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/" href="/categories/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/"
-            id="categoriesE99DA2E8AF95E7BB8FE9AA8C"
-            ><div class='name'>面试经验</div><div class='badge'>(11)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud shadow desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Python/" style="font-size: 16.5px; color: #888">Python</a> <a href="/tags/VBA/" style="font-size: 16.5px; color: #888">VBA</a> <a href="/tags/latex/" style="font-size: 14px; color: #999">latex</a> <a href="/tags/%E5%85%A5%E5%9D%91%E7%AF%87/" style="font-size: 14px; color: #999">入坑篇</a> <a href="/tags/%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/" style="font-size: 14px; color: #999">决策理论</a> <a href="/tags/%E5%88%A9%E6%81%AF%E7%90%86%E8%AE%BA/" style="font-size: 22.75px; color: #5e5e5e">利息理论</a> <a href="/tags/%E5%8F%AF%E4%BF%9D%E5%88%A9%E7%9B%8A/" style="font-size: 14px; color: #999">可保利益</a> <a href="/tags/%E5%A4%87%E8%80%83%E8%B5%84%E6%96%99/" style="font-size: 14px; color: #999">备考资料</a> <a href="/tags/%E5%AF%BC%E5%BC%95%E7%AF%87/" style="font-size: 24px; color: #555">导引篇</a> <a href="/tags/%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97/" style="font-size: 21.5px; color: #666">寿险精算</a> <a href="/tags/%E6%81%8B%E7%88%B1%E9%99%A9/" style="font-size: 14px; color: #999">恋爱险</a> <a href="/tags/%E6%95%99%E5%AD%A6%E8%A7%86%E9%A2%91/" style="font-size: 14px; color: #999">教学视频</a> <a href="/tags/%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1/" style="font-size: 15.25px; color: #919191">极大似然估计</a> <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 20.25px; color: #6f6f6f">概率论</a> <a href="/tags/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98/" style="font-size: 14px; color: #999">每日一题</a> <a href="/tags/%E6%BE%B3%E7%B2%BE/" style="font-size: 16.5px; color: #888">澳精</a> <a href="/tags/%E7%94%9F%E5%AD%98%E5%88%86%E6%9E%90/" style="font-size: 14px; color: #999">生存分析</a> <a href="/tags/%E7%9F%A9%E6%AF%8D%E5%87%BD%E6%95%B0/" style="font-size: 14px; color: #999">矩母函数</a> <a href="/tags/%E7%B2%BE%E7%AE%97%E4%BF%9D%E7%A0%94/" style="font-size: 14px; color: #999">精算保研</a> <a href="/tags/%E7%B2%BE%E7%AE%97%E6%A8%A1%E5%9E%8B/" style="font-size: 17.75px; color: #808080">精算模型</a> <a href="/tags/%E7%B2%BE%E7%AE%97%E7%AB%9E%E8%B5%9B/" style="font-size: 14px; color: #999">精算竞赛</a> <a href="/tags/%E7%B2%BE%E7%AE%97%E8%80%83%E7%A0%94/" style="font-size: 19px; color: #777">精算考研</a> <a href="/tags/%E7%B2%BE%E7%AE%97%E9%AB%98%E6%A0%A1/" style="font-size: 14px; color: #999">精算高校</a> <a href="/tags/%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 14px; color: #999">经济学</a> <a href="/tags/%E7%BD%91%E8%AF%BE%E5%BD%95%E5%88%B6/" style="font-size: 14px; color: #999">网课录制</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E5%99%A8/" style="font-size: 15.25px; color: #919191">计算器</a> <a href="/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF/" style="font-size: 14px; color: #999">贝叶斯</a> <a href="/tags/%E8%B4%A2%E5%8A%A1%E6%8A%A5%E8%A1%A8/" style="font-size: 16.5px; color: #888">财务报表</a> <a href="/tags/%E9%87%91%E8%9E%8D%E7%BB%8F%E6%B5%8E%E5%AD%A6/" style="font-size: 14px; color: #999">金融经济学</a> <a href="/tags/%E9%9D%9E%E5%AF%BF%E9%99%A9%E7%B2%BE%E7%AE%97/" style="font-size: 16.5px; color: #888">非寿险精算</a>
-    </div>
-  </section>
 
 
   
@@ -1418,20 +1006,21 @@
 </aside>
 
 
+
 		  
 		  <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
-  pdata.postTitle="";
+  pdata.ispage=true;
+  pdata.postTitle="2020商车险IELR选取方法——考虑疫情和车险综改的影响";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
 
   var l_header=document.getElementById("l_header");
   
-  l_header.classList.remove("show");
+  l_header.classList.add("show");
   
 </script>
 

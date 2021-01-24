@@ -1017,12 +1017,11 @@ Var[K_{x}]=2\sum_{k=1}^{\infty}k \cdot \px{k}{x}-e_{x}-(e_{x})^{2}
         </a>
       
       
-        <a class='next' href='/CS2-Guide/'>
-          <p class='title'>【CS2导引篇】Risk Modelling and Survival Analysis<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>IFoA 英国精算师考试 CS2 精算模型和非寿险精算的学习大纲，备考必看。各章的主干知识点和考点总结。
+        <a class='next' href='/CT1-MWRR-and-TWRR/'>
+          <p class='title'>【CT1】币值加权收益率 MWRR 和时间加权收益率 TWRR<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>币值加权收益率 MWRR 和时间加权收益率 TWRR 的计算，以及线性插值法的使用。
 
-概述
-公众号原先发过一篇旧体系IFoA的《CT4 Models 导引篇》以及赫瑞...</p>
+MWRR为币值加权收益率，TWRR为时间加权收益率。MWRR和TWRR是旧大纲CT1的Measurem...</p>
         </a>
       
     </div>
@@ -1455,22 +1454,6 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/
-        
-        
-        
-        
-          id="https:actuarygardencn"
-        >
-        <i class='fa fa-rss fa-fw'></i> 返回主页
-      </a>
-    </li>
-  
-        
-      
-        
-          
-    <li>
       <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/guideline/
         
         
@@ -1485,7 +1468,19 @@ var loadCSS = function( href, before, media, attributes ){
         
       
         
-          <hr>
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/guideline/IFoA/
+        
+        
+        
+        
+          id="https:actuarygardencnguidelineIFoA"
+        >
+        <i class='fa fa-rss fa-fw'></i> IFoA导引
+      </a>
+    </li>
+  
         
       
         
@@ -1505,6 +1500,10 @@ var loadCSS = function( href, before, media, attributes ){
         
       
         
+          <hr>
+        
+      
+        
           
     <li>
       <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
@@ -1514,7 +1513,7 @@ var loadCSS = function( href, before, media, attributes ){
         
           id="https:githubcomvolantis-xhexo-theme-volantis"
         >
-        <i class='fa fa-code-branch fa-fw'></i> 主题源码
+        <i class='fas fa-moon fa-fw'></i> 暗黑模式
       </a>
     </li>
   
@@ -1669,7 +1668,7 @@ var loadCSS = function( href, before, media, attributes ){
       }
 
       // 有音乐播放器
-      if ('true' == true && ('home,help,examples,contributors,hr,source_docs,source_theme,hr,print,hr,music'||[]).includes('music')) {
+      if ('true' == true && ('home,help,contributors,examples,source_docs,hr,source_theme,hr,print,hr,music'||[]).includes('music')) {
         // 如果有aplayer，初始化一下
       	try {
       		checkAPlayer();

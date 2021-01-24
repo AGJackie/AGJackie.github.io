@@ -942,20 +942,22 @@
   
     <div class="prev-next">
       
-        <a class='prev' href='/IFoA-StudyMaterial/'>
-          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>IFoA 备考资料介绍和购买流程（2020更新版）</p>
-          <p class='content'>IFoA 的各类备考资料介绍和详细的图文购买流程。包括 Combined Materials Pack (CMP) 、Revision notes、ASET、Flashcards、Mock 等。...</p>
-        </a>
-      
-      
-        <a class='next' href='/IFoA-membership/'>
-          <p class='title'>IFoA英国精算师协会入会指南<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+        <a class='prev' href='/IFoA-membership/'>
+          <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>IFoA英国精算师协会入会指南</p>
           <p class='content'>手把手教你成为 IFoA 英国精算师协会的会员。
 
 入会申请前
 为什么需要入会
 
 非会员可以参加 CS1 或 CM1 的其中一门，但是非会员对这两个科目的报名费比会员的报名费贵。并且，...</p>
+        </a>
+      
+      
+        <a class='next' href='/IFoA-Guide/'>
+          <p class='title'>漫谈英国精算师考试<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>IFoA 英国精算师考试体系介绍、免试认证、申请入会、会费和考试费、备考方法、考试次序、考点和考试时间、计算器的选择、CAA、SOA、IFoA互认转换、中南财经政法大学保险精算专业介绍。
+
+...</p>
         </a>
       
     </div>
@@ -1322,12 +1324,12 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/guideline/CM1-Online-class/
+      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/CM1-Online-class/
         
         
         
         
-          id="https:actuarygardencnguidelineCM1-Online-class"
+          id="https:actuarygardencnCM1-Online-class"
         >
         <i class='fas fa-laptop fa-fw'></i> 精算辅导
       </a>
@@ -1342,12 +1344,10 @@ var loadCSS = function( href, before, media, attributes ){
         
           
     <li>
-      <a class='vlts-menu fix-cursor-default' href=https://github.com/volantis-x/hexo-theme-volantis/
+      <a class='vlts-menu fix-cursor-default' 
         
         
         
-        
-          id="https:githubcomvolantis-xhexo-theme-volantis"
         >
         <i class='fas fa-moon fa-fw'></i> 暗黑模式
       </a>
@@ -1504,7 +1504,7 @@ var loadCSS = function( href, before, media, attributes ){
       }
 
       // 有音乐播放器
-      if ('true' == true && ('home,help,contributors,examples,source_docs,hr,source_theme,hr,print,hr,music'||[]).includes('music')) {
+      if ('true' == true && ('home,help,contributors,examples,source_docs,hr,source_dark,hr,print,hr,music'||[]).includes('music')) {
         // 如果有aplayer，初始化一下
       	try {
       		checkAPlayer();

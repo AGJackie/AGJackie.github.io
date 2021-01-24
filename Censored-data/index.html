@@ -346,34 +346,6 @@ CT4-08 Estimating the lifetime distribution function中，对删失数据的概�
             
           
           
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                  
-                  
-                  >
-                  <i class='fad fa-cog fa-fw'></i>Settings
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
-            
-          
-                    
-                  </ul>
-                
-              </li>
-            
-          
-          
 				</ul>
 			</div>
 
@@ -631,34 +603,6 @@ CT4-08 Estimating the lifetime distribution function中，对删失数据的概�
                 </a>
                 
               </li>
-            
-          
-                    
-                  </ul>
-                
-              </li>
-            
-          
-            
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover" 
-                  
-                  
-                  >
-                  <i class='fad fa-cog fa-fw'></i>Settings
-                </a>
-                
-                  <ul class="list-v">
-                    
-                      
-            
-              <li>
-                <a class="menuitem flat-box header toggle-mode-btn">
-                  <i class='fas fa-moon fa-fw'></i>暗黑模式
-                </a>
-              <li>
             
           
                     
@@ -1526,6 +1470,276 @@ var loadCSS = function( href, before, media, attributes ){
 
 
 
+  
+  
+
+  <div id="rightmenu-wrapper">
+    <ul class="list-v rightmenu" id="rightmenu-content">
+      <li class='option'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-text' onclick="document.execCommand('copy')"><i class='fa fa-copy fa-fw'></i>复制文本</a>
+        <hr id='hr-text'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-href'><i class='fa fa-link fa-fw'></i>复制链接</a>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-open-href'><i class='fa fa-external-link-square-alt fa-fw'></i>在新标签页打开</a>
+        <hr id='hr-href'>
+        <a class='vlts-menu opt fix-cursor-default' id='menu-copy-src'><i class='fa fa-image fa-fw'></i>复制图片地址</a>
+        <hr id='hr-src'>
+      </li>
+      
+        <li class='navigation'>
+          <a class='nav icon-only fix-cursor-default' onclick='history.back()'><i class='fa fa-arrow-left fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='history.forward()'><i class='fa fa-arrow-right fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' onclick='window.location.reload()'><i class='fa fa-redo fa-fw'></i></a>
+          <a class='nav icon-only fix-cursor-default' href='/'><i class='fa fa-home fa-fw'></i></a>
+        </li>
+      
+      <hr>
+      
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.com/
+        
+        
+        
+        
+          id="https:actuarygardencom"
+        >
+        <i class='fa fa-question fa-fw'></i> 精算论坛
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/
+        
+        
+        
+        
+          id="https:actuarygardencn"
+        >
+        <i class='fa fa-rss fa-fw'></i> 回到首页
+      </a>
+    </li>
+  
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' href=https://actuarygarden.cn/guideline/
+        
+        
+        
+        
+          id="https:actuarygardencnguideline"
+        >
+        <i class='fa fa-fan fa-spin fa-fw'></i> 入坑指南
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+        >
+        <i class='fas fa-moon fa-fw'></i> 暗黑模式
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          
+    <li>
+      <a class='vlts-menu fix-cursor-default' 
+        
+        
+        
+          onclick="document.execCommand('print')"
+        
+        >
+        <i class='fa fa-print fa-fw'></i> 打印页面
+      </a>
+    </li>
+  
+        
+      
+        
+          <hr>
+        
+      
+        
+          <li class='music name'>
+            <p class='nav music-title fix-cursor-default'></p>
+          </li>
+          <li class='music ctrl'>
+            <a class='nav icon-only backward fix-cursor-default' onclick='aplayerBackward()'><i class='fa fa-step-backward fa-fw'></i></a>
+            <a class='nav icon-only toggle fix-cursor-default' onclick='aplayerToggle()'><i class='fa fa-play fa-fw'></i></a>
+            <a class='nav icon-only forward fix-cursor-default' onclick='aplayerForward()'><i class='fa fa-step-forward fa-fw'></i></a>
+          </li>
+          <li class='music volume'>
+            <a class='nav volume'>
+              <div class="aplayer-volume-bar-wrap">
+                <div class="aplayer-volume-bar fix-cursor-pointer">
+                  <div class="aplayer-volume"></div>
+                  <i class='left fa fa-volume-off fa-fw'></i>
+                  <i class='right fa fa-volume-up fa-fw'></i>
+                </div>
+              </div>
+            </a>
+          </li>
+        
+      
+    </ul>
+  </div>
+
+  <script>
+    window.document.oncontextmenu = function (event) {
+      if (event.ctrlKey) return true;
+      if (/Android|webOS|BlackBerry/i.test(navigator.userAgent)) return true;
+      return popMenu(event);
+    };
+    document.addEventListener("click", function (event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      mymenu.style.display = "none";
+    });
+    function popMenu(event) {
+      var mymenu = document.getElementById('rightmenu-wrapper');
+      var menuContent = document.getElementById('rightmenu-content');
+      var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var screenHeight = document.documentElement.clientHeight || document.body.clientHeight;
+      mymenu.style.left = event.clientX + "px"; // 获取鼠标位置
+      mymenu.style.top = event.clientY + "px";
+      mymenu.style.display = 'block';
+      if (event.clientX * 2 > screenWidth) {
+        menuContent.classList.add('left');
+      } else {
+        menuContent.classList.remove('left');
+      }
+      if (event.clientY * 2 > screenHeight) {
+        menuContent.classList.add('top');
+      } else {
+        menuContent.classList.remove('top');
+      }
+
+      let hrText = document.getElementById('hr-text');
+      let hrSrc = document.getElementById('hr-src');
+      let hrHref = document.getElementById('hr-href');
+
+      // 选中图片
+      let copySrc = document.getElementById('menu-copy-src');
+      if (copySrc != undefined) {
+        if (event.target.currentSrc) {
+          copySrc.style.display = 'block';
+          copySrc.addEventListener("click", function (e) {
+            copyString(event.target.currentSrc);
+          },{once: true});
+          hrSrc.style.display = 'block';
+        } else {
+          copySrc.style.display = 'none';
+          hrSrc.style.display = 'none';
+        }
+      }
+
+      // 选中按钮
+      // 判断是不是按钮
+      let href = '';
+      if (event.path) {
+        for (i = 0; i < event.path.length; i++) {
+          if (event.path[i].href != undefined && event.path[i].href.length > 0) {
+            href = event.path[i].href;
+          }
+        }
+      }
+
+      let copyText = document.getElementById('menu-copy-text');
+      copyText.style.display = 'none';
+      hrText.style.display = 'none';
+      if (href.length == 0) {
+        // 选中文本
+        if (window.getSelection().toString()) {
+          if ('true' == 'true') {
+            copyText.style.display = 'block';
+            hrText.style.display = 'block';
+          }
+        }
+      }
+
+      // 在新标签页打开
+      let openHref = document.getElementById('menu-open-href');
+      if (openHref != undefined) {
+        if (href.length > 0) {
+          openHref.style.display = 'block';
+          openHref.addEventListener("click", function (e) {
+            window.open(href);
+          },{once: true});
+          hrHref.style.display = 'block';
+        } else {
+          openHref.style.display = 'none';
+          hrHref.style.display = 'none';
+        }
+      }
+      // 复制链接
+      let copyHref = document.getElementById('menu-copy-href');
+      if (copyHref != undefined) {
+        if (href.length > 0) {
+          copyHref.style.display = 'block';
+          copyHref.addEventListener("click", function (e) {
+            copyString(href);
+          },{once: true});
+        } else {
+          copyHref.style.display = 'none';
+        }
+      }
+
+      // 有音乐播放器
+      if ('true' == true && ('home,help,examples,contributors,hr,settings,hr,print,hr,music'||[]).includes('music')) {
+        // 如果有aplayer，初始化一下
+      	try {
+      		checkAPlayer();
+          updateTitle();
+      	} catch (error) {
+      		console.log(error);
+      	}
+      }
+
+      return false; // 该行代码确保系统自带的右键菜单不会被调出
+    }
+    function hideMenu() {
+      document.getElementById('rightmenu-wrapper').style.display = 'none';
+    }
+    function copyString(str) {
+      const input = document.createElement('input');
+      input.setAttribute('readonly', 'readonly');
+      document.body.appendChild(input);
+      input.setAttribute('value', str);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+    document.execCommand('click');
+  </script>
+
+
+
 
 <script>
   function loadIssuesJS() {
@@ -1663,6 +1877,10 @@ var loadCSS = function( href, before, media, attributes ){
       loadScript("https://cdn.jsdelivr.net/npm/meting@2.0/dist/Meting.min.js")
 	  }
   }, 2500)
+
+  
+    loadScript("/js/aplayer.js")
+  
 
 </script>
 

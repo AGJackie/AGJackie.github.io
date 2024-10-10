@@ -1,0 +1,616 @@
+
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>【CT3导引篇】CT3 Probability and Statistics 概率论与数理统计 - Hexo</title>
+
+  
+    <meta name="description" content="IFoA 英国精算师考试 CT3 概率论与数理统计的学习大纲，备考必看。各章的主干知识点和考点总结。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【CT3导引篇】CT3 Probability and Statistics 概率论与数理统计">
+<meta property="og:url" content="http://example.com/CT3-Guide/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="IFoA 英国精算师考试 CT3 概率论与数理统计的学习大纲，备考必看。各章的主干知识点和考点总结。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-10T19:40:09.560Z">
+<meta property="article:modified_time" content="2020-03-13T09:33:36.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="导引篇">
+<meta property="article:tag" content="概率论">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="导引篇,概率论">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Hexo</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a><a class="item title" href="/CB3-Guide/"><span class="title">【CB3导引篇】Business Management</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/IFoA/">IFoA</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/IFoA/CS1/">CS1</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-10-10T19:40:09.560Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2020-03-13T09:33:36.000Z">2020-03-13</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>【CT3导引篇】CT3 Probability and Statistics 概率论与数理统计</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>IFoA 英国精算师考试 CT3 概率论与数理统计的学习大纲，备考必看。各章的主干知识点和考点总结。</p>
+<span id="more"></span>
+
+<h2 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h2><p>说到概率论，就不得不提到爱因斯坦跟玻尔那场著名的争论：上帝掷骰子吗？</p>
+<p>从概率论的角度讲，上帝每时每刻都在掷骰子。因此，整个宇宙，都是测不准的。</p>
+<p>电影《春娇救志明》里，和志明分手以后的春娇内心很挣扎，于是她问外星人自己该不该和志明分手。外星人回答，“经过两兆亿次运算，我们得出结论，就是你们这段关系，一半机会可能成功，一半机会可能不成功。”“在这个宇宙间，大部分的事情都可以预测，只有你们地球人的感情，最难捉摸。”</p>
+<p>也不能怪外星人数学差，谁让感情这种事有那么多的可能性呢。</p>
+<p>《春娇救志明》的最后，志明等回了他的春娇。但在现实世界里，我们可能就会提出这样的疑问：1000个志明里面，究竟有多少个能等回他的春娇？</p>
+<p>给定一个特定的志明，我们无法准确的判断他是否能等回春娇。但是我们可以通过经验数据（或者说样本数据）推断总体（例如1000个志明）的概率分布，进而得出我们想要的结论。在上述这个例子里，我们可以假定“志明等回春娇”这一事件服从二项分布，然后抽取100个志明的样本，用样本的二项分布的参数估计总体的参数。</p>
+<p>CT3就是这样一门课——教你如何运用过去的经验数据，通过概率论和统计学的知识，来预测未来的种种可能性。通俗点讲，给你一张过去的CD，听听那时我们的爱情~哦不对，是让你把将来的爱情也给听出来。没错，这就是精算师们很重要的一部分工作。</p>
+<p>接下来，正式开始介绍CT3。</p>
+<h2 id="CT3大纲"><a href="#CT3大纲" class="headerlink" title="CT3大纲"></a>CT3大纲</h2><p>CT3包含概率论和统计学两块内容。这里不做细分，提出来只是告诉大家，在选修课程时可以同时选这两门。</p>
+<p>CT3共有14章，以下为详细介绍：</p>
+<h3 id="第一章-Summarising-data（统计数据）"><a href="#第一章-Summarising-data（统计数据）" class="headerlink" title="第一章 Summarising data（统计数据）"></a>第一章 Summarising data（统计数据）</h3><p>大概占7%的分值。主要内容是数据的分类，频数。分组频数分布，累计频数分布表，茎叶图，散点图，直方图，集中趋势的度量（样本均值，中位数，众数），离中趋势的度量（样本标准差，矩，极差，分位数），对称性和偏度。这里要重点关注的是矩（moments）的概念的引入，后续的学习也会用到。一阶矩即均值（期望），二阶中心距即方差，三阶中心距即偏度。</p>
+<h3 id="第二章-Probability（概率）"><a href="#第二章-Probability（概率）" class="headerlink" title="第二章 Probability（概率）"></a>第二章 Probability（概率）</h3><p>大概占4%的分值。集合理论，Venn图，概率的基本运算法则，条件概率，全概率公式和贝叶斯公式。</p>
+<h3 id="第三章-Random-variables（随机变量）"><a href="#第三章-Random-variables（随机变量）" class="headerlink" title="第三章 Random variables（随机变量）"></a>第三章 Random variables（随机变量）</h3><p>大概占4%的分值。离散型随机变量和连续型随机变量的期望，方差，矩的计算公式。</p>
+<h3 id="第四章-Probability-distributions（概率分布）"><a href="#第四章-Probability-distributions（概率分布）" class="headerlink" title="第四章 Probability distributions（概率分布）"></a>第四章 Probability distributions（概率分布）</h3><p>大概占5%的分值。几种重要的离散型概率分布和连续型概率分布，它们的期望，方差在Formulae－and－Tables（俗称小黄书）里都可以找到。无需背诵这些公式，考试的时候直接查阅小黄书即可。提一下，这里有个很重要的性质：泊松过程的等待时间服从指数分布。</p>
+<h3 id="第五章-Generating-functions（母函数）"><a href="#第五章-Generating-functions（母函数）" class="headerlink" title="第五章 Generating functions（母函数）"></a>第五章 Generating functions（母函数）</h3><p>很少直接考察本章内容。母函数包括矩量母函数(moment generating function,简称MGF），累计量母函数（cumulant generating function，简称CGF），概率母函数（probability generating function，简称PGF）。母函数使得矩的推导变得更加简单。</p>
+<h3 id="第六章-Joint-distributions（联合分布）"><a href="#第六章-Joint-distributions（联合分布）" class="headerlink" title="第六章 Joint distributions（联合分布）"></a>第六章 Joint distributions（联合分布）</h3><p>大概占3%的分值。两个变量的函数的期望和方差的计算公式，协方差，相关系数，卷积公式，随机变量线性组合的矩，通过母函数推导随机变量的线性组合的分布，例如伯努利分布的加总服从二项分布，几何分布的加总服从负二项分布，等等。</p>
+<h3 id="第七章-Conditional-expectation（条件期望）"><a href="#第七章-Conditional-expectation（条件期望）" class="headerlink" title="第七章 Conditional expectation（条件期望）"></a>第七章 Conditional expectation（条件期望）</h3><p>大概占7%的分值。会直接考察本章的内容。本章的公式需要自行记忆，小黄书里没有。这一章还介绍了复合分布，在CT6非寿险精算当中会继续深入学习。</p>
+<h3 id="第八章-The-Central-Limit-Theorem（中心极限定理）"><a href="#第八章-The-Central-Limit-Theorem（中心极限定理）" class="headerlink" title="第八章 The Central Limit Theorem（中心极限定理）"></a>第八章 The Central Limit Theorem（中心极限定理）</h3><p>大概占5%的分值。要着重掌握几种常见分布的正态近似，例如二项分布，泊松分布，卡方分布。当对离散型分布使用正态近似时，需要进行连续性校正。</p>
+<h3 id="第九章-Sampling-and-statistical-inference-抽样和统计推断"><a href="#第九章-Sampling-and-statistical-inference-抽样和统计推断" class="headerlink" title="第九章 Sampling and statistical inference(抽样和统计推断)"></a>第九章 Sampling and statistical inference(抽样和统计推断)</h3><p>大概占3%的分值。样本均值，样本方差，总体均值，总体方差，T检验，F检验，抽样分布等。本章有时会以证明题的形式考察。</p>
+<h3 id="第十章-Point-estimation（点估计）"><a href="#第十章-Point-estimation（点估计）" class="headerlink" title="第十章 Point estimation（点估计）"></a>第十章 Point estimation（点估计）</h3><p>大概占12%~20%的分值。矩估计，最大似然估计。再难一些会涉及到censored data和truncated data的处理。</p>
+<h3 id="第十一章-Confidence-intervals（置信区间）"><a href="#第十一章-Confidence-intervals（置信区间）" class="headerlink" title="第十一章 Confidence intervals（置信区间）"></a>第十一章 Confidence intervals（置信区间）</h3><p>以下四章都是统计学里的核心内容，这里只提几个注意事项。注意单侧检验与双侧检验的区别。95%的分位数等要学会查小黄书。</p>
+<h3 id="第十二章-Hypothesis-testing（假设检验）"><a href="#第十二章-Hypothesis-testing（假设检验）" class="headerlink" title="第十二章 Hypothesis testing（假设检验）"></a>第十二章 Hypothesis testing（假设检验）</h3><p>大概占13.3%的分值。注意自由度的计算。</p>
+<h3 id="第十三章-Correlation-and-regression（相关和回归）"><a href="#第十三章-Correlation-and-regression（相关和回归）" class="headerlink" title="第十三章 Correlation and regression（相关和回归）"></a>第十三章 Correlation and regression（相关和回归）</h3><p>大概占13.5%的分值。相关分析和回归分析。所有相关的公式都可以在小黄书中查到，因此要重点理解它的思路而不是为背诵而记忆公式。看到Predicted mean response和individual response的时候，注意两者的区别。</p>
+<h3 id="第十四章-Analysis-of-variance（方差分析）"><a href="#第十四章-Analysis-of-variance（方差分析）" class="headerlink" title="第十四章 Analysis of variance（方差分析）"></a>第十四章 Analysis of variance（方差分析）</h3><p>要熟练掌握方差分析表。</p>
+<p>CT3全书的概念不太难。个别细节或者说扩展的部分会有些难，需要掌握其原理。第一遍看的时候理解不了也不用太紧张，尽管继续看下去，不会影响整个知识体系的把握。在考试的时候，掌握了主干部分就没什么大问题了。不过话说回来，当你看完整本Combined Materials Pack,你会发现，CT3的理论还是很有意思的呢。</p>
+<p>PS：CT3要准备好科学计算器和小黄书噢。</p>
+<h2 id="写在结尾的话"><a href="#写在结尾的话" class="headerlink" title="写在结尾的话"></a>写在结尾的话</h2><p>人生是一个多面体，它有千万种状态，难以捉摸。它时而冷酷，时而温柔，它能让你对着手机屏幕哧哧的傻笑，也能让你茶饭不思夜不能寐。</p>
+<p>令人有些失望的是，即便我有一百多张过去的CD，即便我知道人生每种状态的概率分布，我仍然无法预测发生在某个特定个体（比如我自己）身上的会是哪一类事件。无论好的坏的，我想得到的想不到的事情，都不与概率论和统计学的原理相悖。</p>
+<p>当然了，人生充满种种可能性也未必是件坏事。</p>
+<p>朝着你认为最好的状态去努力，让美好的人生状态变成众数，让那些不那么好的事情零星分布在尾部，这样，就很好。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>License</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/CT4-Guide/">【CT4导引篇】 Models 精算模型</a></div><div class="item" id="next"><div class="note">Older</div><a href="/CT2-studynote/">CT2 Finance and Financial reporting 公司金融与财务报表笔记</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%BC%E8%A8%80"><span class="toc-text">导言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CT3%E5%A4%A7%E7%BA%B2"><span class="toc-text">CT3大纲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-Summarising-data%EF%BC%88%E7%BB%9F%E8%AE%A1%E6%95%B0%E6%8D%AE%EF%BC%89"><span class="toc-text">第一章 Summarising data（统计数据）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-Probability%EF%BC%88%E6%A6%82%E7%8E%87%EF%BC%89"><span class="toc-text">第二章 Probability（概率）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-Random-variables%EF%BC%88%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%EF%BC%89"><span class="toc-text">第三章 Random variables（随机变量）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0-Probability-distributions%EF%BC%88%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83%EF%BC%89"><span class="toc-text">第四章 Probability distributions（概率分布）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0-Generating-functions%EF%BC%88%E6%AF%8D%E5%87%BD%E6%95%B0%EF%BC%89"><span class="toc-text">第五章 Generating functions（母函数）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0-Joint-distributions%EF%BC%88%E8%81%94%E5%90%88%E5%88%86%E5%B8%83%EF%BC%89"><span class="toc-text">第六章 Joint distributions（联合分布）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0-Conditional-expectation%EF%BC%88%E6%9D%A1%E4%BB%B6%E6%9C%9F%E6%9C%9B%EF%BC%89"><span class="toc-text">第七章 Conditional expectation（条件期望）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0-The-Central-Limit-Theorem%EF%BC%88%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86%EF%BC%89"><span class="toc-text">第八章 The Central Limit Theorem（中心极限定理）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B9%9D%E7%AB%A0-Sampling-and-statistical-inference-%E6%8A%BD%E6%A0%B7%E5%92%8C%E7%BB%9F%E8%AE%A1%E6%8E%A8%E6%96%AD"><span class="toc-text">第九章 Sampling and statistical inference(抽样和统计推断)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E7%AB%A0-Point-estimation%EF%BC%88%E7%82%B9%E4%BC%B0%E8%AE%A1%EF%BC%89"><span class="toc-text">第十章 Point estimation（点估计）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-Confidence-intervals%EF%BC%88%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4%EF%BC%89"><span class="toc-text">第十一章 Confidence intervals（置信区间）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-Hypothesis-testing%EF%BC%88%E5%81%87%E8%AE%BE%E6%A3%80%E9%AA%8C%EF%BC%89"><span class="toc-text">第十二章 Hypothesis testing（假设检验）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-Correlation-and-regression%EF%BC%88%E7%9B%B8%E5%85%B3%E5%92%8C%E5%9B%9E%E5%BD%92%EF%BC%89"><span class="toc-text">第十三章 Correlation and regression（相关和回归）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-Analysis-of-variance%EF%BC%88%E6%96%B9%E5%B7%AE%E5%88%86%E6%9E%90%EF%BC%89"><span class="toc-text">第十四章 Analysis of variance（方差分析）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E7%BB%93%E5%B0%BE%E7%9A%84%E8%AF%9D"><span class="toc-text">写在结尾的话</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `Switched to Light Mode`,
+      dark: `Switched to Dark Mode`,
+      auto: `Switched to Auto Mode`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

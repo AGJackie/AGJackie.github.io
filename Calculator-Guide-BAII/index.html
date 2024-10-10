@@ -1,0 +1,877 @@
+
+<!DOCTYPE html><html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>精算师考试计算器使用指南-金融计算器 BA II Plus PRO - Hexo</title>
+
+  
+    <meta name="description" content="英国精算师考试中计算器使用经验分享，主要讲解在利息理论科目使用BA II Plus对年金现值积累值等进行求解的方法。对应 IFoA 的 CM1（CT1部分）、SOA 的FM 和 CAA 的 A2金融数学。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="精算师考试计算器使用指南-金融计算器 BA II Plus PRO">
+<meta property="og:url" content="http://example.com/Calculator-Guide-BAII/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="英国精算师考试中计算器使用经验分享，主要讲解在利息理论科目使用BA II Plus对年金现值积累值等进行求解的方法。对应 IFoA 的 CM1（CT1部分）、SOA 的FM 和 CAA 的 A2金融数学。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.actuarygarden.cn/c5839cbc-c567-4b08-9be2-282b989fe7a0.png">
+<meta property="article:published_time" content="2024-10-10T19:40:09.438Z">
+<meta property="article:modified_time" content="2022-08-04T15:01:56.081Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="导引篇">
+<meta property="article:tag" content="利息理论">
+<meta property="article:tag" content="计算器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.actuarygarden.cn/c5839cbc-c567-4b08-9be2-282b989fe7a0.png">
+  
+  
+  
+  <meta name="keywords" content="导引篇,利息理论,计算器">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Hexo</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="Search"></form><div id="search-result"></div><div class="search-no-result">No Results!</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">Recent Update</span></div><div class="widget-body fs14"><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a><a class="item title" href="/CB3-Guide/"><span class="title">【CB3导引篇】Business Management</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">Home</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">Blog</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/IFoA/">IFoA</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/IFoA/CM1/">CM1</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">Posted on: <time datetime="2024-10-10T19:40:09.438Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">Updated on: <time datetime="2022-08-04T15:01:56.081Z">2022-08-04</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>精算师考试计算器使用指南-金融计算器 BA II Plus PRO</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>英国精算师考试中计算器使用经验分享，主要讲解在利息理论科目使用BA II Plus对年金现值积累值等进行求解的方法。对应 IFoA 的 CM1（CT1部分）、SOA 的FM 和 CAA 的 A2金融数学。</p>
+<span id="more"></span>
+
+<p>英国精算师考试中会用到的计算器分为两大类，金融计算器和科学计算器。需要用到金融计算器的科目为CT1 利息理论（即 CM1 的前半部分），其他科目使用科学计算器即可。2020年9月以前，英国精算师考试允许使用的科学计算器和金融计算器的型号在英国精算师协会的官网上有要求：</p>
+<table>
+<thead>
+<tr>
+<th>The following are the authorised calculators for the Fellowship exams:</th>
+<th>(The suffix means any numbers or letters that follow the calculator’s make and model)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Casio FX82 (with or without any suffix)</td>
+<td>Sharp EL531 (with or without any prefix or suffix)</td>
+</tr>
+<tr>
+<td>Casio FX83 (with or without any suffix)</td>
+<td>Texas Instruments BA II Plus (with or without any suffix)</td>
+</tr>
+<tr>
+<td>Casio FX85 (with or without any suffix)</td>
+<td>Texas Instruments TI-30 (with or without any suffix)</td>
+</tr>
+<tr>
+<td>Hewlett Packard HP12c (with or without any suffix)</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>从2020年9月开始，英国精算师考试开始全面在线开卷考，因此IFoA不再对使用的计算器型号进行限制。</strong></p>
+<p>科学计算器是最常见的，中学阶段一直在用的那种，比如 TI-30 和常见的 Casio 计算器。</p>
+<p>金融计算器是为了计算现金流的方便而使用的，除了精算考试外，在CFA、FRM考试中也会用到。比较流行的型号为 BA-II Plus 和 BA-II Plus Pro。</p>
+<p>Jackie购买的是 TI-30XS 和 BA-II Plus Pro ，在中国精算师，英国精算师，北美精算师考试的时候都能用。</p>
+<h2 id="1-1-科学计算器的使用"><a href="#1-1-科学计算器的使用" class="headerlink" title="1.1 科学计算器的使用"></a>1.1 科学计算器的使用</h2><p>科学计算器的使用不需要太多特殊技巧。如果高中习惯用卡西欧，可以买型号符合要求的卡西欧计算器。</p>
+<p>如果使用 TI-30XS，记得提前熟悉计算器的按钮位置，刚开始用会有点不太顺手。请注意，TI-30XS 计算器的负号和减号不是同一个按键，而在 Casio 的计算器里则是同一个按键。</p>
+<p>CS1（对应旧体系的CT3 概率论与数理统计）科目中，在科学计算器中输入题中已有的数据即可直接求解一元线性回归模型中的参数 $\alpha$、$\beta$，以及拟合优度 $R^2$。但此方法并不是对所有的题目都节省时间，而且从知识掌握的系统性角度考虑，不建议一开始就采用此方法做题，掌握好计算的原理才能以不变应万变。</p>
+<h2 id="1-2-金融计算器的使用"><a href="#1-2-金融计算器的使用" class="headerlink" title="1.2 金融计算器的使用"></a>1.2 金融计算器的使用</h2><p>金融计算器主要用在CT1科目（对应于中国精算师的A2金融数学，北美精算师的FM）。</p>
+<p>金融计算器的功能很多，计算货币时间价值、分期付款、现金流、债券、折旧、统计等等。这里以 BA-II Plus Pro 为例介绍三种在考试中最实用的按键方法。</p>
+<p>我们需要用到的一组按键为 BA-II Plus Pro 第一排的 <code>CPT</code>、第二排的 <code>2ND</code> 和第三排的 TVM系列按键。TVM 即 “time value of money”。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.actuarygarden.cn/c5839cbc-c567-4b08-9be2-282b989fe7a0.png"></p>
+<ul>
+<li><p><code>N</code> 为时间（单位为年或期）（Number of Periods）</p>
+</li>
+<li><p><code>I/Y</code>为年利率或每期利率的100倍（effective interest rate <strong>in percentage</strong>）</p>
+</li>
+<li><p><code>PV</code> 为现值（Present Value）</p>
+</li>
+<li><p><code>PMT</code> 为年金每年的付款额（Payment Amount）</p>
+</li>
+<li><p><code>FV</code> 为终值（积累值）（Future Value）</p>
+</li>
+<li><p><code>CPT</code> 是生成的意思（Compute）</p>
+</li>
+</ul>
+<p>另外，BA-II Plus 里还有两个按键用来存储计算数值和调用存储的值：</p>
+<ul>
+<li><p><code>STO</code>  存储计算数值；</p>
+</li>
+<li><p><code>RCL</code>  调用存储的值。</p>
+</li>
+</ul>
+<p>一般来说，用计算器计算分为两步：</p>
+<ul>
+<li>第一步，<strong>每次操作前需要清空 TVM</strong>。依次按 <code>2ND</code>  $\rightarrow$ <code>FV</code> （即： <code>CLR TVM</code>）</li>
+<li>第二步，将其他几个已知量输入，再按 <code>CPT</code> $\rightarrow$ <code>未知量</code> 即可得出结果。</li>
+</ul>
+<h3 id="1-2-1-单次支付的计算"><a href="#1-2-1-单次支付的计算" class="headerlink" title="1.2.1 单次支付的计算"></a>1.2.1 单次支付的计算</h3><blockquote>
+<p><strong>练习1.1</strong> 已知实际年利率为8%，计算 1234 元在 5 年末的积累值。</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p>输入时间：<code>5</code>  $\rightarrow$ <code>N</code></p>
+</li>
+<li><p>输入年年利率：<code>8</code>  $\rightarrow$<code>I/Y</code></p>
+</li>
+<li><p>输入现值：<code>1234</code>   $\rightarrow$ <code>+/- </code>  $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p>计算积累值：<code>CPT</code> $\rightarrow$ <code>FV</code></p>
+</li>
+</ul>
+<p>计算结果为1813.1508</p>
+<blockquote>
+<p>注意：现值和终值的符号一定相反。为了使输出的终值为正，所以我们在输入现值时加了负号。</p>
+<p>利率为8%，但我们输入的时候不输入百分号，因为计算器内部已经默认了为百分比形式。</p>
+<p>这里的数据输入顺序并不固定。比如 <code>8</code>  $\rightarrow$ <code>I/Y</code>   $\rightarrow$  <code>5</code>  $\rightarrow$ <code>N</code>   $\rightarrow$  <code>1234</code>  $\rightarrow$ <code>+/- </code>   $\rightarrow$ <code>PV</code>   $\rightarrow$ <code>CPT</code> $\rightarrow$ <code>FV</code> 也是对的。</p>
+</blockquote>
+<blockquote>
+<p> <strong>练习1.2</strong> 已知实际年利率为8%，求 5 年末终值为 1813.1508 元的现值。</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p><code>8</code>   $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>5</code>  $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>1813.1508</code>   $\rightarrow$ <code>FV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>PV</code></p>
+</li>
+</ul>
+<p>计算结果为 -1234</p>
+<blockquote>
+<p><strong>练习1.3</strong> 已知实际年利率为8%，现值为 1234 元，积累值为 1813.1508 元。求积累了几年？</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p><code>8</code>  $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>1234</code>  $\rightarrow$ <code>+/-</code>   $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p><code>1813.1508</code>  $\rightarrow$ <code>FV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>N</code></p>
+</li>
+</ul>
+<p>计算结果为 5</p>
+<blockquote>
+<p> <strong>练习1.4</strong> 已知现值为 1234 元，经过5年后，积累值为 1813.1508 元。求实际年利率为百分之多少？</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p><code>5</code>  $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>1234</code>  $\rightarrow$ <code>+/-</code>  $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p><code>1813.1508</code>  $\rightarrow$ <code>FV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>I/Y</code></p>
+</li>
+</ul>
+<p>计算结果为 8，即实际年利率为 8%</p>
+<blockquote>
+<p> <strong>练习1.5</strong> 已知年实际贴现率为 9.27%，积累 6.25 年后的终值为 1000 元，求现值。</p>
+</blockquote>
+<p>思路：</p>
+<p>显然 $PV&#x3D;1000(1-0.0927)^{6.25}$</p>
+<p>我们同样可以用 TVM 按键来计算，只需要略施小计，对几个参数做一些微小的改动：把贴现率的相反数 $-d$ 视作 $i$，把 PV 视作 FV ，FV 视作 PV，$N$ 不变。</p>
+<p>或者把贴现率的相反数 $-d$ 视作 $i$，将 $N$ 的相反数 $-N$ 视作 $N$，PV 依然为 PV，FV 依然为 FV。</p>
+<p>这两种方法有个好听的名字：Fool the calculator</p>
+<p>解：</p>
+<p>方法一：</p>
+<ul>
+<li><p><code>6.25</code>  $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>9.27</code>  $\rightarrow$ <code>+/-</code>    $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>1000</code>  $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>FV</code></p>
+</li>
+</ul>
+<p>方法二：</p>
+<ul>
+<li><p><code>6.25</code>  $\rightarrow$  <code>+/-</code>  $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>9.27</code>  $\rightarrow$ <code>+/-</code>  $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>1000 </code> $\rightarrow$ <code>FV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>PV</code></p>
+</li>
+</ul>
+<p>计算结果为 -544.43</p>
+<h3 id="1-2-2-年金的计算"><a href="#1-2-2-年金的计算" class="headerlink" title="1.2.2 年金的计算"></a>1.2.2 年金的计算</h3><h4 id="1-2-2-1-期末年金的计算"><a href="#1-2-2-1-期末年金的计算" class="headerlink" title="1.2.2.1 期末年金的计算"></a>1.2.2.1 期末年金的计算</h4><p>BA-II Plus 在默认状态时为计算期末年金（Annuity-immediate）的模式，屏幕上是没有 BGN 的，如果之前调整到了期初年金的模式，需要调回来，方法如下：</p>
+<ul>
+<li><p>第一步，<code>2ND</code>  $\rightarrow$ <code>PMT</code></p>
+</li>
+<li><p>第二步，<code>2ND</code> $\rightarrow$ <code>ENTER</code></p>
+</li>
+<li><p>第三步，<code>2ND</code>  $\rightarrow$ <code>CPT</code></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>练习1.6</strong> 计算每期支付10元，以利率4%评估的7年期的期末年金现值 $10\ax{}{}{}{\angl{7}}$.</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p>清空 PV 里的数值：<code>0</code> $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p><code>10</code> $\rightarrow$ <code>+/- </code>   $\rightarrow$ <code>PMT</code></p>
+</li>
+<li><p><code>7</code> $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>4</code>  $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>PV</code></p>
+</li>
+</ul>
+<p>计算结果为 60.0205</p>
+<blockquote>
+<p><strong>练习1.7</strong> 已知 $100\ax{}{}{}{\angln} &#x3D; 912.85$, 年实际利率为 9%.求出 $n$ 的值。</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p>清空 TVM 。依次按 <code>2ND</code> $\rightarrow$ <code>FV</code> （即： <code>CLR TVM</code>）</p>
+</li>
+<li><p><code>100</code>  $\rightarrow$ <code>+/-</code>  $\rightarrow$ <code>PMT</code></p>
+</li>
+<li><p><code>9</code> $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>912.85</code>  $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>N</code></p>
+</li>
+</ul>
+<p>计算结果为 20</p>
+<blockquote>
+<p><strong>练习1.8</strong> 计算每期支付2000元，以利率7%评估的6年期的期末年金积累值 $2000\sx{\angl{6}}$.</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p>清空 FV 里的数值：<code>0</code> $\rightarrow$ <code>FV</code></p>
+</li>
+<li><p><code>2000</code>  $\rightarrow$  <code>+/- </code> $\rightarrow$<code>PMT</code></p>
+</li>
+<li><p><code>6</code> $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>7</code> $\rightarrow$ <code>I/Y</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>FV</code></p>
+</li>
+</ul>
+<p>计算结果为 14306.58</p>
+<blockquote>
+<p><strong>练习1.9</strong> Deposits of $2,000 are placed into a fund at the end of each year for the next 6 years. One year after the last deposit, annual withdrawals commence and continue for 4 years. Find the amount of each withdrawal if the annual effective rate of interest is 7%.</p>
+</blockquote>
+<p>思路：<br>翻译一下，就是已知 $PMT&#x3D; 2000$; $n &#x3D; 6$; $ i &#x3D; 7%$, $PMT \times \sx{\angl{6}} &#x3D; W\ax{}{}{}{\angl{4}}$ , 求 $W$</p>
+<p>解：</p>
+<ul>
+<li><p>首先按照上一道题的步骤计算出 $PMT \times \sx{\angl{6}}$, 屏幕上会显示计算结果 8992.614457</p>
+</li>
+<li><p>把上述数值存储在1这个单元里：<code>STO</code> $\rightarrow$ <code>1</code></p>
+</li>
+<li><p>把1单元里存储的数值调出来并设置为 PV：<code>RCL</code>  $\rightarrow$ <code>1</code> $\rightarrow$ <code>PV</code></p>
+</li>
+<li><p><code>4</code> $\rightarrow$<code>N</code></p>
+</li>
+<li><p><code>7</code> $\rightarrow$  <code>I/Y</code></p>
+</li>
+<li><p>清空 FV 里的数值：<code>0</code> $\rightarrow$ <code>FV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>PMT</code></p>
+</li>
+</ul>
+<p>计算结果为 -4223.71</p>
+<h4 id="1-2-2-2-期初年金的计算"><a href="#1-2-2-2-期初年金的计算" class="headerlink" title="1.2.2.2 期初年金的计算"></a>1.2.2.2 期初年金的计算</h4><p>我们可以看到<code>PMT</code> 按键的上方写着 BGN，所以用 <code>2ND </code>可以用来把默认的期末年金切换为期初年金：</p>
+<ul>
+<li><p>第一步，<code>2ND</code>  $\rightarrow$ <code>PMT</code></p>
+</li>
+<li><p>第二步，<code>2ND</code> $\rightarrow$ <code>ENTER</code></p>
+</li>
+<li><p>第三步，<code>2ND</code>  $\rightarrow$<code>CPT</code></p>
+</li>
+</ul>
+<p>这样我们就切换到了期初年金。可以看到计算器的屏幕上方显示 BGN，也就是 BEGINNING 的缩写。</p>
+<p>其余计算步骤和期末年金完全相同。</p>
+<blockquote>
+<p><strong>练习1.10</strong> Calculate $i$,the interest rate such that  $100\axzz{}{}{}{\angl{60}} &#x3D; 4256.0024$ .</p>
+</blockquote>
+<p>解：</p>
+<ul>
+<li><p><code>100</code>  $\rightarrow$  <code>+/-</code>   $\rightarrow$ <code>PMT</code></p>
+</li>
+<li><p><code>60</code>  $\rightarrow$ <code>N</code></p>
+</li>
+<li><p><code>4256.0024</code> $\rightarrow$<code> PV</code></p>
+</li>
+<li><p><code>CPT</code> $\rightarrow$ <code>I/Y</code></p>
+</li>
+</ul>
+<p>计算结果为 1.25, 所以利率 $i&#x3D;1.25%$</p>
+<p>CM1利息理论 &amp; 寿险精算一对一在线辅导招生中，详情点击推文了解 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/mHk0Ii2LCu4CoUPqh1Iorg">CM1利息理论&amp;寿险精算 一对一在线辅导 开课了！</a></p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>License</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">Newer</div><a href="/Career-Online-class/">精算求职一对一辅导项目介绍</a></div><div class="item" id="next"><div class="note">Older</div><a href="/Calculator-Guide/">精算师考试中计算器使用经验分享</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">John Doe</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E7%A7%91%E5%AD%A6%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">1.1 科学计算器的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E9%87%91%E8%9E%8D%E8%AE%A1%E7%AE%97%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-text">1.2 金融计算器的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E5%8D%95%E6%AC%A1%E6%94%AF%E4%BB%98%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">1.2.1 单次支付的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E5%B9%B4%E9%87%91%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">1.2.2 年金的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-1-%E6%9C%9F%E6%9C%AB%E5%B9%B4%E9%87%91%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">1.2.2.1 期末年金的计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-2-%E6%9C%9F%E5%88%9D%E5%B9%B4%E9%87%91%E7%9A%84%E8%AE%A1%E7%AE%97"><span class="toc-text">1.2.2.2 期初年金的计算</span></a></li></ol></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `Just`,
+      min: `minutes ago`,
+      hour: `hours ago`,
+      day: `days ago`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `Switched to Light Mode`,
+      dark: `Switched to Dark Mode`,
+      auto: `Switched to Auto Mode`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  }
+});
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

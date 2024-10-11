@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="“等待仍是需要的，万一戈多来了呢”">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-10T19:40:09.412Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.387Z">
 <meta property="article:modified_time" content="2021-10-31T15:37:46.814Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="秋招">
@@ -67,7 +67,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -80,7 +80,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E8%B0%83%E4%BE%83%E7%B2%BE%E7%AE%97/">调侃精算</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.412Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2021-10-31T15:37:46.814Z">2021-10-31</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.387Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2021-10-31T15:37:46.814Z">2021-10-31</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -93,21 +93,99 @@
   </div>
   </div><article class="md-text content"><p>“等待仍是需要的，万一戈多来了呢”</p>
 <span id="more"></span>
-
-<p>记秋招获得的 offer 数目为 $X$ 。给定参数 $\lambda$ 后，$X$ 服从参数为 $\lambda$ 的泊松分布（ Poisson distribution）：<br>$$<br>X\mid \lambda \sim Poi(\lambda)<br>$$</p>
-<p>显然 $X$ 的分布取决于参数 $\lambda$ ，由于该参数扑朔迷离的不确定性，我们引入<strong>贝叶斯方法</strong>，将参数 $\lambda$ 视作一个随机变量（random variable）。</p>
-<h2 id="先验参数分布"><a href="#先验参数分布" class="headerlink" title="先验参数分布"></a>先验参数分布</h2><p>在秋招之前，根据对自身综合能力的评估，我们会自信满满地对参数 $\lambda$ 做个先验的假设。假定参数 $\lambda$ 的<strong>先验分布</strong>（prior distribution）服从伽马分布：<br>$$<br>\lambda \sim Gamma (\alpha, \beta)<br>$$</p>
-<p>查表可知，先验分布的<strong>概率密度函数</strong>（probability density function）为：<br>$$<br>f_{\text {prior}}(\lambda)&#x3D;\frac{\beta^{\alpha}}{\Gamma(\alpha)} \lambda^{\alpha-1} e^{-\beta \lambda}, \quad \lambda&gt;0<br>$$</p>
-<h2 id="似然函数"><a href="#似然函数" class="headerlink" title="似然函数"></a>似然函数</h2><p>本以为秋招可以畅通无阻，奈何 offer $x$ 的<strong>观测值</strong>（observed values） $x_{1}, x_{2}, \ldots, x_{n}$ 差强人意。为了简便起见，我们把这一组观测值记为 $\underline{x}$ . 上述观测值的（联合）<strong>似然函数</strong>（likelihood function） $f(\underline{X} \mid \lambda)$ 为：<br>$$<br>f(\underline{X} \mid \lambda)&#x3D;\prod_{i&#x3D;1}^{n} P\left(X_{i}&#x3D;x_{i}\right)&#x3D;\prod_{i&#x3D;1}^{n} \frac{e^{-\lambda} \lambda^{x_{i}}}{x_{i} !} \propto e^{-n \lambda} \lambda ^{\sum x_{i}}<br>$$</p>
-<h2 id="后验参数分布"><a href="#后验参数分布" class="headerlink" title="后验参数分布"></a>后验参数分布</h2><p>经历了一通笔试面试，饱受打击后，我们不得不调整自己的心理预期。因此，我们要用似然函数对我们之前的先验分布做出修正。根据贝叶斯法则（Bayes’ theorem）可知，修正出来的<strong>后验分布</strong>（posterior distributions） $f_{\text {post}}(\lambda \mid \underline{X})$ 正比例于似然函数和先验分布 $f_{\text {prior}}(\lambda)$ 的乘积：<br>$$<br>f_{\text {post}}(\lambda \mid \underline{X}) \propto f(\underline{X} \mid \lambda) \times f_{\text {prior}}(\lambda)<br>$$</p>
-<p>因此：<br>$$<br>f_{\text {post}}(\lambda \mid \underline{X}) \propto \lambda^{\alpha-1} e^{-\beta \lambda} \times e^{-n \lambda} \lambda ^{\Sigma^{x_{i}}}&#x3D;\lambda ^{\alpha-1+\sum{x_{i}}} \cdot e^{-(n+\beta) \lambda}, \quad \lambda&gt;0<br>$$</p>
-<p>接着识别后验分布。我们发现，给定观测值 $\underline{x}$ 的后验分布 $f_{\text {post}}(\lambda \mid \underline{X})$ 也服从伽马分布：<br>$$<br>f_{\text {post}}(\lambda \mid \underline{X}) \sim \operatorname{Gamma}\left(\alpha+\sum_{i&#x3D;1}^{n} x_{i}, \beta+n\right)<br>$$</p>
-<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p>在贝叶斯统计里，为得到参数 $\lambda$ 的<strong>贝叶斯估计量</strong>（Bayesian estimate）需要先指定一个损失函数（The loss function）$L(g(\underline{x}), \theta)$，用于判断参数估计值和真值之间的误差可能带来的损失。这里我们选择最常用的损失函数：<strong>平方损失函数</strong>（quadratic loss）。平方损失函数下的贝叶斯估计量 $E(\lambda \mid \underline{x})$ 是后验分布的数学期望，即：<br>$$<br>E(\lambda \mid \underline{x})&#x3D;\frac{\alpha+\sum_{i&#x3D;1}^{n} x_{i}}{\beta+n}<br>$$</p>
-<h2 id="贝叶斯估计"><a href="#贝叶斯估计" class="headerlink" title="贝叶斯估计"></a>贝叶斯估计</h2><p>我们将上式写成<strong>信度保费公式</strong>（The credibility premium formula） $Z \bar{X}+(1-Z) \mu$ 的形式：<br>$$<br>E(\lambda \mid \underline{x})&#x3D;Z \frac{\sum_{i&#x3D;1}^{n} x_{i}}{n}+(1-Z) \frac{\alpha}{\beta}<br>$$</p>
-<p>上式中，$\frac{\sum_{i&#x3D;1}^{n} x_{i}}{n}$ 为观测值的均值 $\bar{X}$， $\frac{\alpha}{\beta}$ 为先验分布的期望，$Z&#x3D;\frac{n}{\beta+n}$ .</p>
+<p>记秋招获得的 offer 数目为 <span class="math inline">\(X\)</span>
+。给定参数 <span class="math inline">\(\lambda\)</span> 后，<span
+class="math inline">\(X\)</span> 服从参数为 <span
+class="math inline">\(\lambda\)</span> 的泊松分布（ Poisson
+distribution）： <span class="math display">\[
+X\mid \lambda \sim Poi(\lambda)
+\]</span></p>
+<p>显然 <span class="math inline">\(X\)</span> 的分布取决于参数 <span
+class="math inline">\(\lambda\)</span>
+，由于该参数扑朔迷离的不确定性，我们引入<strong>贝叶斯方法</strong>，将参数
+<span class="math inline">\(\lambda\)</span> 视作一个随机变量（random
+variable）。</p>
+<h2 id="先验参数分布">先验参数分布</h2>
+<p>在秋招之前，根据对自身综合能力的评估，我们会自信满满地对参数 <span
+class="math inline">\(\lambda\)</span> 做个先验的假设。假定参数 <span
+class="math inline">\(\lambda\)</span>
+的<strong>先验分布</strong>（prior distribution）服从伽马分布： <span
+class="math display">\[
+\lambda \sim Gamma (\alpha, \beta)
+\]</span></p>
+<p>查表可知，先验分布的<strong>概率密度函数</strong>（probability
+density function）为： <span class="math display">\[
+f_{\text {prior}}(\lambda)=\frac{\beta^{\alpha}}{\Gamma(\alpha)}
+\lambda^{\alpha-1} e^{-\beta \lambda}, \quad \lambda&gt;0
+\]</span></p>
+<h2 id="似然函数">似然函数</h2>
+<p>本以为秋招可以畅通无阻，奈何 offer <span
+class="math inline">\(x\)</span> 的<strong>观测值</strong>（observed
+values） <span class="math inline">\(x_{1}, x_{2}, \ldots,
+x_{n}\)</span> 差强人意。为了简便起见，我们把这一组观测值记为 <span
+class="math inline">\(\underline{x}\)</span> .
+上述观测值的（联合）<strong>似然函数</strong>（likelihood function）
+<span class="math inline">\(f(\underline{X} \mid \lambda)\)</span> 为：
+<span class="math display">\[
+f(\underline{X} \mid \lambda)=\prod_{i=1}^{n}
+P\left(X_{i}=x_{i}\right)=\prod_{i=1}^{n} \frac{e^{-\lambda}
+\lambda^{x_{i}}}{x_{i} !} \propto e^{-n \lambda} \lambda ^{\sum x_{i}}
+\]</span></p>
+<h2 id="后验参数分布">后验参数分布</h2>
+<p>经历了一通笔试面试，饱受打击后，我们不得不调整自己的心理预期。因此，我们要用似然函数对我们之前的先验分布做出修正。根据贝叶斯法则（Bayes'
+theorem）可知，修正出来的<strong>后验分布</strong>（posterior
+distributions） <span class="math inline">\(f_{\text {post}}(\lambda
+\mid \underline{X})\)</span> 正比例于似然函数和先验分布 <span
+class="math inline">\(f_{\text {prior}}(\lambda)\)</span> 的乘积： <span
+class="math display">\[
+f_{\text {post}}(\lambda \mid \underline{X}) \propto f(\underline{X}
+\mid \lambda) \times f_{\text {prior}}(\lambda)
+\]</span></p>
+<p>因此： <span class="math display">\[
+f_{\text {post}}(\lambda \mid \underline{X}) \propto \lambda^{\alpha-1}
+e^{-\beta \lambda} \times e^{-n \lambda} \lambda
+^{\Sigma^{x_{i}}}=\lambda ^{\alpha-1+\sum{x_{i}}} \cdot e^{-(n+\beta)
+\lambda}, \quad \lambda&gt;0
+\]</span></p>
+<p>接着识别后验分布。我们发现，给定观测值 <span
+class="math inline">\(\underline{x}\)</span> 的后验分布 <span
+class="math inline">\(f_{\text {post}}(\lambda \mid
+\underline{X})\)</span> 也服从伽马分布： <span class="math display">\[
+f_{\text {post}}(\lambda \mid \underline{X}) \sim
+\operatorname{Gamma}\left(\alpha+\sum_{i=1}^{n} x_{i}, \beta+n\right)
+\]</span></p>
+<h2 id="损失函数">损失函数</h2>
+<p>在贝叶斯统计里，为得到参数 <span
+class="math inline">\(\lambda\)</span>
+的<strong>贝叶斯估计量</strong>（Bayesian
+estimate）需要先指定一个损失函数（The loss function）<span
+class="math inline">\(L(g(\underline{x}),
+\theta)\)</span>，用于判断参数估计值和真值之间的误差可能带来的损失。这里我们选择最常用的损失函数：<strong>平方损失函数</strong>（quadratic
+loss）。平方损失函数下的贝叶斯估计量 <span
+class="math inline">\(E(\lambda \mid \underline{x})\)</span>
+是后验分布的数学期望，即： <span class="math display">\[
+E(\lambda \mid \underline{x})=\frac{\alpha+\sum_{i=1}^{n}
+x_{i}}{\beta+n}
+\]</span></p>
+<h2 id="贝叶斯估计">贝叶斯估计</h2>
+<p>我们将上式写成<strong>信度保费公式</strong>（The credibility premium
+formula） <span class="math inline">\(Z \bar{X}+(1-Z) \mu\)</span>
+的形式： <span class="math display">\[
+E(\lambda \mid \underline{x})=Z \frac{\sum_{i=1}^{n} x_{i}}{n}+(1-Z)
+\frac{\alpha}{\beta}
+\]</span></p>
+<p>上式中，<span class="math inline">\(\frac{\sum_{i=1}^{n}
+x_{i}}{n}\)</span> 为观测值的均值 <span
+class="math inline">\(\bar{X}\)</span>， <span
+class="math inline">\(\frac{\alpha}{\beta}\)</span>
+为先验分布的期望，<span
+class="math inline">\(Z=\frac{n}{\beta+n}\)</span> .</p>
 <p>就这样，基于先验信息和历史数据，我们终于估计出了<strong>未来一年</strong>秋招offer数目的期望值。</p>
 <p>你也终于听懂了HR的好人卡：「你的表现很优秀，但是今年公司不招人」「你还年轻，应该到外面闯一闯」</p>
-<h2 id="相关知识点"><a href="#相关知识点" class="headerlink" title="相关知识点"></a>相关知识点</h2><p>本文的知识点对应 <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/62erTvnxT3lBV9APEsM4tA">CS1</a> 2019 版 CMP 的以下章节：</p>
+<h2 id="相关知识点">相关知识点</h2>
+<p>本文的知识点对应 <a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/62erTvnxT3lBV9APEsM4tA">CS1</a> 2019 版
+CMP 的以下章节：</p>
 <ul>
 <li>Ch13 Bayesian statistics</li>
 <li>Ch14 Credibility theory</li>
@@ -116,7 +194,9 @@
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -141,7 +221,11 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">

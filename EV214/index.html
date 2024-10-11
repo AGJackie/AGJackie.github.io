@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="关于偿二代内含价值、有效业务价值、可分配盈余、要求资本、相应负债、最优估计准备金、风险边际的计算。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-10T19:40:09.596Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.460Z">
 <meta property="article:modified_time" content="2023-02-14T11:19:20.425Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="寿险精算">
@@ -67,7 +67,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -80,7 +80,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%B2%BE%E7%AE%97%E5%AE%9E%E5%8A%A1/">精算实务</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.596Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2023-02-14T11:19:20.425Z">2023-02-14</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.460Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2023-02-14T11:19:20.425Z">2023-02-14</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -93,53 +93,95 @@
   </div>
   </div><article class="md-text content"><p>关于偿二代内含价值、有效业务价值、可分配盈余、要求资本、相应负债、最优估计准备金、风险边际的计算。</p>
 <span id="more"></span>
-
-<h2 id="情人节-or-情人劫？"><a href="#情人节-or-情人劫？" class="headerlink" title="情人节 or 情人劫？"></a>情人节 or 情人劫？</h2><p>作为 IFoB (Institute and Faculty of Bachelors) 的资深会员，情人节与 Jackie 并无太大关系，但由于节日声势过于浩大，我也被迫目睹了身边许多堕入爱河的朋友为爱掏空钱包。近日，一位男同胞向我寻求帮助：</p>
+<h2 id="情人节-or-情人劫">情人节 or 情人劫？</h2>
+<p>作为 IFoB (Institute and Faculty of Bachelors) 的资深会员，情人节与
+Jackie
+并无太大关系，但由于节日声势过于浩大，我也被迫目睹了身边许多堕入爱河的朋友为爱掏空钱包。近日，一位男同胞向我寻求帮助：</p>
 <blockquote>
 <p>“为了女朋友想要的仪式感，每年的情人节的花费都是不能少的。你知道的，女生想要浪漫和惊喜，所以随着年龄的递增，花销也一年高过一年。我每年都有工资收入，但基本不怎么涨，刚开始工资收入扣除情人节的支出后还有富余，但慢慢就捉襟见肘，甚至入不敷出了。可以预见，这样下去我早晚完蛋。我该如何解决我的财政赤字？我的价值又在哪里？”</p>
 </blockquote>
 <p>看着这位男同胞迷茫的眼神，我实在于心不忍，决定帮助他找到自己的价值。</p>
-<h2 id="内含价值-EV"><a href="#内含价值-EV" class="headerlink" title="内含价值(EV)"></a>内含价值(EV)</h2><p>我先安慰他，你这些年总归还是攒了点钱的，先盘点一下你的现金，银行卡，房子，车子，这些就是你的<strong>调整净资产</strong>(<strong>ANAV, Adjusted Net Asset Value</strong>)。当然如果你有负债也得扣除掉。</p>
+<h2 id="内含价值ev">内含价值(EV)</h2>
+<p>我先安慰他，你这些年总归还是攒了点钱的，先盘点一下你的现金，银行卡，房子，车子，这些就是你的<strong>调整净资产</strong>(<strong>ANAV,
+Adjusted Net Asset Value</strong>)。当然如果你有负债也得扣除掉。</p>
 <p>他绞尽脑汁算了一下，加起来不到1万块。非常沮丧地说：原来我就只有一万块的价值。噢不对，作为一名保险代理人，我还有手机里的几百个客户。仅此而已。</p>
-<p>我说别沮丧，你的价值绝不止于此。你现在有这么多<strong>有效业务</strong>(<strong>In-force Business</strong>)，将来会有源源不断的保费收入。这就是<strong>有效业务价值</strong>(<strong>VIFB</strong>, <strong>Value of In-force Business</strong>).</p>
-<p>所以，你的<strong>内含价值</strong>(<strong>Embedded Value</strong>, <strong>EV</strong>)<strong>由有效业务价值及调整净资产两部分共同组成</strong>：</p>
+<p>我说别沮丧，你的价值绝不止于此。你现在有这么多<strong>有效业务</strong>(<strong>In-force
+Business</strong>)，将来会有源源不断的保费收入。这就是<strong>有效业务价值</strong>(<strong>VIFB</strong>,
+<strong>Value of In-force Business</strong>).</p>
+<p>所以，你的<strong>内含价值</strong>(<strong>Embedded Value</strong>,
+<strong>EV</strong>)<strong>由有效业务价值及调整净资产两部分共同组成</strong>：</p>
 <ul>
 <li><strong>调整净资产，是指适用业务对应的资产的市场价值扣除相应负债后的金额</strong>。</li>
 <li><strong>有效业务价值是有效业务未来可分配盈余的现值</strong>。可分配盈余是比利润更加严格的定义，受到会计原则约束、偿付能力监管、和业务规范的限制。</li>
 </ul>
-<p>调整净资产你盘点起来大概问题不大，所以我们重点来聊聊<strong>有效业务价值</strong>( <strong>IBV</strong>, <strong>In-Force Business Value</strong>)。</p>
-<h2 id="有效业务价值-IBV"><a href="#有效业务价值-IBV" class="headerlink" title="有效业务价值(IBV)"></a>有效业务价值(IBV)</h2><p>刚才提到，有效业务价值是有效业务未来可分配盈余的现值。什么是<strong>可分配盈余</strong>(<strong>Distributable Earnings, DE</strong>)呢？</p>
-<p>我们知道，爱情需要经营。所谓家和万事兴，只要你用心经营，就会有<strong>未来经营性净现金流</strong>(<strong>Net Operating CashFlow, NOCF</strong>).</p>
+<p>调整净资产你盘点起来大概问题不大，所以我们重点来聊聊<strong>有效业务价值</strong>(
+<strong>IBV</strong>, <strong>In-Force Business Value</strong>)。</p>
+<h2 id="有效业务价值ibv">有效业务价值(IBV)</h2>
+<p>刚才提到，有效业务价值是有效业务未来可分配盈余的现值。什么是<strong>可分配盈余</strong>(<strong>Distributable
+Earnings, DE</strong>)呢？</p>
+<p>我们知道，爱情需要经营。所谓家和万事兴，只要你用心经营，就会有<strong>未来经营性净现金流</strong>(<strong>Net
+Operating CashFlow, NOCF</strong>).</p>
 <p>你的盈余当然不止这些。别忘了，你家的保险箱里有一笔为了应对家庭财务风险而储备的钱，叫做<strong>相应负债</strong>，<strong>相应负债的投资收益</strong>也归你所有。当然，如果入不敷出的风险越来越大，保险箱里的钱就需要定期增加，增加的这部分叫做<strong>相应负债提转差</strong>，这就是你的支出了。</p>
-<p>未来经营性净现金流，加上相应负债的投资收益，减去相应负债提转差，再扣掉你应交的税，就是<strong>承保利润</strong>(<strong>Book Profits, BP</strong>).</p>
+<p>未来经营性净现金流，加上相应负债的投资收益，减去相应负债提转差，再扣掉你应交的税，就是<strong>承保利润</strong>(<strong>Book
+Profits, BP</strong>).</p>
 <p>你以为盈余只是承保利润吗？还不止。</p>
-<p>其实你家里还有第二个保险箱。内含价值，全称是<strong>偿二代内含价值</strong>(<strong>CROSS EV</strong>)，也就是说，你要想正常经营业务，还需要满足偿二代规则下对偿付能力的要求。所以第一个保险箱里的相应负债就不够用了。</p>
-<p>第二个保险箱里的钱，叫做<strong>要求资本</strong>(<strong>Required Capital, RC</strong>)。和第一个保险箱类似，<strong>要求资本的收益作为你的收入，要求资本提转差作为你的支出，再扣掉相应的税收，连同我们前面的承保利润算在一起，就是你的可分配盈余了</strong>。</p>
+<p>其实你家里还有第二个保险箱。内含价值，全称是<strong>偿二代内含价值</strong>(<strong>CROSS
+EV</strong>)，也就是说，你要想正常经营业务，还需要满足偿二代规则下对偿付能力的要求。所以第一个保险箱里的相应负债就不够用了。</p>
+<p>第二个保险箱里的钱，叫做<strong>要求资本</strong>(<strong>Required
+Capital,
+RC</strong>)。和第一个保险箱类似，<strong>要求资本的收益作为你的收入，要求资本提转差作为你的支出，再扣掉相应的税收，连同我们前面的承保利润算在一起，就是你的可分配盈余了</strong>。</p>
 <p>是不是可分配盈余直接贴现就是有效业务价值了呢？也不是。</p>
 <p>第二个保险箱里的要求资本，这笔钱是你为了满足偿付能力要求额外拿出来的，你本可以拿这个私房钱做点其他的小本生意。但是为了让你的家庭更加稳定，这笔钱你是不能随意取用（分配给股东）的，所以<strong>可分配盈余的现值再扣除要求资本以后，才是你真正的有效业务价值</strong>。</p>
 <p>第一个保险箱（相应负债）和第二个保险箱（要求资本）里该放多少钱呢？</p>
-<h2 id="相应负债"><a href="#相应负债" class="headerlink" title="相应负债"></a>相应负债</h2><p>前面你提到，随着年龄的递增，情人节的花销一年高过一年。而每年的工资收入是恒定的，这其实就和我们的保险一模一样。人的死亡风险往往随着年龄的增加而上升，也就是说，保险公司需要付出的保险金是越来越多的，而收取的保费往往平准，恒久不变，这就会导致在被保险人年龄较高时，保险公司出现收不抵支的风险，为此，我们需要提取<strong>最优估计准备金</strong>(<strong>Best Estimate Liability, BEL</strong>).</p>
+<h2 id="相应负债">相应负债</h2>
+<p>前面你提到，随着年龄的递增，情人节的花销一年高过一年。而每年的工资收入是恒定的，这其实就和我们的保险一模一样。人的死亡风险往往随着年龄的增加而上升，也就是说，保险公司需要付出的保险金是越来越多的，而收取的保费往往平准，恒久不变，这就会导致在被保险人年龄较高时，保险公司出现收不抵支的风险，为此，我们需要提取<strong>最优估计准备金</strong>(<strong>Best
+Estimate Liability, BEL</strong>).</p>
 <p>实际上，最优估计准备金是<strong>现金流现值</strong>(<strong>PVCF</strong>)与<strong>选择权及保证利益的时间价值</strong>(<strong>TVOG</strong>)之和。</p>
-<p>对于普通型人身保险，我们只算现金流现值就可以。但对于分红保险、万能保险和变额年金保险等业务，我们还应该计算其选择权及保证利益的时间价值。比如你承诺女朋友说永远爱她，<strong>这辈子的万能结算利率永远不低于某个数</strong>，这就是<strong>保证</strong>(<strong>guarantees</strong>). 你对女朋友说，以后大小节日的礼物任她挑选，<strong>可以根据条款规定选择转换为保险公司当时认可的终身保险、两全保险或年金保险合同</strong>，这就是<strong>选择权</strong>(<strong>options</strong>). 这就是甜言蜜语的代价。</p>
-<p>爱情之路难免有曲折。“不敢徒手打老虎，不敢无舟去过河”。在遇到<strong>不利偏差</strong>(<strong>Provision of Adverse Deviation, PAD</strong>)的时候，战战兢兢，如临深渊，如履薄冰，方能保万世无忧。因此，我们还需要考虑<strong>风险边际</strong>(<strong>Risk Margin, RM</strong>).</p>
-<p>最优估计准备金(BEL)加上风险边际(RM)，就是<strong>未到期责任准备金</strong>(<strong>RES</strong>). 这也是我们计算相应负债时需要用到的<strong>寿险合同负债</strong>。再加上为了不确认首日利得而设立的剩余边际(<strong>Defferd Profit Liability, DPL</strong>)，就构成了第一个保险箱里的相应负债。</p>
-<h2 id="要求资本-RC"><a href="#要求资本-RC" class="headerlink" title="要求资本(RC)"></a>要求资本(RC)</h2><p>在评估时点或未来的任意时点，若公司的负债水平不足以满足偿二代下总偿付能力资本要求，需要在负债的基础上额外确认要求资本(RC):<br>$$<br>RC_{t}&#x3D;\max<br>\left{MC_t+\max \left[CV_t-\left(RES_t+MC_t\right), 0\right]-\left(DPL_t-DTL_t\right), 0\right}<br>$$</p>
+<p>对于普通型人身保险，我们只算现金流现值就可以。但对于分红保险、万能保险和变额年金保险等业务，我们还应该计算其选择权及保证利益的时间价值。比如你承诺女朋友说永远爱她，<strong>这辈子的万能结算利率永远不低于某个数</strong>，这就是<strong>保证</strong>(<strong>guarantees</strong>).
+你对女朋友说，以后大小节日的礼物任她挑选，<strong>可以根据条款规定选择转换为保险公司当时认可的终身保险、两全保险或年金保险合同</strong>，这就是<strong>选择权</strong>(<strong>options</strong>).
+这就是甜言蜜语的代价。</p>
+<p>爱情之路难免有曲折。“不敢徒手打老虎，不敢无舟去过河”。在遇到<strong>不利偏差</strong>(<strong>Provision
+of Adverse Deviation,
+PAD</strong>)的时候，战战兢兢，如临深渊，如履薄冰，方能保万世无忧。因此，我们还需要考虑<strong>风险边际</strong>(<strong>Risk
+Margin, RM</strong>).</p>
+<p>最优估计准备金(BEL)加上风险边际(RM)，就是<strong>未到期责任准备金</strong>(<strong>RES</strong>).
+这也是我们计算相应负债时需要用到的<strong>寿险合同负债</strong>。再加上为了不确认首日利得而设立的剩余边际(<strong>Defferd
+Profit Liability, DPL</strong>)，就构成了第一个保险箱里的相应负债。</p>
+<h2 id="要求资本rc">要求资本(RC)</h2>
+<p>在评估时点或未来的任意时点，若公司的负债水平不足以满足偿二代下总偿付能力资本要求，需要在负债的基础上额外确认要求资本(RC):
+<span class="math display">\[
+RC_{t}=\max
+\left\{MC_t+\max \left[CV_t-\left(RES_t+MC_t\right),
+0\right]-\left(DPL_t-DTL_t\right), 0\right\}
+\]</span></p>
 <p>简单地说，要求资本(RC)等于偿二代<strong>最低资本</strong>(<strong>MC</strong>)减去剩余边际。因为剩余边际相当于你多提了一笔负债，那么监管也不让你吃亏，你可以拿它来充当一部分资本。注意，扣完税以后的“剩余边际”才能用来充当资本，即<strong>剩余边际</strong>(<strong>DPL</strong>)减去<strong>所得税准备</strong>(<strong>DTL</strong>).</p>
-<p>如果你们不幸分手(退保)了，你需要给女朋友退的这笔分手费叫做<strong>现金价值</strong>(<strong>Cash Value, CV</strong>). 在某些情况下，这可能是一笔天价分手费，为了保障女朋友的利益，需要再多提一笔差价，也就是<strong>现金价值(CV)减去未到期责任准备金(RES)再减去最低资本(MC)的这部分</strong>。</p>
-<h2 id="相关阅读"><a href="#相关阅读" class="headerlink" title="相关阅读"></a>相关阅读</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/HN_I1ZO0WE4hmvkYCzh7vQ">定价实务：费率厘定和新业务价值</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/70Ht0a7juLL3rJCc_jUyHQ">恋爱险的起源</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/T2oCPAl-N8CJ6UA_FHxKAQ">《恋爱险精算》</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yYZY2G0H1j2dlfJdTbd36A">毕业快乐，我的精算女同学</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/17-Mbg9nwii4vkqNYifnbw">“秋刀鱼会过期，罐头会过期，但终身寿险不会”</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Cm3SVfVbSFzuM7zA-tEFEQ">爱上精算的一百个理由</a></li>
-<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/LWJP7P5nZ8YnVqTEJbG1bw">好物推荐 | IFoA英国精算师考试</a></li>
+<p>如果你们不幸分手(退保)了，你需要给女朋友退的这笔分手费叫做<strong>现金价值</strong>(<strong>Cash
+Value, CV</strong>).
+在某些情况下，这可能是一笔天价分手费，为了保障女朋友的利益，需要再多提一笔差价，也就是<strong>现金价值(CV)减去未到期责任准备金(RES)再减去最低资本(MC)的这部分</strong>。</p>
+<h2 id="相关阅读">相关阅读</h2>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/HN_I1ZO0WE4hmvkYCzh7vQ">定价实务：费率厘定和新业务价值</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/70Ht0a7juLL3rJCc_jUyHQ">恋爱险的起源</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/T2oCPAl-N8CJ6UA_FHxKAQ">《恋爱险精算》</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/yYZY2G0H1j2dlfJdTbd36A">毕业快乐，我的精算女同学</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/17-Mbg9nwii4vkqNYifnbw">“秋刀鱼会过期，罐头会过期，但终身寿险不会”</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Cm3SVfVbSFzuM7zA-tEFEQ">爱上精算的一百个理由</a></li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/LWJP7P5nZ8YnVqTEJbG1bw">好物推荐
+| IFoA英国精算师考试</a></li>
 </ul>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -157,21 +199,25 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/Exam5-experience/">【CAS】Exam 5 考试历程回顾（2021.5）</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/CUHK-Bsc-AS-Intro/">CUHK香港中文大学精算本科课程介绍</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/Exam-fees/">精算师考试要花多少钱？IFoA,SOA,CAS,CAA报名费大盘点【零基础入坑精算系列01】</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/CUHK-Bsc-AS-Intro/">CUHK香港中文大学精算本科课程介绍</a></div></section></div>
 
 
 
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%85%E4%BA%BA%E8%8A%82-or-%E6%83%85%E4%BA%BA%E5%8A%AB%EF%BC%9F"><span class="toc-text">情人节 or 情人劫？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%90%AB%E4%BB%B7%E5%80%BC-EV"><span class="toc-text">内含价值(EV)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E4%B8%9A%E5%8A%A1%E4%BB%B7%E5%80%BC-IBV"><span class="toc-text">有效业务价值(IBV)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%BA%94%E8%B4%9F%E5%80%BA"><span class="toc-text">相应负债</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E8%B5%84%E6%9C%AC-RC"><span class="toc-text">要求资本(RC)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E9%98%85%E8%AF%BB"><span class="toc-text">相关阅读</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%85%E4%BA%BA%E8%8A%82-or-%E6%83%85%E4%BA%BA%E5%8A%AB"><span class="toc-text">情人节 or 情人劫？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E5%90%AB%E4%BB%B7%E5%80%BCev"><span class="toc-text">内含价值(EV)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E4%B8%9A%E5%8A%A1%E4%BB%B7%E5%80%BCibv"><span class="toc-text">有效业务价值(IBV)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%BA%94%E8%B4%9F%E5%80%BA"><span class="toc-text">相应负债</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E8%B5%84%E6%9C%ACrc"><span class="toc-text">要求资本(RC)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E9%98%85%E8%AF%BB"><span class="toc-text">相关阅读</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

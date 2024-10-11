@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="根据赫瑞瓦特的 CT2 公司金融与财务报表课程对全书的知识点做的梳理。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-10T19:40:09.556Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.443Z">
 <meta property="article:modified_time" content="2023-12-17T05:41:10.097Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="财务报表">
@@ -66,7 +66,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -79,7 +79,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/IFoA/">IFoA</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/IFoA/CB1/">CB1</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.556Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2023-12-17T05:41:10.097Z">2023-12-17</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.443Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2023-12-17T05:41:10.097Z">2023-12-17</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -92,158 +92,271 @@
   </div>
   </div><article class="md-text content"><p>根据赫瑞瓦特的 CT2 公司金融与财务报表课程对全书的知识点做的梳理。</p>
 <span id="more"></span>
-
 <p>本来在国内就学了会计，到了英国又来了一遍，真实开心（误）。下面就梳理一下对于考试来说重要的知识（老师勾的），不然真的贼多。</p>
-<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1 Introduction"></a>1 Introduction</h2><p>对于这科又学金融，又学会计的来说，先梳理一下区别：</p>
-<p><strong>accounting</strong>：主要考虑collecting, recording, analysing and communicating financial information。</p>
-<p><strong>finance</strong>：关注如何raise and invest funds of a business。但他们都对公司决策起着重大的作用。</p>
+<h2 id="introduction">1 Introduction</h2>
+<p>对于这科又学金融，又学会计的来说，先梳理一下区别：</p>
+<p><strong>accounting</strong>：主要考虑collecting, recording, analysing
+and communicating financial information。</p>
+<p><strong>finance</strong>：关注如何raise and invest funds of a
+business。但他们都对公司决策起着重大的作用。</p>
 <p>1) Users of financial information</p>
-<p>有很多，owners, customers, competitors, manager, lender……不一一列举了。</p>
+<p>有很多，owners, customers, competitors, manager,
+lender......不一一列举了。</p>
 <p>2）Rules and regulations</p>
-<p>有很多，比如Companies act和Accounting standards……来源于international accounting standards boards, company law和financial conduct authority。关键：这些regulations的目的都想保证financial reports give a true and fair view。</p>
+<p>有很多，比如Companies act和Accounting
+standards......来源于international accounting standards boards, company
+law和financial conduct
+authority。关键：这些regulations的目的都想保证financial reports give a
+true and fair view。</p>
 <p>3）Accounting conventions 会计惯例</p>
-<p><strong>Business (company) entity 商业实体</strong>: 超脱于所有者之外，一个单独的公司银行账户</p>
-<p><strong>Historic cost 历史成本</strong>：被计作成本的资产和负债，对于非流动资产有时也会重新评估</p>
+<p><strong>Business (company) entity 商业实体</strong>:
+超脱于所有者之外，一个单独的公司银行账户</p>
+<p><strong>Historic cost
+历史成本</strong>：被计作成本的资产和负债，对于非流动资产有时也会重新评估</p>
 <p><strong>Prudence 审慎</strong>：账户需要谨慎估值</p>
-<p><strong>Going concern 持续经营</strong>：假设公司能够在可见的未来经营（通常为12个月），对于账户的影响</p>
-<p><strong>Dual aspect 双面性</strong> : 每一个交易都会影响两个账户 (asset, equity or liabilities)<br><strong>Money measurement 货币核算原则</strong>：所有账户都用货币计算</p>
-<p><strong>Consistency 一致性</strong>：数据在各年都可以相互比较，也就是说会计policies不会发生较大的改变</p>
-<p><strong>Accruals 权责发生制</strong>：开销一旦发生，都要记录，不管是否给钱</p>
-<p><strong>Realisation 实现</strong>：收入在发生的时候记录，不管当时是否给钱</p>
+<p><strong>Going concern
+持续经营</strong>：假设公司能够在可见的未来经营（通常为12个月），对于账户的影响</p>
+<p><strong>Dual aspect 双面性</strong> : 每一个交易都会影响两个账户
+(asset, equity or liabilities)<br />
+<strong>Money measurement
+货币核算原则</strong>：所有账户都用货币计算</p>
+<p><strong>Consistency
+一致性</strong>：数据在各年都可以相互比较，也就是说会计policies不会发生较大的改变</p>
+<p><strong>Accruals
+权责发生制</strong>：开销一旦发生，都要记录，不管是否给钱</p>
+<p><strong>Realisation
+实现</strong>：收入在发生的时候记录，不管当时是否给钱</p>
 <p>稍微对accruals和prudence注意一下，老师说很常考。</p>
-<h2 id="2-The-main-financial-statements"><a href="#2-The-main-financial-statements" class="headerlink" title="2 The main financial statements"></a>2 The main financial statements</h2><p>1）Statement of Financial Position (Balance Sheet)</p>
-<p>Assets &#x3D;Liabilities + Equity</p>
+<h2 id="the-main-financial-statements">2 The main financial
+statements</h2>
+<p>1）Statement of Financial Position (Balance Sheet)</p>
+<p>Assets =Liabilities + Equity</p>
 <p>1-Assets</p>
-<p><strong>Typical business assets</strong>: property; plant and equipment; fixtures and fittings; patents and trademarks; inventory; trade receivables</p>
-<p><strong>Non-current (fixed) assets and current assets</strong>: 固定资产一般指持有超过1年的可以是有形无形或者投资的资产，而流动资产则是指小于1年的用于商业循环的资产。固定资产的话需要depreciate和可以被revalue。</p>
-<p>Current assets 中Inventories (stock), Cash, trade receivables是一个循环的状态。</p>
+<p><strong>Typical business assets</strong>: property; plant and
+equipment; fixtures and fittings; patents and trademarks; inventory;
+trade receivables</p>
+<p><strong>Non-current (fixed) assets and current assets</strong>:
+固定资产一般指持有超过1年的可以是有形无形或者投资的资产，而流动资产则是指小于1年的用于商业循环的资产。固定资产的话需要depreciate和可以被revalue。</p>
+<p>Current assets 中Inventories (stock), Cash, trade
+receivables是一个循环的状态。</p>
 <p>2-Liabilities</p>
-<p><strong>Typical liabilities</strong>: loans; trade payables; tax due</p>
-<p><strong>Classification</strong>: current liabilities (&lt;1年)；non-current liabilities（&gt;1年）</p>
+<p><strong>Typical liabilities</strong>: loans; trade payables; tax
+due</p>
+<p><strong>Classification</strong>: current liabilities
+(&lt;1年)；non-current liabilities（&gt;1年）</p>
 <p>3-Equity</p>
 <p>公式：owner注入公司的钱-owner拿走的钱+任何profits</p>
 <p>2) Income Statement</p>
 <p>1-Cost of Sales</p>
-<p>-Retail: &#x3D;Opening inventories+Purchases-Closing inventories-Manufacturing: &#x3D;Opening inventories+Raw materials+manufacturing expenses-closing inventories</p>
+<p>-Retail: =Opening inventories+Purchases-Closing
+inventories-Manufacturing: =Opening inventories+Raw
+materials+manufacturing expenses-closing inventories</p>
 <p>2-Groping types of expenses</p>
-<p>包含Cost of Sales, Selling and distribution costs and Administrative expenses。</p>
-<p>对于Selling and distribution costs，只包括advertising, selling costs and delivery costs。Administrative expenses则是除了selling and distribution costs外的所有。</p>
+<p>包含Cost of Sales, Selling and distribution costs and Administrative
+expenses。</p>
+<p>对于Selling and distribution costs，只包括advertising, selling costs
+and delivery costs。Administrative expenses则是除了selling and
+distribution costs外的所有。</p>
 <p>3-Recognising expenses</p>
-<p>注意一下accruals and prepayment。accrued expenses是记在expenses里面，而prepaid expenses则是资产。</p>
+<p>注意一下accruals and prepayment。accrued
+expenses是记在expenses里面，而prepaid expenses则是资产。</p>
 <p>4-Depreciation</p>
-<h2 id="3-Accounting-for-limited-companies"><a href="#3-Accounting-for-limited-companies" class="headerlink" title="3 Accounting for limited companies"></a>3 Accounting for limited companies</h2><p>1）Business ownership</p>
+<h2 id="accounting-for-limited-companies">3 Accounting for limited
+companies</h2>
+<p>1）Business ownership</p>
 <p>注意他的legal entity的关系</p>
-<p><strong>Sole trader</strong>: unlimited liabilities for debt<strong>Partnerships</strong>: jointly and severally liable for debts<strong>Limited companies</strong>: separate legal identity, limited liability</p>
-<p>对于incorporation，既有好处也有坏处。好处就是limited liabilities和比较轻松地raise money，还有就是ownership的变动不会影响该公司生产活动。其坏处就是比其他两种更贵，受法律约束更多还有就是经理人和企业所有者的利益冲突问题。</p>
+<p><strong>Sole trader</strong>: unlimited liabilities for
+debt<strong>Partnerships</strong>: jointly and severally liable for
+debts<strong>Limited companies</strong>: separate legal identity,
+limited liability</p>
+<p>对于incorporation，既有好处也有坏处。好处就是limited
+liabilities和比较轻松地raise
+money，还有就是ownership的变动不会影响该公司生产活动。其坏处就是比其他两种更贵，受法律约束更多还有就是经理人和企业所有者的利益冲突问题。</p>
 <p>2）Private and public companies</p>
-<p>对于limited companies,又分成private和public两种。对于<strong>private limited companies（ltd）</strong>，不允许其对公众发售股票，可以只有一个董事和一个监事，不需要annual general meetings。对于<strong>public limited companies（plc）</strong>，允许对公众发售股票，必须有两个以上的董事和监事。</p>
-<h2 id="4-Cash-Flow-Statements"><a href="#4-Cash-Flow-Statements" class="headerlink" title="4 Cash Flow Statements"></a>4 Cash Flow Statements</h2><p>cash flow statements对现金流动提供额外信息。Income statement中depreciation和accruals and prepayment不影响现金流动。Cash transactions例如share issues和purchase of fixed assets不影响profit。</p>
+<p>对于limited companies,又分成private和public两种。对于<strong>private
+limited
+companies（ltd）</strong>，不允许其对公众发售股票，可以只有一个董事和一个监事，不需要annual
+general meetings。对于<strong>public limited
+companies（plc）</strong>，允许对公众发售股票，必须有两个以上的董事和监事。</p>
+<h2 id="cash-flow-statements">4 Cash Flow Statements</h2>
+<p>cash flow statements对现金流动提供额外信息。Income
+statement中depreciation和accruals and prepayment不影响现金流动。Cash
+transactions例如share issues和purchase of fixed assets不影响profit。</p>
 <p>1）分类</p>
-<p>cash flow分为三种：<strong>cash flow from operating activities</strong>: normal day-to-day trading activities<strong>cash flow from investing activities</strong>: acquire and dispose non-current assets<strong>cash flow from financing activities</strong>: issue and repay shares and long-term loan</p>
+<p>cash flow分为三种：<strong>cash flow from operating
+activities</strong>: normal day-to-day trading activities<strong>cash
+flow from investing activities</strong>: acquire and dispose non-current
+assets<strong>cash flow from financing activities</strong>: issue and
+repay shares and long-term loan</p>
 <p>2）Purpose</p>
-<p>predict future cash flowsplan ahead when business will require a bank loanforecast anticipated inflows and outflows</p>
-<h2 id="5-Consolidated-Accounts"><a href="#5-Consolidated-Accounts" class="headerlink" title="5 Consolidated Accounts"></a>5 Consolidated Accounts</h2><p>1）定义</p>
-<p>consolidated accounts combined results of relevant groups of medium and large companies. </p>
-<p>relevant companies指的是parent&#x2F; holding company和他的subsidiaries.</p>
+<p>predict future cash flowsplan ahead when business will require a bank
+loanforecast anticipated inflows and outflows</p>
+<h2 id="consolidated-accounts">5 Consolidated Accounts</h2>
+<p>1）定义</p>
+<p>consolidated accounts combined results of relevant groups of medium
+and large companies.</p>
+<p>relevant companies指的是parent/ holding
+company和他的subsidiaries.</p>
 <p>小型公司不需要给出consolidated accounts.</p>
 <p>2）Subsidiaries</p>
-<p>如果一个公司有另一个公司超过50%的voting rights，就代表他是holding company而另外一个公司是subsidiaries.当我们consolidate时，我们需要cancel: investment in subsidiaries; loans to&#x2F; from companies; inter-company trading; dividends paid to&#x2F; from companies.跟associates和joint venture区分，associates是20%到50% voting rights，他们都不需要consolidates in group accounts.</p>
+<p>如果一个公司有另一个公司超过50%的voting rights，就代表他是holding
+company而另外一个公司是subsidiaries.当我们consolidate时，我们需要cancel:
+investment in subsidiaries; loans to/ from companies; inter-company
+trading; dividends paid to/ from companies.跟associates和joint
+venture区分，associates是20%到50% voting
+rights，他们都不需要consolidates in group accounts.</p>
 <p>3）Purpose</p>
-<p>central holding company: economically only 1 real business entity;必须看总的assets和liabilities under unified control；只看holding company的话会低估这个集团的实力。</p>
+<p>central holding company: economically only 1 real business
+entity;必须看总的assets和liabilities under unified control；只看holding
+company的话会低估这个集团的实力。</p>
 <p>4）Goodwill</p>
-<p>重点注意一下这个，value placed on a company (price paid) - fair value (assets-liabilities)，记住是fair value噢。</p>
-<h2 id="6-Taxation"><a href="#6-Taxation" class="headerlink" title="6 Taxation"></a>6 Taxation</h2><p>四种：income tax, capital gains tax, corporation tax, other taxes.因为我们不考这个（老师生病然后那周的taxation5分钟拖完，其实就是一堆概念，看看记住就好），就不写啦哈哈。唯一需要注意的就是taxation在balance sheet里属于current liability.</p>
-<h2 id="7-Financing-Limited-Companies"><a href="#7-Financing-Limited-Companies" class="headerlink" title="7 Financing Limited Companies"></a>7 Financing Limited Companies</h2><p>source of finance:</p>
+<p>重点注意一下这个，value placed on a company (price paid) - fair value
+(assets-liabilities)，记住是fair value噢。</p>
+<h2 id="taxation">6 Taxation</h2>
+<p>四种：income tax, capital gains tax, corporation tax, other
+taxes.因为我们不考这个（老师生病然后那周的taxation5分钟拖完，其实就是一堆概念，看看记住就好），就不写啦哈哈。唯一需要注意的就是taxation在balance
+sheet里属于current liability.</p>
+<h2 id="financing-limited-companies">7 Financing Limited Companies</h2>
+<p>source of finance:</p>
 <p>1）internal source of finance</p>
-<p>long-term (retained profits);short term (delay payments to suppliers; reduce inventories; tight credit control of receivables)</p>
+<p>long-term (retained profits);short term (delay payments to suppliers;
+reduce inventories; tight credit control of receivables)</p>
 <p>2）external source of finance</p>
 <p>(1) long-term: capital</p>
-<p><strong>share capital</strong>: fund raised by selling the shares in the company其中注意区分ordinary share和preference shares。</p>
-<p><strong>loan capital</strong>: fund raided by obtaining a loan其中包括debentures(公司债券)，unsecured loan stocks，eurobond loan capital。</p>
+<p><strong>share capital</strong>: fund raised by selling the shares in
+the company其中注意区分ordinary share和preference shares。</p>
+<p><strong>loan capital</strong>: fund raided by obtaining a
+loan其中包括debentures(公司债券)，unsecured loan stocks，eurobond loan
+capital。</p>
 <p>(2) mid-term</p>
-<p><strong>hire purchase（租购）</strong>：其实有点相当于credit purchase，但所有权在分期付款完成后移交。<strong>leasing</strong>: 其中finance leases（融资租赁）是leassee承担风险，而operating leases（经营（传统）租赁）是owner承担风险<strong>credit purchase</strong>：所有权马上移交。<strong>bank loans</strong></p>
+<p><strong>hire purchase（租购）</strong>：其实有点相当于credit
+purchase，但所有权在分期付款完成后移交。<strong>leasing</strong>:
+其中finance leases（融资租赁）是leassee承担风险，而operating
+leases（经营（传统）租赁）是owner承担风险<strong>credit
+purchase</strong>：所有权马上移交。<strong>bank loans</strong></p>
 <p>(3) short-term</p>
-<p>bank overdrafts trade credit factoring：分为non-resource factoring和resource factoring，也就是factor没有和有追偿权的区别。 commercial paper Bills of exchange</p>
+<p>bank overdrafts trade credit factoring：分为non-resource
+factoring和resource factoring，也就是factor没有和有追偿权的区别。
+commercial paper Bills of exchange</p>
 <p>3）Routes to listing</p>
-<p><strong>offer for sale at a fixed price</strong>：最常见的方法<strong>offer for sale by tender</strong>：要约收购<strong>Other methods</strong>: offer for subscription; placing&#x2F; selective marketing; introducting</p>
-<p>underwritingRights issuesScript (bonus) issuesAlternative investment market</p>
-<h2 id="8-Financial-Statement-Analysing-Ratio-Analysis"><a href="#8-Financial-Statement-Analysing-Ratio-Analysis" class="headerlink" title="8 Financial Statement Analysing (Ratio Analysis)"></a>8 Financial Statement Analysing (Ratio Analysis)</h2><p>有5种类型：profitability, efficiency, liquidity, financial gearing, investment。Ratio可以通过和past period, similar businesses during the same period还有planned performance比较。</p>
+<p><strong>offer for sale at a fixed
+price</strong>：最常见的方法<strong>offer for sale by
+tender</strong>：要约收购<strong>Other methods</strong>: offer for
+subscription; placing/ selective marketing; introducting</p>
+<p>underwritingRights issuesScript (bonus) issuesAlternative investment
+market</p>
+<h2 id="financial-statement-analysing-ratio-analysis">8 Financial
+Statement Analysing (Ratio Analysis)</h2>
+<p>有5种类型：profitability, efficiency, liquidity, financial gearing,
+investment。Ratio可以通过和past period, similar businesses during the
+same period还有planned performance比较。</p>
 <p>1）Profitability</p>
-<p>从这些分析中可以提供公司给owner带来wealth, 收益与公司大小相比较，how much capital invested in。</p>
-<p>Return on ordinary shareholders’ funds (ROSF):</p>
-<p>(Net profit – any preference dividends)&#x2F; (Ordinary share capital + reserves)</p>
+<p>从这些分析中可以提供公司给owner带来wealth, 收益与公司大小相比较，how
+much capital invested in。</p>
+<p>Return on ordinary shareholders' funds (ROSF):</p>
+<p>(Net profit – any preference dividends)/ (Ordinary share capital +
+reserves)</p>
 <p>Return on capital employed (ROCE): profitability中最重要</p>
-<p>Operating profit &#x2F; (share capital + reserves + non-current liabilities)</p>
+<p>Operating profit / (share capital + reserves + non-current
+liabilities)</p>
 <p>Operating profit margin</p>
-<p>Operating profit &#x2F; Sales revenues</p>
+<p>Operating profit / Sales revenues</p>
 <p>Gross profit margin</p>
-<p>Gross profit &#x2F; Sales revenue</p>
+<p>Gross profit / Sales revenue</p>
 <p>2）Efficiency ratios</p>
 <p>Inventories turnover period</p>
-<p>(Inventories&#x2F; Cost of sales) x 365: the number of days inventory is held</p>
+<p>(Inventories/ Cost of sales) x 365: the number of days inventory is
+held</p>
 <p>Trade receivable settlement period</p>
-<p>(Trade receivables&#x2F; Credit sales revenue) x 365</p>
+<p>(Trade receivables/ Credit sales revenue) x 365</p>
 <p>Trade payable settlement period</p>
-<p>(Trade payables&#x2F; Credit purchases) x 365</p>
+<p>(Trade payables/ Credit purchases) x 365</p>
 <p>3）Liquidity</p>
 <p>Current ratio</p>
-<p>Current assets &#x2F; Current liabilities</p>
+<p>Current assets / Current liabilities</p>
 <p>Acid test ratio (quick ratio)</p>
-<p>(Current assets – inventories)&#x2F; Current liabilities</p>
+<p>(Current assets – inventories)/ Current liabilities</p>
 <p>4）Financial gearing ratios</p>
 <p>Gearing ratio</p>
-<p>Long-term liabilities&#x2F; (Shareholders funds + long-term liabilities)</p>
+<p>Long-term liabilities/ (Shareholders funds + long-term
+liabilities)</p>
 <p>Interest cover</p>
-<p>operating profit&#x2F; interest payable</p>
+<p>operating profit/ interest payable</p>
 <p>Asset cover</p>
-<p>(Total assets–intangible assets–current liabilities)&#x2F; loan capital</p>
+<p>(Total assets–intangible assets–current liabilities)/ loan
+capital</p>
 <p>5）Investment ratios</p>
 <p>Dividend cover</p>
-<p>Profit for the year&#x2F; Dividend for the year</p>
+<p>Profit for the year/ Dividend for the year</p>
 <p>Dividend Yield</p>
-<p>Dividends per share&#x2F; Market price of share</p>
+<p>Dividends per share/ Market price of share</p>
 <p>Earnings per share</p>
-<p>Profit for the year&#x2F; Number of issued ordinary shares</p>
-<p>Price&#x2F;Earnings (P&#x2F;E) Ratio</p>
-<p>Market value of a share&#x2F; earnings per share</p>
-<h2 id="8-5-Derivatives"><a href="#8-5-Derivatives" class="headerlink" title="8.5 Derivatives"></a>8.5 Derivatives</h2><p>就是之前有在discrete time finance里讲的各种东西，future, option, swap……杂糅。</p>
-<h2 id="9-corporate-finance"><a href="#9-corporate-finance" class="headerlink" title="9 corporate finance"></a>9 corporate finance</h2><p>这章主要讲的是公司中的各个组成部分及公司中的利益冲突和公司的社会责任。</p>
+<p>Profit for the year/ Number of issued ordinary shares</p>
+<p>Price/Earnings (P/E) Ratio</p>
+<p>Market value of a share/ earnings per share</p>
+<h2 id="derivatives">8.5 Derivatives</h2>
+<p>就是之前有在discrete time finance里讲的各种东西，future, option,
+swap......杂糅。</p>
+<h2 id="corporate-finance">9 corporate finance</h2>
+<p>这章主要讲的是公司中的各个组成部分及公司中的利益冲突和公司的社会责任。</p>
 <p>1）agency theory</p>
-<p>directors相当于shareholders的agents，而shareholders则是principals。shareholders指定directors，但是他们的利益可能会冲突。解决办法是给股权，按照表现给奖励和惩罚。directors需要根据一些特定的因素来最大化收益给shareholders，其中包括owners能承受的风险程度，是要immediate profit还是future high growth等。</p>
+<p>directors相当于shareholders的agents，而shareholders则是principals。shareholders指定directors，但是他们的利益可能会冲突。解决办法是给股权，按照表现给奖励和惩罚。directors需要根据一些特定的因素来最大化收益给shareholders，其中包括owners能承受的风险程度，是要immediate
+profit还是future high growth等。</p>
 <p>2) 资本结构</p>
-<p>大部分公司都是混合债务和权益，根据公司类型的不同资产结构也不同，比如银行就会有大量债务，而软件开发公司tangible asset会比较少。下面介绍五种不同的公司类型对应的capital structure：</p>
+<p>大部分公司都是混合债务和权益，根据公司类型的不同资产结构也不同，比如银行就会有大量债务，而软件开发公司tangible
+asset会比较少。下面介绍五种不同的公司类型对应的capital structure：</p>
 <p>(1) 中型，发展中，高杠杆</p>
-<p>Market value of shares可能会较低，因为shareholders想让其加入更多的资产。</p>
+<p>Market value of
+shares可能会较低，因为shareholders想让其加入更多的资产。</p>
 <p>(2) cyclical industry</p>
 <p>最好的情况是，当生产高峰时，高杠杆，当活动减少是降低债务。</p>
 <p>(3) “people” business</p>
-<p>员工和管理技巧是关键，可以用share或者相似的手段奖励员工，但过度使用会对share valuation产生反作用。</p>
+<p>员工和管理技巧是关键，可以用share或者相似的手段奖励员工，但过度使用会对share
+valuation产生反作用。</p>
 <p>(4) 高速增长，高风险产业（例如生物技术）</p>
 <p>借贷资本不存在，可能会有deferred shares给sharehplders。</p>
 <p>(5) an industry facing decline</p>
 <p>管理层可能会diversify或者退出这个产业，对应着债务需求的增多和建设。</p>
 <p>3) taxation and capital structure</p>
-<p>tax incentive: 因为利息是tax deductible，dividends不是，所以公司在需要更多fund时就会选择借贷，但是高杠杆的风险可能会超出tax incentives。</p>
+<p>tax incentive: 因为利息是tax
+deductible，dividends不是，所以公司在需要更多fund时就会选择借贷，但是高杠杆的风险可能会超出tax
+incentives。</p>
 <p>4) dividend policy</p>
-<p>是否发股息会考虑以下因素，股民厌恶股息停发，loyalty，limit cash pile，高风险行业可能会给少量股息以为未来发展考虑等等。但还可用script issue或者share repurchase来代替。现在的market value相当于future dividends。</p>
+<p>是否发股息会考虑以下因素，股民厌恶股息停发，loyalty，limit cash
+pile，高风险行业可能会给少量股息以为未来发展考虑等等。但还可用script
+issue或者share repurchase来代替。现在的market value相当于future
+dividends。</p>
 <p>5) social responsibility</p>
-<p>公司面对道德困境，一个是需要最大化shareholders收益，一个是避免导致环境污染和破坏。Milton Friedman曾指出公司唯一的社会责任就是赚钱而不是做公益，并从economic，ethical和philosophical三方面解释了原因，但也有很多人反对这个观点。</p>
-<h2 id="10-Capital-Investment-Decisions"><a href="#10-Capital-Investment-Decisions" class="headerlink" title="10 Capital Investment Decisions"></a>10 Capital Investment Decisions</h2><p>对于investment，我们想要利润，不想要风险，还会涉及到time value的问题。我们用一下简单的四种方法来评估每个可能的projects:总结起来就是time value of money, inflation, cash flow和investment size总是不能兼顾的。</p>
+<p>公司面对道德困境，一个是需要最大化shareholders收益，一个是避免导致环境污染和破坏。Milton
+Friedman曾指出公司唯一的社会责任就是赚钱而不是做公益，并从economic，ethical和philosophical三方面解释了原因，但也有很多人反对这个观点。</p>
+<h2 id="capital-investment-decisions">10 Capital Investment
+Decisions</h2>
+<p>对于investment，我们想要利润，不想要风险，还会涉及到time
+value的问题。我们用一下简单的四种方法来评估每个可能的projects:总结起来就是time
+value of money, inflation, cash flow和investment
+size总是不能兼顾的。</p>
 <p>1）Accounting rate of return</p>
-<p>公式：Average profit of the year&#x2F; Average investment to earn the profit必须超过设定的最小值，然后越大越好。</p>
-<p>优势：好计算好理解考虑overall profit跟之前的Return on capital employed类似，只是一个考虑未来，一个考虑过去。劣势：</p>
-<p>没有考虑investment size没有考虑time value of money没有考虑过程中cash flow的情况</p>
+<p>公式：Average profit of the year/ Average investment to earn the
+profit必须超过设定的最小值，然后越大越好。</p>
+<p>优势：好计算好理解考虑overall profit跟之前的Return on capital
+employed类似，只是一个考虑未来，一个考虑过去。劣势：</p>
+<p>没有考虑investment size没有考虑time value of money没有考虑过程中cash
+flow的情况</p>
 <p>2）Payback period</p>
 <p>看多久profit能超过cost必须小于设定的最大值，然后越小越好。</p>
 <p>优势：同样好理解好计算考虑了时间因素（相比ARR）</p>
-<p>劣势：同样没有考虑investment size没有考虑time value of money忽略超过payback period后的现金流仅仅考虑时间的长短，没有考虑利润的高低</p>
+<p>劣势：同样没有考虑investment size没有考虑time value of
+money忽略超过payback
+period后的现金流仅仅考虑时间的长短，没有考虑利润的高低</p>
 <p>3）3 Net present value</p>
 <p>就是CT1的求现值啦。</p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -268,14 +381,22 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Introduction"><span class="toc-text">1 Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-The-main-financial-statements"><span class="toc-text">2 The main financial statements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Accounting-for-limited-companies"><span class="toc-text">3 Accounting for limited companies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Cash-Flow-Statements"><span class="toc-text">4 Cash Flow Statements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Consolidated-Accounts"><span class="toc-text">5 Consolidated Accounts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Taxation"><span class="toc-text">6 Taxation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Financing-Limited-Companies"><span class="toc-text">7 Financing Limited Companies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Financial-Statement-Analysing-Ratio-Analysis"><span class="toc-text">8 Financial Statement Analysing (Ratio Analysis)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-Derivatives"><span class="toc-text">8.5 Derivatives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-corporate-finance"><span class="toc-text">9 corporate finance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Capital-Investment-Decisions"><span class="toc-text">10 Capital Investment Decisions</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#introduction"><span class="toc-text">1 Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#the-main-financial-statements"><span class="toc-text">2 The main financial
+statements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#accounting-for-limited-companies"><span class="toc-text">3 Accounting for limited
+companies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cash-flow-statements"><span class="toc-text">4 Cash Flow Statements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#consolidated-accounts"><span class="toc-text">5 Consolidated Accounts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#taxation"><span class="toc-text">6 Taxation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#financing-limited-companies"><span class="toc-text">7 Financing Limited Companies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#financial-statement-analysing-ratio-analysis"><span class="toc-text">8 Financial
+Statement Analysing (Ratio Analysis)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#derivatives"><span class="toc-text">8.5 Derivatives</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#corporate-finance"><span class="toc-text">9 corporate finance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#capital-investment-decisions"><span class="toc-text">10 Capital Investment
+Decisions</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

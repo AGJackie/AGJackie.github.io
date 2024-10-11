@@ -27,13 +27,11 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="本文介绍生存模型，属于CS2第六章的内容，也是学习CM1的寿险精算部分的先修内容。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.actuarygarden.cn/22e35814-c3ca-45d2-86cd-91557f3aaa65.png">
-<meta property="article:published_time" content="2024-10-10T19:40:09.534Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.435Z">
 <meta property="article:modified_time" content="2020-08-01T09:46:56.000Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="精算后花园，精算后花园文章合集，精算后花园博客，精算师资格考试">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.actuarygarden.cn/22e35814-c3ca-45d2-86cd-91557f3aaa65.png">
   
   
   
@@ -68,7 +66,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -81,7 +79,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/IFoA/">IFoA</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/IFoA/CM1/">CM1</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/IFoA/CS2/">CS2</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.534Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2020-08-01T09:46:56.000Z">2020-08-01</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.435Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2020-08-01T09:46:56.000Z">2020-08-01</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -94,59 +92,197 @@
   </div>
   </div><article class="md-text content"><p>本文介绍生存模型，属于CS2第六章的内容，也是学习CM1的寿险精算部分的先修内容。</p>
 <span id="more"></span>
-
-<p>本文不仅适用于英国精算师的考试，Jackie 在写这篇推文时也参考了北美体系的内容，所以考SOA的同学也不妨看一下。</p>
-<h2 id="Notation"><a href="#Notation" class="headerlink" title="Notation"></a>Notation</h2><p>$(x)$ 表示当前为 $x$ 岁的个体，$T_{x}$表示(x)的余命的随机变量(Future lifetime rv.)，$T_{0}$ 为新生儿的余命的随机变量。$K_{x}$表示 $(x)$ 的取整余命的随机变量(Curtate future lifetime rv.)。</p>
-<h2 id="T-0-的分布"><a href="#T-0-的分布" class="headerlink" title="$T_{0}$的分布"></a>$T_{0}$的分布</h2><h3 id="cdf-of-T-0"><a href="#cdf-of-T-0" class="headerlink" title="cdf of $T_{0}$:"></a>cdf of $T_{0}$:</h3><p>$$F_{0}(x)&#x3D;P(T_{0}\leq x)$$</p>
-<h3 id="sf-of-T-0"><a href="#sf-of-T-0" class="headerlink" title="sf of $T_{0}$:"></a>sf of $T_{0}$:</h3><p>$$S_{0}(x)&#x3D;P(T_{0}&gt; x)&#x3D;1-F_{0}(x)$$</p>
-<h3 id="pdf-of-T-0"><a href="#pdf-of-T-0" class="headerlink" title="pdf of $T_{0}$:"></a>pdf of $T_{0}$:</h3><p>$$f_{0}(x)&#x3D;\frac{d}{dx}F_{0}(x)&#x3D;-\frac{d}{dx}S_{0}(x)$$</p>
-<h2 id="Relationship-between-T-0-and-T-x"><a href="#Relationship-between-T-0-and-T-x" class="headerlink" title="Relationship between $T_{0}$ and $T_{x}$"></a>Relationship between $T_{0}$ and $T_{x}$</h2><p>Events that are equivalent (important relationship between $T_{0}$ and $T_{x}$):<br>$$<br>T_{x}\leq t \Leftrightarrow T_{x}&#x3D;T_{0}-x \leq t| T_{0}&gt;x<br>$$</p>
-<h2 id="T-x-的分布"><a href="#T-x-的分布" class="headerlink" title="$T_{x}$的分布"></a>$T_{x}$的分布</h2><h3 id="cdf-of-T-x"><a href="#cdf-of-T-x" class="headerlink" title="cdf of $T_{x}$:"></a>cdf of $T_{x}$:</h3><p>$F_{x}(t)&#x3D;P(T_{x}\leq t)&#x3D;\frac{F_{0}(x+t)-F_{0}(x)}{1-F_{0}(x)}$</p>
-<h3 id="sf-of-T-x"><a href="#sf-of-T-x" class="headerlink" title="sf of $T_{x}$:"></a>sf of $T_{x}$:</h3><p>$S_{x}(t)&#x3D;P(T_{x}&gt; t)&#x3D;1-F_{x}(t)&#x3D;\frac{S_{0}(x+t)}{S_{0}(x)}$</p>
-<h3 id="pdf-of-T-x"><a href="#pdf-of-T-x" class="headerlink" title="pdf of $T_{x}$:"></a>pdf of $T_{x}$:</h3><p>$f_{x}(t)&#x3D;\frac{d}{dt}F_{x}(t)&#x3D;\frac{f_{0}(x+t)}{S_{0}(x)}$</p>
-<h2 id="Chaining-Survival"><a href="#Chaining-Survival" class="headerlink" title="Chaining Survival"></a>Chaining Survival</h2><p>$$S_{0}(x+t)&#x3D;S_{0}(x)S_{x}(t)$$<br>$$S_{x}(t+u)&#x3D;S_{x}(t)S_{x+t}(u)$$</p>
-<h2 id="Conditions-on-S-x-t"><a href="#Conditions-on-S-x-t" class="headerlink" title="Conditions on $S_{x}(t)$"></a>Conditions on $S_{x}(t)$</h2><p>$$S_{x}(0)&#x3D;P(T_{x}&gt; 0)&#x3D;1$$<br>$$\lim\limits_{x\to \infty}S_{x}(t)&#x3D;\lim\limits_{x\to \infty}P(T_{x}&gt; t)&#x3D;0$$<br>$S_{x}(t)$ is non-increasing in $t$</p>
-<h2 id="Assumptions-on-S-x-t"><a href="#Assumptions-on-S-x-t" class="headerlink" title="Assumptions on $S_{x}(t)$"></a>Assumptions on $S_{x}(t)$</h2><p>$S_{x}(t)$ is differentiable $\forall t &gt; 0$</p>
-<p>$$E[T_{x}]&lt; \infty$$<br>$$Var[T_{x}]&lt; \infty$$</p>
-<h2 id="The-force-of-mortality"><a href="#The-force-of-mortality" class="headerlink" title="The force of mortality"></a>The force of mortality</h2><p>$\mu_{x}$，称为force of mortality, hazard rate, transition intensity, 定义为：<br>$$<br>\begin{aligned}<br>\mu_{x}&amp;&#x3D;\lim\limits_{dx\to 0^{+}}\frac{P(T_{0}\leq x+dx|T_{0}&gt;x)}{dx}\\<br>&amp;&#x3D;\lim\limits_{dx\to 0^{+}}\frac{P(T_{x}\leq dx)}{dx}<br>\end{aligned}<br>$$<br>需要掌握的几个公式：<br>$$<br>\mu_{x}&#x3D;\frac{f_{0}(x)}{S_{0}(x)}&#x3D;-\frac{\partial}{\partial x}log S_{0}(x)<br>$$</p>
-<p>$$<br>\mu_{x+t}&#x3D;\frac{f_{x}(t)}{S_{x}(t)}&#x3D;-\frac{\partial}{\partial x}log S_{x}(t)<br>$$</p>
-<p>$$<br>S_x(t)&#x3D;exp{(-\int_{0}^{t}\mu_{x+r}dr)}<br>$$</p>
-<h2 id="Typical-mu-x-curve-for-humans"><a href="#Typical-mu-x-curve-for-humans" class="headerlink" title="Typical $\mu_{x}$ curve for humans"></a>Typical $\mu_{x}$ curve for humans</h2><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.actuarygarden.cn/22e35814-c3ca-45d2-86cd-91557f3aaa65.png"><br>$\mu_{x}$ on $log_{10}$ scale (ELT15 (Males) Mortality Table)<br>The main features of $\mu_{x}$ are:</p>
+<p>本文不仅适用于英国精算师的考试，Jackie
+在写这篇推文时也参考了北美体系的内容，所以考SOA的同学也不妨看一下。</p>
+<h2 id="notation">Notation</h2>
+<p><span class="math inline">\((x)\)</span> 表示当前为 <span
+class="math inline">\(x\)</span> 岁的个体，<span
+class="math inline">\(T_{x}\)</span>表示(x)的余命的随机变量(Future
+lifetime rv.)，<span class="math inline">\(T_{0}\)</span>
+为新生儿的余命的随机变量。<span class="math inline">\(K_{x}\)</span>表示
+<span class="math inline">\((x)\)</span> 的取整余命的随机变量(Curtate
+future lifetime rv.)。</p>
+<h2 id="t_0的分布"><span class="math inline">\(T_{0}\)</span>的分布</h2>
+<h3 id="cdf-of-t_0">cdf of <span
+class="math inline">\(T_{0}\)</span>:</h3>
+<p><span class="math display">\[F_{0}(x)=P(T_{0}\leq x)\]</span></p>
+<h3 id="sf-of-t_0">sf of <span
+class="math inline">\(T_{0}\)</span>:</h3>
+<p><span class="math display">\[S_{0}(x)=P(T_{0}&gt;
+x)=1-F_{0}(x)\]</span></p>
+<h3 id="pdf-of-t_0">pdf of <span
+class="math inline">\(T_{0}\)</span>:</h3>
+<p><span
+class="math display">\[f_{0}(x)=\frac{d}{dx}F_{0}(x)=-\frac{d}{dx}S_{0}(x)\]</span></p>
+<h2 id="relationship-between-t_0-and-t_x">Relationship between <span
+class="math inline">\(T_{0}\)</span> and <span
+class="math inline">\(T_{x}\)</span></h2>
+<p>Events that are equivalent (important relationship between <span
+class="math inline">\(T_{0}\)</span> and <span
+class="math inline">\(T_{x}\)</span>): <span class="math display">\[
+T_{x}\leq t \Leftrightarrow T_{x}=T_{0}-x \leq t| T_{0}&gt;x
+\]</span></p>
+<h2 id="t_x的分布"><span class="math inline">\(T_{x}\)</span>的分布</h2>
+<h3 id="cdf-of-t_x">cdf of <span
+class="math inline">\(T_{x}\)</span>:</h3>
+<p><span class="math inline">\(F_{x}(t)=P(T_{x}\leq
+t)=\frac{F_{0}(x+t)-F_{0}(x)}{1-F_{0}(x)}\)</span></p>
+<h3 id="sf-of-t_x">sf of <span
+class="math inline">\(T_{x}\)</span>:</h3>
+<p><span class="math inline">\(S_{x}(t)=P(T_{x}&gt;
+t)=1-F_{x}(t)=\frac{S_{0}(x+t)}{S_{0}(x)}\)</span></p>
+<h3 id="pdf-of-t_x">pdf of <span
+class="math inline">\(T_{x}\)</span>:</h3>
+<p><span
+class="math inline">\(f_{x}(t)=\frac{d}{dt}F_{x}(t)=\frac{f_{0}(x+t)}{S_{0}(x)}\)</span></p>
+<h2 id="chaining-survival">Chaining Survival</h2>
+<p><span class="math display">\[S_{0}(x+t)=S_{0}(x)S_{x}(t)\]</span>
+<span class="math display">\[S_{x}(t+u)=S_{x}(t)S_{x+t}(u)\]</span></p>
+<h2 id="conditions-on-s_xt">Conditions on <span
+class="math inline">\(S_{x}(t)\)</span></h2>
+<p><span class="math display">\[S_{x}(0)=P(T_{x}&gt; 0)=1\]</span> <span
+class="math display">\[\lim\limits_{x\to
+\infty}S_{x}(t)=\lim\limits_{x\to \infty}P(T_{x}&gt; t)=0\]</span> <span
+class="math inline">\(S_{x}(t)\)</span> is non-increasing in <span
+class="math inline">\(t\)</span></p>
+<h2 id="assumptions-on-s_xt">Assumptions on <span
+class="math inline">\(S_{x}(t)\)</span></h2>
+<p><span class="math inline">\(S_{x}(t)\)</span> is differentiable <span
+class="math inline">\(\forall t &gt; 0\)</span></p>
+<p><span class="math display">\[E[T_{x}]&lt; \infty\]</span> <span
+class="math display">\[Var[T_{x}]&lt; \infty\]</span></p>
+<h2 id="the-force-of-mortality">The force of mortality</h2>
+<p><span class="math inline">\(\mu_{x}\)</span>，称为force of mortality,
+hazard rate, transition intensity, 定义为： <span
+class="math display">\[
+\begin{aligned}
+\mu_{x}&amp;=\lim\limits_{dx\to 0^{+}}\frac{P(T_{0}\leq
+x+dx|T_{0}&gt;x)}{dx}\\\\
+&amp;=\lim\limits_{dx\to 0^{+}}\frac{P(T_{x}\leq dx)}{dx}
+\end{aligned}
+\]</span> 需要掌握的几个公式： <span class="math display">\[
+\mu_{x}=\frac{f_{0}(x)}{S_{0}(x)}=-\frac{\partial}{\partial x}log
+S_{0}(x)
+\]</span></p>
+<p><span class="math display">\[
+\mu_{x+t}=\frac{f_{x}(t)}{S_{x}(t)}=-\frac{\partial}{\partial x}log
+S_{x}(t)
+\]</span></p>
+<p><span class="math display">\[
+S_x(t)=exp{(-\int_{0}^{t}\mu_{x+r}dr)}
+\]</span></p>
+<h2 id="typical-mu_x-curve-for-humans">Typical <span
+class="math inline">\(\mu_{x}\)</span> curve for humans</h2>
+<p><img
+src="https://img.actuarygarden.cn/22e35814-c3ca-45d2-86cd-91557f3aaa65.png" />
+<span class="math inline">\(\mu_{x}\)</span> on <span
+class="math inline">\(log_{10}\)</span> scale (ELT15 (Males) Mortality
+Table) The main features of <span class="math inline">\(\mu_{x}\)</span>
+are:</p>
 <ul>
 <li>High infant mortality</li>
 <li>An ‘accident hump’ at ages around 20</li>
 <li>The nearly exponential increase at older ages</li>
 </ul>
-<h2 id="Some-Common-Mortality-Models"><a href="#Some-Common-Mortality-Models" class="headerlink" title="Some Common Mortality Models"></a>Some Common Mortality Models</h2><ul>
+<h2 id="some-common-mortality-models">Some Common Mortality Models</h2>
+<ul>
 <li>Exponential Model: Constant force of mortality</li>
-<li>De Moivre Model: $T_{x}\sim Uni(0,\omega-x)$</li>
+<li>De Moivre Model: <span class="math inline">\(T_{x}\sim
+Uni(0,\omega-x)\)</span></li>
 <li>Compertz Model</li>
 <li>Generalized (or Modified) De Moivre Model</li>
 </ul>
-<h2 id="Actuarial-Notation"><a href="#Actuarial-Notation" class="headerlink" title="Actuarial Notation"></a>Actuarial Notation</h2><h3 id="Survival"><a href="#Survival" class="headerlink" title="Survival:"></a>Survival:</h3><p>$$\px{t}{x}&#x3D;P(T_{x}&gt; t)&#x3D;S_{x}(t)$$</p>
-<h3 id="Mortality"><a href="#Mortality" class="headerlink" title="Mortality:"></a>Mortality:</h3><p>$$\qx{t}{x}&#x3D;P(T_{x}\leq t)&#x3D;F_{x}(t)$$</p>
-<h3 id="Deferred-Mortality"><a href="#Deferred-Mortality" class="headerlink" title="Deferred Mortality:"></a>Deferred Mortality:</h3><p>$$\qx{t|u}{x}&#x3D;P(t &lt; T_{x}\leq t+u)$$</p>
-<p>It’s convention that $t&#x3D;1$ year, we omit the 1, i.e.</p>
-<p>$\px{1}{x}&#x3D;\px{}{x}$, $\qx{1}{x}&#x3D;\qx{}{x}$, $\qx{t|1}{x}&#x3D;\qx{t|}{x}$.</p>
-<h2 id="3-ways-to-calculate-qx-t-u-x"><a href="#3-ways-to-calculate-qx-t-u-x" class="headerlink" title="3 ways to calculate $\qx{t|u}{x}$"></a>3 ways to calculate $\qx{t|u}{x}$</h2><p>$$\qx{t|u}{x}&#x3D;F_{x}(t+u)-F_{x}(t)&#x3D;\qx{t+u}{x}-\qx{t}{x}$$<br>$$\qx{t|u}{x}&#x3D;S_{x}(t)-S_{x}(t+u)&#x3D;\px{t}{x}-\px{t+u}{x}$$<br>$$\qx{t|u}{x}&#x3D;\px{t}{x}\cdot \qx{x+t}{u}$$</p>
-<h2 id="Relationship-between-F-and-f"><a href="#Relationship-between-F-and-f" class="headerlink" title="Relationship between F and f"></a>Relationship between F and f</h2><p>$$<br>\qx{t}{x}&#x3D;\int_{0}^{t} \px{u}{x}\mu_{x+u}du<br>$$</p>
-<h2 id="Approximate-q-x-with-mu-x-u"><a href="#Approximate-q-x-with-mu-x-u" class="headerlink" title="Approximate $q_{x}$ with $\mu_{x+u}$"></a>Approximate $q_{x}$ with $\mu_{x+u}$</h2><p>For small $q_{x}$:</p>
-<p>$$<br>\begin{aligned}<br>q_{x}\approx \int_{0}^{1}1\cdot \mu_{x+u}du\approx \mu_{x}<br>\end{aligned}<br>$$</p>
-<p>$q_{x}$ can also be approximated by $\mu_{x+\tfrac{1}{2}}$.</p>
-<h2 id="Distributional-Quantities-of-T-x"><a href="#Distributional-Quantities-of-T-x" class="headerlink" title="Distributional Quantities of $T_{x}$"></a>Distributional Quantities of $T_{x}$</h2><h3 id="Mean-of-T-x"><a href="#Mean-of-T-x" class="headerlink" title="Mean of $T_{x}$"></a>Mean of $T_{x}$</h3><p>Complete expectation of life:<br>$$<br>\mathring{e}_x&#x3D;E[T_x]&#x3D;\int_0^{\infty}tf_x(t)dt<br>&#x3D;\int_0^{\infty} t\cdot \px{t}{x}\actsymb{}{}{\mu}{}{x+t} dt<br>&#x3D;\int_0^{\infty}\px{t}{x}dt<br>$$</p>
-<h3 id="Median-of-T-x"><a href="#Median-of-T-x" class="headerlink" title="Median of $T_{x}$"></a>Median of $T_{x}$</h3><p>This is the value $m$ s.t. $P(T_{x}&gt;m)&#x3D;0.5$. i.e. $\px{m}{x}&#x3D;0.5$</p>
-<h3 id="Variance-of-T-x"><a href="#Variance-of-T-x" class="headerlink" title="Variance of $T_{x}$"></a>Variance of $T_{x}$</h3><p>$$<br>Var T_x&#x3D;E[{T_x}^2]-(E T_x)^2<br>$$</p>
-<h2 id="Distribution-of-K-x"><a href="#Distribution-of-K-x" class="headerlink" title="Distribution of $K_{x}$"></a>Distribution of $K_{x}$</h2><h3 id="pmf"><a href="#pmf" class="headerlink" title="pmf:"></a>pmf:</h3><p>$$P(K_{x}&#x3D;k)&#x3D;P(k\leq T_{x}\leq k+1)&#x3D;\qx{k|1}{x}&#x3D;\qx{k|}{x}$$</p>
-<h3 id="cdf"><a href="#cdf" class="headerlink" title="cdf"></a>cdf</h3><p>$$P(K_{x}\leq k)&#x3D;1-\px{k+1}{x}&#x3D;\qx{k+1}{x}$$</p>
-<h3 id="sf"><a href="#sf" class="headerlink" title="sf:"></a>sf:</h3><p>$$P(K_{x}&gt; k)&#x3D;\px{k+1}{x}$$</p>
-<h3 id="Mean-of-K-x"><a href="#Mean-of-K-x" class="headerlink" title="Mean of $K_{x}$"></a>Mean of $K_{x}$</h3><p>$$<br>e_{x}&#x3D;E[K_{x}]&#x3D;\sum_{k&#x3D;0}^{\infty}k \cdot P(K_{x}&#x3D;k)&#x3D;\sum_{k&#x3D;1}^{\infty}\px{k}{x}<br>$$</p>
-<h3 id="Variance-of-K-x"><a href="#Variance-of-K-x" class="headerlink" title="Variance of $K_{x}$"></a>Variance of $K_{x}$</h3><p>$$<br>Var[K_{x}]&#x3D;2\sum_{k&#x3D;1}^{\infty}k \cdot \px{k}{x}-e_{x}-(e_{x})^{2}<br>$$</p>
-<h3 id="Relationship-between-e-x-and-stackrel-o-e-x"><a href="#Relationship-between-e-x-and-stackrel-o-e-x" class="headerlink" title="Relationship between $e_{x}$ and ${\stackrel{o}{e}}_{x}$"></a>Relationship between $e_{x}$ and ${\stackrel{o}{e}}_{x}$</h3><p>$$<br>\mathring{e}_x \approx e_x+\frac{1}{2}<br>$$</p>
+<h2 id="actuarial-notation">Actuarial Notation</h2>
+<h3 id="survival">Survival:</h3>
+<p><span class="math display">\[\px{t}{x}=P(T_{x}&gt;
+t)=S_{x}(t)\]</span></p>
+<h3 id="mortality">Mortality:</h3>
+<p><span class="math display">\[\qx{t}{x}=P(T_{x}\leq
+t)=F_{x}(t)\]</span></p>
+<h3 id="deferred-mortality">Deferred Mortality:</h3>
+<p><span class="math display">\[\qx{t|u}{x}=P(t &lt; T_{x}\leq
+t+u)\]</span></p>
+<p>It's convention that <span class="math inline">\(t=1\)</span> year,
+we omit the 1, i.e.</p>
+<p><span class="math inline">\(\px{1}{x}=\px{}{x}\)</span>, <span
+class="math inline">\(\qx{1}{x}=\qx{}{x}\)</span>, <span
+class="math inline">\(\qx{t|1}{x}=\qx{t|}{x}\)</span>.</p>
+<h2 id="ways-to-calculate-qxtux">3 ways to calculate <span
+class="math inline">\(\qx{t|u}{x}\)</span></h2>
+<p><span
+class="math display">\[\qx{t|u}{x}=F_{x}(t+u)-F_{x}(t)=\qx{t+u}{x}-\qx{t}{x}\]</span>
+<span
+class="math display">\[\qx{t|u}{x}=S_{x}(t)-S_{x}(t+u)=\px{t}{x}-\px{t+u}{x}\]</span>
+<span class="math display">\[\qx{t|u}{x}=\px{t}{x}\cdot
+\qx{x+t}{u}\]</span></p>
+<h2 id="relationship-between-f-and-f">Relationship between F and f</h2>
+<p><span class="math display">\[
+\qx{t}{x}=\int_{0}^{t} \px{u}{x}\mu_{x+u}du
+\]</span></p>
+<h2 id="approximate-q_x-with-mu_xu">Approximate <span
+class="math inline">\(q_{x}\)</span> with <span
+class="math inline">\(\mu_{x+u}\)</span></h2>
+<p>For small <span class="math inline">\(q_{x}\)</span>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+q_{x}\approx \int_{0}^{1}1\cdot \mu_{x+u}du\approx \mu_{x}
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(q_{x}\)</span> can also be approximated
+by <span class="math inline">\(\mu_{x+\tfrac{1}{2}}\)</span>.</p>
+<h2 id="distributional-quantities-of-t_x">Distributional Quantities of
+<span class="math inline">\(T_{x}\)</span></h2>
+<h3 id="mean-of-t_x">Mean of <span
+class="math inline">\(T_{x}\)</span></h3>
+<p>Complete expectation of life: <span class="math display">\[
+\mathring{e}_x=E[T_x]=\int_0^{\infty}tf_x(t)dt
+=\int_0^{\infty} t\cdot \px{t}{x}\actsymb{}{}{\mu}{}{x+t} dt
+=\int_0^{\infty}\px{t}{x}dt
+\]</span></p>
+<h3 id="median-of-t_x">Median of <span
+class="math inline">\(T_{x}\)</span></h3>
+<p>This is the value <span class="math inline">\(m\)</span> s.t. <span
+class="math inline">\(P(T_{x}&gt;m)=0.5\)</span>. i.e. <span
+class="math inline">\(\px{m}{x}=0.5\)</span></p>
+<h3 id="variance-of-t_x">Variance of <span
+class="math inline">\(T_{x}\)</span></h3>
+<p><span class="math display">\[
+Var T_x=E[{T_x}^2]-(E T_x)^2
+\]</span></p>
+<h2 id="distribution-of-k_x">Distribution of <span
+class="math inline">\(K_{x}\)</span></h2>
+<h3 id="pmf">pmf:</h3>
+<p><span class="math display">\[P(K_{x}=k)=P(k\leq T_{x}\leq
+k+1)=\qx{k|1}{x}=\qx{k|}{x}\]</span></p>
+<h3 id="cdf">cdf</h3>
+<p><span class="math display">\[P(K_{x}\leq
+k)=1-\px{k+1}{x}=\qx{k+1}{x}\]</span></p>
+<h3 id="sf">sf:</h3>
+<p><span class="math display">\[P(K_{x}&gt; k)=\px{k+1}{x}\]</span></p>
+<h3 id="mean-of-k_x">Mean of <span
+class="math inline">\(K_{x}\)</span></h3>
+<p><span class="math display">\[
+e_{x}=E[K_{x}]=\sum_{k=0}^{\infty}k \cdot
+P(K_{x}=k)=\sum_{k=1}^{\infty}\px{k}{x}
+\]</span></p>
+<h3 id="variance-of-k_x">Variance of <span
+class="math inline">\(K_{x}\)</span></h3>
+<p><span class="math display">\[
+Var[K_{x}]=2\sum_{k=1}^{\infty}k \cdot \px{k}{x}-e_{x}-(e_{x})^{2}
+\]</span></p>
+<h3 id="relationship-between-e_x-and-stackreloe_x">Relationship between
+<span class="math inline">\(e_{x}\)</span> and <span
+class="math inline">\({\stackrel{o}{e}}_{x}\)</span></h3>
+<p><span class="math display">\[
+\mathring{e}_x \approx e_x+\frac{1}{2}
+\]</span></p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -171,14 +307,20 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Notation"><span class="toc-text">Notation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T-0-%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">$T_{0}$的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cdf-of-T-0"><span class="toc-text">cdf of $T_{0}$:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf-of-T-0"><span class="toc-text">sf of $T_{0}$:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf-of-T-0"><span class="toc-text">pdf of $T_{0}$:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Relationship-between-T-0-and-T-x"><span class="toc-text">Relationship between $T_{0}$ and $T_{x}$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#T-x-%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">$T_{x}$的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cdf-of-T-x"><span class="toc-text">cdf of $T_{x}$:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf-of-T-x"><span class="toc-text">sf of $T_{x}$:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf-of-T-x"><span class="toc-text">pdf of $T_{x}$:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chaining-Survival"><span class="toc-text">Chaining Survival</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conditions-on-S-x-t"><span class="toc-text">Conditions on $S_{x}(t)$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Assumptions-on-S-x-t"><span class="toc-text">Assumptions on $S_{x}(t)$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-force-of-mortality"><span class="toc-text">The force of mortality</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Typical-mu-x-curve-for-humans"><span class="toc-text">Typical $\mu_{x}$ curve for humans</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Some-Common-Mortality-Models"><span class="toc-text">Some Common Mortality Models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Actuarial-Notation"><span class="toc-text">Actuarial Notation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Survival"><span class="toc-text">Survival:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mortality"><span class="toc-text">Mortality:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deferred-Mortality"><span class="toc-text">Deferred Mortality:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-ways-to-calculate-qx-t-u-x"><span class="toc-text">3 ways to calculate $\qx{t|u}{x}$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Relationship-between-F-and-f"><span class="toc-text">Relationship between F and f</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Approximate-q-x-with-mu-x-u"><span class="toc-text">Approximate $q_{x}$ with $\mu_{x+u}$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distributional-Quantities-of-T-x"><span class="toc-text">Distributional Quantities of $T_{x}$</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mean-of-T-x"><span class="toc-text">Mean of $T_{x}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Median-of-T-x"><span class="toc-text">Median of $T_{x}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variance-of-T-x"><span class="toc-text">Variance of $T_{x}$</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distribution-of-K-x"><span class="toc-text">Distribution of $K_{x}$</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pmf"><span class="toc-text">pmf:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cdf"><span class="toc-text">cdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf"><span class="toc-text">sf:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mean-of-K-x"><span class="toc-text">Mean of $K_{x}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variance-of-K-x"><span class="toc-text">Variance of $K_{x}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Relationship-between-e-x-and-stackrel-o-e-x"><span class="toc-text">Relationship between $e_{x}$ and ${\stackrel{o}{e}}_{x}$</span></a></li></ol></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#notation"><span class="toc-text">Notation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#t_0%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">\(T_{0}\)的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cdf-of-t_0"><span class="toc-text">cdf of \(T_{0}\):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf-of-t_0"><span class="toc-text">sf of \(T_{0}\):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf-of-t_0"><span class="toc-text">pdf of \(T_{0}\):</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#relationship-between-t_0-and-t_x"><span class="toc-text">Relationship between \(T_{0}\) and \(T_{x}\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#t_x%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">\(T_{x}\)的分布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#cdf-of-t_x"><span class="toc-text">cdf of \(T_{x}\):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf-of-t_x"><span class="toc-text">sf of \(T_{x}\):</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pdf-of-t_x"><span class="toc-text">pdf of \(T_{x}\):</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#chaining-survival"><span class="toc-text">Chaining Survival</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#conditions-on-s_xt"><span class="toc-text">Conditions on \(S_{x}(t)\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#assumptions-on-s_xt"><span class="toc-text">Assumptions on \(S_{x}(t)\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#the-force-of-mortality"><span class="toc-text">The force of mortality</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#typical-mu_x-curve-for-humans"><span class="toc-text">Typical \(\mu_{x}\) curve for humans</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#some-common-mortality-models"><span class="toc-text">Some Common Mortality Models</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#actuarial-notation"><span class="toc-text">Actuarial Notation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#survival"><span class="toc-text">Survival:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mortality"><span class="toc-text">Mortality:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deferred-mortality"><span class="toc-text">Deferred Mortality:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ways-to-calculate-qxtux"><span class="toc-text">3 ways to calculate \(\qx{t|u}{x}\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#relationship-between-f-and-f"><span class="toc-text">Relationship between F and f</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#approximate-q_x-with-mu_xu"><span class="toc-text">Approximate \(q_{x}\) with \(\mu_{x+u}\)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#distributional-quantities-of-t_x"><span class="toc-text">Distributional Quantities of
+\(T_{x}\)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#mean-of-t_x"><span class="toc-text">Mean of \(T_{x}\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#median-of-t_x"><span class="toc-text">Median of \(T_{x}\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#variance-of-t_x"><span class="toc-text">Variance of \(T_{x}\)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#distribution-of-k_x"><span class="toc-text">Distribution of \(K_{x}\)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pmf"><span class="toc-text">pmf:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cdf"><span class="toc-text">cdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sf"><span class="toc-text">sf:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mean-of-k_x"><span class="toc-text">Mean of \(K_{x}\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#variance-of-k_x"><span class="toc-text">Variance of \(K_{x}\)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#relationship-between-e_x-and-stackreloe_x"><span class="toc-text">Relationship between
+\(e_{x}\) and \({\stackrel{o}{e}}_{x}\)</span></a></li></ol></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

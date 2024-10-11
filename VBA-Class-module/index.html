@@ -27,15 +27,11 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="用 Excel VBA 中的类模块 Class module 计算精算现值。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png">
-<meta property="og:image" content="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png">
-<meta property="og:image" content="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png">
-<meta property="article:published_time" content="2024-10-10T19:40:09.922Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.602Z">
 <meta property="article:modified_time" content="2021-01-19T08:01:14.318Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="VBA">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png">
   
   
   
@@ -70,7 +66,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -83,7 +79,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/">软件技能</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E8%BD%AF%E4%BB%B6%E6%8A%80%E8%83%BD/VBA/">VBA</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.922Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2021-01-19T08:01:14.318Z">2021-01-19</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.602Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2021-01-19T08:01:14.318Z">2021-01-19</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -96,71 +92,88 @@
   </div>
   </div><article class="md-text content"><p>用 Excel VBA 中的类模块 Class module 计算精算现值。</p>
 <span id="more"></span>
-
-<p>本文背景：类模块 （Class module）的普及是未来VBA编程的发展趋势。它具有能够简洁化代码，增强代码可读性的特点。但同时，它会加大代码维护的难度。类模块 （Class module）相对门槛较高，比普通模块更难理解。考虑到做精算同事的背景，可能要两者权衡取舍。</p>
-<p>不积跬步无以至千里，本文用了一个简单的类模块 （Class module）例子，帮助大家入门。本文设计了一个精算背景，目标读者为类模块初级学习者。欢迎大家指出不足之处。</p>
+<p>本文背景：类模块 （Class
+module）的普及是未来VBA编程的发展趋势。它具有能够简洁化代码，增强代码可读性的特点。但同时，它会加大代码维护的难度。类模块
+（Class
+module）相对门槛较高，比普通模块更难理解。考虑到做精算同事的背景，可能要两者权衡取舍。</p>
+<p>不积跬步无以至千里，本文用了一个简单的类模块 （Class
+module）例子，帮助大家入门。本文设计了一个精算背景，目标读者为类模块初级学习者。欢迎大家指出不足之处。</p>
 <p>我有一个朋友，她叫做小珂珂。</p>
-<p>小珂珂是 ActuaryGarden 公司的精算实习生，这天，她在做精算表写VBA的时候遇到了一个问题：她手上目前有两套精算假设，想利用这两套假设计算年金现值a，还有定期寿险现值A。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png"></p>
-<p>因为不想重复工作，她想到，每一套假设都可以看作一个对象(Object)呀！可以利用类模块(Class model)来避免重复工作。<br>可以把利息率和死亡率设置成类模块(Class model)的属性，计算A和a设置成类模块(Class model)的方法~</p>
-<h3 id="如何定义Class-module"><a href="#如何定义Class-module" class="headerlink" title="如何定义Class module"></a>如何定义Class module</h3><p>首先，小珂珂创建了一个新的类模块(Class module)。</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png"></p>
+<p>小珂珂是 ActuaryGarden
+公司的精算实习生，这天，她在做精算表写VBA的时候遇到了一个问题：她手上目前有两套精算假设，想利用这两套假设计算年金现值a，还有定期寿险现值A。</p>
+<p><img
+src="https://img.actuarygarden.cn/8526ce91-4be3-4c8d-9bb2-70791df77a8a.png" /></p>
+<p>因为不想重复工作，她想到，每一套假设都可以看作一个对象(Object)呀！可以利用类模块(Class
+model)来避免重复工作。 可以把利息率和死亡率设置成类模块(Class
+model)的属性，计算A和a设置成类模块(Class model)的方法~</p>
+<h3 id="如何定义class-module">如何定义Class module</h3>
+<p>首先，小珂珂创建了一个新的类模块(Class module)。</p>
+<p><img
+src="https://img.actuarygarden.cn/b76f1b24-3329-4585-83cf-c3c785ecc371.png" /></p>
 <p>并把它的名字在属性窗口中改成了：factor</p>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png"></p>
+<p><img
+src="https://img.actuarygarden.cn/4ea7377d-2aaf-40fb-abce-fd31f2246ca2.png" /></p>
 <p>注意，这个名字十分重要，它决定了我们要如何在普通模块中创建对象。</p>
 <p>这里要解释一下没有用中文写属性名称的原因：因为在VBA编辑器中较难设定中文编码，在分发Excel文件的时候容易出现乱码问题。当然，如果您有更好的解决方案，欢迎留言。</p>
-<h3 id="如何创建属性"><a href="#如何创建属性" class="headerlink" title="如何创建属性"></a>如何创建属性</h3><p>小珂珂想要创建两个属性，一个是死亡率，一个是利息率。<br>这样的话，对于任何一个假设，都都可以轻易获得这些数据。<br>所以她打开了名为factor的类模块(Class model)，开始写属性啦~</p>
-<p>定义变量。getmordata 是死亡数据表，getinsrate是利率。<br>好的编程习惯是一定要把Option Explicit加上哦，这样可以让代码更不容易出错，跑的更快。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Option Explicit</span><br><span class="line">Private getmordata As Variant</span><br><span class="line">Private getinsrate As Single</span><br></pre></td></tr></table></figure>
-<p>对于某种属性，小珂珂都想要做两件事。</p>
-<ul>
-<li>首先，要给这个属性赋值，</li>
-<li>其次，要能够获取这个属性的值。</li>
-</ul>
-<p>注意，这里面的变量getmordata，getinsrate 是这个类模块(Class model)里面的局域变量（private variable)，我们在调取属性的时候，并不需要用它们。</p>
-<p>这个属性要通过下面定义的mortable()来获取。赋值在VBA中使用Let来表示的，代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Property Let mortable(rData As Variant)</span><br><span class="line">	&#x27;这里可以定义一下如何验证属性rData的值</span><br><span class="line">    &#x27;比如死亡率是否在0和1之间</span><br><span class="line">    getmordata = rData</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure>
-<p>rData是我们给getmordata 赋值的时候用的参数。我们把rData的值赋给了mortable这个属性。注意，最后我们把值赋给了区域变量，而不是mortable。</p>
-<p>假设小珂珂把mortable赋好值啦，那么该如何获取这个值呢？<br>那么就涉及到Get啦~</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Property Get mortable() As Variant</span><br><span class="line">        mortable = getmordata</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure>
-<p>可以把它想象成一个函数，因为VBA中利用函数时，返回值是通过给函数自身赋值得到的，所以我们要把地方变量getmordata的值赋予mortable。</p>
+<h3 id="如何创建属性">如何创建属性</h3>
+<p>小珂珂想要创建两个属性，一个是死亡率，一个是利息率。
+这样的话，对于任何一个假设，都都可以轻易获得这些数据。
+所以她打开了名为factor的类模块(Class model)，开始写属性啦~</p>
+<p>定义变量。getmordata 是死亡数据表，getinsrate是利率。
+好的编程习惯是一定要把Option
+Explicit加上哦，这样可以让代码更不容易出错，跑的更快。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Option Explicit</span><br><span class="line">Private getmordata As Variant</span><br><span class="line">Private getinsrate As Single</span><br></pre></td></tr></table></figure>
+对于某种属性，小珂珂都想要做两件事。 - 首先，要给这个属性赋值， -
+其次，要能够获取这个属性的值。</p>
+<p>注意，这里面的变量getmordata，getinsrate 是这个类模块(Class
+model)里面的局域变量（private
+variable)，我们在调取属性的时候，并不需要用它们。</p>
+<p>这个属性要通过下面定义的mortable()来获取。赋值在VBA中使用Let来表示的，代码如下：
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Property Let mortable(rData As Variant)</span><br><span class="line">	&#x27;这里可以定义一下如何验证属性rData的值</span><br><span class="line">    &#x27;比如死亡率是否在0和1之间</span><br><span class="line">    getmordata = rData</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure> rData是我们给getmordata
+赋值的时候用的参数。我们把rData的值赋给了mortable这个属性。注意，最后我们把值赋给了区域变量，而不是mortable。</p>
+<p>假设小珂珂把mortable赋好值啦，那么该如何获取这个值呢？
+那么就涉及到Get啦~ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Property Get mortable() As Variant</span><br><span class="line">        mortable = getmordata</span><br><span class="line">End Property</span><br></pre></td></tr></table></figure>
+可以把它想象成一个函数，因为VBA中利用函数时，返回值是通过给函数自身赋值得到的，所以我们要把地方变量getmordata的值赋予mortable。</p>
 <p>利率的属性也是通过相同方法得到的，大家可以自己试一试哦。</p>
 <ul>
 <li>这里最容易迷惑的点在于getmordata和mortable到底有什么区别？他俩看起来很相似呀，为什么要一个等于另一个呢？</li>
 </ul>
-<p>可以这么想：getmordata是在类模块(Class model)中用来称呼死亡率表的名字，它不能在这个类模块(Class model)之外使用，而mortable是用来在类模块(Class model)外部称呼这个属性的。</p>
-<h3 id="如何创建方法"><a href="#如何创建方法" class="headerlink" title="如何创建方法"></a>如何创建方法</h3><p>接下来，小珂珂就要定义方法啦。方法就太简单啦。方法就是函数而已，不同之处在于，它可以直接调用一些定义好的属性。<br>下面的代码就是小珂珂计算A的过程</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Function bigavalue(lowerlimit As Integer, duration As Integer):</span><br><span class="line">bigavalue = 0</span><br><span class="line">Dim i As Integer</span><br><span class="line">For i = lowerlimit To duration + lowerlimit</span><br><span class="line">    bigavalue = bigavalue + getmordata(lowerlimit, 2) / (1 + insrate) ^ (0.05 + i - lowerlimit)</span><br><span class="line">Next i</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
-<p>希望她还没有把精算数学还给老师。getmordata是死亡率的表，insrate是定义好的利率。通过一个循环算好A~<br>a的计算相似，大家可以想一想哦。</p>
-<h3 id="调用类模块-Class-model"><a href="#调用类模块-Class-model" class="headerlink" title="调用类模块(Class model)"></a>调用类模块(Class model)</h3><p>大家还记得小珂珂把定义好的类模块(Class model)叫做factor了吗？想要定义新的对象，她是这样做滴：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x27;Declare class variable</span><br><span class="line">   Dim factorA As factor</span><br><span class="line">   Dim factorB As factor</span><br><span class="line">   </span><br><span class="line">   Set factorA = New factor</span><br><span class="line">   Set factorB = New factor</span><br></pre></td></tr></table></figure>
-<p>另一种方法是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x27;Declare class variable</span><br><span class="line">   Dim factorA As new factor</span><br><span class="line">   Dim factorB As new factor</span><br></pre></td></tr></table></figure>
-<p>但是要记住，<em>最好使用第一种Dim&#x2F;Set方法</em>。这两种方法最大的区别在于，第一种方法中，factor这个对象在set的时候就创造好了，第二种方法中，factor这个对象是在用它的时候创造的。而且第二种方法跑的更慢。</p>
-<p>factorA和factorB都是新的factor，小珂珂不禁觉得，太简单啦。<br>然后小珂珂把这种假设的属性设置好。</p>
-<ul>
-<li>Atable和Btable都是事先读取了Table1和Table2值的array数组。</li>
-<li>rateA和rateB是两种假设下的利率。</li>
-<li>bigavalue是用来计算A的方法。</li>
-</ul>
-<p>注意Debug.Print的内容可以在即时窗口(immediate window)中显示出来。调用即时窗口(immediate window)的快捷键是Ctrl + G</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   factorA.mortable = Atable</span><br><span class="line">   factorB.mortable = Btable</span><br><span class="line">   </span><br><span class="line">   factorA.insrate = Range(&quot;rateA&quot;).Value</span><br><span class="line">   factorB.insrate = Range(&quot;rateB&quot;).Value</span><br><span class="line">   </span><br><span class="line">&#x27;Calculations</span><br><span class="line">   Debug.Print (factorA.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorA.smlavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.smlavalue(10, 10))</span><br></pre></td></tr></table></figure>
-
-<h3 id="集合-Collections"><a href="#集合-Collections" class="headerlink" title="集合(Collections)"></a>集合(Collections)</h3><p>小珂珂此时想到，如果我能把所有假设放在一起就好啦。这样我能轻易找到自己一共定义了几个假设，调用或遍历起来也方便。</p>
+<p>可以这么想：getmordata是在类模块(Class
+model)中用来称呼死亡率表的名字，它不能在这个类模块(Class
+model)之外使用，而mortable是用来在类模块(Class
+model)外部称呼这个属性的。</p>
+<h3 id="如何创建方法">如何创建方法</h3>
+<p>接下来，小珂珂就要定义方法啦。方法就太简单啦。方法就是函数而已，不同之处在于，它可以直接调用一些定义好的属性。
+下面的代码就是小珂珂计算A的过程 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Function bigavalue(lowerlimit As Integer, duration As Integer):</span><br><span class="line">bigavalue = 0</span><br><span class="line">Dim i As Integer</span><br><span class="line">For i = lowerlimit To duration + lowerlimit</span><br><span class="line">    bigavalue = bigavalue + getmordata(lowerlimit, 2) / (1 + insrate) ^ (0.05 + i - lowerlimit)</span><br><span class="line">Next i</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+希望她还没有把精算数学还给老师。getmordata是死亡率的表，insrate是定义好的利率。通过一个循环算好A~
+a的计算相似，大家可以想一想哦。</p>
+<h3 id="调用类模块class-model">调用类模块(Class model)</h3>
+<p>大家还记得小珂珂把定义好的类模块(Class
+model)叫做factor了吗？想要定义新的对象，她是这样做滴： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x27;Declare class variable</span><br><span class="line">   Dim factorA As factor</span><br><span class="line">   Dim factorB As factor</span><br><span class="line">   </span><br><span class="line">   Set factorA = New factor</span><br><span class="line">   Set factorB = New factor</span><br></pre></td></tr></table></figure>
+另一种方法是 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x27;Declare class variable</span><br><span class="line">   Dim factorA As new factor</span><br><span class="line">   Dim factorB As new factor</span><br></pre></td></tr></table></figure>
+但是要记住，<em>最好使用第一种Dim/Set方法</em>。这两种方法最大的区别在于，第一种方法中，factor这个对象在set的时候就创造好了，第二种方法中，factor这个对象是在用它的时候创造的。而且第二种方法跑的更慢。</p>
+<p>factorA和factorB都是新的factor，小珂珂不禁觉得，太简单啦。
+然后小珂珂把这种假设的属性设置好。 -
+Atable和Btable都是事先读取了Table1和Table2值的array数组。 -
+rateA和rateB是两种假设下的利率。 - bigavalue是用来计算A的方法。</p>
+<p>注意Debug.Print的内容可以在即时窗口(immediate
+window)中显示出来。调用即时窗口(immediate window)的快捷键是Ctrl + G
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   factorA.mortable = Atable</span><br><span class="line">   factorB.mortable = Btable</span><br><span class="line">   </span><br><span class="line">   factorA.insrate = Range(&quot;rateA&quot;).Value</span><br><span class="line">   factorB.insrate = Range(&quot;rateB&quot;).Value</span><br><span class="line">   </span><br><span class="line">&#x27;Calculations</span><br><span class="line">   Debug.Print (factorA.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorA.smlavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.bigavalue(10, 10))</span><br><span class="line">   Debug.Print (factorB.smlavalue(10, 10))</span><br></pre></td></tr></table></figure></p>
+<h3 id="集合collections">集合(Collections)</h3>
+<p>小珂珂此时想到，如果我能把所有假设放在一起就好啦。这样我能轻易找到自己一共定义了几个假设，调用或遍历起来也方便。</p>
 <p>这个时候就要用到一个叫做集合(Collections)的东西。</p>
-<p>像这样可以定义一个叫做Assumptions的集合:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Dim Assumptions As Collection</span><br><span class="line">Set Assumptions = New Collection</span><br></pre></td></tr></table></figure>
-<p>把我们刚刚定义好的对象加入进去：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Assumptions.Add factorA</span><br><span class="line">Assumptions.Add factorB</span><br></pre></td></tr></table></figure>
-<p>试着使用一下！</p>
+<p>像这样可以定义一个叫做Assumptions的集合: <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Dim Assumptions As Collection</span><br><span class="line">Set Assumptions = New Collection</span><br></pre></td></tr></table></figure>
+把我们刚刚定义好的对象加入进去： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Assumptions.Add factorA</span><br><span class="line">Assumptions.Add factorB</span><br></pre></td></tr></table></figure> 试着使用一下！
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">For Each fac In Assumptions</span><br><span class="line">    Debug.Print fac.insrate</span><br><span class="line">Next fac</span><br></pre></td></tr></table></figure>
-<p>这样，把所有的factor对象都放到一个集合(Collections)中，遍历和管理就方便多啦。</p>
-<p>本文完整代码点击<a target="_blank" rel="noopener" href="https://actuarygarden.com/topic/13">阅读原文</a>进入精算后花园论坛下载。</p>
+这样，把所有的factor对象都放到一个集合(Collections)中，遍历和管理就方便多啦。</p>
+<p>本文完整代码点击<a
+target="_blank" rel="noopener" href="https://actuarygarden.com/topic/13">阅读原文</a>进入精算后花园论坛下载。</p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -185,14 +198,18 @@
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89Class-module"><span class="toc-text">如何定义Class module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B1%9E%E6%80%A7"><span class="toc-text">如何创建属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-text">如何创建方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E7%B1%BB%E6%A8%A1%E5%9D%97-Class-model"><span class="toc-text">调用类模块(Class model)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88-Collections"><span class="toc-text">集合(Collections)</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89class-module"><span class="toc-text">如何定义Class module</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%B1%9E%E6%80%A7"><span class="toc-text">如何创建属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%96%B9%E6%B3%95"><span class="toc-text">如何创建方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E7%B1%BB%E6%A8%A1%E5%9D%97class-model"><span class="toc-text">调用类模块(Class model)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E5%90%88collections"><span class="toc-text">集合(Collections)</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

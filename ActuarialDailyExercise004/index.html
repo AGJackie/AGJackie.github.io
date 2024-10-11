@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="SOA 的 Exam P Sample 第247题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-10T19:40:09.335Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.369Z">
 <meta property="article:modified_time" content="2023-12-16T13:52:23.858Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="每日一题">
@@ -67,7 +67,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -80,7 +80,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/SOA/">SOA</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/SOA/P/">P</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.335Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2023-12-16T13:52:23.858Z">2023-12-16</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.369Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2023-12-16T13:52:23.858Z">2023-12-16</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -93,35 +93,68 @@
   </div>
   </div><article class="md-text content"><p>SOA 的 Exam P Sample 第247题。</p>
 <span id="more"></span>
-
 <blockquote>
-<p><strong>SOA P Sample Q247</strong> :<br>Each week, a subcommittee of four individuals is formed from among the members of a committee comprising seven individuals. Two subcommittee members are then assigned to lead the subcommittee, one as chair and the other as secretary.</p>
-<p>Calculate the maximum number of consecutive weeks that can elapse without having the subcommittee contain four individuals who have previously served together with the same subcommittee chair.</p>
+<p><strong>SOA P Sample Q247</strong> : Each week, a subcommittee of
+four individuals is formed from among the members of a committee
+comprising seven individuals. Two subcommittee members are then assigned
+to lead the subcommittee, one as chair and the other as secretary.</p>
+<p>Calculate the maximum number of consecutive weeks that can elapse
+without having the subcommittee contain four individuals who have
+previously served together with the same subcommittee chair.</p>
 <ul>
-<li>(A) 70</li>
-<li>(B) 140</li>
-<li>(C) 210</li>
-<li>(D) 420</li>
-<li>(E) 840</li>
+<li><ol type="A">
+<li>70</li>
+</ol></li>
+<li><ol start="2" type="A">
+<li>140</li>
+</ol></li>
+<li><ol start="3" type="A">
+<li>210</li>
+</ol></li>
+<li><ol start="4" type="A">
+<li>420</li>
+</ol></li>
+<li><ol start="5" type="A">
+<li>840</li>
+</ol></li>
 </ul>
 </blockquote>
 <blockquote>
 <p><strong>思路</strong> :</p>
 </blockquote>
-<p>题目的意思是，7个人里选4个人出来组成一组。对选出的四个人的其中两个给以特定的身份：chair 和 secretary. 求出不同的组合方法有几种。</p>
-<p>刚开始看题的时候我也想当然地列了这个式子：<br>$$<br>A_7^2\times C_5^2&#x3D;420<br>$$<br>刚好掉进了题目给挖的坑里。</p>
-<p>实际上，题目的最后说了，只要没有“served together with the same subcommittee chair”，就可以算是不同的组合方法。所以跟秘书（secretary）是谁没有关系。因此我们可以直接把题目理解为：7选4，指定其中一人为 chair，求出不同的组合方法共几种。所以先在7个人中选出1个人担任 chair，然后在其余6人中选出3人即可：<br>$$<br>A_7^1\times C_6^3&#x3D;140<br>$$</p>
+<p>题目的意思是，7个人里选4个人出来组成一组。对选出的四个人的其中两个给以特定的身份：chair
+和 secretary. 求出不同的组合方法有几种。</p>
+<p>刚开始看题的时候我也想当然地列了这个式子： <span
+class="math display">\[
+A_7^2\times C_5^2=420
+\]</span> 刚好掉进了题目给挖的坑里。</p>
+<p>实际上，题目的最后说了，只要没有“served together with the same
+subcommittee
+chair”，就可以算是不同的组合方法。所以跟秘书（secretary）是谁没有关系。因此我们可以直接把题目理解为：7选4，指定其中一人为
+chair，求出不同的组合方法共几种。所以先在7个人中选出1个人担任
+chair，然后在其余6人中选出3人即可： <span class="math display">\[
+A_7^1\times C_6^3=140
+\]</span></p>
 <blockquote>
-<p><strong>答案</strong> :<br>所以选 (B) 140</p>
+<p><strong>答案</strong> : 所以选 (B) 140</p>
 </blockquote>
-<h3 id="精算每日一题专栏"><a href="#精算每日一题专栏" class="headerlink" title="精算每日一题专栏"></a>精算每日一题专栏</h3><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/xy0kkrP7hpX54yyWTbuqjw">精算每日一题 001|寿险现值随机变量的书写(寿险精算)</a> </p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/VoQZtYMcVinyhqkixFT2qQ">精算每日一题 002|寿险 EPV 的递归公式(寿险精算)</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/w3GgBAH9vJ7-bbjmL6Ecyg">精算每日一题 003|分期付款表(利息理论)</a></p>
+<h3 id="精算每日一题专栏">精算每日一题专栏</h3>
+<p><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/xy0kkrP7hpX54yyWTbuqjw">精算每日一题
+001|寿险现值随机变量的书写(寿险精算)</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/VoQZtYMcVinyhqkixFT2qQ">精算每日一题
+002|寿险 EPV 的递归公式(寿险精算)</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/w3GgBAH9vJ7-bbjmL6Ecyg">精算每日一题
+003|分期付款表(利息理论)</a></p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -139,14 +172,18 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/Actuarial-Diary-of-Qixi/">七夕精算日记</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2020-September-online/">IFoA 2020年9月的线上考试怎么考？</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/Actuary-Baoyan/">精算保研夏令营——央财和南开</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/Actuarial-Symbol/">如何有效记忆寿险精算符号</a></div></section></div>
 
 
 
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">

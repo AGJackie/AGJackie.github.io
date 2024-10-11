@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="生命表的基础介绍：符号说明、常用公式及其含义、易错点。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-10T19:40:09.696Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.501Z">
 <meta property="article:modified_time" content="2021-01-19T09:18:15.813Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="寿险精算">
@@ -66,7 +66,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -79,7 +79,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/CAA/">CAA</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/CAA/A5/">A5</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.696Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2021-01-19T09:18:15.813Z">2021-01-19</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.501Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2021-01-19T09:18:15.813Z">2021-01-19</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -92,42 +92,171 @@
   </div>
   </div><article class="md-text content"><p>生命表的基础介绍：符号说明、常用公式及其含义、易错点。</p>
 <span id="more"></span>
-
-
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>该章节是非常重要的章节之一，之后所有符号含义都基于该章节内容。</p>
+<h2 id="介绍">介绍</h2>
+<p>该章节是非常重要的章节之一，之后所有符号含义都基于该章节内容。</p>
 <p><strong>什么是生命表？</strong></p>
 <p>所谓生命表，就是采用表格的形式简单地表述了同时出生的一批人以怎样的死亡率陆续死亡的全部过程，它是研究人口死亡规律的有力工具。</p>
-<h2 id="符号声明"><a href="#符号声明" class="headerlink" title="符号声明"></a>符号声明</h2><ul>
-<li>Symbols: Meaning </li>
-<li>$l_0$: Radix of the life table</li>
-<li>$\omega$ : Limiting age of the life table, i.e. the maximum age in a life table </li>
-<li>$l_x$:   Number of survivors to exact age $x$ ($x&#x3D;1,2,\cdots,\omega -1$)</li>
-<li>$d_x$: Number of death between $x$ and $x + 1$</li>
-<li>$\actsymb{n}{}{d}{}{x}$: Number of death between $x$ and $x+n$</li>
-<li>$q_x$: Probability that $(x)$ dies by age $x + 1$</li>
-<li>$\qx{n}{x}$: Probability that $(x)$ dies before age $x+n$ </li>
-<li>$\qx{t|}{x}$: Probability that $(x)$ dies between age $x+t$ and age $x+t+1$ </li>
-<li>$\px{n}{x}$: Probability of $(x)$ survive to age $x+n$</li>
-<li>$\actsymb{n}{}{L}{}{x}$: Total lifetime lived by $(l_x)$ between age $x$ and age $x + n$ </li>
-<li>$T_x$: Total number of future years lived by $(l_x)$ </li>
-<li>$\mathring{e}_x$:  Average life expectancy for $(x)$</li>
-<li>$\qx{n|}{x}$: Probability that $(x)$ dies between age $x+n$ and age $x+n+1$</li>
-<li>$\qx{n|m}{x}$: Probability that $(x)$ dies between age $x+n$ and age $x+n+m$</li>
-</ul>
-<h2 id="常用公式及其含义"><a href="#常用公式及其含义" class="headerlink" title="常用公式及其含义"></a>常用公式及其含义</h2><p>第$x$年的生存人数减去第$x$年到第$x+n$年间的死亡人数，就是第$x+n$年的生存人数<br>$$<br>l_{n}- \actsymb{n}{}{d}{}{x}&#x3D;l_{n+x}<br>$$<br>由于我们定义极限年龄是人类无法达到的一个年龄，所以在极限年龄的人数为零<br>$$<br>l_{\omega}&#x3D;0<br>$$<br>一个生命表的基础人数等于每一年死亡人数的总和，所以我们有<br>$$<br>l_{0}&#x3D;\sum_{x&#x3D;0}^{\omega-1} d_{x}<br>$$<br>第$x$年到第$x+n$年的死亡率应该是这$n$年里的死亡人数和第$x$年的存活人数之比<br>$$<br>\qx{n}{x}&#x3D;\frac{\actsymb{n}{}{d}{}{x}}{l_{x}}<br>$$<br>在上式中，特别的，当$n&#x3D;1$的时候，我们可以略去左下角的角标<br>$$<br>q_{x}&#x3D;\frac{d_{x}}{l_{x}}<br>$$<br>在第$x$年存活并在第$x+t$到第$x+t+1$年死亡的概率，可以表示为第$x+t$年到第$x+t+1$年死亡人数与第x年的存活人数的比值<br>$$<br>\qx{t|}{x}&#x3D;\frac{d_{x+t}}{l_{x}}<br>$$<br>第x年的人在第$x+n$年死亡的概率应该等于，第$x$年存活的人在接下来的$n-1$年中每一年死亡的概率之和<br>$$<br>\qx{n}{x}&#x3D;\frac{\actsymb{n}{}{d}{}{x}}{l_{x}}&#x3D;\sum_{t&#x3D;0}^{n-1} \qx{t|}{x}<br>$$<br>和死亡率的概率相似，第x年存活的人在第$x+n$年仍存活的概率，应该等于第$x+n$年存活的人数与第$x$年存活的人数之比<br>$$<br>\px{n}{x}&#x3D;\frac{l_{x+n}}{l_{x}}&#x3D;1-\qx{n}{x}<br>$$<br>人数年(人年)是表示人群存活时间的复合单位，$1$个人存活$1$年是一人年，$2$个人每人存活半年也是$1$人年。在死亡人数服从<strong>均匀分布</strong>的假设下，$x$到$x+n$岁的死亡人平均来说存活了$\frac{n}{2}$年，而存活到$x+n$岁的人均活了$n$年，所以我们有<br>$$<br>\actsymb{n}{}{L}{}{x} \approx n{L_{x+n}}+\frac{n}{2}{\actsymb{n}{}{d}{}{x}}&#x3D;\frac{n}{2}\left(l_{x}+l_{x+n}\right)<br>$$<br>$x$岁的人群未来累积生存人年数应该等于接下来每一年生存的人年数之和，同样在死亡人数服从均匀分布的假设下，有<br>$$<br>T_{x}&#x3D;L_{x}+L_{x+1}+\cdots+L_{\omega-1}&#x3D;\sum_{t&#x3D;0}^{\omega-x-1} L_{x+t} \approx \sum_{t&#x3D;0}^{\infty } \frac{1}{2}\left(l_{x+t}+l_{x+t+1}\right)<br>$$<br>特别的，同一批出生人的平均寿命应该等于这一批人的未来累积生存人年数与人口基数的比值，假设死亡在每个年龄上均匀分布，有<br>$$<br>\overset{o}{e}&#x3D;\frac{T_{0}}{l_{0}}&#x3D;\frac{1}{l_{0}} \sum_{t&#x3D;0}^{\omega-1}(t+\frac{1}{2}) d_{t}<br>$$<br>在上式中，$t+\frac{1}{2}$是每个年龄死亡者的平均年龄，因此平均余寿是一个以各年龄死亡人数为权重的平均死亡年龄。</p>
-<p>$x$岁的人存活$n$年并在第$n+1$年死亡的概率可以表示成第$x+n$年到第$x+n+1$年死亡的人数与第x年存活的人数的比值，同时对等式做一定的变形，可以得到<br>$$<br>\qx{n|}{x}&#x3D;\frac{d_{x+n}}{l_{x}}&#x3D;\frac{l_{x+n}}{l_{x}} \times \frac{d_{x+n}}{l_{x+n}}&#x3D;{\px{n}{x}} \times q_{x+n}<br>$$<br>对$x$岁的人在$x+n$到$x+n+m$岁之间死亡的概率我们也可以做类似的解释，它也可以分成两个阶段，第一个阶段是$x$岁的人存活到第$x+n$年，并在$x+n$年到$x+n+m$年间发生死亡，用等式表示为<br>$$<br>\qx{n|m}{x}&#x3D;\frac{\actsymb{m}{}{d}{}{x+n}}{l_{x}}&#x3D;\frac{l_{x+n}-l_{x+n+m}}{l_{x}}&#x3D;\px{n}{x}-\px{n+m}{x}&#x3D;\px{n}{x} \times \qx{m}{x+n}<br>$$</p>
-<h2 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h2><p>以下两个符号容易混淆：</p>
+<h2 id="符号声明">符号声明</h2>
 <ul>
-<li>$L_x$ 表示第$x$年到第$x+1$年群体存活总时间</li>
-<li>$l_x$ 表示在第$x$年的存活人数。</li>
+<li>Symbols: Meaning</li>
+<li><span class="math inline">\(l_0\)</span>: Radix of the life
+table</li>
+<li><span class="math inline">\(\omega\)</span> : Limiting age of the
+life table, i.e. the maximum age in a life table</li>
+<li><span class="math inline">\(l_x\)</span>: Number of survivors to
+exact age <span class="math inline">\(x\)</span> (<span
+class="math inline">\(x=1,2,\cdots,\omega -1\)</span>)</li>
+<li><span class="math inline">\(d_x\)</span>: Number of death between
+<span class="math inline">\(x\)</span> and <span class="math inline">\(x
++ 1\)</span></li>
+<li><span class="math inline">\(\actsymb{n}{}{d}{}{x}\)</span>: Number
+of death between <span class="math inline">\(x\)</span> and <span
+class="math inline">\(x+n\)</span></li>
+<li><span class="math inline">\(q_x\)</span>: Probability that <span
+class="math inline">\((x)\)</span> dies by age <span
+class="math inline">\(x + 1\)</span></li>
+<li><span class="math inline">\(\qx{n}{x}\)</span>: Probability that
+<span class="math inline">\((x)\)</span> dies before age <span
+class="math inline">\(x+n\)</span></li>
+<li><span class="math inline">\(\qx{t|}{x}\)</span>: Probability that
+<span class="math inline">\((x)\)</span> dies between age <span
+class="math inline">\(x+t\)</span> and age <span
+class="math inline">\(x+t+1\)</span></li>
+<li><span class="math inline">\(\px{n}{x}\)</span>: Probability of <span
+class="math inline">\((x)\)</span> survive to age <span
+class="math inline">\(x+n\)</span></li>
+<li><span class="math inline">\(\actsymb{n}{}{L}{}{x}\)</span>: Total
+lifetime lived by <span class="math inline">\((l_x)\)</span> between age
+<span class="math inline">\(x\)</span> and age <span
+class="math inline">\(x + n\)</span></li>
+<li><span class="math inline">\(T_x\)</span>: Total number of future
+years lived by <span class="math inline">\((l_x)\)</span></li>
+<li><span class="math inline">\(\mathring{e}_x\)</span>: Average life
+expectancy for <span class="math inline">\((x)\)</span></li>
+<li><span class="math inline">\(\qx{n|}{x}\)</span>: Probability that
+<span class="math inline">\((x)\)</span> dies between age <span
+class="math inline">\(x+n\)</span> and age <span
+class="math inline">\(x+n+1\)</span></li>
+<li><span class="math inline">\(\qx{n|m}{x}\)</span>: Probability that
+<span class="math inline">\((x)\)</span> dies between age <span
+class="math inline">\(x+n\)</span> and age <span
+class="math inline">\(x+n+m\)</span></li>
 </ul>
-<p>比如，一个三人组成的群体，在第$x$年后，三个人分别活了$0.2，0.6，1.2$年，则<br>$$<br>L_x&#x3D;0.2+0.6+1&#x3D;1.8<br>$$</p>
-<p>$$<br>l_x&#x3D;3<br>$$<br>所以我们有以下不等式<br>$$<br>l_x&gt;L_x&gt;l_{x+1}<br>$$</p>
+<h2 id="常用公式及其含义">常用公式及其含义</h2>
+<p>第<span class="math inline">\(x\)</span>年的生存人数减去第<span
+class="math inline">\(x\)</span>年到第<span
+class="math inline">\(x+n\)</span>年间的死亡人数，就是第<span
+class="math inline">\(x+n\)</span>年的生存人数 <span
+class="math display">\[
+l_{n}- \actsymb{n}{}{d}{}{x}=l_{n+x}
+\]</span>
+由于我们定义极限年龄是人类无法达到的一个年龄，所以在极限年龄的人数为零
+<span class="math display">\[
+l_{\omega}=0
+\]</span> 一个生命表的基础人数等于每一年死亡人数的总和，所以我们有 <span
+class="math display">\[
+l_{0}=\sum_{x=0}^{\omega-1} d_{x}
+\]</span> 第<span class="math inline">\(x\)</span>年到第<span
+class="math inline">\(x+n\)</span>年的死亡率应该是这<span
+class="math inline">\(n\)</span>年里的死亡人数和第<span
+class="math inline">\(x\)</span>年的存活人数之比 <span
+class="math display">\[
+\qx{n}{x}=\frac{\actsymb{n}{}{d}{}{x}}{l_{x}}
+\]</span> 在上式中，特别的，当<span
+class="math inline">\(n=1\)</span>的时候，我们可以略去左下角的角标 <span
+class="math display">\[
+q_{x}=\frac{d_{x}}{l_{x}}
+\]</span> 在第<span class="math inline">\(x\)</span>年存活并在第<span
+class="math inline">\(x+t\)</span>到第<span
+class="math inline">\(x+t+1\)</span>年死亡的概率，可以表示为第<span
+class="math inline">\(x+t\)</span>年到第<span
+class="math inline">\(x+t+1\)</span>年死亡人数与第x年的存活人数的比值
+<span class="math display">\[
+\qx{t|}{x}=\frac{d_{x+t}}{l_{x}}
+\]</span> 第x年的人在第<span
+class="math inline">\(x+n\)</span>年死亡的概率应该等于，第<span
+class="math inline">\(x\)</span>年存活的人在接下来的<span
+class="math inline">\(n-1\)</span>年中每一年死亡的概率之和 <span
+class="math display">\[
+\qx{n}{x}=\frac{\actsymb{n}{}{d}{}{x}}{l_{x}}=\sum_{t=0}^{n-1}
+\qx{t|}{x}
+\]</span> 和死亡率的概率相似，第x年存活的人在第<span
+class="math inline">\(x+n\)</span>年仍存活的概率，应该等于第<span
+class="math inline">\(x+n\)</span>年存活的人数与第<span
+class="math inline">\(x\)</span>年存活的人数之比 <span
+class="math display">\[
+\px{n}{x}=\frac{l_{x+n}}{l_{x}}=1-\qx{n}{x}
+\]</span> 人数年(人年)是表示人群存活时间的复合单位，<span
+class="math inline">\(1\)</span>个人存活<span
+class="math inline">\(1\)</span>年是一人年，<span
+class="math inline">\(2\)</span>个人每人存活半年也是<span
+class="math inline">\(1\)</span>人年。在死亡人数服从<strong>均匀分布</strong>的假设下，<span
+class="math inline">\(x\)</span>到<span
+class="math inline">\(x+n\)</span>岁的死亡人平均来说存活了<span
+class="math inline">\(\frac{n}{2}\)</span>年，而存活到<span
+class="math inline">\(x+n\)</span>岁的人均活了<span
+class="math inline">\(n\)</span>年，所以我们有 <span
+class="math display">\[
+\actsymb{n}{}{L}{}{x} \approx
+n{L_{x+n}}+\frac{n}{2}{\actsymb{n}{}{d}{}{x}}=\frac{n}{2}\left(l_{x}+l_{x+n}\right)
+\]</span> <span
+class="math inline">\(x\)</span>岁的人群未来累积生存人年数应该等于接下来每一年生存的人年数之和，同样在死亡人数服从均匀分布的假设下，有
+<span class="math display">\[
+T_{x}=L_{x}+L_{x+1}+\cdots+L_{\omega-1}=\sum_{t=0}^{\omega-x-1} L_{x+t}
+\approx \sum_{t=0}^{\infty } \frac{1}{2}\left(l_{x+t}+l_{x+t+1}\right)
+\]</span>
+特别的，同一批出生人的平均寿命应该等于这一批人的未来累积生存人年数与人口基数的比值，假设死亡在每个年龄上均匀分布，有
+<span class="math display">\[
+\overset{o}{e}=\frac{T_{0}}{l_{0}}=\frac{1}{l_{0}}
+\sum_{t=0}^{\omega-1}(t+\frac{1}{2}) d_{t}
+\]</span> 在上式中，<span
+class="math inline">\(t+\frac{1}{2}\)</span>是每个年龄死亡者的平均年龄，因此平均余寿是一个以各年龄死亡人数为权重的平均死亡年龄。</p>
+<p><span class="math inline">\(x\)</span>岁的人存活<span
+class="math inline">\(n\)</span>年并在第<span
+class="math inline">\(n+1\)</span>年死亡的概率可以表示成第<span
+class="math inline">\(x+n\)</span>年到第<span
+class="math inline">\(x+n+1\)</span>年死亡的人数与第x年存活的人数的比值，同时对等式做一定的变形，可以得到
+<span class="math display">\[
+\qx{n|}{x}=\frac{d_{x+n}}{l_{x}}=\frac{l_{x+n}}{l_{x}} \times
+\frac{d_{x+n}}{l_{x+n}}={\px{n}{x}} \times q_{x+n}
+\]</span> 对<span class="math inline">\(x\)</span>岁的人在<span
+class="math inline">\(x+n\)</span>到<span
+class="math inline">\(x+n+m\)</span>岁之间死亡的概率我们也可以做类似的解释，它也可以分成两个阶段，第一个阶段是<span
+class="math inline">\(x\)</span>岁的人存活到第<span
+class="math inline">\(x+n\)</span>年，并在<span
+class="math inline">\(x+n\)</span>年到<span
+class="math inline">\(x+n+m\)</span>年间发生死亡，用等式表示为 <span
+class="math display">\[
+\qx{n|m}{x}=\frac{\actsymb{m}{}{d}{}{x+n}}{l_{x}}=\frac{l_{x+n}-l_{x+n+m}}{l_{x}}=\px{n}{x}-\px{n+m}{x}=\px{n}{x}
+\times \qx{m}{x+n}
+\]</span></p>
+<h2 id="易错点">易错点</h2>
+<p>以下两个符号容易混淆：</p>
+<ul>
+<li><span class="math inline">\(L_x\)</span> 表示第<span
+class="math inline">\(x\)</span>年到第<span
+class="math inline">\(x+1\)</span>年群体存活总时间</li>
+<li><span class="math inline">\(l_x\)</span> 表示在第<span
+class="math inline">\(x\)</span>年的存活人数。</li>
+</ul>
+<p>比如，一个三人组成的群体，在第<span
+class="math inline">\(x\)</span>年后，三个人分别活了<span
+class="math inline">\(0.2，0.6，1.2\)</span>年，则 <span
+class="math display">\[
+L_x=0.2+0.6+1=1.8
+\]</span></p>
+<p><span class="math display">\[
+l_x=3
+\]</span> 所以我们有以下不等式 <span class="math display">\[
+l_x&gt;L_x&gt;l_{x+1}
+\]</span></p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -145,14 +274,18 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/LTAM-Guide/">【LTAM导引篇】Long-Term Actuarial Mathmetics</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/LianaixianAct/">《恋爱险精算》</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/LT-Online-class/">寿险精算实务入门课程</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/LianaixianAct/">《恋爱险精算》</a></div></section></div>
 
 
 
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">

@@ -27,7 +27,7 @@
 <meta property="og:site_name" content="精算后花园">
 <meta property="og:description" content="定价和新业务价值知识点梳理">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-10T19:40:09.776Z">
+<meta property="article:published_time" content="2024-10-11T17:44:16.538Z">
 <meta property="article:modified_time" content="2022-11-24T10:48:25.255Z">
 <meta property="article:author" content="Jackie">
 <meta property="article:tag" content="寿险精算">
@@ -68,7 +68,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a><a class="item title" href="/TVOG/"><span class="title">TVOG 菀菀类卿</span></a><a class="item title" href="/Actuarial-Rulebook-V3/"><span class="title">精算制度汇编3.0.pdf</span></a><a class="item title" href="/UIBE-actuary-kaoyan-3/"><span class="title">2020贸大精算考研经验分享</span></a><a class="item title" href="/UIBE-actuary-kaoyan-2/"><span class="title">2020对外经贸大学890精算学硕考研经验分享和真题回忆</span></a><a class="item title" href="/Actuarial-Science-Intro/"><span class="title">精算学专业介绍</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/IAAust-Intro/"><span class="title">邂逅澳洲精算师协会 来一场“曲线救国”的恋爱（一）</span></a><a class="item title" href="/CT5-Compound-bonus/"><span class="title">【CT5题型探究】带分红寿险两种形式的复利bonus</span></a><a class="item title" href="/CT1-PaymentStream/"><span class="title">【CT1题型探究】Payment Stream：浅谈rate of payment的函数设定</span></a><a class="item title" href="/CM1-Guide/"><span class="title">【CM1导引篇】Actuarial Mathematics</span></a><a class="item title" href="/index/"><span class="title">Hello World</span></a><a class="item title" href="/CAA-Rulebook-2024/"><span class="title">2024版中精正精算师制度汇编.pdf</span></a><a class="item title" href="/Contingency-Lecture-1/"><span class="title">寿险精算知识点串讲(I)</span></a><a class="item title" href="/LT-Online-class/"><span class="title">寿险精算实务入门课程</span></a><a class="item title" href="/AG-toc-Blog/"><span class="title">【精算后花园】博客文章合集目录</span></a><a class="item title" href="/ALTAM-Online-class/"><span class="title">SOA ALTAM 寿险精算进阶一对一在线辅导</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -81,7 +81,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%B2%BE%E7%AE%97%E5%AE%9E%E5%8A%A1/">精算实务</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T19:40:09.776Z">2024-10-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-11-24T10:48:25.255Z">2022-11-24</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.538Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2022-11-24T10:48:25.255Z">2022-11-24</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -94,29 +94,42 @@
   </div>
   </div><article class="md-text content"><p>定价和新业务价值知识点梳理</p>
 <span id="more"></span>
-
 <p>时间过得很快，Jackie入职保险公司的产品部也近四个月了，和大家做个简单的分享，盘点一下精算定价工作中涉及的核心知识点，便于新入职的同学们<strong>根据本文的索引进行教材和实务的衔接</strong>。如有错漏之处欢迎大家批评指正。</p>
 <p>所谓定价（Pricing），指的是确定保险产品的保费（Premium）的过程，也称为费率厘定。实际上，广义的定价流程不光包括费率厘定，还包括现金价值计算，套利测算，新业务价值，会计利润，偿付能力，敏感性测试等。<strong>本文主要讲解费率厘定和新业务价值计算</strong>。</p>
-<h2 id="1-费率厘定"><a href="#1-费率厘定" class="headerlink" title="1 费率厘定"></a>1 费率厘定</h2><p>确定均衡保费用的是经典的<strong>价值等式</strong>：保费的现值等于保险金的现值与费用的现值之和。</p>
+<h2 id="费率厘定">1 费率厘定</h2>
+<p>确定均衡保费用的是经典的<strong>价值等式</strong>：保费的现值等于保险金的现值与费用的现值之和。</p>
 <p>需要用到的主要假设为：<strong>发生率</strong>（死亡率，疾病发生率，意外发生率等）、<strong>费用率</strong>、<strong>利率</strong>。</p>
-<p>其中，寿险产品的死亡率可以直接引用生命表（或乘以一定比例的生命表），健康险产品的发生率需要用到<strong>多重减因表</strong>（multiple decrement table）进行计算。</p>
+<p>其中，寿险产品的死亡率可以直接引用生命表（或乘以一定比例的生命表），健康险产品的发生率需要用到<strong>多重减因表</strong>（multiple
+decrement table）进行计算。</p>
 <p>由于保险金往往会对现金价值和保险金额或已交保费取大，所以在计算保费时也需要计算<strong>现金价值</strong>。现金价值是在客户退保时可领取的金额，计算思路和准备金类似，相当于在准备金基础上进行一定比例的扣减。计算过程需要参照银保监会的相关规定：</p>
 <ul>
-<li>中国银保监会办公厅关于印发普通型人身保险精算规定的通知（银保监办发〔2020〕7 号）</li>
-<li>中国保监会关于万能型人身保险费率政策改革有关事项的通知（保监发〔2015〕19 号）</li>
-<li>关于印发投资连结保险万能保险精算规定的通知（保监寿险〔2007〕335 号）</li>
-<li>中国保监会关于推进分红型人身保险费率政策改革有关事项的通知（保监发〔2015〕93 号）</li>
+<li>中国银保监会办公厅关于印发普通型人身保险精算规定的通知（银保监办发〔2020〕7
+号）</li>
+<li>中国保监会关于万能型人身保险费率政策改革有关事项的通知（保监发〔2015〕19
+号）</li>
+<li>关于印发投资连结保险万能保险精算规定的通知（保监寿险〔2007〕335
+号）</li>
+<li>中国保监会关于推进分红型人身保险费率政策改革有关事项的通知（保监发〔2015〕93
+号）</li>
 </ul>
-<p>上述监管规定，Jackie已整理在：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/AII7Zmk_RfH0wpwSogQ89Q">精算制度汇编.pdf</a>.</p>
-<p>另外，在对分红险进行定价时，需要计算<strong>责任准备金</strong>。其中，终身年金以外的人身保险采用<strong>一年期完全修正方法</strong>（<strong>FPT</strong>）, 终身年金保险采用修正均衡净保费方法。FPT reserve的知识点在IFoA的CM1里未讲，可参考SOA的LTAM或新大纲下的FAM-L.</p>
-<p>一个产品往往涉及多种交费期的选择，也会有不同年龄，不同性别的客户来购买，因此，我们需要计算<strong>各交费期、年龄、性别下的保费</strong>，为了减少简单机械的重复劳动，我们会使用 Excel <strong>VBA</strong> 输出费率表和现价表。</p>
+<p>上述监管规定，Jackie已整理在：<a
+target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/AII7Zmk_RfH0wpwSogQ89Q">精算制度汇编.pdf</a>.</p>
+<p>另外，在对分红险进行定价时，需要计算<strong>责任准备金</strong>。其中，终身年金以外的人身保险采用<strong>一年期完全修正方法</strong>（<strong>FPT</strong>）,
+终身年金保险采用修正均衡净保费方法。FPT
+reserve的知识点在IFoA的CM1里未讲，可参考SOA的LTAM或新大纲下的FAM-L.</p>
+<p>一个产品往往涉及多种交费期的选择，也会有不同年龄，不同性别的客户来购买，因此，我们需要计算<strong>各交费期、年龄、性别下的保费</strong>，为了减少简单机械的重复劳动，我们会使用
+Excel <strong>VBA</strong> 输出费率表和现价表。</p>
 <p>最后讲一下<strong>套利</strong>（<strong>套佣</strong>）<strong>测算</strong>。因为定价时使用的预定费用率和实际发生的手续费率存在偏差，所以在算完保费后需要<strong>检验实际的手续费率、变动业务费用、现金价值、新人奖励等各项之和是否过高</strong>，以避免渠道套取佣金。</p>
-<h2 id="2-新业务价值"><a href="#2-新业务价值" class="headerlink" title="2 新业务价值"></a>2 新业务价值</h2><p><strong>新业务价值</strong>（<strong>VNB</strong>）是保险公司的新业务给公司带来的价值。新业务价值的计算方法和有效业务价值一致，是<strong>业务盈余现值</strong>减去<strong>持有要求资本成本的现值</strong>。</p>
-<p>涉及的精算知识点是利润测试（Profit testing）的内容，在IFoA 的CM1，SOA的LTAM或新大纲下的ALTAM下都有讲解。但教材上考虑的利润的概念相对简单，实务中需要考虑到该业务对公司的资本要求。这里资本的概念涉及到<strong>要求资本</strong>（<strong>RC</strong>）和<strong>最低资本</strong>（<strong>MC</strong>）。和资本相对应的则是负债的概念，包括<strong>相应负债</strong>（Liab）、<strong>寿险合同负债</strong>（<strong>RES</strong>）、<strong>剩余边际</strong>（<strong>DPL</strong>）。另外也要考虑税收的影响。</p>
+<h2 id="新业务价值">2 新业务价值</h2>
+<p><strong>新业务价值</strong>（<strong>VNB</strong>）是保险公司的新业务给公司带来的价值。新业务价值的计算方法和有效业务价值一致，是<strong>业务盈余现值</strong>减去<strong>持有要求资本成本的现值</strong>。</p>
+<p>涉及的精算知识点是利润测试（Profit testing）的内容，在IFoA
+的CM1，SOA的LTAM或新大纲下的ALTAM下都有讲解。但教材上考虑的利润的概念相对简单，实务中需要考虑到该业务对公司的资本要求。这里资本的概念涉及到<strong>要求资本</strong>（<strong>RC</strong>）和<strong>最低资本</strong>（<strong>MC</strong>）。和资本相对应的则是负债的概念，包括<strong>相应负债</strong>（Liab）、<strong>寿险合同负债</strong>（<strong>RES</strong>）、<strong>剩余边际</strong>（<strong>DPL</strong>）。另外也要考虑税收的影响。</p>
 <p>上面几个在初级阶段的精算考试教材中没有听到过的概念可以看银保监会的相关规定：</p>
 <ul>
-<li>中国银保监会关于印发保险公司偿付能力监管规则（II）的通知（银保监发〔2021〕51 号）</li>
-<li>中国银保监会关于实施保险公司偿付能力监管规则（II）有关事项的通知（银保监发〔2021〕52 号）</li>
+<li>中国银保监会关于印发保险公司偿付能力监管规则（II）的通知（银保监发〔2021〕51
+号）</li>
+<li>中国银保监会关于实施保险公司偿付能力监管规则（II）有关事项的通知（银保监发〔2021〕52
+号）</li>
 </ul>
 <p>以及中国精算师协会的：</p>
 <ul>
@@ -124,14 +137,28 @@
 </ul>
 <p>在计算保费时，我们一般按年研究现金流即可，但是新业务价值的计算需要更为精细，因此我们需要<strong>按月研究现金流</strong>。这就需要用到<strong>非整数年龄死亡率</strong>、<strong>非整数年龄现金价值</strong>、<strong>非整数年龄准备金</strong>，这里建议同时结合IFoA的CM1和SOA的LTAM学习对应的知识点。</p>
 <p>在计算保费时，我们并不需要用到退保率。<strong>但在研究利润时，退保率是我们必须关注的问题</strong>，这和IFoA的CM1里的利润测试考试题型非常类似。由于至少考虑到死亡和退保两个减因，所以这里即便是<strong>寿险也会用到多重减因表</strong>。</p>
-<p>最后聊一聊<strong>剩余边际</strong>（<strong>DPL</strong>）。剩余边际是为了不确认首日利得而设立的负债，若在签单时，寿险合同负债小于0，则签单时剩余边际为寿险合同负债的绝对值。即：<br>$$<br>\text{DPL}_{0}&#x3D;\max \left(-\text{RES}<em>0, 0\right)%&#x3D;D P L</em>{\text{issue day}}<br>$$</p>
-<p>剩余边际需要在整个保险期间内<strong>摊销</strong>。摊销对应的知识点是IFoA的CM1的<strong>Loan schedules</strong>或SOA的FM的<strong>Amortisation Method</strong>. 这里需要加上一个<strong>摊销载体</strong>的概念。摊销载体可采用有效保单件数或有效保额,或兼顾到不同公司会计政策的选择，采用其他摊销载体。例如，若我们以<strong>有效保单件数</strong>作为摊销载体，则最后可以推出 $t$ 时刻每份有效保单在 $t$ 时刻的剩余边际（<strong>DPL_PP</strong>）的公式为：<br>$$<br>\text{DPL}<em>{t}&#x3D;\text{DPL}</em>{0} \times\frac{a_{x+t}}{a_{x}}<br>$$</p>
+<p>最后聊一聊<strong>剩余边际</strong>（<strong>DPL</strong>）。剩余边际是为了不确认首日利得而设立的负债，若在签单时，寿险合同负债小于0，则签单时剩余边际为寿险合同负债的绝对值。即：
+<span class="math display">\[
+\text{DPL}_{0}=\max \left(-\text{RES}_0, 0\right)%=D P L_{\text{issue
+day}}
+\]</span></p>
+<p>剩余边际需要在整个保险期间内<strong>摊销</strong>。摊销对应的知识点是IFoA的CM1的<strong>Loan
+schedules</strong>或SOA的FM的<strong>Amortisation Method</strong>.
+这里需要加上一个<strong>摊销载体</strong>的概念。摊销载体可采用有效保单件数或有效保额,或兼顾到不同公司会计政策的选择，采用其他摊销载体。例如，若我们以<strong>有效保单件数</strong>作为摊销载体，则最后可以推出
+<span class="math inline">\(t\)</span> 时刻每份有效保单在 <span
+class="math inline">\(t\)</span>
+时刻的剩余边际（<strong>DPL_PP</strong>）的公式为： <span
+class="math display">\[
+\text{DPL}_{t}=\text{DPL}_{0} \times\frac{a_{x+t}}{a_{x}}
+\]</span></p>
 <p>这样，<strong>DPL_PP的变化曲线正好类似期末支付的生存年金的现值</strong>。注意，该“生存年金”使用的生存概率是同时考虑了退保和死亡两个减因的。推导过程略去，留给同学们作为课后作业~</p>
 
 <div class="article-footer fs14">
     <section id="license">
       <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div>
     </section>
     
@@ -149,21 +176,25 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/PSC-Stage1/">PSC Stage 1 Course 简介（CB3的前置课程）</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/P-Guide/">【P导引篇】Probability</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/PSC-Stage1/">PSC Stage 1 Course 简介（CB3的前置课程）</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/PA-Guide/">PA的module总结和考试心得</a></div></section></div>
 
 
 
 
 
 
-<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a> 运营。为方便阅读最新文章，欢迎关注公众号。<br><a href="https://actuarygarden.cn/">Copyright © 2017-2024 精算后花园</a> <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由微信公众号：精算后花园号主 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注公众号。 <a
+href="https://actuarygarden.cn">Copyright © 2017-2024 精算后花园</a> <a
+target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%B4%B9%E7%8E%87%E5%8E%98%E5%AE%9A"><span class="toc-text">1 费率厘定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B0%E4%B8%9A%E5%8A%A1%E4%BB%B7%E5%80%BC"><span class="toc-text">2 新业务价值</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B4%B9%E7%8E%87%E5%8E%98%E5%AE%9A"><span class="toc-text">1 费率厘定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B0%E4%B8%9A%E5%8A%A1%E4%BB%B7%E5%80%BC"><span class="toc-text">2 新业务价值</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>

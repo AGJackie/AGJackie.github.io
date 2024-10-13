@@ -1,0 +1,893 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>Censored data：当注射格列宁的小白鼠逃出实验室 - 精算后花园</title>
+
+  
+    <meta name="description" content="对应知识点：CT3-10 Point Estimation中，对截尾和删失数据的极大似然估计方法； CT4-08 Estimating the lifetime distribution function中，对删失数据的概念和分类的系统介绍。（属于生存分析的内容）通过小白鼠的例子介绍卡普兰·迈耶生存分析法（乘积极限法）。 同时补充了截尾数据和删失数据的对比。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Censored data：当注射格列宁的小白鼠逃出实验室">
+<meta property="og:url" content="https://actuarygarden.cn/Censored-data/index.html">
+<meta property="og:site_name" content="精算后花园">
+<meta property="og:description" content="对应知识点：CT3-10 Point Estimation中，对截尾和删失数据的极大似然估计方法； CT4-08 Estimating the lifetime distribution function中，对删失数据的概念和分类的系统介绍。（属于生存分析的内容）通过小白鼠的例子介绍卡普兰·迈耶生存分析法（乘积极限法）。 同时补充了截尾数据和删失数据的对比。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-11T17:44:16.408Z">
+<meta property="article:modified_time" content="2024-10-13T05:33:09.747Z">
+<meta property="article:author" content="Jackie">
+<meta property="article:tag" content="精算模型">
+<meta property="article:tag" content="生存分析">
+<meta property="article:tag" content="极大似然估计">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="精算模型,生存分析,极大似然估计">
+
+  <!-- feed -->
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+    <link rel="shortcut icon" href="https://img.actuarygarden.cn/9b1f6a0e-f644-44d4-b222-0d15e5d37171.ico">
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.actuarygarden.cn/0ded43ac-a976-48b4-8d97-59339e4ba744.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">精算后花园</div><div class="sub normal cap">精算辅导联系微信号AGJackie</div><div class="sub hover cap" style="opacity:0"> 让天下没有难学的精算</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="入门指南和辅导课程" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="专栏" href="/topic/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="友情链接" href="/links/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
+</div>
+<div class="widgets">
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">专栏：寓教于乐</span></div><div class="widget-body"><a class="item" href="/Zhifangxian/"><span class="title">西虹市首富里的脂肪险可保吗？</span></a><a class="item" href="/ThreeBody/"><span class="title">假如精算师进入三体游戏</span></a><a class="item" href="/option/"><span class="title">没有人比男朋友更懂衍生品和投连险</span></a><a class="item" href="/Maximum-likelihood/"><span class="title">梦里也能见到她，你大概是喜欢这个姑娘：从贝叶斯到极大似然估计</span></a><a class="item" href="/LianaixianAct/"><span class="title">《恋爱险精算》</span></a><a class="item" href="/gaolidai/"><span class="title">1支雪糕引发的“糕利贷”</span></a><a class="item" href="/football/"><span class="title">赌球的精算原理</span></a><a class="item" href="/EV214/"><span class="title">情人节过后，你的偿付能力还充足吗</span></a><a class="item" href="/CT6-Decision-theory/"><span class="title">遇事不决，可问春风</span></a><a class="item active" href="/Censored-data/"><span class="title">Censored data：当注射格列宁的小白鼠逃出实验室</span><svg class="active-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M21 11.098v4.993c0 3.096 0 4.645-.734 5.321c-.35.323-.792.526-1.263.58c-.987.113-2.14-.907-4.445-2.946c-1.02-.901-1.529-1.352-2.118-1.47a2.225 2.225 0 0 0-.88 0c-.59.118-1.099.569-2.118 1.47c-2.305 2.039-3.458 3.059-4.445 2.945a2.238 2.238 0 0 1-1.263-.579C3 20.736 3 19.188 3 16.091v-4.994C3 6.81 3 4.666 4.318 3.333C5.636 2 7.758 2 12 2c4.243 0 6.364 0 7.682 1.332C21 4.665 21 6.81 21 11.098" opacity=".5"/><path fill="currentColor" d="M9 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5z"/></svg></a><a class="item" href="/BayesOffer/"><span class="title">秋招贝叶斯信度理论</span></a></div></widget>
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/Actuarial-lovestory/"><span class="title">精算爱情故事</span></a><a class="item title" href="/EV214/"><span class="title">情人节过后，你的偿付能力还充足吗</span></a><a class="item title" href="/Zhifangxian/"><span class="title">西虹市首富里的脂肪险可保吗？</span></a><a class="item title" href="/Maximum-likelihood/"><span class="title">梦里也能见到她，你大概是喜欢这个姑娘：从贝叶斯到极大似然估计</span></a><a class="item title" href="/MATH273-revision/"><span class="title">利物浦 MATH273 & 西浦 MATH217（寿险精算1）复习课讲义</span></a><a class="item title" href="/CT6-Decision-theory/"><span class="title">遇事不决，可问春风</span></a><a class="item title" href="/Censored-data/"><span class="title">Censored data：当注射格列宁的小白鼠逃出实验室</span></a><a class="item title" href="/100-reasons-for-actuary/"><span class="title">爱上精算的一百个理由</span></a><a class="item title" href="/BayesOffer/"><span class="title">秋招贝叶斯信度理论</span></a><a class="item title" href="/MTH217-Revision-Questions/"><span class="title">西浦MTH217（寿险精算I）Revision Questions 真题汇总</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" id="menu" href="/topic">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/Zhifangxian/">寓教于乐</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-11T17:44:16.408Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-13T05:33:09.747Z">2024-10-13</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Censored data：当注射格列宁的小白鼠逃出实验室</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>对应知识点：CT3-10 Point
+Estimation中，对截尾和删失数据的极大似然估计方法；</p>
+<p>CT4-08 Estimating the lifetime distribution
+function中，对删失数据的概念和分类的系统介绍。（属于生存分析的内容）通过小白鼠的例子介绍卡普兰·迈耶生存分析法（乘积极限法）。</p>
+<p>同时补充了截尾数据和删失数据的对比。</p>
+<span id="more"></span>
+<h2 id="section">1</h2>
+<p>我已经有好几天没看到那只小白鼠了。</p>
+<p>传言说它逃出实验室是因为要去寻找防治脱发的丹药，也有人说看到它前几天被黑猫警长抓走了，因为躲在图书馆偷看了几本SOA的禁书。世事难料，要知道它原先可是IFoA阵营的忠实粉丝啊。</p>
+<p>但准确原因已经无从查考了。我只记得最后一次见到它那天，天气很热。它穿着一件粉红色的T恤，端正地坐在自己的笼子里，时不时地发出“吱吱”的叫声，像极了等着妈妈来接自己放学的小女孩，模样很是乖巧。</p>
+<p>“这么热要不给它买杯琪琪家的冰豆浆吧。”我这样想着，就走出了实验室，并给它打开了笼子，“这样它应该也会凉快些。”</p>
+<p>其实我认识这只小白鼠的时间并不算长。但对于这只小白鼠，我总有一种熟悉的感觉。</p>
+<p>因此我常常给它开个小灶。每次看着它喜庆的吃相，我都会想，也许这就是作为一名饲养员的乐趣吧。</p>
+<p>但那天，粗心的我没有注意到，它手心里已经偷偷攥好了一把粉红色的遮阳伞。貌似还有把玩具车的车钥匙。</p>
+<p>谁能想到它就这样逃出了实验室呢。</p>
+<p>这个不听话的小白鼠。30天的观测期还没结束啊喂！自己还整了个车车给跑了？！</p>
+<p>下回再碰到，看我不把它所有的太阳伞都给没收了！</p>
+<h2 id="section-1">2</h2>
+<p>故事的起因是新药格列宁的研发。</p>
+<p>为测试药效，“精算后花园”实验室对15只小白鼠注射了格列宁。</p>
+<figure>
+<img
+src="https://img.actuarygarden.cn/2325780a-b615-4156-8778-db5848d1d0d5.png"
+alt="注射格列宁的小白鼠名单" />
+<figcaption aria-hidden="true">注射格列宁的小白鼠名单</figcaption>
+</figure>
+<p>实验员Jackie对这15只小白鼠进行了为期30天的观测，希望得到小白鼠注射新药后的生存数据（即进行死亡调查）（mortality
+investigation）。</p>
+<p>在这30天里，小白鼠可能死，也可能还活着；死因可能是注射了格列宁，也可能是其他；可能还活着，但逃出了实验室，我们无法再观测到它。</p>
+<p>在观测期间内，除了因为注射格列宁而直接引起的死亡以外的所有情况，都会导致出现数据的删失（truncated）或截尾（censored）。</p>
+<p>讲到这里我们先把小白鼠的故事放一放，在〔8〕生存分析会继续讲小白鼠们的具体死亡和删失情况。</p>
+<p>〔9〕和〔10〕也是关于小白鼠的后续，算是讲了一个完整的故事。如果想先看完故事，可以直接滑到最后。</p>
+<h2 id="section-2">3</h2>
+<p>先来讲一下删失。这部分是CT4要求掌握的。</p>
+<h3 id="删失censoring">删失（Censoring）</h3>
+<p>Censored data arises when an individual’s life length is known to
+occur only in a certain period of time.</p>
+<p>也就是说，如果我们想要知道对象存活到的准确的时间点（lifetime），那么事件的失效时间点（failure
+time）必须要在删失时间的区间以内，也就是要在观察区间以内。</p>
+<p>如果失效事件发生的时间不是在观察的时间区间以内，该对象的数据就会以删失数据（censored
+data）的形式出现。</p>
+<p>我们只知道在观测区间以外发生了失效事件，但并不知道具体事件发生的失效时间点的精确值。</p>
+<p>和截尾不同的是，数据存在的事实我们是知道的（后面会说截尾的特点，主要是对于观测外的事件的发生并不知情/不考虑）。（不妨思考一下空白数据和0的区别）</p>
+<p>以下是删失的几种分类：（注意它们并不是严格互斥的情况）</p>
+<h3 id="左删失left-censoring">左删失（Left censoring）</h3>
+<p>当事件发生时，观测还没有开始，事件发生时间位于观测区间的左侧，那么相应的数据就是左删失的数据。我们只知道事件在观测开始之前就发生，但还是不知道精确的发生时间。</p>
+<p>左删失一般发生在：</p>
+<ul>
+<li>当估计某个确定的年龄的生存函数，但你不知道准确的出生日期时；</li>
+<li>当估计某个确定的保险期间的生存函数，但你不知道准确的保单起始日期时；</li>
+<li>当估计某种疾病的持续期间的生存函数，但你不知道准确的开始生病的时间时。</li>
+</ul>
+<h3 id="右删失right-censoring">右删失（Right censoring）</h3>
+<p>在观测区间中，对象并没有发生失效事件，失效事件的发生时间是在我们观测区间的右侧，但我们也不能得到精确的失效时间。</p>
+<p>比如在这30天的死亡调查中，当时间超过30天时，也许还是有一部分小白鼠没有死亡，但我们实验的观测和记录已经终止了，那么这些还未死亡的小白鼠的数据就是右删失的数据。我们只知道这些小白鼠的生存时间超过30天。</p>
+<p>右删失一般发生在：</p>
+<ul>
+<li>寿险的投保人退保时；</li>
+<li>养老金计划的被保险人在退休领取养老金时为健康状态（active）；</li>
+<li>生死两全保险的保单期满。</li>
+</ul>
+<h3 id="区间删失interval-censoring">区间删失（Interval censoring）</h3>
+<p>在某一个时间区间内，我们无法知道事件的精确失效时间，只知道失效事件是在这个区间内发生的。</p>
+<p>区间删失一般发生在：</p>
+<ul>
+<li>当你只知道退保的会计年度（calendar year ）时。</li>
+<li>当估计某个确定的年龄的生存函数，但你只知道死亡发生时的年龄是“x
+nearest
+birthday”时。也就是说你只知道死亡发生在【x-0.5，x+0.5】的年龄区间（Rate
+interval）内；</li>
+<li>当你知道死亡和出生的会计年度时。因为此时我们有的数据只是“age next
+birthday at the 1 January prior to
+death”，我们只知道死亡发生在这个时间区间内。</li>
+</ul>
+<p>在精算调查中，右删失是最为常见的。</p>
+<h3 id="随机删失random-censoring">随机删失（Random censoring）</h3>
+<p>顾名思义，此时删失是个随机变量，与死亡无关。比如小白鼠因为各种非格列宁引起的原因离开，我们无法继续观测。而这种离开我们事先是不知道的。</p>
+<p>随机删失一般发生在：</p>
+<ul>
+<li>寿险的投保人退保时；</li>
+<li>人群发生迁移；</li>
+<li>企业年金计划的成员跳槽到另一家企业。</li>
+</ul>
+<p>随机删失是右删失的一种特例。</p>
+<p>当删失成为我们考虑的失效事件的第二原因时，就可以建立多重减因模型。这在CT5寿险精算中会详细讲。</p>
+<h3 id="informative-and-non-informative-censoring">Informative and
+non-informative censoring</h3>
+<p>如果删失数据不会给出生存时长（余命）任何信息，我们就称这种删失为non-informative
+censoring.</p>
+<p>也就是说，对于non-informative
+censoring，我们观测的整个群体的死亡率和其中删失的部分的死亡率是一样的。</p>
+<p>non-informative censoring的例子：</p>
+<ul>
+<li>调查期间的结束（因为这对于所有的个体的影响是相同的）。</li>
+</ul>
+<p>Informative
+censoring的分析则比较复杂。（对，你可以把这句话大致理解为Informative
+censoring只要掌握概念就好）</p>
+<p>Informative censoring的例子有：</p>
+<ul>
+<li>寿险的退保。因为退保的人可能会比没有退保的人健康状态略好，死亡率低一些；</li>
+<li>养老金计划的被保险人在退休领取养老金时为生病状态（Ill-health）。因为他们的健康状态一般会比留在养老金计划中的人差，死亡率更高。</li>
+</ul>
+<h3 id="第一类删失type-i-censoring">第一类删失（Type I censoring）</h3>
+<p>如果删失发生的时刻是事先知道的，我们就称之为第一类删失。</p>
+<p>这是随机删失的一种退化的情形。因此，第一类删失也是右删失的一种特例。</p>
+<h3 id="第二类删失type-ii-censoring">第二类删失（Type II
+censoring）</h3>
+<p>如果删失发生的数量是事先预定的，我们就称之为第二类删失。</p>
+<p>在精算调查中，最常见的是随机删失和第一类删失的组合。</p>
+<h2 id="section-3">4</h2>
+<p>CT4对截尾并没有详细讲解，但这里还是补充一下。</p>
+<h3 id="截尾截断truncation">截尾/截断（Truncation）</h3>
+<p>Truncation of survival data occurs when only those individuals whose
+event time lies within a certain observational window (YL,YR) are
+observed. An individual whose event time is not in this interval is not
+observed and no information on this subject is available to the
+investigator.</p>
+<p>也就是说，我们只能从一个固定的时间窗内观测，记录事件在这个时间段内发生的精确时间点。但是对于时间窗以外的时间发生的失效事件，我们是不知情的。只有当事件的失效时间（也就是事件的发生时间，event
+time）出现在观测区间内，我们才能知道这个事件及其观测数据的存在。</p>
+<h3 id="左截尾left-truncation">左截尾（Left truncation）</h3>
+<p>只能观测到一个时间点之后发生的失效事件。左截尾时间点之前发生的失效事件不知情/不关心。</p>
+<h3 id="右截尾right-truncation">右截尾（Right truncation）</h3>
+<p>只能观测到一个时间点之前发生的失效事件。右截尾时间点之后发生的失效事件不知情/不关心。</p>
+<h3 id="区间截尾interval-truncation">区间截尾（Interval
+truncation）</h3>
+<p>在这个固定区间内发生的失效事件不知情，也就是在这个区间内发生的失效事件不能被观测到，或者说不关心或不知情。</p>
+<p>截尾（truncated）是所有样本的综合特性，指的是你观察的总体是有偏的。比如你的寿命样本全部来自于退休中心，但是退休中心只有60岁以上才能加入，所以你的所有样本都是t≥60，t＜60的数据被排除掉了，是左截尾（注意此处与删失不同）；要是你的所有样本只是80岁以下死亡的老人的寿命，那就面临右截尾。</p>
+<h2 id="section-4">5</h2>
+<p>删失和截尾最主要的区别是什么呢？</p>
+<p>观测者对于删失数据的发生是知情的，只是仍然不知道对应这些删失数据，其失效事件发生的精确时间。</p>
+<p>而观测者对于截尾数据的发生是不知情或不关心的。</p>
+<p>因此构造似然函数时，截尾数据要引入条件分布，而删失数据要考虑累积概率分布。</p>
+<h2 id="section-5">6</h2>
+<p>既然讲到了构造似然函数，我们就来看看对于删失数据和截尾数据，我们分别应该如何进行极大似然估计。这是CT3-10
+Point Estimation的内容。</p>
+<h3 id="极大似然估计法的基本步骤">极大似然估计法的基本步骤</h3>
+<p>我们知道，极大似然估计法的第一步，也是最重要的一步，是构造似然函数。似然函数的基本公式是：</p>
+<p><span class="math display">\[L(\theta)=\prod_{i=1}^{n} f\left(x_{i} ;
+\theta\right)\]</span></p>
+<p>也就是概率密度函数的联乘积。</p>
+<p>第二步，取对数，并对参数进行求导，令求导后的式子等于0，解出来的参数就是极大似然估计量。</p>
+<p>也就是求解：</p>
+<p><span class="math display">\[\frac{\partial}{\partial \theta} \ln
+L(\theta)=0\]</span></p>
+<p>第三步是验证。把刚才的式子再对参数求一次导数，（即二阶导）若二阶导小于0，就说明求出来的参数的确是最大值，</p>
+<p>即验证：</p>
+<p><span class="math display">\[\frac{\partial^{2}}{\partial \theta^{2}}
+\ln L(\theta)&lt;0 \Rightarrow \max\]</span></p>
+<p>下面讲一下对于censored data和truncated
+data分别如何进行极大似然估计。后两步同上，唯一的区别在于构造似然函数。</p>
+<h3 id="censored-data的似然函数">Censored data的似然函数</h3>
+<p>比如说，我们的样本里有n个准确的观测值，和m个删失数据，对这m个删失数据，只知道它们大于y。那么似然函数可以写为：</p>
+<p><span class="math display">\[L(\theta)=\left[\prod_{i=1}^{n}
+f\left(x_{i} ; \theta\right)\right]
+\times[\mathrm{P}(\mathrm{X}&gt;y)]^{\mathrm{m}}\]</span></p>
+<p>也是密度函数或概率的联乘积。</p>
+<h3 id="truncated-data的似然函数">Truncated data的似然函数</h3>
+<p>这个我们来看一道例题。</p>
+<p><img
+src="https://img.actuarygarden.cn/8236183b-6535-4116-ad64-b95efa738685.png" /></p>
+<p>这里我们对于索赔数为0的保单的信息是一无所知的。因此我们在计算各索赔数的保单的概率时，在分母的位置需要扣除索赔数为0的保单。</p>
+<p><img
+src="https://img.actuarygarden.cn/9558eeb9-89d5-476d-9107-f5d1f08d9627.png" /></p>
+<h2 id="section-6">7</h2>
+<p>在讲小白鼠的具体例子之前，我们先介绍卡普兰·迈耶生存分析法。</p>
+<p>卡普兰·迈耶生存分析法，又称为乘积极限法，是非参数分析法的一种，是一种描述终点事件发生情况的有效手段。Nelson-Aalen模型的原理与之类似，也是生存分析法的一种，用到的是积分风险函数，这里不再介绍，也是CT4第八章的内容。</p>
+<p>假定我们观测了n个对象，其中有m个在观测期间发生失效事件（比如我们需要研究的目标事件是作用在小白鼠身上的格列宁直接引起的死亡）。</p>
+<p>令t1，t2，…，tk为按顺序观测到的失效事件发生的时刻；</p>
+<p>假设在时刻tj发生失效事件的个体数目dj为，则有d1+d2+…+dk=m；</p>
+<p>剩余n-m个研究对象处于存活状态的个体是删失的，对这些删失数据，记在时间区间（tj,tj+1）发生失效事件的个数为cj，并设定t0=1、tk+1=无穷，则有c0+c1+…+ck=n-m；</p>
+<p>假定失效事件发生的风险在真实发生失效事件时为正，未发生时均为0；</p>
+<p>设nj为在时刻tj前存活且能被观测到的数目，定义发生失效事件（这里只研究死亡）的风险为：</p>
+<p><span class="math display">\[\hat{\lambda}_{j}=\frac{d_{j}}{n_{j}}(1
+\leq j \leq k)\]</span></p>
+<p>离散的死亡风险函数（discrete hazard function of death）为：</p>
+<p><span class="math display">\[\lambda_{j}=P\left[T=t_{j} | T \geq
+t_{j}\right]\]</span></p>
+<p>余命T的分布函数为：</p>
+<p><span class="math display">\[F(t)=1-\prod_{t_1\leq
+t}\left(1-\lambda_{j}\right)\]</span></p>
+<p>余命T的分布函数的估计量为：</p>
+<p><span class="math display">\[\hat{F}(t)=1-\prod_{t_{1} \leq
+t}\left(1-\hat{\lambda}_{j}\right)=1-\prod_{t_{1} \leq t}
+\frac{n_{j}-d_{j}}{n_{j}}\]</span></p>
+<h2 id="section-7">8</h2>
+<p>回到我们实验室里观测的15只小白鼠的例子。</p>
+<p>精算后花园实验室对注射新药格列宁后的15只小白鼠进行了为期30天的死亡调查，希望得到小白鼠注射新药后的生存数据。具体的死亡情况如下图：</p>
+<p><img
+src="https://img.actuarygarden.cn/5d862e0b-0f5f-441e-a4d4-0265c51f533e.png" /></p>
+<p>我们可以画出时间线：</p>
+<p><img
+src="https://img.actuarygarden.cn/1bb06e17-d4f6-4699-a497-6fcd6e69f99c.png" /></p>
+<p>用上一节的标记方法。本例子中，观测对象总数目n=15。因为注射新药直接死亡的小白鼠数目m=6，分别是Rat
+4，Rat 13，Rat 6，Rat 9，Rat 10，Rat 5。</p>
+<p>注意，在第17天死亡的小白鼠的死因不是注射新药，而是被其他鼠谋杀，所以这种情况和因为注射新药直接死亡的情况是区别对待的，属于一种随机右删失。</p>
+<p>发生失效事件（因为注射新药直接死亡）的时刻分别为t1=3, t2=4, t3=11,
+t4=21, t5=26。</p>
+<p>在对应时刻发生的死亡的小白鼠的数目：d1=1, d2=1, d3=2, d4=1,
+d5=1。</p>
+<p>在对应时刻仍然存活且能被观测到的小白鼠数目：n1=15, n2=14, n3=12,
+n4=9, n5=6。</p>
+<p>删失分别发生在第6天（Rat 7咬坏笼子逃跑了），第17天（Rat
+1被其他鼠谋杀），第24天（Rat
+8被动物保护主义者突击搜捕后放掉了），第25天（Rat
+12被香港记者在采访中放掉了），第30天（剩下的5只老鼠在调查结束后放回了大街上）</p>
+<p>所以对应时间区间里删失数据的个数：c0=0, c1=0, c2=1, c3=1, c4=2,
+c5=5</p>
+<p>对应的数据已经找出来，就可以按照上节的公式进行生存分析了。</p>
+<h2 id="section-8">9</h2>
+<p>至于那只小白鼠，后来听说它带着血液里的格列宁远渡重洋去了印度，在那里开了一家仿制格列宁的药厂，前一阵子因为一部电影的热映，药价高昂的问题还引起了国内广泛的讨论。</p>
+<p>但我最关心的却不是这些。</p>
+<p>生老病死的风险，可以通过提前做保险配置，得到一些经济上的补偿，给人更多活下去的勇气以及希望。做一些预备方案，多少是能有点办法的。</p>
+<p>但对于这只小白鼠的出逃，我束手无策。</p>
+<p>小白鼠离开的第N天。想它。</p>
+<p>好久不见，它是不是还喜欢穿粉红色的T恤？它的吃相还是和以前一样喜庆么？</p>
+<p>也不知道它长胖了没啊。</p>
+<p><img
+src="https://img.actuarygarden.cn/62b2a7d1-bc02-4b29-8fff-78022cdae95d.png" /></p>
+<h2 id="section-9">10</h2>
+<p>过去只是我们在观测期间偶然相遇而发生的故事，而这30天里的故事总是绕不开你。</p>
+<p>“你我相逢在黑夜的海上</p>
+<p>你有你的/我有我的/方向</p>
+<p>你记得也好</p>
+<p>最好你忘掉</p>
+<p>在这交会时互放的光亮”</p>
+<p>每一次分别，要是都像处理censored data一样简单，那就好了。</p>
+<p>再不回来，我就真把你当censored data了喔。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a
+target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享
+4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://actuarygarden.cn/Censored-data/" /></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg" /></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://actuarygarden.cn/Censored-data/&title=Censored data：当注射格列宁的小白鼠逃出实验室 - 精算后花园&summary=对应知识点：CT3-10 Point
+Estimation中，对截尾和删失数据的极大似然估计方法；
+CT4-08 Estimating the lifetime distribution
+function中，对删失数据的概念和分..."><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg" /></a><a class="social share-item email" href="mailto:?subject=Censored data：当注射格列宁的小白鼠逃出实验室 - 精算后花园&amp;body=https://actuarygarden.cn/Censored-data/"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg" /></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg" /></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://actuarygarden.cn/Censored-data/"/>
+        </div>
+        
+      </div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/CM1-AutoEPV/">用VBA自动生成寿险EPV求解过程（完美对应 IFoA CM1 考试符号要求！）</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/CB1-experience/">CB1(原CT2)经验贴|2019年4月改革后首考</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a
+target="_blank" rel="noopener" href="https://img.actuarygarden.cn/9ef2d164-d341-4d9e-88ec-213feef80861.jpg">Jackie</a>
+运营。为方便阅读最新文章，欢迎关注 Jackie
+的<strong>微信公众号</strong>：精算后花园。</p>
+<p><a href="https://actuarygarden.cn">Copyright©2017-2025 精算后花园</a>
+<a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">京ICP备2024075456号</a></p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#section"><span class="toc-text">1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-1"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-2"><span class="toc-text">3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E5%A4%B1censoring"><span class="toc-text">删失（Censoring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A6%E5%88%A0%E5%A4%B1left-censoring"><span class="toc-text">左删失（Left censoring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E5%88%A0%E5%A4%B1right-censoring"><span class="toc-text">右删失（Right censoring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E5%88%A0%E5%A4%B1interval-censoring"><span class="toc-text">区间删失（Interval censoring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E5%88%A0%E5%A4%B1random-censoring"><span class="toc-text">随机删失（Random censoring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#informative-and-non-informative-censoring"><span class="toc-text">Informative and
+non-informative censoring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%B1%BB%E5%88%A0%E5%A4%B1type-i-censoring"><span class="toc-text">第一类删失（Type I censoring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%B1%BB%E5%88%A0%E5%A4%B1type-ii-censoring"><span class="toc-text">第二类删失（Type II
+censoring）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-3"><span class="toc-text">4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%AA%E5%B0%BE%E6%88%AA%E6%96%ADtruncation"><span class="toc-text">截尾&#x2F;截断（Truncation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A6%E6%88%AA%E5%B0%BEleft-truncation"><span class="toc-text">左截尾（Left truncation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%B3%E6%88%AA%E5%B0%BEright-truncation"><span class="toc-text">右截尾（Right truncation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E9%97%B4%E6%88%AA%E5%B0%BEinterval-truncation"><span class="toc-text">区间截尾（Interval
+truncation）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-4"><span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-5"><span class="toc-text">6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9E%81%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1%E6%B3%95%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4"><span class="toc-text">极大似然估计法的基本步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#censored-data%E7%9A%84%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0"><span class="toc-text">Censored data的似然函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#truncated-data%E7%9A%84%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0"><span class="toc-text">Truncated data的似然函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-6"><span class="toc-text">7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-7"><span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-8"><span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#section-9"><span class="toc-text">10</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    processEscapes: true
+  },
+  TeX: {
+    Macros: {
+      actuarialangle: ["{\\mkern1mu\\overline{#1\\,}\\kern-3mu\\lower-1mu\\small|}", 1],
+      angl: ["{\\actuarialangle{#1\\mkern1mu}}", 1],
+      angln: "{\\angl n}",
+      anglk: "{\\angl k}",
+      anglr: "{\\angl r}",
+      term: ["{\\overset{1}{#1}:\\angl{#2}}", 2],
+      termxn: "{\\term{x}{n}}",
+      pureendow: ["{#1:\\overset{1}{\\angl{#2}}}", 2],
+      pureendowxn: "{\\pureendow{x}{n}}",
+      endow: ["{#1:\\angl{#2}}", 2],
+      endowxn: "{\\endow{x}{n}}",
+      joint: ["{\\overline{#1}}", 1],
+      actsymb: ["{\\sideset{_{#1\\mkern3mu}^{#2\\mkern3mu}}{^{#4}_{#5}}{#3}}", 5],
+      Ax: ["{\\actsymb{#1}{#2}{A}{#3}{#4}}", 4],
+      Axz: ["{\\actsymb{#1}{#2}{\\bar{A}}{#3}{#4}}", 4],
+      Axzz: ["{\\actsymb{#1}{#2}{\\ddot{A}}{#3}{#4}}", 4],
+      ax: ["{\\actsymb{#1}{#2}{a}{#3}{#4}}", 4],
+      axz: ["{\\actsymb{#1}{#2}{\\bar{a}}{#3}{#4}}", 4],
+      axzz: ["{\\actsymb{#1}{#2}{\\ddot{a}}{#3}{#4}}", 4],
+      Ex: ["{\\actsymb{#1}{}{E}{}{#2}}", 2],
+      px: ["{\\actsymb{#1}{}{p}{}{#2}}", 2],
+      qx: ["{\\actsymb{#1}{}{q}{}{#2}}", 2],
+      sx: ["{\\actsymb{}{}{s}{}{#1}}", 1],
+      sxz: ["{\\actsymb{}{}{\\bar{s}}{}{#1}}", 1],
+      sxzz: ["{\\actsymb{}{}{\\ddot{s}}{}{#1}}", 1],
+      Vx: ["{\\actsymb{#1}{}{V}{}{#2}}", 2],
+      href: "{}",
+      },
+    extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js']
+  },
+  'HTML-CSS': { availableFonts: ['TeX'] }
+});
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+});
+MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for(i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
